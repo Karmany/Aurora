@@ -43,6 +43,6 @@ Temporary Items\
 *.css.map\
 \
 ### Prepros ###\
-\pard\pardeftab720\partightenfactor0
+.prepros.cfg
 
 \f1 \cf2 .prepros.cfg}
