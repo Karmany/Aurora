@@ -10,17 +10,17 @@ var page3 = 'galleri';
 var page4 = 'om-oss';
 var page5 = 'kontakt';
 
-$('#page-1-link').text(page1);
-$('#page-2-link').text(page2);
-$('#page-3-link').text(page3);
-$('#page-4-link').text(page4);
-$('#page-5-link').text(page5);
+$('#page-1-link a').text(page1);
+$('#page-2-link a').text(page2);
+$('#page-3-link a').text(page3);
+$('#page-4-link a').text(page4);
+$('#page-5-link a').text(page5);
 
-$("#page-1-link").attr("href", '#' + page1);
-$("#page-2-link").attr("href", '#' + page2);
-$("#page-3-link").attr("href", '#' + page3);
-$("#page-4-link").attr("href", '#' + page4);
-$("#page-5-link").attr("href", '#' + page5);
+$("#page-1-link a").attr("href", '#' + page1);
+$("#page-2-link a").attr("href", '#' + page2);
+$("#page-3-link a").attr("href", '#' + page3);
+$("#page-4-link a").attr("href", '#' + page4);
+$("#page-5-link a").attr("href", '#' + page5);
 /*
 $('page-one-desktop__link').textContent 	= pageOne;
 $('page-two-desktop__link').textContent 	= pageTwo;
