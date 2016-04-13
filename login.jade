@@ -5,11 +5,10 @@ html(lang="en", ng-app="myApp")
 		title Login
 		link(rel="stylesheet", href="css/base.css")
 	body
-		.login
-			video(poster='img/aurora.jpg', autoplay='true', loop='')
-				source(src='img/aurora.mp4', type='video/mp4')
-				source(src='img/aurora.webm', type='video/webm')
-			.form
+		video(poster='img/aurora.jpg', autoplay='true', loop='')
+			source(src='img/aurora.mp4', type='video/mp4')
+			source(src='img/aurora.webm', type='video/webm')
+		.form
 				#login
 					h1 Welcome Back
 					form(action='/', method='post')
@@ -20,5 +19,3 @@ html(lang="en", ng-app="myApp")
 						p.forgot
 							a(href='#') Forgot Password?
 						button.button.button-block Log In
-//NOTE TO SELF
-//Sett opp grunt-jade og watch
