@@ -5,7 +5,7 @@ var app = angular.module('myApp', [
 ]);
 
 var page1 = 'hjem';
-var page2 = 'yolo';
+var page2 = 'lectures-student';
 var page3 = 'galleri';
 var page4 = 'om-oss';
 var page5 = 'kontakt';
@@ -40,7 +40,7 @@ app.config(['$routeProvider', function($routeProvider){
 	templateUrl: 'partials/default.html'
 	})
 	.when('/' + page2,{
-	templateUrl: 'partials/meny.html'
+	templateUrl: 'partials/lectures-student.html'
 	})
 	.when('/' + page3,{
 	templateUrl: 'partials/galleri.html'
