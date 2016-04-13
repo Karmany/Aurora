@@ -1,21 +1,22 @@
 doctype html
-html(lang="en", ng-app="myApp")
+html#loginhtml(lang="en", ng-app="myApp")
 	head
 		meta(charset="utf-8")
 		title Login
 		link(rel="stylesheet", href="css/base.css")
 	body
-		video(poster='img/aurora.jpg', autoplay='true', loop='')
+		video#loginvideo(poster='img/aurora.jpg', autoplay='true', loop='')
 			source(src='img/aurora.mp4', type='video/mp4')
 			source(src='img/aurora.webm', type='video/webm')
-		.form
+		.loginform
 				#login
-					h1 Welcome Back
-					form(action='/', method='post')
+					h1#loginheader Welcome Back
+					form#logmein(action='/', method='post' onsubmit="return logIn(this)")
 						.field-wrap
-							input(type='email', name='email' placeholder='Email Address', required='')
+							input.logininput#loginEmail(type='email', name='email' placeholder='Email Address', required='')
 						.field-wrap
-							input(type='password', name='pasword' placeholder='Password', required='')
+							input.logininput#loginPassword(type='password', name='password' placeholder='Password', required='')
 						p.forgot
-							a(href='#') Forgot Password?
-						button.button.button-block Log In
+							a.loginlink(href='#') Forgot Password?
+						input.loginbutton(type='submit', value='LOGIN')
+		script src="js/login.js">

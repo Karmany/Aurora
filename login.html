@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html id="loginhtml" lang="en" ng-app="myApp">
   <head>
     <meta charset="utf-8">
     <title>Login</title>
     <link rel="stylesheet" href="css/base.css">
   </head>
   <body>
-    <video poster="img/aurora.jpg" autoplay="true" loop="">
+    <video id="loginvideo" poster="img/aurora.jpg" autoplay="true" loop="">
       <source src="img/aurora.mp4" type="video/mp4">
       <source src="img/aurora.webm" type="video/webm">
     </video>
-    <div class="form">
+    <div class="loginform">
       <div id="login">
-        <h1>Welcome Back</h1>
-        <form action="/" method="post">
+        <h1 id="loginheader">Welcome Back</h1>
+        <form id="logmein" action="/" method="post" onsubmit="return logIn(this)">
           <div class="field-wrap">
-            <input type="email" name="email" placeholder="Email Address" required="">
+            <input id="loginEmail" type="email" name="email" placeholder="Email Address" required="" class="logininput">
           </div>
           <div class="field-wrap">
-            <input type="password" name="pasword" placeholder="Password" required="">
+            <input id="loginPassword" type="password" name="password" placeholder="Password" required="" class="logininput">
           </div>
-          <p class="forgot"><a href="#">Forgot Password?</a></p>
-          <button class="button button-block">Log In</button>
+          <p class="forgot"><a href="#" class="loginlink">Forgot Password?</a></p>
+          <input type="submit" value="LOGIN" class="loginbutton">
         </form>
       </div>
     </div>
+    <script>src="js/login.js"></script>
   </body>
 </html>
