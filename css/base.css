@@ -820,3 +820,36 @@ th {
 .col--am {
   vertical-align: middle;
 }
+
+html {
+  font-size: 62.5%;
+}
+
+html, body {
+  height: 100%;
+}
+
+header {
+  background-color: pink;
+  width: 100%;
+  height: 7ex;
+}
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -200px;
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+footer, .page-wrap:after {
+  height: 200px;
+}
+
+footer {
+  background-color: teal;
+}
