@@ -968,3 +968,15 @@ footer {
   text-align: right;
   margin-bottom: 20px;
 }
+
+.notifications {
+  background-color: grey;
+}
+
+.notifications img {
+  width: 100px;
+}
+
+#test {
+  width: 500px;
+}
