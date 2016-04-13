@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
   <head></head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -26,10 +26,22 @@
             </polygon>
           </polygon>
         </svg>
-        <nav></nav>
+        <nav>
+          <ul>
+            <li id="page-1-link"></li>
+            <li id="page-2-link"></li>
+            <li id="page-3-link"></li>
+            <li id="page-4-link"></li>
+          </ul>
+        </nav>
       </header>
-      <div id="container" ng-view></div>
+      <div id="container" ng-view>yolo</div>
     </div>
     <footer></footer>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/main.js"></script>
 </html>

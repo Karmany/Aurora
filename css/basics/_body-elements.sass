@@ -1,5 +1,8 @@
 // Common elements
 
+*
+   box-sizing: border-box
+
 html, body
    height: 100%
 
@@ -14,8 +17,8 @@ header
    align-items: center
 
    svg#logo
-      width: 50%
-      he
+      //width: 50%
+      height: 50px
 
 // !FOOTER || F O O T E R
 
@@ -33,3 +36,13 @@ footer, .page-wrap:after
 
 footer
    background-color: teal
+
+// !CONTAINER || C O N T A I N E R
+
+#container
+   width: calc(100% - 100px)
+   max-width: 1060px
+   padding: 0px 50px
+   margin: 0 auto
+   // working properties
+   border: 2px solid red
