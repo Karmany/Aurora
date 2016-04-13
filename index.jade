@@ -1,6 +1,6 @@
 doctype html
 
-html(lang="en")
+html(lang="en", ng-app="myApp")
    head
    meta(charset="utf-8")
    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
@@ -11,10 +11,21 @@ html(lang="en")
       .page-wrap
             
          header
-            //include ./includes/logo.jade
+            include ./includes/logo.jade
             
             nav
+               ul
+                  li#page-1-link
+                  li#page-2-link
+                  li#page-3-link
+                  li#page-4-link
             
-         #container(ng-view)
+         #container(ng-view) yolo
          
-      footer how u guys u doing
+      footer
+   
+   script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+   script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js")
+   script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js")
+   script(src="js/app.js")
+   script(src="js/main.js")
