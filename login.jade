@@ -10,15 +10,15 @@ html(lang="en", ng-app="myApp")
 				source(src='img/aurora.mp4', type='video/mp4')
 				source(src='img/aurora.webm', type='video/webm')
 			.form
-					#login
-						h1 Welcome Back
-						form(action='/', method='post')
-							.field-wrap
-								input(type='email', name='email' placeholder='Email Address', required='')
-							.field-wrap
-								input(type='password', name='pasword' placeholder='Password', required='')
-							p.forgot
-								a(href='#') Forgot Password?
-							button.button.button-block Log In
+				#login
+					h1 Welcome Back
+					form(action='/', method='post')
+						.field-wrap
+							input(type='email', name='email' placeholder='Email Address', required='')
+						.field-wrap
+							input(type='password', name='pasword' placeholder='Password', required='')
+						p.forgot
+							a(href='#') Forgot Password?
+						button.button.button-block Log In
 //NOTE TO SELF
 //Sett opp grunt-jade og watch
