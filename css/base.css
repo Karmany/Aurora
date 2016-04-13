@@ -821,6 +821,10 @@ th {
   vertical-align: middle;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
 }
@@ -835,7 +839,7 @@ header {
 }
 
 header svg#logo {
-  width: 50%;
+  height: 50px;
 }
 
 .page-wrap {
@@ -857,6 +861,7 @@ footer {
   background-color: teal;
 }
 
+<<<<<<< HEAD
 * {
   box-sizing: border-box;
 }
@@ -971,3 +976,12 @@ textarea {
   text-align: right;
   margin-bottom: 20px;
 }
+=======
+#container {
+  width: calc(100% - 100px);
+  max-width: 1060px;
+  padding: 0px 50px;
+  margin: 0 auto;
+  border: 2px solid red;
+}
+>>>>>>> origin/master
