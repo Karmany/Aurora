@@ -850,15 +850,15 @@ footer {
   background-color: teal;
 }
 
-* {
+.login * {
   box-sizing: border-box;
 }
 
-*:before, *:after {
+.login *:before, .login *:after {
   box-sizing: border-box;
 }
 
-body {
+.login body {
   background: #c1bdba;
   font-family: 'Roboto', sans-serif;
   display: flex;
@@ -870,7 +870,7 @@ body {
   justify-content: center;
 }
 
-video {
+.login video {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -882,18 +882,18 @@ video {
   z-index: 1;
 }
 
-a {
+.login a {
   text-decoration: none;
   color: #1ab188;
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
 
-a:hover {
+.login a:hover {
   color: #138566;
 }
 
-.form {
+.login .form {
   background: rgba(19, 35, 47, 0.9);
   padding: 40px;
   border-radius: 4px;
@@ -901,14 +901,14 @@ a:hover {
   z-index: 2;
 }
 
-h1 {
+.login h1 {
   text-align: center;
   color: #ffffff;
   font-weight: 300;
   margin: 30 0 30 0;
 }
 
-input {
+.login input {
   font-size: 22px;
   display: block;
   width: 100%;
@@ -924,21 +924,21 @@ input {
   -webkit-appearance: none;
 }
 
-input:focus {
+.login input:focus {
   outline: #138566;
 }
 
-.field-wrap {
+.login .field-wrap {
   position: relative;
   margin-bottom: 40px;
 }
 
-textarea {
+.login textarea {
   border: 2px solid #a0b3b0;
   resize: vertical;
 }
 
-.button {
+.login .button {
   border: 0;
   outline: none;
   border-radius: 0;
@@ -954,16 +954,16 @@ textarea {
   -webkit-appearance: none;
 }
 
-.button:hover, .button:focus {
+.login .button:hover, .login .button:focus {
   background: #138566;
 }
 
-.button-block {
+.login .button-block {
   display: block;
   width: 100%;
 }
 
-.forgot {
+.login .forgot {
   margin-top: -20px;
   text-align: right;
   margin-bottom: 20px;
