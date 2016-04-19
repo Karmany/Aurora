@@ -8,15 +8,14 @@ html#loginhtml(lang="en", ng-app="myApp")
         video#loginvideo(poster='img/aurora.jpg', autoplay='true', loop='')
             source(src='img/aurora.mp4', type='video/mp4')
             source(src='img/aurora.webm', type='video/webm')
-        .loginform
-            #login
-                h1#loginheader Welcome Back
-                form#logmein(action='/', method='post' onsubmit="return logIn(this)")
-                    .field-wrap
-                        input.logininput#loginEmail(type='email', name='email' placeholder='Email Address', required='')
-                    .field-wrap
-                        input.logininput#loginPassword(type='password', name='password' placeholder='Password', required='')
-                    p.forgot
-                        a.loginlink(href='#') Forgot Password?
-                    input.loginbutton(type='submit', value='LOGIN')
-        script(src='js/login.js')
+         #login
+             h1#loginheader Welcome Back
+             form#logmein(action='/', method='post' onsubmit="return logIn(this)")
+                 .field-wrap
+                     input.logininput#loginEmail(type='email', name='email' placeholder='Email Address', required='')
+                 .field-wrap
+                     input.logininput#loginPassword(type='password', name='password' placeholder='Password', required='')
+                 p.forgot
+                     a.loginlink(href='#') Forgot Password?
+                 input.loginbutton(type='submit', value='LOGIN')
+                 script(src='js/login.js')
