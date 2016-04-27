@@ -262,6 +262,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/lectures\/avatar.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4046,
+		"inputAbbreviatedPath": "\/img\/lectures\/avatar.jpg",
+		"outputAbbreviatedPath": "\/img\/lectures\/avatar.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/lectures\/steve.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5908,
+		"inputAbbreviatedPath": "\/img\/lectures\/steve.jpg",
+		"outputAbbreviatedPath": "\/img\/lectures\/steve.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/notifcation-img.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
