@@ -12,7 +12,7 @@
     </video>
     <div id="login">
       <h1 id="loginheader">Welcome Back</h1>
-      <form id="logmein" action="/" method="post" onsubmit="return logIn(this)">
+      <form id="logmein" name="loginForm" action="index.html" method="post" onsubmit="return validate(this);">
         <div class="field-wrap">
           <input id="loginEmail" type="email" name="email" placeholder="Email Address" required="" class="logininput">
         </div>
