@@ -123,6 +123,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": false
 		},
+	"\/css\/subpages\/main_student.sass": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 2,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/subpages\/main_student.sass",
+		"outputAbbreviatedPath": "\/css\/css\/main_student.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": false
+		},
 	"\/css\/tools\/_fonts.sass": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -242,6 +258,17 @@
 		"initialSize": 44540,
 		"inputAbbreviatedPath": "\/img\/aurora.jpg",
 		"outputAbbreviatedPath": "\/img\/aurora.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/notifcation-img.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16782,
+		"inputAbbreviatedPath": "\/img\/notifcation-img.jpg",
+		"outputAbbreviatedPath": "\/img\/notifcation-img.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -397,6 +424,26 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/partials\/lectures-student.jade",
 		"outputAbbreviatedPath": "\/partials\/lectures-student.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
+	"\/partials\/main-student.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/partials\/main-student.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/partials\/main-student.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/partials\/main-student.jade",
+		"outputAbbreviatedPath": "\/partials\/main-student.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
