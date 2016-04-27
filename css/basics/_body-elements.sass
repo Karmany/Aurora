@@ -6,19 +6,49 @@
 html, body
    height: 100%
 
+body
+   background-color: $primaryColorDark
+   color: white
+
 // !HEADER || H E A D E R
 
 header
-   background-color: pink
+   background-color: $primaryColor
    width: 100%
-   height: 100px
+   height: 200px
    display: flex
-   justify-content: center
-   align-items: center
+   flex-flow: column
+   justify-content: space-between
+   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45)
 
    svg#logo
-      //width: 50%
+      //align-self: center
       height: 50px
+
+   nav
+      background-color: $primaryColorLight
+      height: 50px
+      display: flex
+      justify-content: center
+
+      a
+         color: white
+         text-decoration: none
+
+      ul
+         list-style-type: none
+         display: flex
+         justify-content: space-between
+         align-items: center
+         width: calc(100% - 100px)
+         max-width: 1060px
+         padding: 0px 50px
+         margin: 0 auto
+         border: 0
+
+         li
+            list-style: none
+            display: inline
 
 // !FOOTER || F O O T E R
 
@@ -45,4 +75,4 @@ footer
    padding: 0px 50px
    margin: 0 auto
    // working properties
-   border: 2px solid red
+   //border: 2px solid red
