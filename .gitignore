@@ -64,4 +64,9 @@ Temporary Items\
 *.codekit
 
 *.codekit
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+
+*.codekit
 >>>>>>> origin/master

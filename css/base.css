@@ -1158,17 +1158,52 @@ html, body {
   height: 100%;
 }
 
+body {
+  background-color: #314650;
+  color: white;
+}
+
 header {
-  background-color: pink;
+  background-color: #455A64;
   width: 100%;
-  height: 100px;
+  height: 200px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-flow: column;
+  justify-content: space-between;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
 }
 
 header svg#logo {
   height: 50px;
+}
+
+header nav {
+  background-color: #6d828c;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 100px);
+  max-width: 1060px;
+  padding: 0px 50px;
+  margin: 0 auto;
+  border: 0;
+}
+
+header nav ul li {
+  list-style: none;
+  display: inline;
 }
 
 .page-wrap {
@@ -1195,21 +1230,17 @@ footer {
   max-width: 1060px;
   padding: 0px 50px;
   margin: 0 auto;
-  border: 2px solid red;
 }
 
-#loginhtml {
+#loginbody {
   background: #c1bdba;
   font-family: 'Roboto', sans-serif;
-  display: flex;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   margin: 0;
-  margin-padding: 0;
-  align-items: center;
-  justify-content: center;
+  padding: 0;
   overflow: hidden;
-  text-align: center;
+  position: relative;
 }
 
 #loginvideo {
@@ -1224,11 +1255,15 @@ footer {
   z-index: -1;
 }
 
-.loginform {
+#login {
   background: rgba(19, 35, 47, 0.9);
   border-radius: 4px;
   padding: 40px;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #loginheader {
