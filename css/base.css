@@ -1459,14 +1459,14 @@ textarea {
   margin-bottom: 20px;
 }
 
-.notifications {
-  background-color: grey;
+#main-student {
+  border: 2px solid pink;
 }
 
-.notifications img {
-  width: 100px;
+#main-student .notification-content img {
+  width: 100%;
 }
 
-#test {
-  width: 500px;
+#main-student .profile-content img {
+  width: 100%;
 }
