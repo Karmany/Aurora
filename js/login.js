@@ -13,10 +13,10 @@ function logIn() {
     if (a === studentEmail && b === studentPassword) {
         window.location = "http://www.google.com/";
     }
-    if (a === teacherEmail && b === teacherPassword) {
+    else if (a === teacherEmail && b === teacherPassword) {
         window.location = "http://www.google.com/";
     }
-    if (a === adminEmail && b === adminPassword) {
+    else if (a === adminEmail && b === adminPassword) {
         window.location = "http://www.google.com/";
     } else {
         alert("Wrong login!");
