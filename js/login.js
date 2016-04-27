@@ -9,25 +9,24 @@ function validate() {
     var teacherPassword = "teacherpwd";
     var adminEmail = "admin@aurora.com";
     var adminPassword = "adminpwd";
-    document.getElementById("logmein").addEventListener("submit", function (e) {
-        if (email.value === studentEmail) {
-            if (pass.value === studentPassword) {
-                console.log("Student ok!");
-                return true;
-            }
-        } else if (email.value === teacherEmail) {
-            if (pass.value === teacherPassword) {
-                console.log("Teacher ok!");
-                return true;
-            }
-        } else if (email.value === adminEmail) {
-            if (pass.value === adminPassword) {
-                console.log("Admin ok!");
-                return true;
-            }
-        } else {
-            console.log("FAILED!");
-            return false;
+
+    if (email === studentEmail) {
+        if (pass === studentPassword) {
+            console.log("Student ok!");
+            return true;
         }
-    });
+    } else if (email === teacherEmail) {
+        if (pass === teacherPassword) {
+            console.log("Teacher ok!");
+            return true;
+        }
+    } else if (email === adminEmail) {
+        if (pass === adminPassword) {
+            console.log("Admin ok!");
+            return true;
+        }
+    } else {
+        console.log("FAILED!");
+        return false;
+    }
 }
