@@ -1150,6 +1150,52 @@ th {
   vertical-align: middle;
 }
 
+.a2 {
+  fill: url(#aurora); }
+  .a2.animate {
+    animation: aurora 2 1s 1s ease-in-out forwards; }
+
+.r2 {
+  fill: url(#aurora); }
+  .r2.animate {
+    animation: aurora 2 1s 1s ease-in-out forwards; }
+
+.o {
+  fill: url(#aurora); }
+  .o.animate {
+    animation: aurora 1s 1s ease-in-out forwards; }
+
+.r {
+  fill: url(#aurora); }
+  .r.animate {
+    animation: aurora 1s 1s ease-in-out forwards; }
+
+.u {
+  fill: url(#aurora); }
+  .u.animate {
+    animation: aurora 1s 1s ease-in-out forwards; }
+
+.al {
+  fill: green; }
+  .al.animate {
+    animation: aurora 1s 1s ease-in-out forwards; }
+
+.a {
+  fill: green; }
+  .a.animate {
+    animation: aurora 1s 1s ease-in-out forwards; }
+
+@keyframes aurora {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); }
+  33% {
+    opacity: 1;
+    transform: translateY(0px); }
+  66% {
+    transform: translateY(-20px); }
+  100% {
+    transform: translate(0px); } }
 * {
   box-sizing: border-box;
 }

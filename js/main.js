@@ -160,3 +160,7 @@ function removeActiveClass() {
 	document.getElementById('page-five-desktop').setAttribute('class', 'nav-list-desktop__item');
 }
 */
+
+$(function() {
+   $('#logo').addClass('animate');
+});
