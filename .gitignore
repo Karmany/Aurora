@@ -48,5 +48,20 @@ Temporary Items\
 \f1 \cf2 .prepros.cfg}
 
 *.codekit
+<<<<<<< HEAD
 *.cfg
 *.cfg
+=======
+*.codekit
+*.cfg
+
+*.codekit
+
+*.codekit
+
+*.codekit
+
+*.codekit
+
+*.codekit
+>>>>>>> origin/master

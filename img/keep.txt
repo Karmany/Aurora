@@ -1,1 +1,0 @@
-GitHub tillater ikke tomme mapper, slett denne filen da den ikke er tom lenger.
