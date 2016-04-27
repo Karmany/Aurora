@@ -1326,9 +1326,12 @@ footer {
   border-radius: 50%;
 }
 
-.lectures-student .notification-dropdown {
-  display: inline-block;
-  position: relative;
+.lectures-student .profile-btn {
+  text-align: center;
+  width: 100%;
+  background-color: red;
+  border-radius: 5px;
+  padding: 5px 0px;
 }
 
 .lectures-student .notification-btn {
@@ -1337,16 +1340,9 @@ footer {
   background-color: blue;
 }
 
-.lectures-student .notification-content {
-  display: none;
-  position: absolute;
-  background-color: red;
-  width: 100%;
-  margin-top: -20px;
-}
-
-.lectures-student .notification-dropdown:hover .notification-content {
-  display: inline-block;
+.lectures-student .more-notifications {
+  text-decoration: none;
+  color: white;
 }
 
 #loginbody {
@@ -1459,14 +1455,20 @@ textarea {
   margin-bottom: 20px;
 }
 
-.notifications {
-  background-color: grey;
+#main-student {
+  border: 2px solid pink;
 }
 
-.notifications img {
-  width: 100px;
+#main-student .notification-img {
+  min-height: 200px;
 }
 
-#test {
-  width: 500px;
+#main-student .notification-img img {
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
+
+#main-student .profile-content img {
+  width: 100%;
 }
