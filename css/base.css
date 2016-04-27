@@ -1305,6 +1305,50 @@ footer {
   margin: 0 auto;
 }
 
+.lectures-student .steve {
+  width: 100%;
+}
+
+.lectures-student .txt-wrap h4 {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+.lectures-student .txt-wrap p {
+  margin-left: 10px;
+}
+
+.lectures-student ul {
+  list-style: none;
+}
+
+.lectures-student .avatar {
+  border-radius: 50%;
+}
+
+.lectures-student .notification-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.lectures-student .notification-btn {
+  width: 100%;
+  text-align: center;
+  background-color: blue;
+}
+
+.lectures-student .notification-content {
+  display: none;
+  position: absolute;
+  background-color: red;
+  width: 100%;
+  margin-top: -20px;
+}
+
+.lectures-student .notification-dropdown:hover .notification-content {
+  display: inline-block;
+}
+
 #loginbody {
   background: #c1bdba;
   font-family: 'Roboto', sans-serif;
