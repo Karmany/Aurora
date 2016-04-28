@@ -1318,20 +1318,52 @@ footer {
   margin-left: 10px;
 }
 
-.lectures-student ul {
+.lectures-student .space-fix {
+  margin-top: 50px;
+}
+
+.lectures-student .profile-wrapper {
+  background-color: #455A64;
+  margin-top: 50px;
+  padding-bottom: 20px;
+}
+
+.lectures-student .profile-list {
   list-style: none;
+  width: 100%;
+}
+
+.lectures-student .profile-list p {
+  text-align: center;
 }
 
 .lectures-student .avatar {
   border-radius: 50%;
+  width: 60%;
+  left: 20%;
+  position: relative;
+  margin-top: 20px;
 }
 
 .lectures-student .profile-btn {
   text-align: center;
-  width: 100%;
+  width: 80%;
+  left: 10%;
+  position: relative;
   background-color: red;
   border-radius: 5px;
   padding: 5px 0px;
+}
+
+.lectures-student .notification-wrap {
+  width: 80%;
+  left: 10%;
+  position: relative;
+}
+
+.lectures-student .notification-wrap h4 {
+  position: relative;
+  top: 13px;
 }
 
 .lectures-student .notification-btn {
@@ -1343,6 +1375,24 @@ footer {
 .lectures-student .more-notifications {
   text-decoration: none;
   color: white;
+}
+
+.lectures-student .notification-txt {
+  font-size: 0.8em;
+}
+
+.lectures-student .full-txt {
+  display: none;
+}
+
+.lectures-student .read-more {
+  color: #ccc;
+}
+
+.lectures-student .older-notifications {
+  font-size: 0.8em;
+  color: #aaa;
+  margin-bottom: 50px;
 }
 
 #loginbody {
@@ -1457,23 +1507,10 @@ textarea {
 
 #main-student {
   border: 2px solid pink;
-<<<<<<< HEAD
 }
 
 #main-student .notification-content img {
   width: 100%;
-=======
-}
-
-#main-student .notification-img {
-  min-height: 200px;
-}
-
-#main-student .notification-img img {
-  vertical-align: middle;
-  width: 100%;
-  height: 100%;
->>>>>>> 3146813a3bf12d8f83d3a875441ce04dfe90dce8
 }
 
 #main-student .profile-content img {
