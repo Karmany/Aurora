@@ -1492,5 +1492,37 @@ textarea {
 }
 
 #main-teacher {
-  background-color: grey;
+  margin-top: 0.5em;
+}
+
+#main-teacher .notification-content img {
+  border-radius: 2px;
+}
+
+#main-teacher .notification-content h3 {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+#main-teacher .notification-content p {
+  margin-top: 0;
+}
+
+#main-teacher .notification {
+  margin-bottom: 10px;
+}
+
+#main-teacher .notification img {
+  width: 20%;
+  float: left;
+  margin-right: 10px;
+}
+
+#main-teacher .profile-content img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+#main-teacher .profile-content h2 {
+  margin-top: 0;
 }

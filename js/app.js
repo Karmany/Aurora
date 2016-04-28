@@ -8,7 +8,7 @@ var page1 = 'hjem';
 var page2 = 'lectures-student';
 var page3 = 'main-student';
 var page4 = 'subjects';
-var page5 = 'kontakt';
+var page5 = 'main-teacher';
 
 $('#page-1-link a').text(page1);
 $('#page-2-link a').text(page2);
@@ -37,7 +37,7 @@ app.config(['$routeProvider', function($routeProvider){
 	templateUrl: 'partials/subjects.html'
 	})
 	.when('/' + page5,{
-	templateUrl: 'partials/kontakt.html'
+	templateUrl: 'partials/main-teacher.html'
 	})
 	.otherwise({
 	templateUrl: 'partials/default.html'
