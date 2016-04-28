@@ -1459,6 +1459,10 @@ textarea {
   margin-top: 0.5em;
 }
 
+#main-student .notification-content img {
+  border-radius: 2px;
+}
+
 #main-student .notification-content h3 {
   margin-top: 0;
   margin-bottom: 0.25em;
@@ -1473,7 +1477,7 @@ textarea {
 }
 
 #main-student .notification img {
-  max-width: 20%;
+  width: 20%;
   float: left;
   margin-right: 10px;
 }
@@ -1485,4 +1489,8 @@ textarea {
 
 #main-student .profile-content h2 {
   margin-top: 0;
+}
+
+#main-teacher {
+  background-color: grey;
 }
