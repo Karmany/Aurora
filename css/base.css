@@ -1385,7 +1385,7 @@ footer {
   display: none;
 }
 
-.lectures-student .read-more {
+.lectures-student .read-more-fix {
   color: #ccc;
 }
 
@@ -1506,13 +1506,6 @@ textarea {
 }
 
 #main-student {
-<<<<<<< HEAD
-  border: 2px solid pink;
-}
-
-#main-student .notification-content img {
-  width: 100%;
-=======
   margin-top: 0.5em;
 }
 
@@ -1537,7 +1530,6 @@ textarea {
   width: 20%;
   float: left;
   margin-right: 10px;
->>>>>>> 9f54e7422139a2691416073799cf18e7fe8edf3f
 }
 
 #main-student .profile-content img {
@@ -1550,5 +1542,37 @@ textarea {
 }
 
 #main-teacher {
-  background-color: grey;
+  margin-top: 0.5em;
+}
+
+#main-teacher .notification-content img {
+  border-radius: 2px;
+}
+
+#main-teacher .notification-content h3 {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+#main-teacher .notification-content p {
+  margin-top: 0;
+}
+
+#main-teacher .notification {
+  margin-bottom: 10px;
+}
+
+#main-teacher .notification img {
+  width: 20%;
+  float: left;
+  margin-right: 10px;
+}
+
+#main-teacher .profile-content img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+#main-teacher .profile-content h2 {
+  margin-top: 0;
 }
