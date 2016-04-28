@@ -1506,13 +1506,49 @@ textarea {
 }
 
 #main-student {
+<<<<<<< HEAD
   border: 2px solid pink;
 }
 
 #main-student .notification-content img {
   width: 100%;
+=======
+  margin-top: 0.5em;
+}
+
+#main-student .notification-content img {
+  border-radius: 2px;
+}
+
+#main-student .notification-content h3 {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+#main-student .notification-content p {
+  margin-top: 0;
+}
+
+#main-student .notification {
+  margin-bottom: 10px;
+}
+
+#main-student .notification img {
+  width: 20%;
+  float: left;
+  margin-right: 10px;
+>>>>>>> 9f54e7422139a2691416073799cf18e7fe8edf3f
 }
 
 #main-student .profile-content img {
   width: 100%;
+  border-radius: 50%;
+}
+
+#main-student .profile-content h2 {
+  margin-top: 0;
+}
+
+#main-teacher {
+  background-color: grey;
 }
