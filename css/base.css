@@ -1455,25 +1455,26 @@ textarea {
   margin-bottom: 20px;
 }
 
+.container-100 {
+  width: 100%;
+}
+
+#gradient {
+  width: 0;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 50px 200px 150px rgba(255, 255, 255, 0.93);
+  -moz-box-shadow: 0 50px 200px 150px rgba(255, 255, 255, 0.93);
+  box-shadow: 0 50px 200px 150px rgba(255, 255, 255, 0.93);
+}
+
 #main-student {
   border: 2px solid pink;
-<<<<<<< HEAD
 }
 
 #main-student .notification-content img {
   width: 100%;
-=======
-}
-
-#main-student .notification-img {
-  min-height: 200px;
-}
-
-#main-student .notification-img img {
-  vertical-align: middle;
-  width: 100%;
-  height: 100%;
->>>>>>> 3146813a3bf12d8f83d3a875441ce04dfe90dce8
 }
 
 #main-student .profile-content img {

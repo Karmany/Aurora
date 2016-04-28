@@ -7,7 +7,7 @@ var app = angular.module('myApp', [
 var page1 = 'hjem';
 var page2 = 'lectures-student';
 var page3 = 'main-student';
-var page4 = 'om-oss';
+var page4 = 'subjects';
 var page5 = 'kontakt';
 
 $('#page-1-link a').text(page1);
@@ -34,7 +34,7 @@ app.config(['$routeProvider', function($routeProvider){
 	templateUrl: 'partials/main-student.html'
 	})
 	.when('/' + page4,{
-	templateUrl: 'partials/om-oss.html'
+	templateUrl: 'partials/subjects.html'
 	})
 	.when('/' + page5,{
 	templateUrl: 'partials/kontakt.html'
