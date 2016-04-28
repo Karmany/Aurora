@@ -42,10 +42,6 @@ Temporary Items\
 .sass-cache/\
 *.css.map\
 \
-### Prepros ###\
-.prepros.cfg
-
-\f1 \cf2 .prepros.cfg}
 
 *.codekit
 <<<<<<< HEAD
@@ -55,26 +51,17 @@ Temporary Items\
 *.codekit
 *.cfg
 
-*.codekit
-
-*.codekit
-
-*.codekit
-
-*.codekit
-
-*.codekit
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
-
-*.codekit
->>>>>>> origin/master
-
-*.cfg
+*prepros.cfg
 
 *.html
 
 *.css
 
 *.codekit
+<<<<<<< HEAD
+>>>>>>> origin/master
+
+*.cfg
+*.cfg
+=======
+>>>>>>> 65efec13e172ee7397cf0ce149cd935e6cf19219
