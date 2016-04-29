@@ -42,3 +42,13 @@ css/.sass-cache/a726031b29d496ea2261ad9fc513a39db1d4d510/base.sassc
 css/.sass-cache/a726031b29d496ea2261ad9fc513a39db1d4d510/base.sassc
 
 *.css
+
+*.sassc
+
+*.css
+
+*.cfg
+
+prepros.cfg
+
+css/base.css
