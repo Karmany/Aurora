@@ -1682,7 +1682,7 @@ button[type="submit"] {
   float: right;
 }
 
-input, button {
+input, #sButton {
   height: 30px;
   padding: 10px;
   vertical-align: top;
@@ -1694,7 +1694,6 @@ button.accordion {
   background-color: #eee;
   color: #444;
   cursor: pointer;
-  padding: 18px;
   width: 100%;
   border: none;
   text-align: left;
@@ -1708,13 +1707,21 @@ button.accordion.active, button.accordion:hover {
 }
 
 div.panel {
-  padding: 0 18px;
   display: none;
   background-color: white;
 }
 
 div.panel.show {
   display: block !important;
+}
+
+.panel p {
+  margin: 0;
+  color: black;
+}
+
+#accordion {
+  margin-top: 50px;
 }
 
 /* BEGIN Thin */
