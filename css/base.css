@@ -1326,6 +1326,8 @@ footer {
   background-color: #455A64;
   margin-top: 50px;
   padding-bottom: 20px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
 }
 
 .lectures-student .profile-list {
@@ -1347,12 +1349,15 @@ footer {
 
 .lectures-student .profile-btn {
   text-align: center;
-  width: 80%;
-  left: 10%;
+  display: block;
+  width: 70%;
+  left: 15%;
   position: relative;
-  background-color: red;
+  background-color: #6d828c;
   border-radius: 5px;
   padding: 5px 0px;
+  text-decoration: none;
+  color: #fff;
 }
 
 .lectures-student .notification-wrap {
@@ -1386,12 +1391,12 @@ footer {
 }
 
 .lectures-student .read-fix {
-  color: #ccc;
+  color: #bbb;
 }
 
 .lectures-student .older-notifications {
   font-size: 0.8em;
-  color: #aaa;
+  color: #bbb;
   margin-bottom: 50px;
 }
 
