@@ -1,54 +1,17 @@
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Files that might appear in the root of a volume\
-.DocumentRevisions-V100\
-.fseventsd\
-.Spotlight-V100\
-.TemporaryItems\
-.Trashes\
-.VolumeIcon.icns\
-
-# Directories potentially created on remote AFP share\
-.AppleDB\
-.AppleDesktop\
-Network Trash Folder\
-Temporary Items\
-.apdisk
-
-.sass-cache
-
-*.css.map
-
-*.cfg
-
-*prepros.cfg
-
-*.html
+*.
+!*.jade
+!*.sass
+!*.ttf
+!*.woff
+!*.woff2
+!*.jpg
+!*.svg
+!*.mp4
+!*.png
+!*.ico
 
 *.codekit
 
-*.cfg
-
-*.css
-
-css/base.css
-
-*.sassc
-
-css/.sass-cache/a726031b29d496ea2261ad9fc513a39db1d4d510/base.sassc
-
-css/.sass-cache/a726031b29d496ea2261ad9fc513a39db1d4d510/base.sassc
-
-*.css
-
-*.sassc
-
-*.css
+*.html
 
 *.cfg
-
-prepros.cfg
-
-css/base.css
