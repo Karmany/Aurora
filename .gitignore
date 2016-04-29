@@ -9,3 +9,9 @@
 !*.mp4
 !*.png
 !*.ico
+
+*.codekit
+
+*.html
+
+*.cfg
