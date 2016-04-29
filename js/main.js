@@ -169,7 +169,7 @@ $(function() {
 // Profile JS
 
 
-
+/*
 $(document).ready(function(){
 $('.read-more').click(function(){
    readMore();
@@ -182,27 +182,14 @@ function readMore() {
 }
 
 $(document).ready(function(){
-$('.read-less').click(function(){
-$('.full-txt').toggle();
-$('.read-more').toggle();
-});
-})
-
-/*
-   $(document).ready(function(){
    $('.read-less').click(function(){
-   $('.full-txt').toggle();
-   $('.read-more').toggle();
+      $('.full-txt').toggle();
+      $('.read-more').toggle();
    });
-   })
-
-   $(document).ready(function(){
-   $('.read-more').click(function(){
-   $('.full-txt').toggle();
-   $('.read-more').toggle();
-   });
-   })
+});
 */
+
+   
 
 function changePos() {
     var navDesktop = $(".profile-wrapper");

@@ -1,4 +1,4 @@
-#main-student
+#main-student.content
 	
 	.row 
 		// notifications content 
@@ -37,5 +37,10 @@
 			h2 Profile 
 			img(src="../img/lectures/avatar.jpg" alt="Profile image")
 								
-			p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+			
+script.
+	$(function(){
+		$('.content').addClass('animate');
+	});
 			

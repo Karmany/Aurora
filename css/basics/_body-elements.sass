@@ -6,6 +6,9 @@
 html, body
    height: 100%
 
+html
+   font-size: 62.5%
+
 body
    background-color: $primaryColorDark
    color: white
@@ -76,3 +79,20 @@ footer
    margin: 0 auto
    // working properties
    //border: 2px solid red
+
+.content
+   transform: translateY(-10px)
+   opacity: 0
+   background-color: white
+   min-height: inherit
+
+.content
+   animation: fade-in 1s 1s ease forwards
+
+@keyframes fade-in
+   33%
+      opacity: 1
+
+   100%
+      transform: translateY(0px)
+      opacity: 1
