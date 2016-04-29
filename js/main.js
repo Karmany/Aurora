@@ -164,3 +164,81 @@ function removeActiveClass() {
 $(function() {
    $('#logo').addClass('animate');
 });
+
+
+// Profile JS
+
+
+
+$(document).ready(function(){
+$('.read-more').click(function(){
+   readMore();
+});
+});
+
+function readMore() {
+   $('.full-txt').toggle();
+   $('.read-more').toggle();
+}
+
+$(document).ready(function(){
+$('.read-less').click(function(){
+$('.full-txt').toggle();
+$('.read-more').toggle();
+});
+})
+
+/*
+   $(document).ready(function(){
+   $('.read-less').click(function(){
+   $('.full-txt').toggle();
+   $('.read-more').toggle();
+   });
+   })
+
+   $(document).ready(function(){
+   $('.read-more').click(function(){
+   $('.full-txt').toggle();
+   $('.read-more').toggle();
+   });
+   })
+*/
+
+function changePos() {
+    var navDesktop = $(".profile-wrapper");
+    console.log('it lives');
+    if (window.pageYOffset > parseInt($('#header').css('height'))) {
+      $(navDesktop).css("position","fixed");
+      $(navDesktop).css("top","50px");
+      //$(navDesktop).css("width","inherit");
+        console.log('if statement');
+    }
+    else {
+     $(navDesktop).css("position","");
+     $(navDesktop).css("top","");
+     //$(navDesktop).css("width","100%");
+     console.log('else state');
+    }
+}
+
+$(window).scroll(function(){
+   changePos();
+});
+
+
+
+
+
+
+/*
+$(window).scroll(function(e){
+ var $el = $('.profile-wrapper');
+ var isPositionFixed = ($el.css('position') == 'fixed');
+ if ($(this).scrollTop() > 300 && !isPositionFixed){
+    $('.profile-wrapper').css({'position': 'fixed', 'top': '0px'});
+ }
+ if ($(this).scrollTop() < 300 && isPositionFixed){
+    $('.profile-wrapper').css({'position': 'static', 'top': '0px'});
+ }
+});
+*/

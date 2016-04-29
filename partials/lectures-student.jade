@@ -1,24 +1,10 @@
 .lectures-student
-   script
-      $(document).ready(function(){
-      $('.read-more').click(function(){
-      $('.full-txt').toggle();
-      $('.read-more').toggle();
-      });
-      })
-      
-      $(document).ready(function(){
-      $('.read-less').click(function(){
-      $('.full-txt').toggle();
-      $('.read-more').toggle();
-      });
-      })
-      
-      
+   
+   
    
    .row
       .col.col--4-of-5
-         .space-fix.row
+         .row
             .img-wrap.col.col--1-of-4
                img.steve(src='img/lectures/steve.jpg')
             .txt-wrap.col.col--3-of-4
@@ -57,34 +43,70 @@
                   h4 Lecture title
                .row
                   p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
+         .row
+            br
+         .row
+            .img-wrap.col.col--1-of-4
+               img.steve(src='img/lectures/steve.jpg')
+            .txt-wrap.col.col--3-of-4 
+               .row
+                  h4 Lecture title
+                  
+               .row
+                  p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
+         .row
+            br         
+         .row
+            .img-wrap.col.col--1-of-4
+               img.steve(src='img/lectures/steve.jpg')
+            .txt-wrap.col.col--3-of-4 
+               .row
+                  h4 Lecture title
+                  
+               .row
+                  p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
+
+      .col.col--1-of-5
          
-      .col.col--1-of-5.profile-wrapper
-         .row
-            
-            img.avatar(src='img/lectures/avatar.jpg')
-            
-         .row
-            .profile-list
-               p Aslak Ihle
-               p Studnr: 470587   
-         .row
+            .profile-wrapper
+               img.avatar(src='img/lectures/avatar.jpg')
+               
+               .profile-list
+                  p Aslak Ihle
+                  p Studnr: 470587   
+               
                a.profile-btn(href='') My profile
-         .row
-            .notification-wrap   
-               h4 Notifications 
-               p.notification-txt.part-txt 
-                  | Teacher Tom has a uploaded a new lecture in
-                  span.full-txt
-                     |  the subject IMT2002 Digital imagereproduction and color management. 
-                     a.read-less 
+               
+               .notification-wrap   
+                  h4 Notifications 
+                  p.notification-txt.part-txt 
+                     | Teacher Tom has a uploaded a new lecture in
+                     span.full-txt
+                        |  the subject IMT2002 Digital imagereproduction and color management. 
+                        a.read-less 
+                           span.read-fix 
+                              br
+                              | Hide
+                     a.read-more
+                        |... 
                         span.read-fix 
                            br
-                           | Hide
-                  a.read-more
-                     |... 
-                     span.read-fix 
-                        br
-                        | Show more
-                     
-                 
-               a.older-notifications(href='#main-student') View older Notifications
+                           | Show more
+                        
+                    
+                  a.older-notifications(href='#main-student') View older Notifications
+                  
+script.
+   $(document).ready(function(){
+      $('.read-less').click(function(){
+         $('.full-txt').toggle();
+         $('.read-more').toggle();
+      });
+   })
+      
+   $(document).ready(function(){
+      $('.read-more').click(function(){
+         $('.full-txt').toggle();
+         $('.read-more').toggle();
+      });
+   })
