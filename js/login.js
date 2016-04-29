@@ -1,6 +1,5 @@
 function validate() {
     "use strict";
-
     var email = document.forms.logmein.email.value;
     var pass = document.forms.logmein.password.value;
     var studentEmail = "student@aurora.com";
@@ -9,7 +8,6 @@ function validate() {
     var teacherPassword = "teacherpwd";
     var adminEmail = "admin@aurora.com";
     var adminPassword = "adminpwd";
-
     if (email === studentEmail) {
         if (pass === studentPassword) {
             console.log("Student ok!");
