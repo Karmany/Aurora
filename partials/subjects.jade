@@ -4,21 +4,24 @@
          .row
             .col.col--5-of-5
                .container-100
-                  form.searchbox(action='')
-                     input(type='search', placeholder='Search')
-                     button(type='submit', id="sButton", value='search')
+                  form.searchbox(name='searchbox', action='')
+                     input(type='search', name='search', placeholder='Search for subject by name or eg. "computer"', onblur='changeText()')
+                     button(type='submit', id="sButton", value='search', onclick='showResults()')
             
-            .col.col--5-of-5
+            #results.col.col--5-of-5
                #accordion
-                  button.accordion Section 1
+                  button.accordion.expand Computer Result 1
                   .panel
                      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  button.accordion Section 2
+                     i.starborder
+                  button.accordion.expand Computer Result 2
                   .panel
                      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  button.accordion Section 3
+                     i.star
+                  button.accordion.expand Computer Result 3
                   .panel
                      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                     i.starborder
 
       .col.col--1-of-5.col-m--5-of-5.col-s--5-of-5
          .container-100
@@ -47,3 +50,17 @@ script.
          this.nextElementSibling.classList.toggle("show");
       }
    }
+
+script. 
+   function showResults() {
+      document.getElementById('results').style.display = "block";
+   }
+
+script. 
+   function changeText() {
+   var original = document.forms.searchbox.search.value;
+   var newTxt = original.replace(original, "computer");
+   document.forms.searchbox.search.value = newTxt;
+   }
+
+// Star og starborder må bytte klasse hver for seg da de blir trykket på. 
