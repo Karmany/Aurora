@@ -1690,7 +1690,8 @@ input, #sButton {
 }
 
 button.accordion {
-  background-color: #eee;
+  padding: 10px;
+  background-color: #79d894;
   color: #444;
   cursor: pointer;
   width: 100%;
@@ -1702,13 +1703,13 @@ button.accordion {
 }
 
 button.accordion.active, button.accordion:hover {
-  background-color: #ddd;
+  background-color: #98ff9b;
 }
 
 div.panel {
-  padding: 0 18px;
+  padding: 10px 18px;
   display: none;
-  background-color: white;
+  background-color: #65ff69;
 }
 
 div.panel.show {

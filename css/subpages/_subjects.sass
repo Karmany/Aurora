@@ -48,7 +48,8 @@ input, #sButton
 
 //ACCORDION V.2
 button.accordion
-   background-color: #eee
+   padding: 10px
+   background-color: $green1
    color: #444
    cursor: pointer
    width: 100%
@@ -58,12 +59,12 @@ button.accordion
    font-size: 15px
    transition: 0.4s
    &.active, &:hover
-      background-color: #ddd
+      background-color: $green2
 
 div.panel
-   padding: 0 18px
+   padding: 10px 18px
    display: none
-   background-color: white
+   background-color: darken($green2, 10%)
    &.show
       display: block !important
 
