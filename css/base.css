@@ -499,6 +499,7 @@ figure {
 /**
  * Address differences between Firefox and other browsers. */
 hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -626,6 +627,8 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box;
 }
@@ -1152,8 +1155,7 @@ th {
 }
 
 .a2.animate {
-  -webkit-animation: aurora 2 1s 1s ease-in-out forwards;
-          animation: aurora 2 1s 1s ease-in-out forwards;
+  animation: aurora 2 1s 1s ease-in-out forwards;
 }
 
 .r2 {
@@ -1161,8 +1163,7 @@ th {
 }
 
 .r2.animate {
-  -webkit-animation: aurora 2 1s 1s ease-in-out forwards;
-          animation: aurora 2 1s 1s ease-in-out forwards;
+  animation: aurora 2 1s 1s ease-in-out forwards;
 }
 
 .o {
@@ -1170,8 +1171,7 @@ th {
 }
 
 .o.animate {
-  -webkit-animation: aurora 1s 1s ease-in-out forwards;
-          animation: aurora 1s 1s ease-in-out forwards;
+  animation: aurora 1s 1s ease-in-out forwards;
 }
 
 .r {
@@ -1179,8 +1179,7 @@ th {
 }
 
 .r.animate {
-  -webkit-animation: aurora 1s 1s ease-in-out forwards;
-          animation: aurora 1s 1s ease-in-out forwards;
+  animation: aurora 1s 1s ease-in-out forwards;
 }
 
 .u {
@@ -1188,8 +1187,7 @@ th {
 }
 
 .u.animate {
-  -webkit-animation: aurora 1s 1s ease-in-out forwards;
-          animation: aurora 1s 1s ease-in-out forwards;
+  animation: aurora 1s 1s ease-in-out forwards;
 }
 
 .al {
@@ -1197,8 +1195,7 @@ th {
 }
 
 .al.animate {
-  -webkit-animation: aurora 1s 1s ease-in-out forwards;
-          animation: aurora 1s 1s ease-in-out forwards;
+  animation: aurora 1s 1s ease-in-out forwards;
 }
 
 .a {
@@ -1206,49 +1203,23 @@ th {
 }
 
 .a.animate {
-  -webkit-animation: aurora 1s 1s ease-in-out forwards;
-          animation: aurora 1s 1s ease-in-out forwards;
-}
-
-@-webkit-keyframes aurora {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-  33% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  66% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-  100% {
-    -webkit-transform: translate(0px);
-            transform: translate(0px);
-  }
+  animation: aurora 1s 1s ease-in-out forwards;
 }
 
 @keyframes aurora {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    transform: translateY(-20px);
   }
   33% {
     opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
   }
   66% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    transform: translateY(-20px);
   }
   100% {
-    -webkit-transform: translate(0px);
-            transform: translate(0px);
+    transform: translate(0px);
   }
 }
 
@@ -1273,15 +1244,9 @@ header {
   background-color: #455A64;
   width: 100%;
   height: 200px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: column;
+  justify-content: space-between;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
 }
 
@@ -1292,12 +1257,8 @@ header svg#logo {
 header nav {
   background-color: #6d828c;
   height: 50px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 header nav a {
@@ -1307,15 +1268,9 @@ header nav a {
 
 header nav ul {
   list-style-type: none;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   width: calc(100% - 100px);
   max-width: 1060px;
   padding: 0px 50px;
@@ -1355,27 +1310,13 @@ footer {
 }
 
 .content {
-  -webkit-transform: translateY(-10px);
-      -ms-transform: translateY(-10px);
-          transform: translateY(-10px);
+  transform: translateY(-10px);
   opacity: 0;
   min-height: inherit;
 }
 
 .content {
-  -webkit-animation: fade-in 1s 1s ease forwards;
-          animation: fade-in 1s 1s ease forwards;
-}
-
-@-webkit-keyframes fade-in {
-  33% {
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    opacity: 1;
-  }
+  animation: fade-in 1s 1s ease forwards;
 }
 
 @keyframes fade-in {
@@ -1383,8 +1324,7 @@ footer {
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
     opacity: 1;
   }
 }
@@ -1531,9 +1471,7 @@ p.secondary {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   min-width: 100%;
   min-height: 100%;
   width: auto;
@@ -1549,9 +1487,7 @@ p.secondary {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 #loginheader {
@@ -1572,6 +1508,7 @@ p.secondary {
   border: 1px solid #1ab188;
   color: #ffffff;
   border-radius: 0;
+  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
   transition: border-color .25s ease, box-shadow .25s ease;
   -webkit-appearance: none;
 }
@@ -1593,6 +1530,7 @@ textarea {
 .loginlink {
   text-decoration: none;
   color: #1ab188;
+  -webkit-transition: .5s ease;
   transition: .5s ease;
 }
 
@@ -1613,6 +1551,7 @@ textarea {
   width: 100%;
   background: #1ab188;
   color: #ffffff;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-appearance: none;
 }
@@ -1697,6 +1636,29 @@ textarea {
 
 #main-teacher .profile-content h2 {
   margin-top: 0;
+}
+
+#main-admin .settings, #main-admin .students, #main-admin .teachers {
+  height: 100px;
+  width: 100%;
+  border: 1px solid blue;
+}
+
+#main-admin .settings {
+  background-color: blue;
+}
+
+#main-admin .students {
+  background-color: red;
+}
+
+#main-admin .teachers {
+  background-color: white;
+}
+
+#main-admin .notification-content {
+  height: 500px;
+  background-color: grey;
 }
 
 #subjectWrapper {
