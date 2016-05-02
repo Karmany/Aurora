@@ -1,1 +1,1 @@
-$(function(){$("#logo").addClass("animate")});
+function changePos(){var s=$(".profile-wrapper");console.log("it lives"),window.pageYOffset>parseInt($("#header").css("height"))?($(s).css("position","fixed"),$(s).css("top","50px"),console.log("if statement")):($(s).css("position",""),$(s).css("top",""),console.log("else state"))}$(window).scroll(function(){changePos()});
