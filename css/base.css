@@ -1638,11 +1638,34 @@ textarea {
   margin-top: 0;
 }
 
+#main-admin .settings, #main-admin .students, #main-admin .teachers {
+  height: 100px;
+  width: 100%;
+  border: 1px solid blue;
+}
+
+#main-admin .settings {
+  background-color: blue;
+}
+
+#main-admin .students {
+  background-color: red;
+}
+
+#main-admin .teachers {
+  background-color: white;
+}
+
+#main-admin .notification-content {
+  height: 500px;
+  background-color: grey;
+}
+
 #subjectWrapper {
   margin-top: 50px;
 }
 
-.searchbox {
+#subjectWrapper .searchbox {
   background-color: #fffbf8;
   padding: 13px;
   width: auto;
@@ -1654,7 +1677,7 @@ textarea {
   min-width: 100%;
 }
 
-input[type="search"] {
+#subjectWrapper input[type="search"] {
   width: 50%;
   max-width: 50%;
   padding: 10px;
@@ -1668,7 +1691,7 @@ input[type="search"] {
   max-width: 70%;
 }
 
-button[type="submit"] {
+#subjectWrapper button[type="submit"] {
   border-radius: 6px;
   width: 20%;
   background-image: url(../img/iconography/search.svg);
@@ -1681,7 +1704,7 @@ button[type="submit"] {
   float: right;
 }
 
-input, #sButton {
+#subjectWrapper input, #subjectWrapper #sButton {
   height: 30px;
   padding: 10px;
   vertical-align: top;
@@ -1689,7 +1712,11 @@ input, #sButton {
   display: inline;
 }
 
+<<<<<<< HEAD
 button.accordion {
+=======
+#subjectWrapper button.accordion {
+>>>>>>> 545b60fbbd61201e00401e387038d775edf47c62
   padding: 10px;
   background-color: #79d894;
   color: #444;
@@ -1702,27 +1729,88 @@ button.accordion {
   transition: 0.4s;
 }
 
+<<<<<<< HEAD
 button.accordion.active, button.accordion:hover {
   background-color: #98ff9b;
 }
 
 div.panel {
+=======
+#subjectWrapper button.accordion.active, #subjectWrapper button.accordion:hover {
+  background-color: #98ff9b;
+}
+
+#subjectWrapper div.panel {
+>>>>>>> 545b60fbbd61201e00401e387038d775edf47c62
   padding: 10px 18px;
   display: none;
   background-color: #65ff69;
 }
 
-div.panel.show {
+#subjectWrapper div.panel.show {
   display: block !important;
 }
 
-.panel p {
+#subjectWrapper .panel p {
   margin: 0;
   color: black;
+  width: 80%;
+  display: inline-block;
 }
 
-#accordion {
+#subjectWrapper #accordion {
   margin-top: 50px;
+}
+
+#subjectWrapper .expand {
+  background-image: url(../img/iconography/expand.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: transparent;
+}
+
+#subjectWrapper button:focus, #subjectWrapper input:focus {
+  outline: none !important;
+}
+
+#subjectWrapper #results {
+  display: none;
+}
+
+#subjectWrapper .panel {
+  position: relative;
+}
+
+#subjectWrapper .starborder {
+  background-image: url(../img/iconography/starborder.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  float: right;
+  display: inline-block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+#subjectWrapper .star {
+  background-image: url(../img/iconography/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  float: right;
+  display: inline-block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
 }
 
 /* BEGIN Thin */
