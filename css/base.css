@@ -1433,12 +1433,21 @@ p.secondary {
   margin-left: 10px;
 }
 
+.lectures-student .top-space-fix {
+  margin-top: 0;
+}
+
+.lectures-student .lecture-time {
+  color: #79d894;
+}
+
 .lectures-student .profile-wrapper {
   background-color: #455A64;
   padding-bottom: 20px;
   border-radius: 2px;
   width: 200px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
+  position: relative;
 }
 
 .lectures-student .profile-list {
@@ -1467,8 +1476,8 @@ p.secondary {
   width: 80%;
   left: 10%;
   position: relative;
-  background-color: #65ff69;
-  border-radius: 5px;
+  background-color: #79d894;
+  border-radius: 2px;
   padding: 5px 0px;
 }
 

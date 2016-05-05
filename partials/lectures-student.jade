@@ -5,69 +5,63 @@
    .row
       .col.col--4-of-5
          .row
+            h2.lecture-time.top-space-fix Today
+         .row
             .img-wrap.col.col--1-of-4
                img.steve(src='img/lectures/steve.jpg')
             .txt-wrap.col.col--3-of-4
-               .row
-                  h3 IMT1231 Subject title  -  Lecture title
-               .row
-                  p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
+               h3 IMT1231 Subject title  -  Lecture title
+               p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
          .row
-            br
+            h2.lecture-time 1 week old
          .row
             .img-wrap.col.col--1-of-4
                img.steve(src='img/lectures/steve.jpg')
             .txt-wrap.col.col--3-of-4 
-               .row
-                  h3 Lecture title
+               
+               h3 Lecture title
                   
-               .row
-                  p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
-         .row
-            br
-         .row
-            .img-wrap.col.col--1-of-4
-               img.steve(src='img/lectures/steve.jpg')
-            .txt-wrap.col.col--3-of-4 
-               .row
-                  h3 Lecture title
-               .row
-                  p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
-         .row
-            br
+               
+               p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
+
          .row
             .img-wrap.col.col--1-of-4
                img.steve(src='img/lectures/steve.jpg')
             .txt-wrap.col.col--3-of-4 
-               .row
-                  h3 Lecture title
-               .row
-                  p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
+               
+               h3 Lecture title
+               
+               p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
          .row
-            br
+            h2.lecture-time One month old
          .row
             .img-wrap.col.col--1-of-4
                img.steve(src='img/lectures/steve.jpg')
             .txt-wrap.col.col--3-of-4 
-               .row
-                  h3 Lecture title
+               
+               h3 Lecture title
+               
+               p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
+
+         .row
+            .img-wrap.col.col--1-of-4
+               img.steve(src='img/lectures/steve.jpg')
+            .txt-wrap.col.col--3-of-4 
+               
+               h3 Lecture title
                   
-               .row
-                  p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
-         .row
-            br         
+               
+               p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
+        
          .row
             .img-wrap.col.col--1-of-4
                img.steve(src='img/lectures/steve.jpg')
             .txt-wrap.col.col--3-of-4 
-               .row
-                  h4 Lecture title
-                  
-               .row
-                  p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
+               h3 Lecture title
+               p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
 
       .col.col--1-of-5
-         
+         .row.hue
             .profile-wrapper
                img.avatar(src='img/lectures/avatar.jpg')
                
@@ -102,6 +96,13 @@ script.
       
    $(document).ready(function(){
       $('.read-more').click(function(){
+         $('.full-txt').toggle();
+         $('.read-more').toggle();
+      });
+   })
+   
+   $(document).ready(function(){
+      $('.read-less').click(function(){
          $('.full-txt').toggle();
          $('.read-more').toggle();
       });
