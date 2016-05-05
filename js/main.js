@@ -187,31 +187,33 @@ $(document).ready(function(){
 */
 
 
-
+/*
 function changePos() {
-    var navDesktop = $(".profile-wrapper");
-    console.log('it lives');
-    if (window.pageYOffset > parseInt($('#header').css('height'))) {
+   var navDesktop = $(".profile-wrapper");
+   if (window.pageYOffset > parseInt($('#header').css('height'))) {
       $(navDesktop).css("position","fixed");
-      $(navDesktop).css("top","50px");
+      $(navDesktop).css("top","0px");
       //$(navDesktop).css("width","inherit");
-        console.log('if statement');
-    }
-    else if ($(".profile-wrapper").offset().top + $(".profile-wrapper").height() >= $('footer').offset().top - 10)
-        $(navDesktop).css("position", "absolute");
-
-    else {
-     $(navDesktop).css("position","");
-     $(navDesktop).css("top","");
-     //$(navDesktop).css("width","100%");
-     console.log('else state');
-    }
+      console.log('if state');
+   }
+   else {
+      $(navDesktop).css("position","relative");
+      $(navDesktop).css("top","0px");
+      //$(navDesktop).css("width","100%");
+      console.log('else state');
+   }
 
 }
 
 $(window).scroll(function(){
    changePos();
 });
+*/
+//if ($(".profile-wrapper").offset().top + $(".profile-wrapper").height() >= $('#footer').offset().top - 10){
+  //  $(navDesktop).css("position", "absolute");
+    //console.log("else if state")
+//}
+
 
 
 
@@ -230,3 +232,40 @@ $(window).scroll(function(e){
  }
 });
 */
+
+
+
+//Dette er en kode jeg bare sparer på, skal kansje bruke den mer. -Aslak
+/*
+// Position of fixed element from top of the document
+var fixedElementOffset = $('.profile-wrapper').offset().top;
+// Position of footer element from top of the document.
+// You can add extra distance from the bottom if needed,
+// must match with the bottom property in CSS
+var footerOffset = $('#footer').offset().top - 36;
+
+var fixedElementHeight = $('.profile-wrapper').height();
+
+// Check every time the user scrolls
+$(window).scroll(function (event) {
+
+    // Y position of the vertical scrollbar
+    var y = $(this).scrollTop();
+
+    if ( y >= fixedElementOffset && ( y + fixedElementHeight ) < footerOffset ) {
+         $('.profile-wrapper').addClass('fixed');
+         $('.profile-wrapper').removeClass('bottom');
+         console.log("if")
+    }
+    else if ( y >= fixedElementOffset && ( y + fixedElementHeight ) >= footerOffset ) {
+         $('.profile-wrapper').removeClass('fixed');
+         $('.profile-wrapper').addClass('bottom');
+         console.log("else if")
+    }
+    else {
+         $('.profile-wrapper').removeClass('fixed bottom');
+         console.log("else")
+    }
+
+ });
+ */
