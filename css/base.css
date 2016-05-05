@@ -1342,6 +1342,7 @@ footer {
   max-width: 1060px;
   padding: 50px 50px;
   margin: 0 auto;
+  border: 2px solid transparent;
 }
 
 .content {
@@ -1351,7 +1352,7 @@ footer {
 }
 
 .content {
-  animation: fade-in 1s 1s ease forwards;
+  animation: fade-in 0.5s 0.5s ease forwards;
 }
 
 @keyframes fade-in {
@@ -1403,8 +1404,15 @@ p.secondary {
 
 @media (max-width: 700px) {
   #container {
+    width: 100%;
+    padding: 50px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #container {
+    width: 100%;
     padding: 50px 10px;
-    margin: 0 auto;
   }
 }
 
