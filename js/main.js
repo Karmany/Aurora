@@ -197,12 +197,16 @@ function changePos() {
       //$(navDesktop).css("width","inherit");
         console.log('if statement');
     }
+    else if ($(".profile-wrapper").offset().top + $(".profile-wrapper").height() >= $('footer').offset().top - 10)
+        $(navDesktop).css("position", "absolute");
+
     else {
      $(navDesktop).css("position","");
      $(navDesktop).css("top","");
      //$(navDesktop).css("width","100%");
      console.log('else state');
     }
+
 }
 
 $(window).scroll(function(){
