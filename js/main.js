@@ -215,6 +215,76 @@ $(window).scroll(function(){
 //}
 
 
+// fetch subpage from Url and display as title and in header and tab
+
+var pageBaseTitle = "Aurora";
+var pageDivider = "#/";
+var ttl = $("#title");
+
+function getUrl(){
+	var url = window.location.href.split(pageDivider)[1];
+	return (typeof url == 'undefined' ? pageOne : url);
+}
+String.prototype.ucFirst = function(){
+	 return this.charAt(0).toUpperCase() + this.slice(1);
+}
+function urlTitle() {
+	document.title = pageBaseTitle + " - " + getUrl().ucFirst();
+	ttl.textContent = getUrl()//.ucFirst();
+}
+
+urlTitle();
+setActiveMenuItem();
+window.addEventListener("hashchange", function(){
+	urlTitle();
+	setActiveMenuItem();
+});
+
+// See which subpage is currently active in the navigation
+
+function setActiveMenuItem() {
+	switch (url = window.location.href.split(pageDivider)[1]) {
+		case page1:
+			removeActiveClass();
+			//document.getElementById('page-one-mobile').setAttribute('class', 'nav-list-mobile__item nav-list-mobile__item--active');
+			$('nav-desktop-indicator #page1-link').addClass('active');
+			break;
+		case page2:
+			removeActiveClass();
+			//document.getElementById('page-two-mobile').setAttribute('class', 'nav-list-mobile__item nav-list-mobile__item--active');
+			$('nav-desktop-indicator #page-2-link').addClass('active');
+			break;
+		case page3:
+			removeActiveClass();
+			//document.getElementById('page-three-mobile').setAttribute('class', 'nav-list-mobile__item nav-list-mobile__item--active');
+			$('nav-desktop-indicator #page-3-link').addClass('active');
+			break;
+		case page4:
+			removeActiveClass();
+			//document.getElementById('page-four-mobile').setAttribute('class', 'nav-list-mobile__item nav-list-mobile__item--active');
+			$('nav-desktop-indicator #page-4-link').addClass('active');
+			break;
+		case page5:
+			removeActiveClass();
+			//document.getElementById('page-five-mobile').setAttribute('class', 'nav-list-mobile__item nav-list-mobile__item--active');
+			$('nav-desktop-indicator #page-5-link').addClass('active');
+			break;
+      case page6:
+			removeActiveClass();
+			//document.getElementById('page-five-mobile').setAttribute('class', 'nav-list-mobile__item nav-list-mobile__item--active');
+			$('nav-desktop-indicator #page-6-link').addClass('active');
+			break;
+	}
+}
+
+function removeActiveClass() {
+	$('nav-desktop-indicator #page-1-link').removeClass('active');
+	$('nav-desktop-indicator #page-1-link').removeClass('active');
+	$('nav-desktop-indicator #page-1-link').removeClass('active');
+	$('nav-desktop-indicator #page-1-link').removeClass('active');
+	$('nav-desktop-indicator #page-1-link').removeClass('active');
+}
+
 
 
 
