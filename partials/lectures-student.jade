@@ -1,4 +1,4 @@
-.lectures-student
+.content.lectures-student
    
    
    
@@ -9,7 +9,7 @@
                img.steve(src='img/lectures/steve.jpg')
             .txt-wrap.col.col--3-of-4
                .row
-                  h4 IMT1231 Subject title  -  Lecture title
+                  h3 IMT1231 Subject title  -  Lecture title
                .row
                   p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
          .row
@@ -19,7 +19,7 @@
                img.steve(src='img/lectures/steve.jpg')
             .txt-wrap.col.col--3-of-4 
                .row
-                  h4 Lecture title
+                  h3 Lecture title
                   
                .row
                   p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
@@ -30,7 +30,7 @@
                img.steve(src='img/lectures/steve.jpg')
             .txt-wrap.col.col--3-of-4 
                .row
-                  h4 Lecture title
+                  h3 Lecture title
                .row
                   p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
          .row
@@ -40,7 +40,7 @@
                img.steve(src='img/lectures/steve.jpg')
             .txt-wrap.col.col--3-of-4 
                .row
-                  h4 Lecture title
+                  h3 Lecture title
                .row
                   p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
          .row
@@ -50,7 +50,7 @@
                img.steve(src='img/lectures/steve.jpg')
             .txt-wrap.col.col--3-of-4 
                .row
-                  h4 Lecture title
+                  h3 Lecture title
                   
                .row
                   p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
@@ -72,13 +72,13 @@
                img.avatar(src='img/lectures/avatar.jpg')
                
                .profile-list
-                  p Aslak Ihle
-                  p Studnr: 470587   
+                  h3 Aslak Ihle
+                  h3 Studnr: 470587   
                
                a.profile-btn(href='') My profile
                
                .notification-wrap   
-                  h4 Notifications 
+                  h3 Notifications 
                   p.notification-txt.part-txt 
                      | Teacher Tom has a uploaded a new lecture in
                      span.full-txt
@@ -95,14 +95,10 @@
                         
                     
                   a.older-notifications(href='#main-student') View older Notifications
-                  
+
+include ../includes/partialscript.jade
+            
 script.
-   $(document).ready(function(){
-      $('.read-less').click(function(){
-         $('.full-txt').toggle();
-         $('.read-more').toggle();
-      });
-   })
       
    $(document).ready(function(){
       $('.read-more').click(function(){
