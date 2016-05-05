@@ -1366,10 +1366,6 @@ p.secondary {
   line-height: 3.2rem / 1.3;
 }
 
-.lectures-student {
-  padding-top: 50px;
-}
-
 .lectures-student .img-wrap {
   padding-left: 0px;
 }
@@ -1421,7 +1417,7 @@ p.secondary {
   width: 80%;
   left: 10%;
   position: relative;
-  background-color: red;
+  background-color: #6d828c;
   border-radius: 5px;
   padding: 5px 0px;
 }
