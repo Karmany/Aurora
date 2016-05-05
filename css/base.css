@@ -1948,7 +1948,8 @@ textarea {
   border: none;
   cursor: pointer;
   color: black;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
+  display: block;
 }
 
 #subjectWrapper .panelImage {
@@ -1958,6 +1959,14 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+#subjectWrapper .middleBtn {
+  width: 100%;
+}
+
+#subjectWrapper .marginTop {
+  margin-top: 20px;
 }
 
 /* BEGIN Thin */
