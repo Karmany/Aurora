@@ -1801,10 +1801,6 @@ textarea {
   background-color: grey;
 }
 
-#subjectWrapper {
-  margin: 50px;
-}
-
 #subjectWrapper .searchbox {
   background-color: #fffbf8;
   padding: 13px;
@@ -1945,8 +1941,17 @@ textarea {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  float: right;
   color: black;
+  margin: 0 auto 0 auto;
+}
+
+#subjectWrapper .panelImage {
+  width: 100%;
+  max-width: 200px;
+  max-height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 /* BEGIN Thin */
