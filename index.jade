@@ -18,6 +18,7 @@ html(lang="en", ng-app="myApp")
             nav
                ul
                   li#page-1-link
+                     include ./includes/svg-icons/home-icon.jade
                      a
                   li#page-2-link
                      a
@@ -27,8 +28,10 @@ html(lang="en", ng-app="myApp")
                      a
                   li#page-5-link
                      a
+                  li#page-6-link
+                     a
             
-         #container(ng-view) yolo
+         #container(ng-view)
          
       footer
    
@@ -37,3 +40,15 @@ html(lang="en", ng-app="myApp")
    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js")
    script(src="js/app.js")
    script(src="js/main.js")
+
+script.
+   $(function() {
+      $('#logo .a2').attr('class', 'a2 animate');
+      $('#logo .r2').attr('class', 'r2 animate');
+      $('#logo .o').attr('class', 'o animate');
+      $('#logo .r').attr('class', 'r animate');
+      $('#logo .u').attr('class', 'u animate');
+      $('#logo .a').attr('class', 'a animate-a');
+   });
+   
+   

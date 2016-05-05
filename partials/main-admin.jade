@@ -1,0 +1,26 @@
+#main-admin.content
+	
+	.row 
+		// Left section (settings/students/teachers)
+		.col.col--1-of-6
+			.settings
+			.students
+			.teachers
+	
+		// notifications content 
+		.notification-content.col.col--4-of-6 
+		
+		// Approve users 
+		
+		// Profile content 
+		.profile-content.col.col--1-of-6 
+			h2 Profile 
+			img(src="../img/lectures/avatar.jpg" alt="Profile image")
+								
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+			
+script.
+	$(function(){
+		$('.content').addClass('animate');
+	});
+			

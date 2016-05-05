@@ -1,4 +1,5 @@
 
+
 /*
 // nav/ham
 var ham = document.getElementById("hamburger");
@@ -161,10 +162,6 @@ function removeActiveClass() {
 }
 */
 
-$(function() {
-   $('#logo').addClass('animate');
-});
-
 
 // Profile JS
 
@@ -189,7 +186,7 @@ $(document).ready(function(){
 });
 */
 
-   
+
 
 function changePos() {
     var navDesktop = $(".profile-wrapper");
