@@ -95,14 +95,10 @@
                         
                     
                   a.older-notifications(href='#main-student') View older Notifications
-                  
+
+include ../includes/partialscript.jade
+            
 script.
-   $(document).ready(function(){
-      $('.read-less').click(function(){
-         $('.full-txt').toggle();
-         $('.read-more').toggle();
-      });
-   })
       
    $(document).ready(function(){
       $('.read-more').click(function(){
