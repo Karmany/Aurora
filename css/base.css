@@ -1398,7 +1398,86 @@ header nav ul {
 
 header nav ul li {
   list-style: none;
-  display: inline;
+  font-size: 2rem;
+  font-variant: small-caps;
+}
+
+header nav ul li a {
+  float: right;
+}
+
+header nav ul li .desktop-nav-icon {
+  float: left;
+}
+
+header nav ul li .desktop-nav-icon svg {
+  height: 1.6rem;
+  position: relative;
+  top: 0.2rem;
+  margin-right: 5px;
+}
+
+.nav-desktop-indicator {
+  height: 50px;
+  overflow: hidden;
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: -50px;
+}
+
+.nav-desktop-indicator a {
+  color: transparent;
+  text-decoration: none;
+}
+
+.nav-desktop-indicator ul {
+  list-style-type: none;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+  width: calc(100% - 100px);
+  max-width: 1060px;
+  padding: 0px 50px;
+  margin: 0 auto;
+  border: 0;
+}
+
+.nav-desktop-indicator ul li {
+  list-style: none;
+  font-size: 2rem;
+  font-variant: small-caps;
+}
+
+.nav-desktop-indicator ul li a {
+  float: right;
+}
+
+.nav-desktop-indicator ul li .desktop-nav-icon {
+  float: left;
+}
+
+.nav-desktop-indicator ul li .desktop-nav-icon svg {
+  height: 1.6rem;
+  fill: transparent;
+  position: relative;
+  top: 0.2rem;
+  margin-right: 5px;
+}
+
+.nav-desktop-indicator ul li.active {
+  border-bottom: 3px solid white;
 }
 
 .page-wrap {
@@ -1425,7 +1504,7 @@ footer {
   max-width: 1060px;
   padding: 50px 50px;
   margin: 0 auto;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
 }
 
 .content {
