@@ -1514,6 +1514,12 @@ p.secondary {
   }
 }
 
+@media (max-width: 480px) {
+  .sMiddle {
+    width: 100% !important;
+  }
+}
+
 .lectures-student .img-wrap {
   padding-left: 0px;
 }
