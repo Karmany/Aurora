@@ -194,6 +194,19 @@ function changePos() {
       $(navDesktop).css("position","fixed");
       $(navDesktop).css("top","0px");
       //$(navDesktop).css("width","inherit");
+<<<<<<< HEAD
+        console.log('if statement');
+    }
+    else if ($(".profile-wrapper").offset().top + $(".profile-wrapper").height() >= $('footer').offset().top - 10)
+        $(navDesktop).css("position", "absolute");
+
+    else {
+     $(navDesktop).css("position","");
+     $(navDesktop).css("top","");
+     //$(navDesktop).css("width","100%");
+     console.log('else state');
+    }
+=======
       console.log('if state');
    }
    else {
@@ -202,6 +215,7 @@ function changePos() {
       //$(navDesktop).css("width","100%");
       console.log('else state');
    }
+>>>>>>> origin/master
 
 }
 
