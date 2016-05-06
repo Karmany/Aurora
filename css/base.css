@@ -1068,6 +1068,99 @@ th {
     margin-right: 0;
     width: auto;
   }
+<<<<<<< HEAD
+=======
+}
+
+@media (max-width: 700px) and (min-width: 480px) {
+  .col[class*="col--m-"] {
+    display: inline-block;
+    margin-right: -.24em;
+  }
+  .col.col--m-1-of-2, .col.col--m-2-of-4 {
+    width: 50%;
+  }
+  .col.col--m-1-of-3 {
+    width: 33.33333%;
+  }
+  .col.col--m-2-of-3 {
+    width: 66.66667%;
+  }
+  .col.col--m-1-of-4 {
+    width: 25%;
+  }
+  .col.col--m-3-of-4 {
+    width: 75%;
+  }
+}
+
+@media (max-width: 480px) {
+  .col[class*="col--s-"] {
+    display: inline-block;
+    margin-right: -.24em;
+  }
+  .col.col--s-1-of-2, .col.col--s-2-of-4 {
+    width: 50%;
+  }
+  .col.col--s-1-of-3 {
+    width: 33.33333%;
+  }
+  .col.col--s-2-of-3 {
+    width: 66.66667%;
+  }
+  .col.col--s-1-of-4 {
+    width: 25%;
+  }
+  .col.col--s-3-of-4 {
+    width: 75%;
+  }
+}
+
+.col--centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col--d-first {
+  float: left;
+}
+
+.col--d-last {
+  float: right;
+}
+
+.row--no-gutter {
+  margin-left: 0;
+  width: 100%;
+}
+
+.row--no-gutter .col {
+  padding-left: 0;
+}
+
+.row--no-gutter .col--span-all {
+  margin-left: 0;
+  width: 100%;
+}
+
+.col--ab {
+  vertical-align: bottom;
+}
+
+.col--am {
+  vertical-align: middle;
+}
+
+.a2 {
+  opacity: 0;
+  fill: url(#aurora);
+}
+
+.a2.animate {
+  -webkit-animation: aurora 1s 1s ease-in-out forwards;
+          animation: aurora 1s 1s ease-in-out forwards;
+>>>>>>> origin/master
 }
 
 @media (max-width: 700px) and (min-width: 480px) {
@@ -1215,7 +1308,12 @@ th {
 @keyframes aurora {
   0% {
     opacity: 0;
+<<<<<<< HEAD
     transform: translateY(-40px);
+=======
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+>>>>>>> origin/master
   }
   33% {
     opacity: 1;
@@ -1280,8 +1378,17 @@ header {
   width: 100%;
   height: 200px;
   display: flex;
+<<<<<<< HEAD
   flex-flow: column;
   justify-content: space-between;
+=======
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+>>>>>>> origin/master
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
 }
 
@@ -1315,7 +1422,86 @@ header nav ul {
 
 header nav ul li {
   list-style: none;
-  display: inline;
+  font-size: 2rem;
+  font-variant: small-caps;
+}
+
+header nav ul li a {
+  float: right;
+}
+
+header nav ul li .desktop-nav-icon {
+  float: left;
+}
+
+header nav ul li .desktop-nav-icon svg {
+  height: 1.6rem;
+  position: relative;
+  top: 0.2rem;
+  margin-right: 5px;
+}
+
+.nav-desktop-indicator {
+  height: 50px;
+  overflow: hidden;
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: -50px;
+}
+
+.nav-desktop-indicator a {
+  color: transparent;
+  text-decoration: none;
+}
+
+.nav-desktop-indicator ul {
+  list-style-type: none;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+  width: calc(100% - 100px);
+  max-width: 1060px;
+  padding: 0px 50px;
+  margin: 0 auto;
+  border: 0;
+}
+
+.nav-desktop-indicator ul li {
+  list-style: none;
+  font-size: 2rem;
+  font-variant: small-caps;
+}
+
+.nav-desktop-indicator ul li a {
+  float: right;
+}
+
+.nav-desktop-indicator ul li .desktop-nav-icon {
+  float: left;
+}
+
+.nav-desktop-indicator ul li .desktop-nav-icon svg {
+  height: 1.6rem;
+  fill: transparent;
+  position: relative;
+  top: 0.2rem;
+  margin-right: 5px;
+}
+
+.nav-desktop-indicator ul li.active {
+  border-bottom: 3px solid white;
 }
 
 .page-wrap {
@@ -1342,7 +1528,11 @@ footer {
   max-width: 1060px;
   padding: 50px 50px;
   margin: 0 auto;
+<<<<<<< HEAD
   border: 2px solid transparent;
+=======
+  border: 1px solid transparent;
+>>>>>>> origin/master
 }
 
 .content {
@@ -1352,7 +1542,12 @@ footer {
 }
 
 .content {
+<<<<<<< HEAD
   animation: fade-in 0.5s 0.5s ease forwards;
+=======
+  -webkit-animation: fade-in 0.5s 0.5s ease forwards;
+          animation: fade-in 0.5s 0.5s ease forwards;
+>>>>>>> origin/master
 }
 
 @keyframes fade-in {
@@ -1360,7 +1555,23 @@ footer {
     opacity: 1;
   }
   100% {
+<<<<<<< HEAD
     transform: translateY(0px);
+=======
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  33% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+>>>>>>> origin/master
     opacity: 1;
   }
 }
@@ -1404,8 +1615,26 @@ p.secondary {
 
 @media (max-width: 700px) {
   #container {
+<<<<<<< HEAD
     padding: 50px 10px;
     margin: 0 auto;
+=======
+    width: 100%;
+    padding: 50px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #container {
+    width: 100%;
+    padding: 50px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sMiddle {
+    width: 100% !important;
+>>>>>>> origin/master
   }
 }
 
@@ -1426,12 +1655,27 @@ p.secondary {
   margin-left: 10px;
 }
 
+<<<<<<< HEAD
+=======
+.lectures-student .top-space-fix {
+  margin-top: 0;
+}
+
+.lectures-student .lecture-time {
+  color: #79d894;
+}
+
+>>>>>>> origin/master
 .lectures-student .profile-wrapper {
   background-color: #455A64;
   padding-bottom: 20px;
   border-radius: 2px;
   width: 200px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
+<<<<<<< HEAD
+=======
+  position: relative;
+>>>>>>> origin/master
 }
 
 .lectures-student .profile-list {
@@ -1460,8 +1704,13 @@ p.secondary {
   width: 80%;
   left: 10%;
   position: relative;
+<<<<<<< HEAD
   background-color: #65ff69;
   border-radius: 5px;
+=======
+  background-color: #79d894;
+  border-radius: 2px;
+>>>>>>> origin/master
   padding: 5px 0px;
 }
 
@@ -1521,7 +1770,13 @@ p.secondary {
   position: absolute;
   top: 50%;
   left: 50%;
+<<<<<<< HEAD
   transform: translate(-50%, -50%);
+=======
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+>>>>>>> origin/master
 }
 
 #loginheader {
@@ -1542,7 +1797,10 @@ p.secondary {
   border: 1px solid #1ab188;
   color: #ffffff;
   border-radius: 0;
+<<<<<<< HEAD
   -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+=======
+>>>>>>> origin/master
   transition: border-color .25s ease, box-shadow .25s ease;
   -webkit-appearance: none;
 }
@@ -1564,7 +1822,10 @@ textarea {
 .loginlink {
   text-decoration: none;
   color: #1ab188;
+<<<<<<< HEAD
   -webkit-transition: .5s ease;
+=======
+>>>>>>> origin/master
   transition: .5s ease;
 }
 
@@ -1600,6 +1861,13 @@ textarea {
   margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
+=======
+#main-student {
+  margin-top: 0.5em;
+}
+
+>>>>>>> origin/master
 #main-student .notification-content img {
   border-radius: 2px;
 }
@@ -1613,6 +1881,7 @@ textarea {
   margin-top: 0;
 }
 
+<<<<<<< HEAD
 #main-student .notification-content p span {
   color: grey;
 }
@@ -1621,20 +1890,29 @@ textarea {
   margin-bottom: 0;
 }
 
+=======
+>>>>>>> origin/master
 #main-student .notification {
   margin-bottom: 10px;
 }
 
 #main-student .notification img {
+<<<<<<< HEAD
   max-width: 15%;
+=======
+  width: 20%;
+>>>>>>> origin/master
   float: left;
   margin-right: 10px;
 }
 
+<<<<<<< HEAD
 #main-student .notification .author {
   margin-top: -10px;
 }
 
+=======
+>>>>>>> origin/master
 #main-student .profile-content img {
   width: 100%;
   border-radius: 50%;
@@ -1643,6 +1921,7 @@ textarea {
 #main-student .profile-content h2 {
   margin-top: 0;
 }
+<<<<<<< HEAD
 
 @media only screen and (max-width: 700px) {
   #main-student .notification img {
@@ -1652,6 +1931,8 @@ textarea {
     max-width: 50%;
   }
 }
+=======
+>>>>>>> origin/master
 
 #main-teacher {
   margin-top: 0.5em;
@@ -1661,7 +1942,11 @@ textarea {
   border-radius: 2px;
 }
 
+<<<<<<< HEAD
 #main-teacher .notification-content h3, #main-teacher .notification-content h4 {
+=======
+#main-teacher .notification-content h3 {
+>>>>>>> origin/master
   margin-top: 0;
   margin-bottom: 0.25em;
 }
@@ -1670,6 +1955,7 @@ textarea {
   margin-top: 0;
 }
 
+<<<<<<< HEAD
 #main-teacher .notification-content p span {
   color: grey;
 }
@@ -1678,16 +1964,23 @@ textarea {
   margin-bottom: 0;
 }
 
+=======
+>>>>>>> origin/master
 #main-teacher .notification {
   margin-bottom: 10px;
 }
 
 #main-teacher .notification img {
+<<<<<<< HEAD
   max-width: 15%;
+=======
+  width: 20%;
+>>>>>>> origin/master
   float: left;
   margin-right: 10px;
 }
 
+<<<<<<< HEAD
 #main-teacher .notification .author {
   margin-top: -10px;
 }
@@ -1758,6 +2051,38 @@ textarea {
 
 #subjectWrapper {
   margin: 50px;
+=======
+#main-teacher .profile-content img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+#main-teacher .profile-content h2 {
+  margin-top: 0;
+}
+
+#main-admin .settings, #main-admin .students, #main-admin .teachers {
+  height: 100px;
+  width: 100%;
+  border: 1px solid blue;
+}
+
+#main-admin .settings {
+  background-color: blue;
+}
+
+#main-admin .students {
+  background-color: red;
+}
+
+#main-admin .teachers {
+  background-color: white;
+}
+
+#main-admin .notification-content {
+  height: 500px;
+  background-color: grey;
+>>>>>>> origin/master
 }
 
 #subjectWrapper .searchbox {
@@ -1900,8 +2225,31 @@ textarea {
   background-color: transparent;
   border: none;
   cursor: pointer;
+<<<<<<< HEAD
   float: right;
   color: black;
+=======
+  color: black;
+  margin: 0 auto;
+  display: block;
+}
+
+#subjectWrapper .panelImage {
+  width: 100%;
+  max-width: 200px;
+  max-height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#subjectWrapper .middleBtn {
+  width: 100%;
+}
+
+#subjectWrapper .marginTop {
+  margin-top: 20px;
+>>>>>>> origin/master
 }
 
 /* BEGIN Thin */

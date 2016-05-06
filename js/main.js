@@ -187,14 +187,14 @@ $(document).ready(function(){
 */
 
 
-
+/*
 function changePos() {
-    var navDesktop = $(".profile-wrapper");
-    console.log('it lives');
-    if (window.pageYOffset > parseInt($('#header').css('height'))) {
+   var navDesktop = $(".profile-wrapper");
+   if (window.pageYOffset > parseInt($('#header').css('height'))) {
       $(navDesktop).css("position","fixed");
-      $(navDesktop).css("top","50px");
+      $(navDesktop).css("top","0px");
       //$(navDesktop).css("width","inherit");
+<<<<<<< HEAD
         console.log('if statement');
     }
     else if ($(".profile-wrapper").offset().top + $(".profile-wrapper").height() >= $('footer').offset().top - 10)
@@ -206,12 +206,98 @@ function changePos() {
      //$(navDesktop).css("width","100%");
      console.log('else state');
     }
+=======
+      console.log('if state');
+   }
+   else {
+      $(navDesktop).css("position","relative");
+      $(navDesktop).css("top","0px");
+      //$(navDesktop).css("width","100%");
+      console.log('else state');
+   }
+>>>>>>> origin/master
 
 }
 
 $(window).scroll(function(){
    changePos();
 });
+*/
+//if ($(".profile-wrapper").offset().top + $(".profile-wrapper").height() >= $('#footer').offset().top - 10){
+  //  $(navDesktop).css("position", "absolute");
+    //console.log("else if state")
+//}
+
+
+// fetch subpage from Url and display as title and in header and tab
+
+var pageBaseTitle = "Aurora";
+var pageDivider = "#/";
+var ttl = $("#title");
+
+function getUrl(){
+	var url = window.location.href.split(pageDivider)[1];
+	return (typeof url == 'undefined' ? pageOne : url);
+}
+String.prototype.ucFirst = function(){
+	 return this.charAt(0).toUpperCase() + this.slice(1);
+}
+function urlTitle() {
+	document.title = pageBaseTitle + " - " + getUrl().ucFirst();
+	ttl.textContent = getUrl()//.ucFirst();
+}
+
+urlTitle();
+setActiveMenuItem();
+window.addEventListener("hashchange", function(){
+	urlTitle();
+	setActiveMenuItem();
+});
+
+// See which subpage is currently active in the navigation
+
+function setActiveMenuItem() {
+	switch (url = window.location.href.split(pageDivider)[1]) {
+		case page1:
+			removeActiveClass();
+			//document.getElementById('page-one-mobile').setAttribute('class', 'nav-list-mobile__item nav-list-mobile__item--active');
+			$('nav-desktop-indicator #page1-link').addClass('active');
+			break;
+		case page2:
+			removeActiveClass();
+			//document.getElementById('page-two-mobile').setAttribute('class', 'nav-list-mobile__item nav-list-mobile__item--active');
+			$('nav-desktop-indicator #page-2-link').addClass('active');
+			break;
+		case page3:
+			removeActiveClass();
+			//document.getElementById('page-three-mobile').setAttribute('class', 'nav-list-mobile__item nav-list-mobile__item--active');
+			$('nav-desktop-indicator #page-3-link').addClass('active');
+			break;
+		case page4:
+			removeActiveClass();
+			//document.getElementById('page-four-mobile').setAttribute('class', 'nav-list-mobile__item nav-list-mobile__item--active');
+			$('nav-desktop-indicator #page-4-link').addClass('active');
+			break;
+		case page5:
+			removeActiveClass();
+			//document.getElementById('page-five-mobile').setAttribute('class', 'nav-list-mobile__item nav-list-mobile__item--active');
+			$('nav-desktop-indicator #page-5-link').addClass('active');
+			break;
+      case page6:
+			removeActiveClass();
+			//document.getElementById('page-five-mobile').setAttribute('class', 'nav-list-mobile__item nav-list-mobile__item--active');
+			$('nav-desktop-indicator #page-6-link').addClass('active');
+			break;
+	}
+}
+
+function removeActiveClass() {
+	$('nav-desktop-indicator #page-1-link').removeClass('active');
+	$('nav-desktop-indicator #page-1-link').removeClass('active');
+	$('nav-desktop-indicator #page-1-link').removeClass('active');
+	$('nav-desktop-indicator #page-1-link').removeClass('active');
+	$('nav-desktop-indicator #page-1-link').removeClass('active');
+}
 
 
 
@@ -230,3 +316,40 @@ $(window).scroll(function(e){
  }
 });
 */
+
+
+
+//Dette er en kode jeg bare sparer på, skal kansje bruke den mer. -Aslak
+/*
+// Position of fixed element from top of the document
+var fixedElementOffset = $('.profile-wrapper').offset().top;
+// Position of footer element from top of the document.
+// You can add extra distance from the bottom if needed,
+// must match with the bottom property in CSS
+var footerOffset = $('#footer').offset().top - 36;
+
+var fixedElementHeight = $('.profile-wrapper').height();
+
+// Check every time the user scrolls
+$(window).scroll(function (event) {
+
+    // Y position of the vertical scrollbar
+    var y = $(this).scrollTop();
+
+    if ( y >= fixedElementOffset && ( y + fixedElementHeight ) < footerOffset ) {
+         $('.profile-wrapper').addClass('fixed');
+         $('.profile-wrapper').removeClass('bottom');
+         console.log("if")
+    }
+    else if ( y >= fixedElementOffset && ( y + fixedElementHeight ) >= footerOffset ) {
+         $('.profile-wrapper').removeClass('fixed');
+         $('.profile-wrapper').addClass('bottom');
+         console.log("else if")
+    }
+    else {
+         $('.profile-wrapper').removeClass('fixed bottom');
+         console.log("else")
+    }
+
+ });
+ */
