@@ -1,7 +1,4 @@
 #main-student
-	// border: 2px solid black
-	margin-top: 0.5em
-
 	.notification-content
 		img
 			border-radius: 2px
@@ -13,14 +10,23 @@
 		p
 			margin-top: 0
 
+			span
+				color: grey
+
+		.first
+			margin-bottom: 0
+
 	.notification
 		margin-bottom: 10px
 		// max-width: 85%
 
 		img
-			width: 20%
+			max-width: 15%
 			float: left
 			margin-right: 10px
+
+		.author
+			margin-top: -10px
 
 	.profile-content
 
@@ -31,8 +37,18 @@
 		h2
 			margin-top: 0
 
-// @media only screen and (max-width:1150px)
-// 	.notification
-//
-// 		img
-// 			max-width: 55%
+@media only screen and (max-width:700px)
+	#main-student
+
+		.notification-content .first
+			// margin-top: -40px
+
+		.notification
+
+			img
+				display: none
+
+		.profile-content
+
+			img
+				max-width: 50%

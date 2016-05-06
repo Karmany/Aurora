@@ -2,18 +2,81 @@
 	
 	.row 
 		// Left section (settings/students/teachers)
-		.col.col--1-of-6
+		.left.col.col--1-of-8
 			.settings
+				img(src="../img/notification-img.jpg" alt="Notification image")
+				p Settings 
+				// p Advanced 
 			.students
+				img(src="../img/notification-img.jpg" alt="Notification image")
+				p Students
+				// p Show list  
 			.teachers
-	
+				img(src="../img/notification-img.jpg" alt="Notification image")
+				p teachers 
+				// p Show list  
+
 		// notifications content 
-		.notification-content.col.col--4-of-6 
+		.notification-content.col.col--4-of-8 
+			// h2 Reported comments 
+			
+			// Notification 1
+			.row
+			
+				.notification.first.col.col--2-of-2
+					h3 Reported comment 1 
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+						| sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+					p.author Bad Boy 1 
+					
+			// Notification 2
+			.row
+			
+				.notification.col.col--2-of-2
+					h3 Reported comment 2
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+						| sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+					p.author Bad Boy 2
 		
-		// Approve users 
+			// Notification 2
+			.row
+			
+				.notification.col.col--2-of-2
+					h3 Reported comment 3
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+						| sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+					p.author Bad Boy 3
+		
+		// Approve teachers 
+		.approve-teachers.col.col--2-of-8
+			h2 Pending requests
+			// What action to use? 
+			form#approveTeachersForm(name='approveTeachersForm', action='#', method='get')
+				ul 
+					li
+						label
+							input(type="checkbox")
+							a(href="#") Ali Sharif
+					li
+						label
+							input(type="checkbox")
+							a(href="#") Randi Rikberg
+					li
+						label
+							input(type="checkbox")
+							a(href="#") Tina Tvist 
+					li
+						label
+							input(type="checkbox")
+							a(href="#") Ole Olsen		
+					li
+						label
+							input(type="checkbox")
+							a(href="#") Nina Nilsen
+				input(type="submit", value="Approve")
 		
 		// Profile content 
-		.profile-content.col.col--1-of-6 
+		.profile-content.col.col--1-of-8
 			h2 Profile 
 			img(src="../img/lectures/avatar.jpg" alt="Profile image")
 								
