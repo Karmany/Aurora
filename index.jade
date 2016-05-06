@@ -18,7 +18,7 @@ html(lang="en", ng-app="myApp")
             nav
                ul
                   li#page-1-link
-                     .desktop-nav-icon
+                     .desktop-nav-icon 
                         include ./includes/svg-icons/home-icon.jade
                      a
                   li#page-2-link
@@ -41,32 +41,7 @@ html(lang="en", ng-app="myApp")
                      .desktop-nav-icon
                         include ./includes/svg-icons/profile-icon.jade
                      a
-         .nav-desktop-indicator
-            ul
-               li#page-1-link.active
-                  .desktop-nav-icon
-                     include ./includes/svg-icons/home-icon.jade
-                  a
-               li#page-2-link
-                  .desktop-nav-icon
-                     include ./includes/svg-icons/lectures-icon.jade
-                  a
-               li#page-3-link
-                  .desktop-nav-icon
-                     include ./includes/svg-icons/profile-icon.jade
-                  a
-               li#page-4-link
-                  .desktop-nav-icon
-                     include ./includes/svg-icons/subjects-icon.jade
-                  a
-               li#page-5-link
-                  .desktop-nav-icon
-                     include ./includes/svg-icons/profile-icon.jade
-                  a
-               li#page-6-link
-                  .desktop-nav-icon
-                     include ./includes/svg-icons/profile-icon.jade
-                  a
+         include ./includes/nav-indicator.jade
             
          #container(ng-view)
          #title
