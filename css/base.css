@@ -1485,6 +1485,9 @@ p.secondary {
     width: 100%;
     padding: 50px 20px;
   }
+  .profile-wrapper {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1523,72 +1526,14 @@ p.secondary {
 
 .lectures-student .lecture-time {
   color: #79d894;
-}
-
-.lectures-student .profile-wrapper {
-  background-color: #455A64;
-  padding-bottom: 20px;
-  border-radius: 2px;
-  width: 200px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
-  position: relative;
-  margin-top: 7px;
-}
-
-.lectures-student .profile-list {
-  width: 80%;
-  left: 10%;
-  position: relative;
-}
-
-.lectures-student .profile-list h3 {
   text-align: center;
+  margin-top: -20px;
 }
 
-.lectures-student .avatar {
-  border-radius: 50%;
-  max-width: 60%;
-  left: 20%;
-  position: relative;
-  margin-top: 40px;
-}
-
-.lectures-student .profile-btn {
-  text-align: center;
-  color: #455A64;
-  display: block;
-  text-decoration: none;
-  width: 80%;
-  left: 10%;
-  position: relative;
-  background-color: #79d894;
-  border-radius: 2px;
-  padding: 5px 0px;
-}
-
-.lectures-student .more-notifications {
-  text-decoration: none;
-  color: white;
-}
-
-.lectures-student .notification-wrap {
-  width: 80%;
-  left: 10%;
-  position: relative;
-}
-
-.lectures-student .full-txt {
-  display: none;
-}
-
-.lectures-student .read-fix {
-  color: #79d894;
-}
-
-.lectures-student .older-notifications {
-  color: #fff;
-  text-align: center;
-  display: block;
+.lectures-student .lecture-time h2 {
+  padding: 0 20px;
+  border-bottom: 2px solid #79d894;
+  display: inline-block;
 }
 
 #loginbody {
@@ -2020,7 +1965,7 @@ textarea {
   margin-top: 20px;
 }
 
-.profile.wrapper {
+.profile .profile-wrapper {
   background-color: #455A64;
   padding-bottom: 20px;
   border-radius: 2px;
@@ -2030,17 +1975,17 @@ textarea {
   margin-top: 7px;
 }
 
-.profile.wrapper .profile-list {
+.profile .profile-list {
   width: 80%;
   left: 10%;
   position: relative;
 }
 
-.profile.wrapper .profile-list h3 {
+.profile .profile-list h3 {
   text-align: center;
 }
 
-.profile.wrapper .avatar {
+.profile .avatar {
   border-radius: 50%;
   max-width: 60%;
   left: 20%;
@@ -2048,7 +1993,7 @@ textarea {
   margin-top: 40px;
 }
 
-.profile.wrapper .profile-btn {
+.profile .profile-btn {
   text-align: center;
   color: #455A64;
   display: block;
@@ -2061,26 +2006,26 @@ textarea {
   padding: 5px 0px;
 }
 
-.profile.wrapper .more-notifications {
+.profile .more-notifications {
   text-decoration: none;
   color: white;
 }
 
-.profile.wrapper .notification-wrap {
+.profile .notification-wrap {
   width: 80%;
   left: 10%;
   position: relative;
 }
 
-.profile.wrapper .full-txt {
+.profile .full-txt {
   display: none;
 }
 
-.profile.wrapper .read-fix {
+.profile .read-fix {
   color: #79d894;
 }
 
-.profile.wrapper .older-notifications {
+.profile .older-notifications {
   color: #fff;
   text-align: center;
   display: block;
