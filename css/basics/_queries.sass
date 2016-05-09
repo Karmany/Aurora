@@ -12,9 +12,32 @@
       width: 100%
       padding: 50px 10px
 
-   .footer
-      height: 800px
+   footer, .page-wrap:after
+      height: 410px
 
 @media (max-width: 480px)
+
+   .page-wrap
+      min-height: 100%
+      /* equal to footer height */
+      margin-bottom: -590px
+
+      &:after
+         content: ""
+         display: block
+
+   footer, .page-wrap:after
+      height: 590px
+
+   footer
+      .links-mobile
+         display: block
+      .container
+         padding-left: 50px
+         padding-right: 50px
+
+   .links
+      display: none
+
    .sMiddle
       width: 100% !important
