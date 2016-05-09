@@ -1397,7 +1397,6 @@ header nav ul li .desktop-nav-icon svg {
 }
 
 .page-wrap {
-  min-height: 100%;
   /* equal to footer height */
   margin-bottom: -410px;
 }
@@ -1505,8 +1504,12 @@ footer ul li:last-child {
   border-bottom: none;
 }
 
-footer .info, footer .social {
+footer .links {
   padding-left: 40px;
+}
+
+footer .links-mobile {
+  display: none;
 }
 
 .copyright {
@@ -1598,12 +1601,34 @@ p.secondary {
     width: 100%;
     padding: 50px 10px;
   }
-  .footer {
-    height: 800px;
+  footer, .page-wrap:after {
+    height: 410px;
   }
 }
 
 @media (max-width: 480px) {
+  .page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -590px;
+  }
+  .page-wrap:after {
+    content: "";
+    display: block;
+  }
+  footer, .page-wrap:after {
+    height: 590px;
+  }
+  footer .links-mobile {
+    display: block;
+  }
+  footer .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .links {
+    display: none;
+  }
   .sMiddle {
     width: 100% !important;
   }
@@ -2104,11 +2129,7 @@ textarea {
   margin-top: 20px;
 }
 
-<<<<<<< HEAD
-.profile .profile.wrapper {
-=======
 .profile .profile-wrapper {
->>>>>>> origin/master
   background-color: #455A64;
   padding-bottom: 20px;
   border-radius: 2px;
