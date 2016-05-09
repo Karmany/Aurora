@@ -126,18 +126,19 @@ header
 .page-wrap
    min-height: 100%
    /* equal to footer height */
-   margin-bottom: -450px
+   margin-bottom: -410px
 
    &:after
       content: ""
       display: block
 
 footer, .page-wrap:after
-   height: 450px
+   height: 410px
 
 footer
    background-color:  $green1
    color: $primaryColor
+   display: flex
 
    .container
       padding-top: 20px
@@ -197,6 +198,32 @@ footer
       &:active
          background-color: $primaryColorDark
          outline: none
+
+   .footer-logo
+      display: flex
+      justify-content: center
+
+   ul
+      list-style: none
+      padding-left: 0px
+
+      li
+         border-bottom: 2px solid $primaryColor
+
+      li:last-child
+         border-bottom: none
+
+   .info, .social
+      padding-left: 40px
+
+.copyright
+   background-color: $green1 - 35
+   text-align: center
+   color: $primaryColor
+   padding-top: 1rem
+   padding-bottom: 1rem
+   font-weight: 300
+
 
 // !CONTAINER || C O N T A I N E R
 
