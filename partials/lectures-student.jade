@@ -1,7 +1,8 @@
 .content.lectures-student
    .row
-      .col.col--4-of-5
-            h2.lecture-time.top-space-fix Today
+      .col.col--4-of-5.col--m-4-of-4
+            .lecture-time
+               h2 Today
             
             .img-wrap.col.col--1-of-4
                img.steve(src='img/lectures/steve.jpg')
@@ -9,7 +10,8 @@
                h3 IMT1231 Subject title  -  Lecture title
                p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
 
-            h2.lecture-time 1 week old
+            .lecture-time 
+               h2 1 week old
             
             .img-wrap.col.col--1-of-4
                img.steve(src='img/lectures/steve.jpg')
@@ -23,14 +25,8 @@
                h3 Lecture title
                p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
 
-
-            .img-wrap.col.col--1-of-4
-               img.steve(src='img/lectures/steve.jpg')
-            .txt-wrap.col.col--3-of-4
-               h3 Lecture title
-               p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
-
-            h2.lecture-time One month old
+            .lecture-time 
+               h2 One month old
             
             .img-wrap.col.col--1-of-4
                img.steve(src='img/lectures/steve.jpg')
@@ -51,6 +47,7 @@
                p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description   
       .col.col--1-of-5
          include ../includes/profile.jade
+         
 include ../includes/partialscript.jade
             
 script.
