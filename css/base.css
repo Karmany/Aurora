@@ -499,6 +499,7 @@ figure {
 /**
  * Address differences between Firefox and other browsers. */
 hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -626,6 +627,8 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box;
 }
@@ -1153,8 +1156,7 @@ th {
 }
 
 .a2.animate {
-  -webkit-animation: aurora 1s 1s ease-in-out forwards;
-          animation: aurora 1s 1s ease-in-out forwards;
+  animation: aurora 1s 1s ease-in-out forwards;
 }
 
 .r2 {
@@ -1163,8 +1165,7 @@ th {
 }
 
 .r2.animate {
-  -webkit-animation: aurora 1s 1.1s ease-in-out forwards;
-          animation: aurora 1s 1.1s ease-in-out forwards;
+  animation: aurora 1s 1.1s ease-in-out forwards;
 }
 
 .o {
@@ -1173,8 +1174,7 @@ th {
 }
 
 .o.animate {
-  -webkit-animation: aurora 1s 1.2s ease-in-out forwards;
-          animation: aurora 1s 1.2s ease-in-out forwards;
+  animation: aurora 1s 1.2s ease-in-out forwards;
 }
 
 .r {
@@ -1183,8 +1183,7 @@ th {
 }
 
 .r.animate {
-  -webkit-animation: aurora 1s 1.3s ease-in-out forwards;
-          animation: aurora 1s 1.3s ease-in-out forwards;
+  animation: aurora 1s 1.3s ease-in-out forwards;
 }
 
 .u {
@@ -1193,8 +1192,7 @@ th {
 }
 
 .u.animate {
-  -webkit-animation: aurora 1s 1.4s ease-in-out forwards;
-          animation: aurora 1s 1.4s ease-in-out forwards;
+  animation: aurora 1s 1.4s ease-in-out forwards;
 }
 
 .al {
@@ -1207,67 +1205,24 @@ th {
 
 .a {
   opacity: 0;
-  -webkit-transform: scale(1.3);
-      -ms-transform: scale(1.3);
-          transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 .a.animate-a {
-  -webkit-animation: aurora-a 0.5s 2s ease-in-out forwards;
-          animation: aurora-a 0.5s 2s ease-in-out forwards;
-}
-
-@-webkit-keyframes aurora {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-40px);
-            transform: translateY(-40px);
-  }
-  33% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  66% {
-    -webkit-transform: translateY(-40px);
-            transform: translateY(-40px);
-  }
-  75% {
-    opacity: 0;
-  }
-  76% {
-    fill: url(#aurora);
-    opacity: 0;
-  }
-  77% {
-    fill: #79d894;
-    opacity: 0;
-  }
-  78% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    fill: #79d894;
-    -webkit-transform: translate(0px);
-            transform: translate(0px);
-  }
+  animation: aurora-a 0.5s 2s ease-in-out forwards;
 }
 
 @keyframes aurora {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-40px);
-            transform: translateY(-40px);
+    transform: translateY(-40px);
   }
   33% {
     opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
   }
   66% {
-    -webkit-transform: translateY(-40px);
-            transform: translateY(-40px);
+    transform: translateY(-40px);
   }
   75% {
     opacity: 0;
@@ -1286,41 +1241,19 @@ th {
   100% {
     opacity: 1;
     fill: #79d894;
-    -webkit-transform: translate(0px);
-            transform: translate(0px);
-  }
-}
-
-@-webkit-keyframes aurora-a {
-  0% {
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
-    opacity: 1;
+    transform: translate(0px);
   }
 }
 
 @keyframes aurora-a {
   0% {
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
+    transform: scale(1.3);
+    transform-origin: center center;
     opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
+    transform: scale(1);
+    transform-origin: center center;
     opacity: 1;
   }
 }
@@ -1346,15 +1279,9 @@ header {
   background-color: #455A64;
   width: 100%;
   height: 200px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: column;
+  justify-content: space-between;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
 }
 
@@ -1363,14 +1290,11 @@ header svg#logo {
 }
 
 header nav {
-  background-color: #6d828c;
   height: 50px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  position: relative;
+  z-index: 2;
   display: flex;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 header nav a {
@@ -1380,15 +1304,9 @@ header nav a {
 
 header nav ul {
   list-style-type: none;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   width: calc(100% - 100px);
   max-width: 1060px;
   padding: 0px 50px;
@@ -1398,7 +1316,84 @@ header nav ul {
 
 header nav ul li {
   list-style: none;
-  display: inline;
+  font-size: 2rem;
+  font-variant: small-caps;
+}
+
+header nav ul li a {
+  float: right;
+}
+
+header nav ul li .desktop-nav-icon {
+  float: left;
+}
+
+header nav ul li .desktop-nav-icon svg {
+  height: 1.6rem;
+  position: relative;
+  top: 0.2rem;
+  margin-right: 5px;
+}
+
+.nav-desktop-indicator {
+  height: 50px;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  position: relative;
+  margin-top: -50px;
+}
+
+.nav-desktop-indicator a {
+  color: transparent;
+  text-decoration: none;
+}
+
+.nav-desktop-indicator ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: flex-end;
+  width: calc(100% - 100px);
+  max-width: 1060px;
+  padding: 0px 50px;
+  margin: 0 auto;
+  border: 0;
+}
+
+.nav-desktop-indicator ul li {
+  list-style: none;
+  font-size: 2rem;
+  font-variant: small-caps;
+}
+
+.nav-desktop-indicator ul li a {
+  float: right;
+}
+
+.nav-desktop-indicator ul li .desktop-nav-icon {
+  float: left;
+}
+
+.nav-desktop-indicator ul li .desktop-nav-icon svg {
+  height: 1.6rem;
+  fill: transparent;
+  position: relative;
+  top: 0.2rem;
+  margin-right: 5px;
+}
+
+.nav-desktop-indicator ul li {
+  border-bottom: 3px solid rgba(255, 255, 255, 0);
+  transition: clip-path 0.3s ease;
+  clip-path: inset(0 100% 0 0);
+}
+
+.nav-desktop-indicator ul li.active {
+  border-bottom: 3px solid white;
+  border-width: 0px 0px 3px 20px;
+  clip-path: inset(0 0 0 0);
 }
 
 .page-wrap {
@@ -1429,27 +1424,13 @@ footer {
 }
 
 .content {
-  -webkit-transform: translateY(-10px);
-      -ms-transform: translateY(-10px);
-          transform: translateY(-10px);
+  transform: translateY(-10px);
   opacity: 0;
   min-height: inherit;
 }
 
 .content {
-  -webkit-animation: fade-in 0.5s 0.5s ease forwards;
-          animation: fade-in 0.5s 0.5s ease forwards;
-}
-
-@-webkit-keyframes fade-in {
-  33% {
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    opacity: 1;
-  }
+  animation: fade-in 0.5s 0.5s ease forwards;
 }
 
 @keyframes fade-in {
@@ -1457,8 +1438,7 @@ footer {
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
     opacity: 1;
   }
 }
@@ -1625,9 +1605,7 @@ p.secondary {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   min-width: 100%;
   min-height: 100%;
   width: auto;
@@ -1643,9 +1621,7 @@ p.secondary {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 #loginheader {
@@ -1666,6 +1642,7 @@ p.secondary {
   border: 1px solid #1ab188;
   color: #ffffff;
   border-radius: 0;
+  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
   transition: border-color .25s ease, box-shadow .25s ease;
   -webkit-appearance: none;
 }
@@ -1687,6 +1664,7 @@ textarea {
 .loginlink {
   text-decoration: none;
   color: #1ab188;
+  -webkit-transition: .5s ease;
   transition: .5s ease;
 }
 
@@ -1707,6 +1685,7 @@ textarea {
   width: 100%;
   background: #1ab188;
   color: #ffffff;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-appearance: none;
 }
@@ -1719,10 +1698,6 @@ textarea {
   margin-top: -20px;
   text-align: right;
   margin-bottom: 20px;
-}
-
-#main-student {
-  margin-top: 0.5em;
 }
 
 #main-student .notification-content img {
@@ -1738,14 +1713,26 @@ textarea {
   margin-top: 0;
 }
 
+#main-student .notification-content p span {
+  color: grey;
+}
+
+#main-student .notification-content .first {
+  margin-bottom: 0;
+}
+
 #main-student .notification {
   margin-bottom: 10px;
 }
 
 #main-student .notification img {
-  width: 20%;
+  max-width: 15%;
   float: left;
   margin-right: 10px;
+}
+
+#main-student .notification .author {
+  margin-top: -10px;
 }
 
 #main-student .profile-content img {
@@ -1757,6 +1744,15 @@ textarea {
   margin-top: 0;
 }
 
+@media only screen and (max-width: 700px) {
+  #main-student .notification img {
+    display: none;
+  }
+  #main-student .profile-content img {
+    max-width: 50%;
+  }
+}
+
 #main-teacher {
   margin-top: 0.5em;
 }
@@ -1765,7 +1761,7 @@ textarea {
   border-radius: 2px;
 }
 
-#main-teacher .notification-content h3 {
+#main-teacher .notification-content h3, #main-teacher .notification-content h4 {
   margin-top: 0;
   margin-bottom: 0.25em;
 }
@@ -1774,14 +1770,26 @@ textarea {
   margin-top: 0;
 }
 
+#main-teacher .notification-content p span {
+  color: grey;
+}
+
+#main-teacher .notification-content .first {
+  margin-bottom: 0;
+}
+
 #main-teacher .notification {
   margin-bottom: 10px;
 }
 
 #main-teacher .notification img {
-  width: 20%;
+  max-width: 15%;
   float: left;
   margin-right: 10px;
+}
+
+#main-teacher .notification .author {
+  margin-top: -10px;
 }
 
 #main-teacher .profile-content img {
@@ -1793,27 +1801,59 @@ textarea {
   margin-top: 0;
 }
 
-#main-admin .settings, #main-admin .students, #main-admin .teachers {
-  height: 100px;
-  width: 100%;
-  border: 1px solid blue;
+#main-admin .left {
+  padding: 0;
+  margin: 0;
 }
 
-#main-admin .settings {
-  background-color: blue;
+#main-admin .left img {
+  max-width: 20%;
+}
+
+#main-admin .left .settings, #main-admin .left .students, #main-admin .left .teachers {
+  border: 1px solid black;
+  border-radius: 8px;
 }
 
 #main-admin .students {
-  background-color: red;
+  margin-top: 10px;
 }
 
 #main-admin .teachers {
-  background-color: white;
+  margin-top: 10px;
 }
 
-#main-admin .notification-content {
-  height: 500px;
-  background-color: grey;
+#main-admin .notification-content .notification {
+  margin-top: -20px;
+}
+
+#main-admin .notification-content .notification p {
+  margin-top: -15px;
+}
+
+#main-admin .notification-content .notification .author {
+  color: grey;
+}
+
+#main-admin .approve-teachers form ul {
+  list-style: none;
+  margin-left: -40px;
+}
+
+#main-admin .approve-teachers form ul input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+}
+
+#main-admin .approve-teachers form ul a {
+  text-decoration: none;
+  color: white;
+}
+
+#main-admin .approve-teachers form input[type="submit"] {
+  border-radius: 4px;
+  color: black;
 }
 
 #subjectWrapper .searchbox {
@@ -1956,6 +1996,7 @@ textarea {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  float: right;
   color: black;
   margin: 0 auto;
   display: block;
