@@ -187,7 +187,7 @@ $(document).ready(function(){
 */
 
 
-/*
+
 function changePos() {
    var navDesktop = $(".profile-wrapper");
    if (window.pageYOffset > parseInt($('#header').css('height'))) {
@@ -222,7 +222,7 @@ function changePos() {
 $(window).scroll(function(){
    changePos();
 });
-*/
+
 //if ($(".profile-wrapper").offset().top + $(".profile-wrapper").height() >= $('#footer').offset().top - 10){
   //  $(navDesktop).css("position", "absolute");
     //console.log("else if state")

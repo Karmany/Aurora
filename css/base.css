@@ -1532,6 +1532,7 @@ p.secondary {
   width: 200px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
   position: relative;
+  margin-top: 7px;
 }
 
 .lectures-student .profile-list {
@@ -1540,7 +1541,7 @@ p.secondary {
   position: relative;
 }
 
-.lectures-student .profile-list p {
+.lectures-student .profile-list h3 {
   text-align: center;
 }
 
@@ -1554,7 +1555,7 @@ p.secondary {
 
 .lectures-student .profile-btn {
   text-align: center;
-  color: #314650;
+  color: #455A64;
   display: block;
   text-decoration: none;
   width: 80%;
@@ -1581,11 +1582,11 @@ p.secondary {
 }
 
 .lectures-student .read-fix {
-  color: #bbb;
+  color: #79d894;
 }
 
 .lectures-student .older-notifications {
-  color: #bbb;
+  color: #fff;
   text-align: center;
   display: block;
 }
@@ -2017,6 +2018,72 @@ textarea {
 
 #subjectWrapper .marginTop {
   margin-top: 20px;
+}
+
+.profile.wrapper {
+  background-color: #455A64;
+  padding-bottom: 20px;
+  border-radius: 2px;
+  width: 200px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
+  position: relative;
+  margin-top: 7px;
+}
+
+.profile.wrapper .profile-list {
+  width: 80%;
+  left: 10%;
+  position: relative;
+}
+
+.profile.wrapper .profile-list h3 {
+  text-align: center;
+}
+
+.profile.wrapper .avatar {
+  border-radius: 50%;
+  max-width: 60%;
+  left: 20%;
+  position: relative;
+  margin-top: 40px;
+}
+
+.profile.wrapper .profile-btn {
+  text-align: center;
+  color: #455A64;
+  display: block;
+  text-decoration: none;
+  width: 80%;
+  left: 10%;
+  position: relative;
+  background-color: #79d894;
+  border-radius: 2px;
+  padding: 5px 0px;
+}
+
+.profile.wrapper .more-notifications {
+  text-decoration: none;
+  color: white;
+}
+
+.profile.wrapper .notification-wrap {
+  width: 80%;
+  left: 10%;
+  position: relative;
+}
+
+.profile.wrapper .full-txt {
+  display: none;
+}
+
+.profile.wrapper .read-fix {
+  color: #79d894;
+}
+
+.profile.wrapper .older-notifications {
+  color: #fff;
+  text-align: center;
+  display: block;
 }
 
 /* BEGIN Thin */
