@@ -100,8 +100,8 @@ firstLink.addEventListener('click', function (event) {
 
 //Links to the different slides that we will put in the page
 var slides = [
-   "../img/slides/slide1.jpg",
-   "../img/slides/slide2.jpg",
+   "../img/slides/slide1.png",
+   "../img/slides/slide2.png",
    "../img/slides/slide3.png",
    "../img/slides/slide4.png",
    "../img/slides/slide5.png",
