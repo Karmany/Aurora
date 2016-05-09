@@ -32,83 +32,84 @@
 				li Student 3
 	
 	.row 
-		// Left section (settings/students/teachers)
-		.monitor.col.col--1-of-8
-			.lectures
-				// When clicked, lectures modal triggers 
-				button(id="btnLectures") Lectures  
-			.teachers
-				// When clicked, teachers modal triggers 
-				button(id="btnTeachers") Teachers
-			.students
-				// When clicked, students modal triggers 
-				button(id="btnStudents") Students 
+		// Content (not profile)
+		.col.col--4-of-5
+	
+			.row 
+				// Left section (settings/students/teachers)
+				.monitor.col.col--1-of-5
+					.lectures
+						// When clicked, lectures modal triggers 
+						button(id="btnLectures") Lectures  
+					.teachers
+						// When clicked, teachers modal triggers 
+						button(id="btnTeachers") Teachers
+					.students
+						// When clicked, students modal triggers 
+						button(id="btnStudents") Students 
 
-		// notifications content 
-		.notification-content.col.col--4-of-8 
-			// h2 Reported comments 
-			
-			// Notification 1
-			.row
-			
-				.notification.first.col.col--2-of-2
-					h3 Reported comment 1 
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-						| sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-					p.author Bad Boy 1 
+				// notifications content 
+				.notification-content.col.col--3-of-5 
+					// h2 Reported comments 
 					
-			// Notification 2
-			.row
-			
-				.notification.col.col--2-of-2
-					h3 Reported comment 2
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-						| sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-					p.author Bad Boy 2
+					// Notification 1
+					.row
+					
+						.notification.first.col.col--2-of-2
+							h3 Reported comment 1 
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+								| sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+							p.author Bad Boy 1 
+							
+					// Notification 2
+					.row
+					
+						.notification.col.col--2-of-2
+							h3 Reported comment 2
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+								| sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+							p.author Bad Boy 2
+				
+					// Notification 2
+					.row
+					
+						.notification.col.col--2-of-2
+							h3 Reported comment 3
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+								| sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+							p.author Bad Boy 3
+				
+				// Approve teachers 
+				.approve-teachers.col.col--1-of-5
+					h2 Pending requests
+					// What action to use? 
+					form#approveTeachersForm(name='approveTeachersForm', action='#', method='get')
+						ul 
+							li
+								label
+									input(type="checkbox")
+									a(href="#") Ali Sharif
+							li
+								label
+									input(type="checkbox")
+									a(href="#") Randi Rikberg
+							li
+								label
+									input(type="checkbox")
+									a(href="#") Tina Tvist 
+							li
+								label
+									input(type="checkbox")
+									a(href="#") Ole Olsen		
+							li
+								label
+									input(type="checkbox")
+									a(href="#") Nina Nilsen
+						input(type="submit", value="Approve")
 		
-			// Notification 2
-			.row
-			
-				.notification.col.col--2-of-2
-					h3 Reported comment 3
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-						| sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-					p.author Bad Boy 3
-		
-		// Approve teachers 
-		.approve-teachers.col.col--2-of-8
-			h2 Pending requests
-			// What action to use? 
-			form#approveTeachersForm(name='approveTeachersForm', action='#', method='get')
-				ul 
-					li
-						label
-							input(type="checkbox")
-							a(href="#") Ali Sharif
-					li
-						label
-							input(type="checkbox")
-							a(href="#") Randi Rikberg
-					li
-						label
-							input(type="checkbox")
-							a(href="#") Tina Tvist 
-					li
-						label
-							input(type="checkbox")
-							a(href="#") Ole Olsen		
-					li
-						label
-							input(type="checkbox")
-							a(href="#") Nina Nilsen
-				input(type="submit", value="Approve")
-		
-		// Profile content 
-		.profile-content.col.col--1-of-8
-			h2 Profile 
-			img(src="../img/lectures/avatar.jpg" alt="Profile image")
-								
-			p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+		// Profile content
+		.col.col--1-of-5			 
+			include ../includes/profile.jade
 			
 include ../includes/partialscript.jade
 
