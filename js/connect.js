@@ -12,7 +12,7 @@
 var vid = document.getElementById('lectureVideo');
 var timeStamp = 0;
 
-vid.ontimeupdate = function() {getStarted()};
+vid.ontimeupdate = function() {getStarted();};
 
 function getStarted() {
    pageTime();
@@ -24,7 +24,7 @@ function pageTime() {
     document.getElementById("demo").innerHTML = vid.currentTime;
     timeStamp = vid.currentTime;
     console.log("Page time is updated to " + vid.currentTime);
-};
+}
 
 // This function change the slide based on how far the video have played
 function changeImg() {
@@ -77,10 +77,10 @@ function changeImg() {
       document.getElementById('slides').src = slides[15];
       console.log("Slide 16 loaded on page");
    }
-};
+}
 
 //Keywords change videotime
-var firstLink = document.getElementById('first')
+var firstLink = document.getElementById('first');
 
 firstLink.addEventListener('click', function (event) {
    event.preventDefault();
@@ -88,7 +88,7 @@ firstLink.addEventListener('click', function (event) {
    vid.pause();
    vid.currentTime = 3;
    vid.play();
-})
+});
 
 
 
@@ -134,5 +134,5 @@ var breakpoints = [
    "2480",
    "2480",
    "2480",
-   "2487";
+   "2487"
 ];
