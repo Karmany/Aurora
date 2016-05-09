@@ -126,28 +126,115 @@ header
 .page-wrap
    min-height: 100%
    /* equal to footer height */
-   margin-bottom: -200px
+   margin-bottom: -410px
 
    &:after
       content: ""
       display: block
 
 footer, .page-wrap:after
-   height: 200px
+   height: 410px
 
 footer
-   background-color: teal
+   background-color:  $green1
+   color: $primaryColor
+   display: flex
+
+   .container
+      padding-top: 20px
+      padding-bottom: 20px
+
+   input, textarea
+      background-color: transparent
+      border: 2px solid $primaryColor
+      border-radius: 2px
+      font-weight: 300
+      width: 100%
+      padding: 0.5rem
+      font-size: 1.3rem
+      margin-bottom: 15px
+      transition: background-color 0.3s ease
+
+      &::-webkit-input-placeholder
+      color: $primaryColorLight
+
+      &:-moz-placeholder
+         /* Firefox 18- */
+         color: $primaryColorLight
+
+      &::-moz-placeholder
+         /* Firefox 19+ */
+         color: $primaryColorLight
+
+      &:-ms-input-placeholder
+         color: $primaryColorLight
+
+      &:focus
+         outline: none
+         color: white
+         background-color: $primaryColor
+
+   textarea
+      resize: none
+
+   button
+      border-radius: 2px
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,0.12),0 2px 10px 0 rgba(0,0,0,0.10)
+      width: 100%
+      text-align: center
+      font-weight: 300
+      background-repeat: no-repeat
+      border: none
+      background-color: $primaryColor
+      color: white
+      padding: 1rem
+      font-size: 1.3rem
+      transition: background-color 0.3s ease
+
+      &:hover
+         background-color: $primaryColorLight
+         outline: none
+
+      &:active
+         background-color: $primaryColorDark
+         outline: none
+
+   .footer-logo
+      display: flex
+      justify-content: center
+
+   ul
+      list-style: none
+      padding-left: 0px
+
+      li
+         border-bottom: 2px solid $primaryColor
+
+      li:last-child
+         border-bottom: none
+
+   .info, .social
+      padding-left: 40px
+
+.copyright
+   background-color: $green1 - 35
+   text-align: center
+   color: $primaryColor
+   padding-top: 1rem
+   padding-bottom: 1rem
+   font-weight: 300
+
 
 // !CONTAINER || C O N T A I N E R
 
-#container
+.container
    width: calc(100% - 100px)
    max-width: 1060px
    padding: 50px 50px
    margin: 0 auto
    // working properties
    border: 2px solid rgba(0, 0, 0, 0)
-   
+
 .content
    transform: translateY(-10px)
    opacity: 0

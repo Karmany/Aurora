@@ -187,7 +187,7 @@ $(document).ready(function(){
 */
 
 
-
+/*
 function changePos() {
    var navDesktop = $(".profile-wrapper");
    if (window.pageYOffset > parseInt($('#header').css('height'))) {
@@ -211,12 +211,23 @@ function changePos() {
 $(window).scroll(function(){
    changePos();
 });
-
+/*
 //if ($(".profile-wrapper").offset().top + $(".profile-wrapper").height() >= $('#footer').offset().top - 10){
   //  $(navDesktop).css("position", "absolute");
     //console.log("else if state")
 //}
 
+// Footer shit
+/*
+$(function(){
+	$('.page-wrap').css({
+		'margin-bottom' : '-' + parseInt($('footer').css('height')) + 'px',
+	});
+	$('.page-wrap:after').css({
+		'height' : parseInt($('footer').css('height')) + 'px',
+	});
+});
+*/
 
 // fetch subpage from Url and display as title and in header and tab
 
@@ -226,7 +237,7 @@ var ttl = $("#title");
 
 function getUrl(){
 	var url = window.location.href.split(pageDivider)[1];
-	return (typeof url == 'undefined' ? pageOne : url);
+	return (typeof url == 'undefined' ? page1 : url);
 }
 String.prototype.ucFirst = function(){
 	 return this.charAt(0).toUpperCase() + this.slice(1);

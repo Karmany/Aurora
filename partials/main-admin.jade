@@ -1,20 +1,48 @@
 #main-admin.content
 	
+	// MODAL STUFF 
+	// Lectures modal 
+	#lecturesModal.modal 
+		.modal-content 
+			span.close X
+			h2 Manage Lectures 
+			ul
+				li Lecture 1 
+				li Lecture 2 
+				li Lecture 3
+				
+	// Teachers modal 
+	#teachersModal.modal 
+		.modal-content 
+			span.close X
+			h2 Manage Teachers 
+			ul
+				li Teacher 1
+				li Teacher 2 
+				li Teacher 3
+	
+	// Students modal 
+	#studentsModal.modal 
+		.modal-content 
+			span.close X
+			h2 Manage Students 
+			ul
+				li Student 1
+				li Student 2 
+				li Student 3
+	
 	.row 
 		// Left section (settings/students/teachers)
-		.left.col.col--1-of-8
-			.settings
-				img(src="../img/notification-img.jpg" alt="Notification image")
-				p Settings 
-				// p Advanced 
-			.students
-				img(src="../img/notification-img.jpg" alt="Notification image")
-				p Students
-				// p Show list  
+		.monitor.col.col--1-of-8
+			.lectures
+				// When clicked, lectures modal triggers 
+				button(id="btnLectures") Lectures  
 			.teachers
-				img(src="../img/notification-img.jpg" alt="Notification image")
-				p teachers 
-				// p Show list  
+				// When clicked, teachers modal triggers 
+				button(id="btnTeachers") Teachers
+			.students
+				// When clicked, students modal triggers 
+				button(id="btnStudents") Students 
 
 		// notifications content 
 		.notification-content.col.col--4-of-8 
@@ -83,4 +111,5 @@
 			p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
 			
 include ../includes/partialscript.jade
-			
+
+	script(src='js/main-admin.js')
