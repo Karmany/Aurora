@@ -1291,11 +1291,8 @@ header svg#logo {
 
 header nav {
   height: 50px;
-<<<<<<< HEAD
-=======
   position: relative;
   z-index: 2;
->>>>>>> a83d413f475a0a5cc38e60c6e284c22472a2d9ef
   display: flex;
   justify-content: center;
 }
@@ -1319,10 +1316,6 @@ header nav ul {
 
 header nav ul li {
   list-style: none;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a83d413f475a0a5cc38e60c6e284c22472a2d9ef
   font-size: 2rem;
   font-variant: small-caps;
 }
@@ -1348,11 +1341,7 @@ header nav ul li .desktop-nav-icon svg {
   width: 100%;
   display: flex;
   position: relative;
-<<<<<<< HEAD
-  top: -50px;
-=======
   margin-top: -50px;
->>>>>>> a83d413f475a0a5cc38e60c6e284c22472a2d9ef
 }
 
 .nav-desktop-indicator a {
@@ -1395,13 +1384,6 @@ header nav ul li .desktop-nav-icon svg {
   margin-right: 5px;
 }
 
-<<<<<<< HEAD
-.nav-desktop-indicator ul li.active {
-  border-bottom: 3px solid white;
-=======
-  display: inline;
->>>>>>> 67756ad4866ce192d5286c2a533bd83e136855eb
-=======
 .nav-desktop-indicator ul li {
   border-bottom: 3px solid rgba(255, 255, 255, 0);
   transition: clip-path 0.3s ease;
@@ -1412,7 +1394,6 @@ header nav ul li .desktop-nav-icon svg {
   border-bottom: 3px solid white;
   border-width: 0px 0px 3px 20px;
   clip-path: inset(0 0 0 0);
->>>>>>> a83d413f475a0a5cc38e60c6e284c22472a2d9ef
 }
 
 .page-wrap {
@@ -2037,6 +2018,72 @@ textarea {
 
 #subjectWrapper .marginTop {
   margin-top: 20px;
+}
+
+.profile.wrapper {
+  background-color: #455A64;
+  padding-bottom: 20px;
+  border-radius: 2px;
+  width: 200px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
+  position: relative;
+  margin-top: 7px;
+}
+
+.profile.wrapper .profile-list {
+  width: 80%;
+  left: 10%;
+  position: relative;
+}
+
+.profile.wrapper .profile-list h3 {
+  text-align: center;
+}
+
+.profile.wrapper .avatar {
+  border-radius: 50%;
+  max-width: 60%;
+  left: 20%;
+  position: relative;
+  margin-top: 40px;
+}
+
+.profile.wrapper .profile-btn {
+  text-align: center;
+  color: #455A64;
+  display: block;
+  text-decoration: none;
+  width: 80%;
+  left: 10%;
+  position: relative;
+  background-color: #79d894;
+  border-radius: 2px;
+  padding: 5px 0px;
+}
+
+.profile.wrapper .more-notifications {
+  text-decoration: none;
+  color: white;
+}
+
+.profile.wrapper .notification-wrap {
+  width: 80%;
+  left: 10%;
+  position: relative;
+}
+
+.profile.wrapper .full-txt {
+  display: none;
+}
+
+.profile.wrapper .read-fix {
+  color: #79d894;
+}
+
+.profile.wrapper .older-notifications {
+  color: #fff;
+  text-align: center;
+  display: block;
 }
 
 /* BEGIN Thin */
