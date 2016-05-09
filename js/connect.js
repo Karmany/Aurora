@@ -44,7 +44,7 @@ firstLink.addEventListener('click', function (event) {
    event.preventDefault();
    vid.play();
    vid.pause();
-   vid.currentTime = 7;
+   vid.currentTime = 3;
    vid.play();
 })
 
