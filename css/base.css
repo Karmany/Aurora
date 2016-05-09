@@ -1315,6 +1315,7 @@ header nav ul {
 
 header nav ul li {
   list-style: none;
+<<<<<<< HEAD
   font-size: 2rem;
   font-variant: small-caps;
 }
@@ -1385,6 +1386,9 @@ header nav ul li .desktop-nav-icon svg {
 
 .nav-desktop-indicator ul li.active {
   border-bottom: 3px solid white;
+=======
+  display: inline;
+>>>>>>> 67756ad4866ce192d5286c2a533bd83e136855eb
 }
 
 .page-wrap {
@@ -1411,7 +1415,7 @@ footer {
   max-width: 1060px;
   padding: 50px 50px;
   margin: 0 auto;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 }
 
 .content {

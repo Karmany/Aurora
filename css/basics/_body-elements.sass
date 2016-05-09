@@ -29,8 +29,10 @@ header
       height: 50px
 
    nav
-      background-color: $primaryColorLight
+      //background-color: $primaryColorLight
       height: 50px
+      position: relative
+      z-index: 2
       display: flex
       justify-content: center
 
@@ -72,7 +74,8 @@ header
    width: 100%
    display: flex
    position: relative
-   top: -50px
+   margin-top: -50px
+   //background-color: $primaryColorLight
 
    a
       color: rgba(0, 0, 0, 0)
@@ -108,8 +111,15 @@ header
                top: 0.2rem
                margin-right: 5px
 
-      li.active
-         border-bottom: 3px solid white
+      li
+         border-bottom: 3px solid rgba(255, 255, 255, 0)
+         transition: clip-path 0.3s ease
+         clip-path: inset(0 100% 0 0)
+
+         &.active
+            border-bottom: 3px solid white
+            border-width: 0px 0px 3px 20px
+            clip-path: inset(0 0 0 0)
 
 // !FOOTER || F O O T E R
 
@@ -136,8 +146,8 @@ footer
    padding: 50px 50px
    margin: 0 auto
    // working properties
-   border: 1px solid rgba(0, 0, 0, 0)
-
+   border: 2px solid rgba(0, 0, 0, 0)
+   
 .content
    transform: translateY(-10px)
    opacity: 0

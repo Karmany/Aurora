@@ -1,18 +1,59 @@
 #main-admin
-	.settings, .students, .teachers
-		height: 100px
-		width: 100%
-		border: 1px solid blue
+	.left
+		// height: 500px
+		// background-color: brown
+		padding: 0
+		margin: 0
+
+		img
+			max-width: 20%
+
+		.settings, .students, .teachers
+			border: 1px solid black
+			border-radius: 8px
 
 	.settings
-		background-color: blue
+		// background-color: blue
 
 	.students
-		background-color: red
+		margin-top: 10px
+		// background-color: red
 
 	.teachers
-		background-color: white
+		margin-top: 10px
+		// background-color: lime
 
 	.notification-content
-		height: 500px
-		background-color: grey
+		// height: 500px
+		// background-color: grey
+
+		.notification
+			margin-top: -20px
+
+			p
+				margin-top: -15px
+
+			.author
+				color: grey
+
+	.approve-teachers
+		// height: 500px
+		// background-color: lightGrey
+		form
+
+			ul
+				list-style: none
+				margin-left: -40px
+
+				input[type="checkbox"]
+					width: 15px
+					height: 15px
+					margin: 5px
+
+				a
+					text-decoration: none
+					color: white
+
+			input[type="submit"]
+				border-radius: 4px
+				color: black

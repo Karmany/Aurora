@@ -1,0 +1,23 @@
+#playWrapper
+   .row
+      .col.col--2-of-4
+         .row
+            .col.col--4-of-4
+               #playVideo
+                  video#lectureVideo(width='320', height='240', controls )
+                     source(src='../img/aurora.mp4', type='video/mp4')
+            .col.col--4-of-4
+               #playText
+                  p
+                     | Playback position: 
+                     span#demo
+
+      .col.col--2-of-4
+         .row
+            .col.col--4-of-4
+               #playSlides
+                  img(id="slides", src="../img/notification-img.jpg" alt="Notification image")
+            .col.col--4-of-4
+               #playWiki
+               
+script(src='../js/connect.js')
