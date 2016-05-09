@@ -1290,8 +1290,12 @@ header svg#logo {
 }
 
 header nav {
-  background-color: #6d828c;
   height: 50px;
+<<<<<<< HEAD
+=======
+  position: relative;
+  z-index: 2;
+>>>>>>> a83d413f475a0a5cc38e60c6e284c22472a2d9ef
   display: flex;
   justify-content: center;
 }
@@ -1316,6 +1320,9 @@ header nav ul {
 header nav ul li {
   list-style: none;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a83d413f475a0a5cc38e60c6e284c22472a2d9ef
   font-size: 2rem;
   font-variant: small-caps;
 }
@@ -1341,7 +1348,11 @@ header nav ul li .desktop-nav-icon svg {
   width: 100%;
   display: flex;
   position: relative;
+<<<<<<< HEAD
   top: -50px;
+=======
+  margin-top: -50px;
+>>>>>>> a83d413f475a0a5cc38e60c6e284c22472a2d9ef
 }
 
 .nav-desktop-indicator a {
@@ -1384,11 +1395,24 @@ header nav ul li .desktop-nav-icon svg {
   margin-right: 5px;
 }
 
+<<<<<<< HEAD
 .nav-desktop-indicator ul li.active {
   border-bottom: 3px solid white;
 =======
   display: inline;
 >>>>>>> 67756ad4866ce192d5286c2a533bd83e136855eb
+=======
+.nav-desktop-indicator ul li {
+  border-bottom: 3px solid rgba(255, 255, 255, 0);
+  transition: clip-path 0.3s ease;
+  clip-path: inset(0 100% 0 0);
+}
+
+.nav-desktop-indicator ul li.active {
+  border-bottom: 3px solid white;
+  border-width: 0px 0px 3px 20px;
+  clip-path: inset(0 0 0 0);
+>>>>>>> a83d413f475a0a5cc38e60c6e284c22472a2d9ef
 }
 
 .page-wrap {
@@ -1696,10 +1720,6 @@ textarea {
   margin-bottom: 20px;
 }
 
-#main-student {
-  margin-top: 0.5em;
-}
-
 #main-student .notification-content img {
   border-radius: 2px;
 }
@@ -1713,14 +1733,26 @@ textarea {
   margin-top: 0;
 }
 
+#main-student .notification-content p span {
+  color: grey;
+}
+
+#main-student .notification-content .first {
+  margin-bottom: 0;
+}
+
 #main-student .notification {
   margin-bottom: 10px;
 }
 
 #main-student .notification img {
-  width: 20%;
+  max-width: 15%;
   float: left;
   margin-right: 10px;
+}
+
+#main-student .notification .author {
+  margin-top: -10px;
 }
 
 #main-student .profile-content img {
@@ -1732,6 +1764,15 @@ textarea {
   margin-top: 0;
 }
 
+@media only screen and (max-width: 700px) {
+  #main-student .notification img {
+    display: none;
+  }
+  #main-student .profile-content img {
+    max-width: 50%;
+  }
+}
+
 #main-teacher {
   margin-top: 0.5em;
 }
@@ -1740,7 +1781,7 @@ textarea {
   border-radius: 2px;
 }
 
-#main-teacher .notification-content h3 {
+#main-teacher .notification-content h3, #main-teacher .notification-content h4 {
   margin-top: 0;
   margin-bottom: 0.25em;
 }
@@ -1749,14 +1790,26 @@ textarea {
   margin-top: 0;
 }
 
+#main-teacher .notification-content p span {
+  color: grey;
+}
+
+#main-teacher .notification-content .first {
+  margin-bottom: 0;
+}
+
 #main-teacher .notification {
   margin-bottom: 10px;
 }
 
 #main-teacher .notification img {
-  width: 20%;
+  max-width: 15%;
   float: left;
   margin-right: 10px;
+}
+
+#main-teacher .notification .author {
+  margin-top: -10px;
 }
 
 #main-teacher .profile-content img {
@@ -1768,27 +1821,59 @@ textarea {
   margin-top: 0;
 }
 
-#main-admin .settings, #main-admin .students, #main-admin .teachers {
-  height: 100px;
-  width: 100%;
-  border: 1px solid blue;
+#main-admin .left {
+  padding: 0;
+  margin: 0;
 }
 
-#main-admin .settings {
-  background-color: blue;
+#main-admin .left img {
+  max-width: 20%;
+}
+
+#main-admin .left .settings, #main-admin .left .students, #main-admin .left .teachers {
+  border: 1px solid black;
+  border-radius: 8px;
 }
 
 #main-admin .students {
-  background-color: red;
+  margin-top: 10px;
 }
 
 #main-admin .teachers {
-  background-color: white;
+  margin-top: 10px;
 }
 
-#main-admin .notification-content {
-  height: 500px;
-  background-color: grey;
+#main-admin .notification-content .notification {
+  margin-top: -20px;
+}
+
+#main-admin .notification-content .notification p {
+  margin-top: -15px;
+}
+
+#main-admin .notification-content .notification .author {
+  color: grey;
+}
+
+#main-admin .approve-teachers form ul {
+  list-style: none;
+  margin-left: -40px;
+}
+
+#main-admin .approve-teachers form ul input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+}
+
+#main-admin .approve-teachers form ul a {
+  text-decoration: none;
+  color: white;
+}
+
+#main-admin .approve-teachers form input[type="submit"] {
+  border-radius: 4px;
+  color: black;
 }
 
 #subjectWrapper .searchbox {
@@ -1931,6 +2016,7 @@ textarea {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  float: right;
   color: black;
   margin: 0 auto;
   display: block;
