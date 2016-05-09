@@ -1591,9 +1591,6 @@ p.secondary {
     width: 100%;
     padding: 50px 20px;
   }
-  .profile-wrapper {
-    display: none;
-  }
 }
 
 @media (max-width: 480px) {
@@ -1657,12 +1654,13 @@ p.secondary {
 
 .lectures-student .lecture-time {
   color: #79d894;
-  text-align: center;
   margin-top: -20px;
+  text-align: center;
 }
 
 .lectures-student .lecture-time h2 {
-  padding: 0 20px;
+  margin: 40px 0 10px 0;
+  padding: 0 15px 5px 15px;
   border-bottom: 2px solid #79d894;
   display: inline-block;
 }
@@ -2193,6 +2191,12 @@ textarea {
   color: #fff;
   text-align: center;
   display: block;
+}
+
+@media (max-width: 700px) {
+  .profile .profile-wrapper {
+    display: none;
+  }
 }
 
 /* BEGIN Thin */

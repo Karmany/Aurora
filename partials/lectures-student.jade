@@ -9,8 +9,8 @@
             .txt-wrap.col.col--3-of-4
                h3 IMT1231 Subject title  -  Lecture title
                p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description
-
-            .lecture-time 
+            
+            .lecture-time
                h2 1 week old
             
             .img-wrap.col.col--1-of-4
@@ -43,26 +43,9 @@
             .img-wrap.col.col--1-of-4
                img.steve(src='img/lectures/steve.jpg')
             .txt-wrap.col.col--3-of-4 
-               h3 Lecture title
+               h3Lecture title
                p lectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce descriptionlectuce description   
       .col.col--1-of-5
          include ../includes/profile.jade
          
 include ../includes/partialscript.jade
-            
-script.
-      
-   $(document).ready(function(){
-      $('.read-more').click(function(){
-         $('.full-txt').toggle();
-         $('.read-more').toggle();
-      });
-   })
-
-   $(document).ready(function(){
-      $('.read-less').click(function(){
-         $('.full-txt').toggle();
-         $('.read-more').toggle();
-      });
-   })
-                  
