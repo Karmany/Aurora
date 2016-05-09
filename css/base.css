@@ -2104,7 +2104,11 @@ textarea {
   margin-top: 20px;
 }
 
+<<<<<<< HEAD
+.profile .profile.wrapper {
+=======
 .profile .profile-wrapper {
+>>>>>>> origin/master
   background-color: #455A64;
   padding-bottom: 20px;
   border-radius: 2px;
