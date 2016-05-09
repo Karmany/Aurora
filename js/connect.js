@@ -19,13 +19,14 @@ function getStarted() {
    changeImg();
 }
 
+// This updates the timer on the page
 function pageTime() {
     document.getElementById("demo").innerHTML = vid.currentTime;
     timeStamp = vid.currentTime;
     console.log("Page time is updated to " + vid.currentTime);
 };
 
-
+// This function change the slide based on how far the video have played
 function changeImg() {
    if (vid.currentTime > 0  && vid.currentTime < 5 && document.getElementById('slides').src != slides[0]) {
       document.getElementById('slides').src = slides[0];
@@ -35,6 +36,18 @@ function changeImg() {
       console.log("Slide 2 loaded on page");
    }
 };
+
+//Keywords change videotime
+var firstLink = document.getElementById('first')
+
+firstLink.addEventListener('click', function (event) {
+   event.preventDefault();
+   vid.play();
+   vid.pause();
+   vid.currentTime = 7;
+   vid.play();
+})
+
 
 
 
