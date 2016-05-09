@@ -1,19 +1,18 @@
 #main-admin
-	.left
-		// height: 500px
-		// background-color: brown
+	// Monitor section
+	.monitor
 		padding: 0
 		margin: 0
 
-		img
-			max-width: 20%
-
-		.settings, .students, .teachers
+		.lectures, .students, .teachers
 			border: 1px solid black
 			border-radius: 8px
+			color: black
 
-	.settings
-		// background-color: blue
+			button
+				width: 100%
+
+	.lectures
 
 	.students
 		margin-top: 10px
@@ -23,6 +22,39 @@
 		margin-top: 10px
 		// background-color: lime
 
+
+	// ----------- MODAL STYLES ----------
+	.modal
+		display: none
+		position: fixed
+		z-index: 1
+		left: 0
+		top: -40px
+		width: 100%
+		// Enable scroll if needed
+		overflow: auto
+
+	.modal-content
+		background-color: #ffffff
+		// padding: 20px
+		border: 1px solid black
+		margin: 0 auto
+		width: 75%
+		color: black
+
+	// Close button
+	.close
+		color: #aaaaaa
+		margin-right: 5px
+		float: right
+		font-size: 28px
+		font-weight: bold
+
+	.close:hover, .close:focus
+		color: #000
+		text-decoration: none
+		cursor: pointer
+	// ------------- NOTIFICATION CONTENT STYLES ------------
 	.notification-content
 		// height: 500px
 		// background-color: grey
@@ -36,6 +68,7 @@
 			.author
 				color: grey
 
+	// ---------- APPROVE TEACHERS STYLES  ----------------
 	.approve-teachers
 		// height: 500px
 		// background-color: lightGrey

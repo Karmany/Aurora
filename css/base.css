@@ -1915,18 +1915,19 @@ textarea {
   margin-top: 0;
 }
 
-#main-admin .left {
+#main-admin .monitor {
   padding: 0;
   margin: 0;
 }
 
-#main-admin .left img {
-  max-width: 20%;
-}
-
-#main-admin .left .settings, #main-admin .left .students, #main-admin .left .teachers {
+#main-admin .monitor .lectures, #main-admin .monitor .students, #main-admin .monitor .teachers {
   border: 1px solid black;
   border-radius: 8px;
+  color: black;
+}
+
+#main-admin .monitor .lectures button, #main-admin .monitor .students button, #main-admin .monitor .teachers button {
+  width: 100%;
 }
 
 #main-admin .students {
@@ -1935,6 +1936,38 @@ textarea {
 
 #main-admin .teachers {
   margin-top: 10px;
+}
+
+#main-admin .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: -40px;
+  width: 100%;
+  overflow: auto;
+}
+
+#main-admin .modal-content {
+  background-color: #ffffff;
+  border: 1px solid black;
+  margin: 0 auto;
+  width: 75%;
+  color: black;
+}
+
+#main-admin .close {
+  color: #aaaaaa;
+  margin-right: 5px;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#main-admin .close:hover, #main-admin .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 #main-admin .notification-content .notification {
