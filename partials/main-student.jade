@@ -1,47 +1,107 @@
 #main-student.content
-	
+
 	.row 
 		// notifications content 
 		.col.col--4-of-5.notification-content
 		
-			// Notification 1
-			.row
-			
-				.notification.first.col.col--2-of-2
-					img(src="../img/notification-img.jpg" alt="Notification image")
-					h3 IMT2002 Color Management: Last lecture May 10th
-					p The last lecture will take place on Tuesday, May 10th in K102. 
-						| We will go through a short summary of the course curriculum
-						| and I will answer any questions you might have before the exam.
-					p.author
-						| Peter Nussbaum 
-						span (peter.nussbaum@ntnu.no)
+			// TEACHER NOTIFICATIONS 
+			.teacher.col.col--1-of-2 
+				
+				.teacher-headline
+					h2 Teacher
+					img.headline-icon(src="../img/iconography/ic_notifications_green_24px.svg")
 					
-			// Notification 2
-			.row
-			
-				.notification.col.col--2-of-2
-					img(src="../img/notification-img.jpg" alt="Notification image")
-					h3 IMT1471 Web Project: Lecture moved to May 12th. 
-					p Due to a scheduling conflict, the lecture planned for May 10th 
-						| have been moved to Thursday, May 12th. Room A254 will be used.
-					p.author
-						| Ali Shariq Imran 
-						span (ali.imran@hig.no)
-			
-			// Notification 3
-			.row 
-			
-				.notification.col.col--2-of-2
-					img(src="../img/notification-img.jpg" alt="Notification image")
-					h3 IMT2661 Mobile Media: Final Project due May 31th.
-					p The absolute final date for submission of your projects is Tuesday, 
-						| May 31th. Remember to ask me any potential questions well in time 
-						| before the deadline. 
-					p.author
-						| Emil Bakke 
-						span (emil.bakke@ntnu.no)
+				// Notification 1
+				.row
+					.notification.first.col.col--2-of-2
+						h3 IMT2002 Color Management: Last lecture May 10th
+						p The last lecture will take place on Tuesday, May 10th in K102. 
+							| We will go through a short summary of the course curriculum
+							| and I will answer any questions you might have before the exam.
+						img.profile-img(src="../img/profile_images/teacher1.jpg")
+						.author 
+							p
+								| Gunnar Olsen
+								span (gunnar.olsen@aurora.no) 
+						
+				// Notification 2
+				.row
+					.notification.col.col--2-of-2
+						h3 IMT1471 Web Project: Lecture moved to May 12th. 
+						p Due to a scheduling conflict, the lecture planned for May 10th 
+							| have been moved to Thursday, May 12th. Room A254 will be used.
+						img.profile-img(src="../img/profile_images/female_teacher.jpg")
+						.author
+							p
+								| Frida Nilsen
+								span (frida.nilsen@aurora.no)
+				
+				// Notification 3
+				.row 
+					.notification.col.col--2-of-2
+						h3 IMT2661 Mobile Media: Final Project due May 31th.
+						p The absolute final date for submission of your projects is Tuesday, 
+							| May 31th. Remember to ask me any potential questions well in time 
+							| before the deadline. 
+						img.profile-img(src="../img/profile_images/clooney.jpg")
+						.author
+							p
+								| Torgeir Hansen 
+								span (torgeir.hansen@aurora.no)
+								
+			// STUDENT NOTIFICATIONS
+			.student.col.col--1-of-2 
+				
+				.student-headline
+					h2 Comments 
+					img.headline-icon(src="../img/iconography/ic_comment_green_24px.svg")
 					
+				// Comment 1
+				.row 
+					.notification.first.col.col--2-of-2
+						h3 RE: Lorem ipsum 
+						p 
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
+							| ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+						img.profile-img(src="../img/profile_images/female_student1.jpg")
+						.author
+							p
+								| Camilla Svensen
+								span (camilla.svensen@aurora.no)
+							
+					.notification.col.col--2-of-2
+						h3 RE: Lorem ipsum 
+						p 
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
+							| ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+						img.profile-img(src="../img/profile_images/male_student1.png")
+						.author
+							p
+								| Rajesh Singh
+								span (rajesh.singh@aurora.no)
+							
+					.notification.col.col--2-of-2
+						h3 RE: Lorem ipsum 
+						p 
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
+							| ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+						img.profile-img(src="../img/profile_images/male_student2.jpg")
+						.author
+							p
+								| Karl Svenning 
+								span (bernt.nilsen@aurora.no)
+							
+					.notification.col.col--2-of-2
+						h3 RE: Lorem ipsum 
+						p 
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
+							| ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+						img.profile-img(src="../img/profile_images/female_student2.png")
+						.author
+							p
+								| Kristine Nilsen 
+								span (bernt.nilsen@aurora.no)
+				
 		// Profile content 
 		.col.col--1-of-5
 			include ../includes/profile.jade
