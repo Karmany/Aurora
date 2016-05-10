@@ -355,3 +355,61 @@ $(window).scroll(function (event) {
 
  });
  */
+
+ // !LOCALSTORAGE for storing session roles!
+
+ $('button').on('click', function(){
+
+	if($('.username').val() == 'student'){
+		window.location.href = 'index.html#/' + page3;
+		sessionStorage.role = 'student';
+
+	}else if ($('.username').val() == 'teacher'){
+		window.location.href = 'index.html#/' + page5;
+		sessionStorage.role = 'teacher';
+
+	}else if ($('.username').val() == 'admin') {
+		window.location.href = 'index.html#/' + page6;
+		sessionStorage.role = 'admin';
+	}
+
+ });
+
+ $('.unregistered, .logout').on('click', function() {
+ 	sessionStorage.role = undefined;
+ });
+
+ $(window).on('hashchange load', function(e){
+	$(function(){
+
+		if (sessionStorage.role == 'student') {
+			hideNavItems();
+			// student header nav links
+			$('.page-1-link,  .page-2-link, .page-3-link, .page-4-link, .logout').show();
+
+		}else if (sessionStorage.role == 'teacher') {
+			hideNavItems();
+			// teacher header nav links
+			$('.page-1-link, .page-4-link, .page-4-link, .logout').show();
+
+		}else if (sessionStorage.role == 'admin') {
+			hideNavItems();
+			// admin header nav links
+			$('.page-1-link,  .page-2-link, .page-4-link, .logout').show();
+
+		}else if (sessionStorage.role == 'undefined') {
+			hideNavItems();
+			// unregistered header nav links
+			$('.page-1-link, .page-4-link, .logout').show();
+			$('.logout a').text('sign in')
+		}
+
+	});
+ });
+
+function hideNavItems(){
+	$('nav ul li, .nav-desktop-indicator ul li').hide();
+}
+
+// See role while working
+$('#role').text(sessionStorage.role)

@@ -1,0 +1,28 @@
+doctype html
+
+html(lang="en", ng-app="myApp")
+   head
+      include ./includes/favicons.jade
+      meta(charset="utf-8")
+      meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+      title Project Aurora
+      link(rel="stylesheet", href="css/base.css")
+      
+      style.
+         input {
+            color: black; }
+   
+   body
+      input.username(name='username')
+      button(type='submit') check role
+      br
+      a.unregistered(href='index.html') view page unregistered
+      p Hei håkon. den her må på en eller anna måte integreres med din login side. Vi kan gjør det imorra elns. Anyways, prøv å skriv 'student', 'admin', eller 'teacher'!
+   
+      script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+      script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js")
+      script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js")
+      script(src="js/app.js")
+      script(src="js/main.js")
+      
+      
