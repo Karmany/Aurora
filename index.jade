@@ -43,11 +43,19 @@ html(lang="en", ng-app="myApp")
                      .desktop-nav-icon
                         include ./includes/svg-icons/profile-icon.jade
                      a
+                  li.search
+                     .desktop-nav-icon.search-icon
+                        include ./includes/svg-icons/search-icon.jade
+                     .desktop-nav-icon.close-icon(style='display: none')
+                        include ./includes/svg-icons/close-icon.jade
+                     a search
                   li.logout
                      .desktop-nav-icon
                         include ./includes/svg-icons/logout-icon.jade
                      a(href='logintest.html') log out
          include ./includes/nav-indicator.jade
+         #searchbox
+            input(placeholder='Search for e.g. a partical subject')
             
          .container(ng-view)
          #title
