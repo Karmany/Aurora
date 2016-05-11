@@ -1,54 +1,89 @@
 #main-teacher.content
-	
+
 	.row 
 		// notifications content 
-		.notification-content.col.col--4-of-5 
+		.col.col--4-of-5.notification-content
 		
-			// Notification 1
-			.row
-				// Image column
-				.notification.first.col.col--2-of-2
-					//- img(src="../img/notification-img.jpg" alt="Notification image")
-					h3 Comment on lecture 
-					h4 
-						| IMT1471 Web Project 1 
-						span (25.05.2016)
-					p I did not quite understand how you can include parts of your 
-						| website by writing separate html files and adding them 
-						| together. Can you explain a bit more? 
-					p.author Ola Nordmann 
-			
-			// Notification 2
-			.row
-				// Image column
-				.notification.col.col--2-of-2
-					//- img(src="../img/notification-img.jpg" alt="Notification image")
-					h3 Comment on lecture 
-					h4 
-						| IMT1471 Web Project 1 
-						span (25.04.2016)
-					p Hi! It seems like the last few slides from the lecture is missing. 
-						| Can you please add them? 
-					p.author John Doe 
-			
-			// Notification 3
-			.row 
-				.notification.col.col--2-of-2
-					//- img(src="../img/notification-img.jpg" alt="Notification image")
-					h3 Lecture scheduling conflict 
-					h4 
-						| IMT1471 Web Project 1 
-						span (09.05.2016)
-					p Hello. Would it be possible for you to move your lecture in 
-						| IMT1471 Web Project 1 from Monday 09.05.2016 (08:15-10) to
-						| Tuesday 10.05.2016 (10:15-12)?
-					p.author 
-						| Jane Doe, Management 
-						span (jane.doe@management.ntnu.no) 
+			// TEACHER AND MANAGEMENT NOTIFICATIONS 
+			.teacher.col.col--1-of-2 
+				
+				.teacher-headline
+					h2 Management 
+					img.headline-icon(src="../img/iconography/ic_notifications_green_24px.svg")
 					
+				// Notification 1
+				.row
+					.notification.first.col.col--2-of-2
+						h3 IMT2002 Color Management: Last lecture May 10th.
+						p Due to a scheduling issue, your lecture for IMT1471 Web Project 1 
+							| has been moved from Monday 09.05.2016 (08:15-10) to
+							| Tuesday 10.05.2016 (10:15-12). 
+						img.profile-img(src="../img/profile_images/kristian_management.jpg")
+						.author 
+							p
+								| Kristian Fjell
+								span (kristian.fjell@aurora.management.no) 
+						
+				// Notification 2
+				.row
+					.notification.col.col--2-of-2
+						h3 Guest lecture in Mobile Media Design
+						p Would you be interested in holding a 
+							| small guest lecture for my class. The topic in question  is 
+							| "Typography on the web". I was originally thinking Tuesday
+							| May 11th (10:15 - 12:00), but we could change that if it doesn't work for you.
+						img.profile-img(src="../img/profile_images/clooney.jpg")
+						.author
+							p
+								| Torgeir Hansen
+								span (torgeir.hansen@aurora.no)
+								
+			// STUDENT NOTIFICATIONS
+			.student.col.col--1-of-2 
+				
+				.student-headline
+					h2 Comments 
+					img.headline-icon(src="../img/iconography/ic_comment_green_24px.svg")
+					
+				// Comment 1
+				.row 
+					.notification.first.col.col--2-of-2
+						h3 Using includes in html
+						p
+							| I did not quite understand how you can include parts of your 
+							| website by writing separate html files and adding them 
+							| together. Can you explain a bit more? 
+						img.profile-img(src="../img/profile_images/female_student1.jpg")
+						.author
+							p
+								| Camilla Svensen
+								span (camilla.svensen@aurora.no)
+							
+					.notification.col.col--2-of-2
+						h3 Missing lectures slides
+						p 
+							| It seems like the last few slides from the lecture is missing. 
+							| Can you please add them? 
+						img.profile-img(src="../img/profile_images/male_student1.png")
+						.author
+							p
+								| Rajesh Singh
+								span (rajesh.singh@aurora.no)
+					
+					.notification.col.col--2-of-2
+						h3 Frameworks for oblig 
+						p 
+							| Are we allowed to use any frameworks like Bootstrap or 
+							| Foundation for Oblig 2? 
+						img.profile-img(src="../img/profile_images/male_student3.jpg")
+						.author
+							p
+								| Ola Kristiansen
+								span (ola.kristiansen@aurora.no)					
+				
 		// Profile content 
 		.col.col--1-of-5
-			include ../includes/profile-teacher.jade
-			
-include ../includes/partialscript.jade
+			include ../includes/profile.jade
+		
+		include ../includes/partialscript.jade
 			
