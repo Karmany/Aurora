@@ -1690,6 +1690,10 @@ p.secondary {
   margin-top: 0;
 }
 
+.lectures-student .date-space-fix {
+  margin-bottom: 5px;
+}
+
 .lectures-student .top-space-fix {
   margin-top: -20px;
 }
@@ -1740,6 +1744,12 @@ p.secondary {
   }
   .lectures-student .lecture-time h2 {
     width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lectures-student .author p span {
+    font-size: 1.1rem;
   }
 }
 
@@ -1913,6 +1923,9 @@ textarea {
   }
   #main-student .student-headline {
     margin-top: 50px;
+  }
+  #main-student .author p span {
+    color: red;
   }
 }
 
