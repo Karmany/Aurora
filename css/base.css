@@ -1701,6 +1701,31 @@ p.secondary {
   display: inline-block;
 }
 
+.lectures-student .profile-img {
+  margin-top: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  float: left;
+}
+
+.lectures-student .author {
+  border-top: 2px solid #455A64;
+  padding-top: 5px;
+  width: 200px;
+}
+
+.lectures-student .author p {
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.lectures-student .author p span {
+  font-size: 1.4rem;
+  color: #79d894;
+  display: block;
+}
+
 #loginbody {
   background: #c1bdba;
   font-family: 'Roboto', sans-serif;
