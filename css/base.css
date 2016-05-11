@@ -1854,6 +1854,37 @@ nav.mobile {
   float: left;
 }
 
+.lectures-student .comment-icon {
+  margin-top: 5px;
+  width: 20px;
+  height: 20px;
+  float: left;
+}
+
+.lectures-student .comment-txt {
+  padding-top: 5px;
+}
+
+.lectures-student .comment-txt a {
+  margin-left: 5px;
+  margin-top: 10px;
+  color: #79d894;
+  text-decoration: none;
+}
+
+.lectures-student .comment-wrap {
+  width: 100%;
+  float: left;
+  margin-top: 10px;
+}
+
+.lectures-student .comment-wrap-teacher {
+  margin-top: -15px;
+  margin-bottom: 25px;
+  width: 100%;
+  float: left;
+}
+
 .lectures-student .bottom-space-fix {
   margin-bottom: 30px;
 }
@@ -1861,7 +1892,10 @@ nav.mobile {
 .lectures-student .author {
   border-top: 2px solid #455A64;
   padding-top: 5px;
+  position: relative;
+  left: -40px;
   width: 200px;
+  float: left;
 }
 
 .lectures-student .author p {
@@ -2395,7 +2429,7 @@ textarea {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
   position: relative;
   margin-top: 7px;
-  min-width: 150px;
+  min-width: 180px;
 }
 
 .profile .profile-list {
