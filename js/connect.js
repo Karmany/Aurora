@@ -95,7 +95,24 @@ fourthLink.addEventListener('click', function (event) {
    vid.play();
 });
 
+var numimg = 11;
+var curimg = 0;
 
+function  goback() {
+   var im=document.getElementById("slides");
+   if(curimg>0) {
+   im.src = slides[curimg-1];
+   curimg = curimg - 1;
+   }
+}
+
+function gofwd(){
+var im=document.getElementById("slides");
+   if(curimg < numimg){
+   im.src = slides[curimg+1];
+   curimg = curimg + 1;
+   }
+}
 
 
 
