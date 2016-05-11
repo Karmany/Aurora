@@ -32,8 +32,6 @@ $('.unregistered').on('click', function() {
   sessionStorage.role = 'unregistered';
 });
 
-
-
 $(window).on('hashchange load', function(e){
   $(function(){
 
@@ -71,98 +69,56 @@ $('#role').text(sessionStorage.role)
 
 // END - SESSIONSTORAGE
 
+// START - SEARCHBOX
+
 $('li.search').on('click', function(){
-	$('#searchbox').toggleClass('active');
-	if($('#searchbox').hasClass('active')){
+	$('#searchbox').removeClass('force-closed')
+	$('#searchbox').toggleClass('closed open')
+	if($('#searchbox').hasClass('open')){
 		$('#searchbox input').focus();
-		$('li.search .search-icon').hide();
-		$('li.search .close-icon').show();
-		removeActiveClass();
-		$('.nav-desktop-indicator .search').addClass('active');
-	}else{
+	}else if($('#searchbox').hasClass('closed')){
 		$('#searchbox input').blur();
-		$('li.search .search-icon').show();
-		$('li.search .close-icon').hide();
-		setActiveMenuItem();
 	}
 });
 
-$('#searchbox input').on('blur', function() {
-   $('#searchbox').removeClass('active');
+$('#searchbox input').on('focus', function(){
+	$('li.search .search-icon').hide();
+	$('li.search .close-icon').show();
+	removeActiveClass();
+	$('.nav-desktop-indicator .search').addClass('active');
+});
+$('#searchbox input').on('blur', function(){
+   $('#searchbox').addClass('force-closed', 'closed');
+	$('li.search .search-icon').show();
+	$('li.search .close-icon').hide();
+	setActiveMenuItem();
 });
 
+// END - SEARCHBOX
 
-// Profile JS
+// START - HAMBURGER
 
-
-/*
-$(document).ready(function(){
-$('.read-more').click(function(){
-   readMore();
-});
-});
-
-function readMore() {
-   $('.full-txt').toggle();
-   $('.read-more').toggle();
-}
-
-$(document).ready(function(){
-   $('.read-less').click(function(){
-      $('.full-txt').toggle();
-      $('.read-more').toggle();
-   });
-});
-*/
-
-
-/*
-function changePos() {
-   var navDesktop = $(".profile-wrapper");
-   if (window.pageYOffset > parseInt($('#header').css('height'))) {
-      $(navDesktop).css("position","fixed");
-      $(navDesktop).css("top","0px");
-      //$(navDesktop).css("width","inherit");
-      console.log('if state');
-   }
-   else {
-      $(navDesktop).css("position","relative");
-      $(navDesktop).css("top","0px");
-      //$(navDesktop).css("width","100%");
-      console.log('else state');
-   }
-
-
-//else if ($(".profile-wrapper").offset().top + $(".profile-wrapper").height() >= $('footer').offset().top - 10)
-   //  $(navDesktop).css("position", "absolute");
-}
-
-$(window).scroll(function(){
-   changePos();
-});
-/*
-//if ($(".profile-wrapper").offset().top + $(".profile-wrapper").height() >= $('#footer').offset().top - 10){
-  //  $(navDesktop).css("position", "absolute");
-    //console.log("else if state")
-//}
-
-// Footer shit
-/*
 $(function(){
-	$('.page-wrap').css({
-		'margin-bottom' : '-' + parseInt($('footer').css('height')) + 'px',
-	});
-	$('.page-wrap:after').css({
-		'height' : parseInt($('footer').css('height')) + 'px',
+	$('.hamburger').click(function(){
+		if($('.hamburger').hasClass('hamburger') || $('.hamburger').hasClass('active-out')){
+			$('.slideout-wrap').addClass("active").removeClass("active-out");
+		}else{
+			$('.slideout-wrap').addClass("active-out").removeClass("active");
+		}
 	});
 });
-*/
+
+$(".slideout ul li a, .body-overlay").click(function(){
+	$(".slideout-wrap").addClass("active-out").removeClass("active");
+});
+
+// END - HAMBURGER
 
 // fetch subpage from Url and display as title and in header and tab
 
 var pageBaseTitle = "Aurora";
 var pageDivider = "#/";
-var ttl = $("#title");
+var ttl = document.getElementById("title");
 
 function getUrl(){
 	var url = window.location.href.split(pageDivider)[1];
@@ -173,11 +129,13 @@ String.prototype.ucFirst = function(){
 }
 function urlTitle() {
 	document.title = pageBaseTitle + " - " + getUrl().ucFirst();
-	ttl.textContent = getUrl()//.ucFirst();
+	ttl.textContent = getUrl().ucFirst();
 }
 
-urlTitle();
-setActiveMenuItem();
+$(function(){
+	urlTitle();
+	setActiveMenuItem();
+});
 
 window.addEventListener("hashchange", function(){
 	urlTitle();
@@ -186,7 +144,7 @@ window.addEventListener("hashchange", function(){
 
 // See which subpage is currently active in the navigation
 
-function setActiveMenuItem() {
+function setActiveMenuItem(){
 	switch (url = window.location.href.split(pageDivider)[1]) {
 		case page1:
 			removeActiveClass();
@@ -218,10 +176,10 @@ function setActiveMenuItem() {
 			//document.getElementById('page-five-mobile').setAttribute('class', 'nav-list-mobile__item nav-list-mobile__item--active');
 			$('.nav-desktop-indicator .page-6-link').addClass('active');
 			break;
-	}
+	};
 }
 
-function removeActiveClass() {
+function removeActiveClass(){
 	$('.nav-desktop-indicator .page-1-link').removeClass('active');
 	$('.nav-desktop-indicator .page-2-link').removeClass('active');
 	$('.nav-desktop-indicator .page-3-link').removeClass('active');
@@ -229,59 +187,4 @@ function removeActiveClass() {
 	$('.nav-desktop-indicator .page-5-link').removeClass('active');
    $('.nav-desktop-indicator .page-6-link').removeClass('active');
 	$('.nav-desktop-indicator .search').removeClass('active');
-}
-
-
-
-
-
-
-/*
-$(window).scroll(function(e){
- var $el = $('.profile-wrapper');
- var isPositionFixed = ($el.css('position') == 'fixed');
- if ($(this).scrollTop() > 300 && !isPositionFixed){
-    $('.profile-wrapper').css({'position': 'fixed', 'top': '0px'});
- }
- if ($(this).scrollTop() < 300 && isPositionFixed){
-    $('.profile-wrapper').css({'position': 'static', 'top': '0px'});
- }
-});
-*/
-
-
-
-//Dette er en kode jeg bare sparer på, skal kansje bruke den mer. -Aslak
-/*
-// Position of fixed element from top of the document
-var fixedElementOffset = $('.profile-wrapper').offset().top;
-// Position of footer element from top of the document.
-// You can add extra distance from the bottom if needed,
-// must match with the bottom property in CSS
-var footerOffset = $('#footer').offset().top - 36;
-
-var fixedElementHeight = $('.profile-wrapper').height();
-
-// Check every time the user scrolls
-$(window).scroll(function (event) {
-
-    // Y position of the vertical scrollbar
-    var y = $(this).scrollTop();
-
-    if ( y >= fixedElementOffset && ( y + fixedElementHeight ) < footerOffset ) {
-         $('.profile-wrapper').addClass('fixed');
-         $('.profile-wrapper').removeClass('bottom');
-         console.log("if")
-    }
-    else if ( y >= fixedElementOffset && ( y + fixedElementHeight ) >= footerOffset ) {
-         $('.profile-wrapper').removeClass('fixed');
-         $('.profile-wrapper').addClass('bottom');
-         console.log("else if")
-    }
-    else {
-         $('.profile-wrapper').removeClass('fixed bottom');
-         console.log("else")
-    }
-
- });
- */
+};
