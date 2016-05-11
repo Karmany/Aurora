@@ -61,7 +61,7 @@ $(window).on('hashchange load', function(e){
 });
 
 function hideNavItems(){
-  $('nav ul li, .nav-desktop-indicator ul li').hide();
+  $('nav ul li, .nav-desktop-indicator ul li, .slideout ul li').hide();
 }
 
 // See role while working
@@ -71,6 +71,26 @@ $('#role').text(sessionStorage.role)
 
 // START - SEARCHBOX
 
+$(function(){
+	$('li.search, .search-icon').click(function(){
+		if($('.searchbox').hasClass('searchbox') || $('.searchbox').hasClass('closed')){
+			$('.searchbox').addClass("open").removeClass("closed");
+			$('.searchbox input').focus();
+			//$('li.search .search-icon').hide();
+			//$('li.search .close-icon').show();
+			//$('li.search a').html('close');
+			removeActiveClass();
+			$('.nav-desktop-indicator .search').addClass('active');
+		}else{
+			$('.searchbox input').blur();
+			//$('.searchbox').addClass('closed').removeClass('open');
+			//$('li.search .search-icon').show();
+			//$('li.search .close-icon').hide();
+			//$('li.search a').html('search');
+		}
+	});
+});
+/*
 $('li.search').on('click', function(){
 	$('#searchbox').removeClass('force-closed')
 	$('#searchbox').toggleClass('closed open')
@@ -80,17 +100,17 @@ $('li.search').on('click', function(){
 		$('#searchbox input').blur();
 	}
 });
-
-$('#searchbox input').on('focus', function(){
+*/
+/*
+$('.searchbox input').on('focus', function(){
 	$('li.search .search-icon').hide();
 	$('li.search .close-icon').show();
 	removeActiveClass();
 	$('.nav-desktop-indicator .search').addClass('active');
 });
-$('#searchbox input').on('blur', function(){
-   $('#searchbox').addClass('force-closed', 'closed');
-	$('li.search .search-icon').show();
-	$('li.search .close-icon').hide();
+*/
+$('.searchbox input').on('blur', function(){
+	$('.searchbox').addClass('closed').removeClass('open');
 	setActiveMenuItem();
 });
 
@@ -122,6 +142,9 @@ var ttl = document.getElementById("title");
 
 function getUrl(){
 	var url = window.location.href.split(pageDivider)[1];
+	if(url !== undefined){
+		url.replace('-', ' ')
+	}
 	return (typeof url == 'undefined' ? page1 : url);
 }
 String.prototype.ucFirst = function(){
@@ -129,7 +152,7 @@ String.prototype.ucFirst = function(){
 }
 function urlTitle() {
 	document.title = pageBaseTitle + " - " + getUrl().ucFirst();
-	ttl.textContent = getUrl().ucFirst();
+	ttl.textContent = getUrl()//.ucFirst();
 }
 
 $(function(){
