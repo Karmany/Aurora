@@ -58,7 +58,7 @@ function changeImg() {
    } else if (vid.currentTime > 555 && vid.currentTime < 603 && document.getElementById('slides').src != slides[9]) {
       document.getElementById('slides').src = slides[9];
       console.log("Slide 10 loaded on page");
-   } 
+   }
 }
 
 //Keywords change videotime
@@ -105,17 +105,17 @@ fourthLink.addEventListener('click', function (event) {
 
 //Links to the different slides that we will put in the page
 var slides = [
-   "../img/slides/Lecure3-1.001.jpg",
-   "../img/slides/Lecure3-1.002.jpg",
-   "../img/slides/Lecure3-1.003.jpg",
-   "../img/slides/Lecure3-1.004.jpg",
-   "../img/slides/Lecure3-1.005.jpg",
-   "../img/slides/Lecure3-1.006.jpg",
-   "../img/slides/Lecure3-1.007.jpg",
-   "../img/slides/Lecure3-1.008.jpg",
-   "../img/slides/Lecure3-1.009.jpg",
-   "../img/slides/Lecure3-1.010.jpg",
-   "../img/slides/Lecure3-1.011.jpg";
+   "../img/slides/Lecture3-1.001.jpeg",
+   "../img/slides/Lecture3-1.002.jpeg",
+   "../img/slides/Lecture3-1.003.jpeg",
+   "../img/slides/Lecture3-1.004.jpeg",
+   "../img/slides/Lecture3-1.005.jpeg",
+   "../img/slides/Lecture3-1.006.jpeg",
+   "../img/slides/Lecture3-1.007.jpeg",
+   "../img/slides/Lecture3-1.008.jpeg",
+   "../img/slides/Lecture3-1.009.jpeg",
+   "../img/slides/Lecture3-1.010.jpeg",
+   "../img/slides/Lecture3-1.011.jpeg"
 ];
 
 //When is the video we want to change slide
