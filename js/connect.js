@@ -102,6 +102,20 @@ fourthLink.addEventListener('click', function (event) {
 var numimg = 11;
 var curimg = 0;
 
+/*
+var item = document.getElementById('slides').getAttribute("src")
+function gofwd(){
+   for (var i=0; i<slides.length; i++){
+      slides.indexOf(item);
+      var code = slides[i+1];
+      console.log(item)
+      console.log(code)
+      document.getElementById('slides').setAttribute("src", "../img/slides/Lecture3-1.004.jpeg");
+   break;
+   }
+}
+*/
+
 function goback() {
    var im=document.getElementById("slides");
    if(curimg>0) {
