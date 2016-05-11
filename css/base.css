@@ -1343,7 +1343,7 @@ header nav ul li .desktop-nav-icon svg {
   margin-right: 5px;
 }
 
-#searchbox {
+.searchbox {
   width: 100%;
   height: 0px;
   background-color: #79d894;
@@ -1354,7 +1354,7 @@ header nav ul li .desktop-nav-icon svg {
   transition: height 0.3s ease;
 }
 
-#searchbox input {
+.searchbox input {
   width: calc(100% - 100px);
   max-width: 1060px;
   padding: 0px 50px 0px 80px;
@@ -1369,16 +1369,12 @@ header nav ul li .desktop-nav-icon svg {
   background-repeat: no-repeat;
 }
 
-#searchbox input:focus {
+.searchbox input:focus {
   outline: none;
 }
 
-#searchbox.open {
+.searchbox.open {
   height: 50px;
-}
-
-#searchbox.force-closed {
-  height: 0px;
 }
 
 .nav-desktop-indicator {
@@ -1445,7 +1441,7 @@ header nav ul li .desktop-nav-icon svg {
 nav.mobile {
   width: 100%;
   padding: 0px 20px;
-  height: 30px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1455,6 +1451,10 @@ nav.mobile .nav-items {
   display: flex;
   color: white;
   justify-content: space-between;
+}
+
+nav.mobile .nav-items #title {
+  font-variant: small-caps;
 }
 
 nav.mobile .nav-items .hamburger {
@@ -1503,7 +1503,6 @@ nav.mobile .nav-items .hamburger {
   width: 100%;
   padding: 0px;
   padding-top: 20px;
-  padding-left: 20px;
 }
 
 .slideout-wrap .slideout ul li {
@@ -1512,6 +1511,11 @@ nav.mobile .nav-items .hamburger {
   display: block;
   font-variant: small-caps;
   margin-bottom: 20px;
+}
+
+.slideout-wrap .slideout ul li:last-child {
+  border-top: 2px solid #455A64;
+  padding-top: 20px;
 }
 
 .slideout-wrap .slideout ul li a {
@@ -1528,6 +1532,7 @@ nav.mobile .nav-items .hamburger {
   position: relative;
   top: 0.2rem;
   margin-right: 10px;
+  margin-left: 20px;
 }
 
 @keyframes open {
@@ -1771,6 +1776,29 @@ nav.mobile {
   }
   .flex2 {
     display: flex;
+  }
+  .searchbox {
+    width: calc(100% - 40px);
+    border-radius: 2px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 0px;
+    background-color: #79d894;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-image: url(src=img/iconography/small-arrow.svg);
+    background-size: 2rem auto;
+    background-position: right 0px bottom 20px;
+    background-repeat: no-repeat;
+  }
+  .searchbox input {
+    width: 100%;
+    margin: 0 auto;
+    height: inherit;
+    padding: 0px 20px 0px 20px;
+    background-image: none;
   }
 }
 
