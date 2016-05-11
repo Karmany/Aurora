@@ -85,7 +85,7 @@ header
 
             &.activeColor
                background-color: $green2
-               top: 45px
+               top: 65px
 
             .search-icon, .close-icon
                svg
@@ -94,28 +94,47 @@ header
                   margin-left: 3px
 
 .searchbox
-   width: 100%
+   max-width: 960px
+   width: calc(100% - 190px)
+   border-radius: 20px
+   margin: 0 auto
    height: 0px
    background-color: $green1
+   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25)
    color: $primaryColor
    overflow: hidden
    display: flex
    justify-content: center
    transition: height 0.3s ease
+   margin-top: 20px
 
    input
-      width: calc(100% - 100px)
-      max-width: 1060px
-      padding: 0px 50px 0px 80px
+      padding: 0px 35px
+      width: 100%
       margin: 0 auto
       height: inherit
       font-size: 1.6rem
+      color: $primaryColor
       background-color: transparent
       border: none
       background-image: url(../img/iconography/search-2.svg)
       background-size: 1.6rem auto
-      background-position: left 54px bottom 12px
+      background-position: left 15px bottom 12px
       background-repeat: no-repeat
+
+      &::-webkit-input-placeholder
+      color: $primaryColorLight
+
+      &:-moz-placeholder
+         /* Firefox 18- */
+         color: $primaryColorLight
+
+      &::-moz-placeholder
+         /* Firefox 19+ */
+         color: $primaryColorLight
+
+      &:-ms-input-placeholder
+         color: $primaryColorLight
 
       &:focus
          outline: none
