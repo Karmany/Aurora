@@ -1275,6 +1275,13 @@ body {
   color: white;
 }
 
+#role {
+  position: absolute;
+  background-color: rgba(69, 90, 100, 0.5);
+  top: 10px;
+  left: 10px;
+}
+
 header {
   background-color: #455A64;
   width: 100%;
@@ -1333,6 +1340,40 @@ header nav ul li .desktop-nav-icon svg {
   position: relative;
   top: 0.2rem;
   margin-right: 5px;
+}
+
+#searchbox {
+  width: 100%;
+  height: 0px;
+  background-color: #79d894;
+  color: #455A64;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  transition: height 0.3s ease;
+}
+
+#searchbox input {
+  width: calc(100% - 100px);
+  max-width: 1060px;
+  padding: 0px 50px 0px 80px;
+  margin: 0 auto;
+  height: inherit;
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  background-image: url(../img/iconography/search-2.svg);
+  background-size: 2rem auto;
+  background-position: left 50px bottom 15px;
+  background-repeat: no-repeat;
+}
+
+#searchbox input:focus {
+  outline: none;
+}
+
+#searchbox.active {
+  height: 50px;
 }
 
 .nav-desktop-indicator {
@@ -1591,9 +1632,6 @@ p.secondary {
     width: 100%;
     padding: 50px 20px;
   }
-  .profile-wrapper {
-    display: none;
-  }
 }
 
 @media (max-width: 480px) {
@@ -1626,7 +1664,7 @@ p.secondary {
     padding-left: 50px;
     padding-right: 50px;
   }
-  .links {
+  footer .links {
     display: none;
   }
   .sMiddle {
@@ -1657,12 +1695,13 @@ p.secondary {
 
 .lectures-student .lecture-time {
   color: #79d894;
-  text-align: center;
   margin-top: -20px;
+  text-align: center;
 }
 
 .lectures-student .lecture-time h2 {
-  padding: 0 20px;
+  margin: 40px 0 10px 0;
+  padding: 0 15px 5px 15px;
   border-bottom: 2px solid #79d894;
   display: inline-block;
 }
@@ -2124,7 +2163,6 @@ textarea {
   background-color: #455A64;
   padding-bottom: 20px;
   border-radius: 2px;
-  width: 200px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
   position: relative;
   margin-top: 7px;
@@ -2184,6 +2222,12 @@ textarea {
   color: #fff;
   text-align: center;
   display: block;
+}
+
+@media (max-width: 700px) {
+  .profile .profile-wrapper {
+    display: none;
+  }
 }
 
 /* BEGIN Thin */

@@ -1,0 +1,289 @@
+// Common elements
+
+*
+   box-sizing: border-box
+
+html, body
+   height: 100%
+
+html
+   font-size: 62.5%
+
+body
+   background-color: $primaryColorDark
+   color: white
+
+#role
+   position: absolute
+   background-color: rgba(69, 90, 100, 0.5)
+   top: 10px
+   left: 10px
+
+// !HEADER || H E A D E R
+
+header
+   background-color: $primaryColor
+   width: 100%
+   height: 200px
+   display: flex
+   flex-flow: column
+   justify-content: space-between
+   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45)
+
+   svg#logo
+      //align-self: center
+      height: 50px
+
+   nav
+      height: 50px
+      position: relative
+      z-index: 2
+      display: flex
+      justify-content: center
+
+      a
+         color: white
+         text-decoration: none
+
+      ul
+         list-style-type: none
+         display: flex
+         justify-content: space-between
+         align-items: center
+         width: calc(100% - 100px)
+         max-width: 1060px
+         padding: 0px 50px
+         margin: 0 auto
+         border: 0
+
+         li
+            list-style: none
+            font-size: 2rem
+            font-variant: small-caps
+
+            a
+               float: right
+
+            .desktop-nav-icon
+               float: left
+
+               svg
+                  height: 1.6rem
+                  position: relative
+                  top: 0.2rem
+                  margin-right: 5px
+
+#searchbox
+   width: 100%
+   height: 0px
+   background-color: $green1
+   color: $primaryColor
+   overflow: hidden
+   display: flex
+   justify-content: center
+   transition: height 0.3s ease
+
+   input
+      width: calc(100% - 100px)
+      max-width: 1060px
+      padding: 0px 50px 0px 80px
+      margin: 0 auto
+      height: inherit
+      font-size: 2rem
+      background-color: transparent
+      border: none
+      background-image: url(../img/iconography/search-2.svg)
+      background-size: 2rem auto
+      background-position: left 50px bottom 15px
+      background-repeat: no-repeat
+
+      &:focus
+         outline: none
+
+#searchbox.active
+   height: 50px
+
+.nav-desktop-indicator
+   height: 50px
+   overflow: hidden
+   width: 100%
+   display: flex
+   position: relative
+   margin-top: -50px
+   //background-color: $primaryColorLight
+
+   a
+      color: rgba(0, 0, 0, 0)
+      text-decoration: none
+
+   ul
+      list-style-type: none
+      display: flex
+      justify-content: space-between
+      align-items: center
+      align-self: flex-end
+      width: calc(100% - 100px)
+      max-width: 1060px
+      padding: 0px 50px
+      margin: 0 auto
+      border: 0
+
+      li
+         list-style: none
+         font-size: 2rem
+         font-variant: small-caps
+
+         a
+            float: right
+
+         .desktop-nav-icon
+            float: left
+
+            svg
+               height: 1.6rem
+               fill: rgba(0, 0, 0, 0)
+               position: relative
+               top: 0.2rem
+               margin-right: 5px
+
+      li
+         border-bottom: 3px solid rgba(255, 255, 255, 0)
+         transition: clip-path 0.3s ease
+         clip-path: inset(0 100% 0 0)
+
+         &.active
+            border-bottom: 3px solid white
+            border-width: 0px 0px 3px 20px
+            clip-path: inset(0 0 0 0)
+
+// !FOOTER || F O O T E R
+
+.page-wrap
+   /* equal to footer height */
+   margin-bottom: -410px
+
+   &:after
+      content: ""
+      display: block
+
+footer, .page-wrap:after
+   height: 410px
+
+footer
+   background-color:  $green1
+   color: $primaryColor
+   display: flex
+
+   .container
+      padding-top: 20px
+      padding-bottom: 20px
+
+   input, textarea
+      background-color: transparent
+      border: 2px solid $primaryColor
+      border-radius: 2px
+      font-weight: 300
+      width: 100%
+      padding: 0.5rem
+      font-size: 1.3rem
+      margin-bottom: 15px
+      transition: background-color 0.3s ease
+
+      &::-webkit-input-placeholder
+         color: $primaryColorLight
+
+      &:-moz-placeholder
+         /* Firefox 18- */
+         color: $primaryColorLight
+
+      &::-moz-placeholder
+         /* Firefox 19+ */
+         color: $primaryColorLight
+
+      &:-ms-input-placeholder
+         color: $primaryColorLight
+
+      &:focus
+         outline: none
+         color: white
+         background-color: $primaryColor
+
+   textarea
+      resize: none
+
+   button
+      border-radius: 2px
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,0.12),0 2px 10px 0 rgba(0,0,0,0.10)
+      width: 100%
+      text-align: center
+      font-weight: 300
+      background-repeat: no-repeat
+      border: none
+      background-color: $primaryColor
+      color: white
+      padding: 1rem
+      font-size: 1.3rem
+      transition: background-color 0.3s ease
+
+      &:hover
+         background-color: $primaryColorLight
+         outline: none
+
+      &:active
+         background-color: $primaryColorDark
+         outline: none
+
+   .footer-logo
+      display: flex
+      justify-content: center
+
+   ul
+      list-style: none
+      padding-left: 0px
+
+      li
+         border-bottom: 2px solid $primaryColor
+
+      li:last-child
+         border-bottom: none
+
+   .links
+      padding-left: 40px
+
+   .links-mobile
+      display: none
+
+.copyright
+   background-color: $green1 - 35
+   text-align: center
+   color: $primaryColor
+   padding-top: 1rem
+   padding-bottom: 1rem
+   font-weight: 300
+
+
+// !CONTAINER || C O N T A I N E R
+
+.container
+   width: calc(100% - 100px)
+   max-width: 1060px
+   padding: 50px 50px
+   margin: 0 auto
+   // working properties
+   border: 2px solid rgba(0, 0, 0, 0)
+
+.content
+   transform: translateY(-10px)
+   opacity: 0
+   min-height: inherit
+
+.content
+   animation: fade-in 0.5s 0.5s ease forwards
+
+@keyframes fade-in
+   33%
+      opacity: 1
+
+   100%
+      transform: translateY(0px)
+      opacity: 1

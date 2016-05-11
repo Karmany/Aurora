@@ -25,3 +25,19 @@
                   | Show more
          a.older-notifications(href='#main-student') 
             p.secondary View older Notifications
+      
+   script.
+         
+      $(document).ready(function(){
+         $('.read-more').click(function(){
+            $('.full-txt').toggle();
+            $('.read-more').toggle();
+         });
+      })
+   
+      $(document).ready(function(){
+         $('.read-less').click(function(){
+            $('.full-txt').toggle();
+            $('.read-more').toggle();
+         });
+      })
