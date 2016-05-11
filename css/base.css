@@ -1649,18 +1649,13 @@ p.secondary {
 }
 
 .lectures-student .top-space-fix {
-  margin-top: 0;
-}
-
-.lectures-student .lecture-time {
-  color: #79d894;
   margin-top: -20px;
-  text-align: center;
 }
 
 .lectures-student .lecture-time h2 {
-  margin: 40px 0 10px 0;
-  padding: 0 15px 5px 15px;
+  margin: 20px 0;
+  padding-bottom: 5px;
+  width: 300px;
   border-bottom: 2px solid #79d894;
   display: inline-block;
 }
@@ -2196,6 +2191,13 @@ textarea {
   .profile .profile-wrapper {
     display: none;
   }
+}
+
+.profile-student .avatar {
+  border-radius: 50%;
+  width: 80%;
+  left: 10%;
+  position: relative;
 }
 
 /* BEGIN Thin */

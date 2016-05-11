@@ -11,6 +11,7 @@ var page4 = 'subjects';
 var page5 = 'main-teacher';
 var page6 = 'main-admin'
 var page7 = 'play'
+var page8 = 'profile-student'
 
 $('#page-1-link a').text(page1);
 $('#page-2-link a').text(page2);
@@ -48,6 +49,9 @@ app.config(['$routeProvider', function($routeProvider){
 	})
 	.when('/' + page7,{
 	templateUrl: 'partials/play.html'
+	})
+	.when('/' + page8,{
+	templateUrl: 'partials/profile-student.html'
 	})
 	.otherwise({
 	templateUrl: 'partials/default.html'

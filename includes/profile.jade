@@ -1,13 +1,10 @@
 .content.profile
    .profile-wrapper
       img.avatar(src='img/lectures/student.jpg')
-      
       .profile-list
          h3 Aslak Ihle
          h3 Studnr: 470587   
-      
-      a.profile-btn(href='') My profile
-      
+      a.profile-btn(href='#profile-student') My profile
       .notification-wrap   
          h3 Notifications 
          p.notification-txt.part-txt 
@@ -19,22 +16,20 @@
                      br
                      | Hide
             a.read-more
-               |... 
+               | ... 
                span.read-fix 
                   br
                   | Show more
          a.older-notifications(href='#main-student') 
             p.secondary View older Notifications
-      
-   script.
-         
+   script. 
+      //Show / Hide script
       $(document).ready(function(){
          $('.read-more').click(function(){
             $('.full-txt').toggle();
             $('.read-more').toggle();
          });
       })
-   
       $(document).ready(function(){
          $('.read-less').click(function(){
             $('.full-txt').toggle();
