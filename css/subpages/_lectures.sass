@@ -3,20 +3,22 @@
    .img-wrap
       padding-left: 0px
 
-   .steve
+   .lecture-img
       width: 100%
+      margin-top: 5px
 
    .txt-wrap h3
       margin-top: 0
+      margin-bottom: 10px
 
    .txt-wrap p
-      
+      margin-top: 0
 
    .top-space-fix
       margin-top: -20px
 
    .lecture-time h2
-      margin: 20px 0
+      margin-top: 20px
       padding-bottom: 5px
       width: 410px
       border-bottom: 2px solid $green1
@@ -24,11 +26,14 @@
 
    .profile-img
 
-      margin-top: 16px
+      margin-top: 20px
       width: 40px
       height: 40px
       border-radius: 100%
       float: left
+
+   .bottom-space-fix
+      margin-bottom: 30px
 
    .author
       border-top: 2px solid #455A64
@@ -43,3 +48,12 @@
             font-size: 1.4rem
             color: $green1
             display: block
+
+   @media (max-width: 1050px)
+      .img-wrap
+         display:none
+      .txt-wrap
+         padding-left: 0
+      .lecture-time h2
+         width: 200px
+      .hue

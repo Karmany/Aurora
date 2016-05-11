@@ -1,35 +1,40 @@
-.profile
+.content.profile
    .profile-wrapper
-      img.avatar(src='img/profile_images/main-student.jpg')
+      img.avatar(src='img/profile_images/teacher2.jpg')
+      
       .profile-list
-         h3 Aslak Ihle
-         h3 Studnr: 470587   
-      a.profile-btn(href='#profile-student') My profile
+         h3 Henriette Jacobsen
+         h3 Universitylector
+      
+      a.profile-btn(href='') My profile
+      
       .notification-wrap   
          h3 Notifications 
          p.notification-txt.part-txt 
-            | Teacher Tom has a uploaded a new lecture in
+            | Student Sam has commented on your lecture
             span.full-txt
-               |  the subject IMT2002 Digital imagereproduction and color management. 
+               | in the subject IMT1292 webcoding. 
                a.read-less 
                   span.read-fix 
                      br
                      | Hide
             a.read-more
-               | ... 
+               |... 
                span.read-fix 
                   br
                   | Show more
-         a.older-notifications(href='#main-student') 
+         a.older-notifications(href='#main-teacher') 
             p.secondary View older Notifications
-   script. 
-      //Show / Hide script
+            
+   script.
+         
       $(document).ready(function(){
          $('.read-more').click(function(){
             $('.full-txt').toggle();
             $('.read-more').toggle();
          });
       })
+   
       $(document).ready(function(){
          $('.read-less').click(function(){
             $('.full-txt').toggle();

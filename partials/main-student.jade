@@ -1,0 +1,107 @@
+#main-student.content
+
+	.row 
+		// notifications content 
+		.col.col--4-of-5.notification-content
+		
+			// TEACHER NOTIFICATIONS 
+			.teacher.col.col--1-of-2 
+				
+				.teacher-headline
+					h2 Teacher
+					img.headline-icon(src="../img/iconography/ic_notifications_green_24px.svg")
+					
+				// Notification 1
+				.row
+					.notification.first.col.col--2-of-2
+						h3 IMT2002 Color Management: Last lecture May 10th.
+						p The last lecture will take place on Tuesday, May 10th in K102. 
+							| We will go through a short summary of the course curriculum
+							| and I will answer any questions you might have before the exam.
+						img.profile-img(src="../img/profile_images/teacher1.jpg")
+						.author 
+							p
+								| Gunnar Olsen
+								span (gunnar.olsen@aurora.no) 
+						
+				// Notification 2
+				.row
+					.notification.col.col--2-of-2
+						h3 IMT1471 Web Project: Lecture moved to May 12th. 
+						p Due to a scheduling conflict, the lecture planned for May 10th 
+							| have been moved to Thursday, May 12th. Room A254 will be used.
+						img.profile-img(src="../img/profile_images/female_teacher.jpg")
+						.author
+							p
+								| Frida Nygaard
+								span (frida.nygaard@aurora.no)
+				
+				// Notification 3
+				.row 
+					.notification.col.col--2-of-2
+						h3 IMT2661 Mobile Media Design: Final Project due May 31th.
+						p The absolute final date for submission of your projects is Tuesday, 
+							| May 31th. Remember to ask me any potential questions well in time 
+							| before the deadline. 
+						img.profile-img(src="../img/profile_images/clooney.jpg")
+						.author
+							p
+								| Torgeir Hansen 
+								span (torgeir.hansen@aurora.no)
+								
+			// STUDENT NOTIFICATIONS
+			.student.col.col--1-of-2 
+				
+				.student-headline
+					h2 Comments 
+					img.headline-icon(src="../img/iconography/ic_comment_green_24px.svg")
+					
+				// Comment 1
+				.row 
+					.notification.first.col.col--2-of-2
+						h3 RE: Need a group member.
+						p
+							| Do you guys still need one more member for you group? 
+							| I am looking for a group myself, so I would like to join. 
+						img.profile-img(src="../img/profile_images/female_student1.jpg")
+						.author
+							p
+								| Camilla Svensen
+								span (camilla.svensen@aurora.no)
+							
+					.notification.col.col--2-of-2
+						h3 Anyone know when oblig 3 will be graded? 
+						p 
+							| Torgeir said he will be finished grading everyone by the end of the week :)
+						img.profile-img(src="../img/profile_images/male_student1.png")
+						.author
+							p
+								| Rajesh Singh
+								span (rajesh.singh@aurora.no)
+							
+					.notification.col.col--2-of-2
+						h3 RE: Try using display inline-block instead of inline. 
+						p 
+							| Thank you. That fixed the problem for me. 
+						img.profile-img(src="../img/profile_images/male_student2.jpg")
+						.author
+							p
+								| Karl Svenning 
+								span (karl.svenning@aurora.no)
+							
+					.notification.col.col--2-of-2
+						h3 RE: Will we be allowed to use any tools during the exam? 
+						p 
+							| I'm pretty sure you can use a simple calculator (with no special functionalities). 
+						img.profile-img(src="../img/profile_images/female_student2.png")
+						.author
+							p
+								| Kristine Nilsen 
+								span (kristine.nilsen@aurora.no)
+				
+		// Profile content 
+		.col.col--1-of-5
+			include ../includes/profile.jade
+		
+		include ../includes/partialscript.jade
+			

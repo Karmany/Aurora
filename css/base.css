@@ -1798,11 +1798,17 @@ p.secondary {
   padding-left: 0px;
 }
 
-.lectures-student .steve {
+.lectures-student .lecture-img {
   width: 100%;
+  margin-top: 5px;
 }
 
 .lectures-student .txt-wrap h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.lectures-student .txt-wrap p {
   margin-top: 0;
 }
 
@@ -1811,7 +1817,7 @@ p.secondary {
 }
 
 .lectures-student .lecture-time h2 {
-  margin: 20px 0;
+  margin-top: 20px;
   padding-bottom: 5px;
   width: 410px;
   border-bottom: 2px solid #79d894;
@@ -1819,11 +1825,15 @@ p.secondary {
 }
 
 .lectures-student .profile-img {
-  margin-top: 16px;
+  margin-top: 20px;
   width: 40px;
   height: 40px;
   border-radius: 100%;
   float: left;
+}
+
+.lectures-student .bottom-space-fix {
+  margin-bottom: 30px;
 }
 
 .lectures-student .author {
@@ -1841,6 +1851,18 @@ p.secondary {
   font-size: 1.4rem;
   color: #79d894;
   display: block;
+}
+
+@media (max-width: 1050px) {
+  .lectures-student .img-wrap {
+    display: none;
+  }
+  .lectures-student .txt-wrap {
+    padding-left: 0;
+  }
+  .lectures-student .lecture-time h2 {
+    width: 200px;
+  }
 }
 
 #loginbody {
@@ -2008,42 +2030,81 @@ textarea {
   display: block;
 }
 
-#main-teacher {
-  margin-top: 0.5em;
+@media (max-width: 700px) {
+  #main-student {
+    margin-top: -10px;
+  }
+  #main-student .student-headline {
+    margin-top: 50px;
+  }
 }
 
 #main-teacher .notification-content h3, #main-teacher .notification-content h4 {
   margin-top: 0;
-  margin-bottom: 0.25em;
-}
-
-#main-teacher .notification-content p {
-  margin-top: 0;
-}
-
-#main-teacher .notification-content p span {
-  color: grey;
-}
-
-#main-teacher .notification-content .first {
-  margin-bottom: 0;
-}
-
-#main-teacher .notification {
   margin-bottom: 10px;
 }
 
-#main-teacher .notification .author {
-  margin-top: -10px;
+#main-teacher .notification-content .teacher-headline, #main-teacher .notification-content .student-headline {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #79d894;
+  width: 200px;
 }
 
-#main-teacher .profile-content img {
-  width: 100%;
-  border-radius: 50%;
+#main-teacher .notification-content .teacher-headline h2, #main-teacher .notification-content .student-headline h2 {
+  display: inline;
 }
 
-#main-teacher .profile-content h2 {
+#main-teacher .notification-content .teacher-headline .headline-icon, #main-teacher .notification-content .student-headline .headline-icon {
+  margin-bottom: -5px;
+  margin-left: 5px;
+}
+
+#main-teacher .notification-content .notification {
+  margin-bottom: 10px;
+}
+
+#main-teacher .notification-content .notification h3 {
   margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#main-teacher .notification-content .notification p {
+  margin-top: 0;
+}
+
+#main-teacher .notification-content .notification .profile-img {
+  margin-top: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  float: left;
+}
+
+#main-teacher .notification-content .notification .author {
+  border-top: 2px solid #455A64;
+  padding-top: 5px;
+  width: 200px;
+}
+
+#main-teacher .notification-content .notification .author p {
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+#main-teacher .notification-content .notification .author p span {
+  font-size: 1.4rem;
+  color: #79d894;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  #main-teacher {
+    margin-top: -10px;
+  }
+  #main-teacher .student-headline {
+    margin-top: 50px;
+  }
 }
 
 #main-admin .monitor {
@@ -2304,6 +2365,7 @@ textarea {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
   position: relative;
   margin-top: 7px;
+  min-width: 150px;
 }
 
 .profile .profile-list {

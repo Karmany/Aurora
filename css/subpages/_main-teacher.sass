@@ -1,33 +1,58 @@
 #main-teacher
-	// border: 2px solid black
-	margin-top: 0.5em
 
 	.notification-content
 		h3, h4
 			margin-top: 0
-			margin-bottom: 0.25em
+			margin-bottom: 10px
 
-		p
-			margin-top: 0
+		.teacher-headline, .student-headline
+			margin-bottom: 10px
+			padding-bottom: 5px
+			border-bottom: 2px solid $green1
+			width: 200px
 
-			span
-				color: grey
+			h2
+				display: inline
 
-		.first
-			margin-bottom: 0
+			.headline-icon
+				margin-bottom: -5px
+				margin-left: 5px
 
-	.notification
-		margin-bottom: 10px
-		// max-width: 85%
+		.notification
+			margin-bottom: 10px
 
-		.author
-			margin-top: -10px
+			h3
+				margin-top: 0
+				margin-bottom: 10px
 
-	.profile-content
+			p
+				margin-top: 0
 
-		img
-			width: 100%
-			border-radius: 50%
+			.profile-img
 
-		h2
-			margin-top: 0
+				margin-top: 16px
+				width: 40px
+				height: 40px
+				border-radius: 100%
+				float: left
+
+			.author
+				border-top: 2px solid #455A64
+				padding-top: 5px
+				width: 200px
+
+				p
+					margin-left: 50px
+					margin-top: 10px
+
+					span
+						font-size: 1.4rem
+						color: $green1
+						display: block
+
+@media (max-width: 700px)
+	#main-teacher
+		margin-top: -10px
+
+		.student-headline
+			margin-top: 50px
