@@ -1,54 +1,57 @@
 #main-student
 	.notification-content
-		img
-			border-radius: 2px
 
-		h3
-			margin-top: 0
-			margin-bottom: 0.25em
+		.teacher-headline, .student-headline
+			margin-bottom: 10px
+			padding-bottom: 5px
+			border-bottom: 2px solid $green1
+			width: 200px
 
-		p
-			margin-top: 0
+			h2
+				display: inline
 
-			span
-				color: grey
-
-		.first
-			margin-bottom: 0
-
-	.notification
-		margin-bottom: 10px
-		// max-width: 85%
-
-		img
-			max-width: 15%
-			float: left
-			margin-right: 10px
-
-		.author
-			margin-top: -10px
-
-	.profile-content
-
-		img
-			width: 100%
-			border-radius: 50%
-
-		h2
-			margin-top: 0
-
-@media only screen and (max-width:700px)
-	#main-student
-
-		.notification-content .first
-			// margin-top: -40px
+			.headline-icon
+				margin-bottom: -5px
+				margin-left: 5px
 
 		.notification
+			margin-bottom: 10px
 
-			img
-				display: none
+			h3
+				margin-top: 0
+				margin-bottom: 10px
 
-		.profile-content
+			p
+				margin-top: 0
 
-			img
-				max-width: 50%
+			.profile-img
+
+				margin-top: 16px
+				width: 40px
+				height: 40px
+				border-radius: 100%
+				float: left
+
+			.author
+				border-top: 2px solid #455A64
+				padding-top: 5px
+				width: 200px
+
+				p
+					margin-left: 50px
+					margin-top: 10px
+
+					span
+						font-size: 1.4rem
+						color: $green1
+						display: block
+
+		// Styles specific for teacher notifications
+		.teacher
+
+			.teacher-headline
+
+		// Specific for student notifications/comments
+		.student
+
+			.student-headline

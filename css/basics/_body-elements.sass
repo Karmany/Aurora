@@ -13,6 +13,12 @@ body
    background-color: $primaryColorDark
    color: white
 
+#role
+   position: absolute
+   background-color: rgba(69, 90, 100, 0.5)
+   top: 10px
+   left: 10px
+
 // !HEADER || H E A D E R
 
 header
@@ -29,7 +35,6 @@ header
       height: 50px
 
    nav
-      //background-color: $primaryColorLight
       height: 50px
       position: relative
       z-index: 2
@@ -67,6 +72,36 @@ header
                   position: relative
                   top: 0.2rem
                   margin-right: 5px
+
+#searchbox
+   width: 100%
+   height: 0px
+   background-color: $green1
+   color: $primaryColor
+   overflow: hidden
+   display: flex
+   justify-content: center
+   transition: height 0.3s ease
+
+   input
+      width: calc(100% - 100px)
+      max-width: 1060px
+      padding: 0px 50px 0px 80px
+      margin: 0 auto
+      height: inherit
+      font-size: 2rem
+      background-color: transparent
+      border: none
+      background-image: url(../img/iconography/search-2.svg)
+      background-size: 2rem auto
+      background-position: left 50px bottom 15px
+      background-repeat: no-repeat
+
+      &:focus
+         outline: none
+
+#searchbox.active
+   height: 50px
 
 .nav-desktop-indicator
    height: 50px
