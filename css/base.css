@@ -1682,11 +1682,6 @@ p.secondary {
 
 .lectures-student .txt-wrap h3 {
   margin-top: 0;
-  margin-left: 10px;
-}
-
-.lectures-student .txt-wrap p {
-  margin-left: 10px;
 }
 
 .lectures-student .top-space-fix {
@@ -1696,7 +1691,7 @@ p.secondary {
 .lectures-student .lecture-time h2 {
   margin: 20px 0;
   padding-bottom: 5px;
-  width: 300px;
+  width: 410px;
   border-bottom: 2px solid #79d894;
   display: inline-block;
 }
