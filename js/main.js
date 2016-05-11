@@ -73,21 +73,11 @@ $('#role').text(sessionStorage.role)
 
 $(function(){
 	$('li.search, .search-icon').click(function(){
-		if($('.searchbox').hasClass('searchbox') || $('.searchbox').hasClass('closed')){
-			$('.searchbox').addClass("open").removeClass("closed");
-			$('.searchbox input').focus();
-			//$('li.search .search-icon').hide();
-			//$('li.search .close-icon').show();
-			//$('li.search a').html('close');
-			removeActiveClass();
-			$('.nav-desktop-indicator .search').addClass('active');
-		}else{
-			$('.searchbox input').blur();
-			//$('.searchbox').addClass('closed').removeClass('open');
-			//$('li.search .search-icon').show();
-			//$('li.search .close-icon').hide();
-			//$('li.search a').html('search');
-		}
+		$('.searchbox').addClass('open');
+		$('li.search').addClass('activeColor');
+		$('li.search .search-icon').hide();
+		$('li.search .close-icon').show();
+		$('.searchbox input').focus();
 	});
 });
 /*
@@ -101,19 +91,17 @@ $('li.search').on('click', function(){
 	}
 });
 */
-/*
-$('.searchbox input').on('focus', function(){
-	$('li.search .search-icon').hide();
-	$('li.search .close-icon').show();
-	removeActiveClass();
-	$('.nav-desktop-indicator .search').addClass('active');
+$('.searchbox input').on('blur', function(){
+	$('.searchbox').removeClass('open');
+	$('li.search').removeClass('activeColor');
+	$('li.search .search-icon').show();
+	$('li.search .close-icon').hide();
 });
-*/
+/*
 $('.searchbox input').on('blur', function(){
 	$('.searchbox').addClass('closed').removeClass('open');
-	setActiveMenuItem();
 });
-
+*/
 // END - SEARCHBOX
 
 // START - HAMBURGER
