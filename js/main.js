@@ -86,11 +86,11 @@ $('li.search').on('click', function(){
 		setActiveMenuItem();
 	}
 });
-/*
+
 $('#searchbox input').on('blur', function() {
    $('#searchbox').removeClass('active');
 });
-*/
+
 
 // Profile JS
 
