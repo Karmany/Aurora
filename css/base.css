@@ -2039,6 +2039,8 @@ nav.mobile {
   padding-top: 5px;
   position: relative;
   left: -40px;
+  display: block;
+  text-decoration: none;
   width: 200px;
   float: left;
 }
@@ -2046,6 +2048,7 @@ nav.mobile {
 .lectures-student .author p {
   margin-left: 50px;
   margin-top: 10px;
+  color: white;
 }
 
 .lectures-student .author p span {
@@ -2248,11 +2251,14 @@ textarea {
   border-top: 2px solid #455A64;
   padding-top: 5px;
   width: 200px;
+  display: block;
+  text-decoration: none;
 }
 
 #main-student .notification-content .notification .author p {
   margin-left: 50px;
   margin-top: 10px;
+  color: white;
 }
 
 #main-student .notification-content .notification .author p span {
@@ -2322,11 +2328,14 @@ textarea {
   border-top: 2px solid #455A64;
   padding-top: 5px;
   width: 200px;
+  display: block;
+  text-decoration: none;
 }
 
 #main-teacher .notification-content .notification .author p {
   margin-left: 50px;
   margin-top: 10px;
+  color: white;
 }
 
 #main-teacher .notification-content .notification .author p span {
