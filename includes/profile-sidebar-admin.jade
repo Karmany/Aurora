@@ -1,0 +1,43 @@
+.content.profile
+   .profile-wrapper
+      img.avatar(src='img/profile_images/kristian_management.jpg')
+      
+      .profile-list
+         h3 Kristian Fjell
+         h3 Administrator
+      
+      a.profile-btn(href='#profile-admin') My profile
+      
+      .notification-wrap   
+         h3 Notifications 
+         p.notification-txt.part-txt 
+            | Student Sam has commented on your lecture
+            span.full-txt
+               | in the subject IMT1292 webcoding. 
+               a.read-less 
+                  span.read-fix 
+                     br
+                     | Hide
+            a.read-more
+               |... 
+               span.read-fix 
+                  br
+                  | Show more
+         a.older-notifications(href='#main-teacher') 
+            p.secondary View older Notifications
+            
+   script.
+         
+      $(document).ready(function(){
+         $('.read-more').click(function(){
+            $('.full-txt').toggle();
+            $('.read-more').toggle();
+         });
+      })
+   
+      $(document).ready(function(){
+         $('.read-less').click(function(){
+            $('.full-txt').toggle();
+            $('.read-more').toggle();
+         });
+      })

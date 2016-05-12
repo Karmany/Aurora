@@ -52,10 +52,12 @@ html(lang="en", ng-app="myApp")
                         include ./includes/svg-icons/logout-icon.jade
                      a(href='logintest.html') log out
                   li.search
-                     .desktop-nav-icon.search-icon
-                        include ./includes/svg-icons/search-icon.jade
-                     .desktop-nav-icon.close-icon(style='display: none')
-                        include ./includes/svg-icons/close-icon.jade
+                     .search-press
+                        .desktop-nav-icon.search-icon
+                           include ./includes/svg-icons/search-icon.jade
+                        .desktop-nav-icon.close-icon(style='display: none')
+                           include ./includes/svg-icons/close-icon.jade
+                     .blur-trigger
                         
          include ./includes/nav-indicator.jade
          .searchbox

@@ -1,22 +1,30 @@
 doctype html
 html#loginhtml(lang="en", ng-app="myApp")
-    head
-        meta(charset="utf-8")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
-        title Login
-        link(rel="stylesheet", href="css/base.css")
-    body#loginBody
-        video#loginvideo(poster='img/aurora.jpg', autoplay='true', loop='')
+   head
+      meta(charset="utf-8")
+      meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+      title Login
+      link(rel="stylesheet", href="css/base.css")
+   body#loginBody
+      #loginWrapper
+         video#loginvideo(poster='img/aurora.jpg', autoplay='true', muted, loop='')
             source(src='img/aurora.mp4', type='video/mp4')
             source(src='img/aurora.webm', type='video/webm')
          #login
-             h1#loginheader Welcome Back
-             form#logmein(name='loginForm', action='index.html', method='post', onsubmit='return validate(this);')
-                 .field-wrap
-                     input.logininput#loginEmail(type='email', name='email' placeholder='Email Address', required='')
-                 .field-wrap
-                     input.logininput#loginPassword(type='password', name='password' placeholder='Password', required='')
-                 p.forgot
-                     a.loginlink(href='#') Forgot Password?
-                 input.loginbutton(type='submit', value='LOGIN')
+            h1#loginheader Welcome Back
+            form#logmein(name='loginForm', action='index.html', method='post', onsubmit='return validate(this);')
+               #field1.field-wrap
+                  input.username.logininput#loginEmail(type='email', name='email' placeholder='Email Address', required='')
+               #field2.field-wrap
+                  input.logininput#loginPassword(type='password', name='password' placeholder='Password', required='')
+               p.forgot
+                  a.loginlink(href='#') Forgot Password?
+               input.loginbutton(type='submit', value='LOGIN')
+            a.unregistered(href='index.html') View page unregistered
+      script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+      script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js")
+      script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js")
+      script(src="js/app.js")
+      script(src="js/main.js")
       script(src='js/login.js')
+      

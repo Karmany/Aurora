@@ -3,21 +3,21 @@
 $(function() {
 	if(sessionStorage.role == undefined){
 		sessionStorage.role = 'unregistered';
-		window.location.href = 'logintest.html';
+		window.location.href = 'login.html';
 	}
 });
 
-$('button').on('click', function(){
+$('.loginbutton').on('click', function(){
 
-  if($('.username').val() == 'student'){
+  if($('.username').val() == 'student@aurora.com'){
 	  window.location.href = 'index.html#/' + page3;
 	  sessionStorage.role = 'student';
 
-  }else if ($('.username').val() == 'teacher'){
+  }else if ($('.username').val() == 'teacher@aurora.com'){
 	  window.location.href = 'index.html#/' + page5;
 	  sessionStorage.role = 'teacher';
 
-  }else if ($('.username').val() == 'admin') {
+  }else if ($('.username').val() == 'admin@aurora.com') {
 	  window.location.href = 'index.html#/' + page6;
 	  sessionStorage.role = 'admin';
   }
@@ -70,19 +70,23 @@ $('#role').text(sessionStorage.role)
 // END - SESSIONSTORAGE
 
 // START - SEARCHBOX
-	$('li.search, .search-icon').on('click', function(){
+	$('.search-press, .search-press-mobile').on('click', function(){
 			$('.searchbox').addClass('open');
 			$('li.search').addClass('activeColor');
-			$('li.search .search-icon').hide();
-			$('li.search .close-icon').show();
+			$('nav.mobile .nav-items').addClass('search-active');
+			$('.blur-trigger, .blur-trigger-mobile').show();
+			$('.search-icon').hide();
+			$('.close-icon').show();
 			$('.searchbox input').focus();
 	});
 
 $('.searchbox input').on('blur', function(){
 	$('.searchbox').removeClass('open');
 	$('li.search').removeClass('activeColor');
-	$('li.search .search-icon').show();
-	$('li.search .close-icon').hide();
+	$('nav.mobile .nav-items').removeClass('search-active');
+	$('.search-icon').show();
+	$('.close-icon').hide();
+	$('.blur-trigger, .blur-trigger-mobile').hide();
 });
 /*
 $('.searchbox input').on('blur', function(){

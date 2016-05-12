@@ -5,8 +5,11 @@
    height: 100vh
    margin: 0
    padding: 0
-   overflow: hidden
    position: relative
+
+#loginWrapper
+   overflow: auto
+   max-height: 100%
 
 #loginvideo
    position: absolute
@@ -20,7 +23,7 @@
    z-index: -1
 
 #login
-   background: rgba(19, 35, 47, 0.9)
+   background: $primaryColorDark
    border-radius: 4px
    padding: 40px
    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3)
@@ -33,7 +36,7 @@
    text-align: center
    color: #ffffff
    font-weight: 300
-   margin: 30 0 30 0
+   margin: 0px 0px 30px 0px
 
 .logininput
    font-size: 22px
@@ -43,14 +46,14 @@
    padding: 5px 10px
    background: none
    background-image: none
-   border: 1px solid #1ab188
+   border: 2px solid $primaryColorLight
    color: #ffffff
-   border-radius: 0
+   border-radius: 2px
    -webkit-transition: border-color .25s ease, box-shadow .25s ease
    transition: border-color .25s ease, box-shadow .25s ease
    -webkit-appearance: none
    &:focus
-      outline: darken(#1ab188, 10%)
+      outline: $green2
 
 .field-wrap
    position: relative
@@ -62,11 +65,25 @@ textarea
 
 .loginlink
    text-decoration: none
-   color: #1ab188
+   color: $green1
    -webkit-transition: .5s ease
    transition: .5s ease
    &:hover
-      color: darken(#1ab188, 10%)
+      color: $green2
+
+.unregistered
+   text-decoration: none
+   color: $green1
+   -webkit-transition: .5s ease
+   transition: .5s ease
+   &:hover
+      color: $green2
+   display: block
+   text-align: center
+   margin-top: 10px
+   font-family: roboto
+   font-weight: 300
+   font-size: 1.6rem
 
 .loginbutton
    border: 0
@@ -79,15 +96,18 @@ textarea
    letter-spacing: .1em
    display: block
    width: 100%
-   background: #1ab188
-   color: #ffffff
+   background: $green1
+   color: $primaryColor
    -webkit-transition: all 0.5s ease
    transition: all 0.5s ease
    -webkit-appearance: none
    &:hover, &:focus
-      background: darken(#1ab188, 10%)
+      background: $green2
 
 .forgot
    margin-top: -20px
    text-align: right
+   margin-bottom: 20px
+
+#field1
    margin-bottom: 20px
