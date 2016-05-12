@@ -22,12 +22,6 @@ html(lang="en", ng-app="myApp")
             
             nav.desktop
                ul
-                  li.search
-                     .desktop-nav-icon.search-icon
-                        include ./includes/svg-icons/search-icon.jade
-                     .desktop-nav-icon.close-icon(style='display: none')
-                        include ./includes/svg-icons/close-icon.jade
-                     a search
                   li.page-1-link
                      .desktop-nav-icon 
                         include ./includes/svg-icons/home-icon.jade
@@ -56,6 +50,12 @@ html(lang="en", ng-app="myApp")
                      .desktop-nav-icon
                         include ./includes/svg-icons/logout-icon.jade
                      a(href='logintest.html') log out
+                  li.search
+                     .desktop-nav-icon.search-icon
+                        include ./includes/svg-icons/search-icon.jade
+                     .desktop-nav-icon.close-icon(style='display: none')
+                        include ./includes/svg-icons/close-icon.jade
+                        
          include ./includes/nav-indicator.jade
          .searchbox
             input(placeholder='Search for e.g. a partical subject')

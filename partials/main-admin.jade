@@ -5,32 +5,92 @@
 	#lecturesModal.modal 
 		.modal-content 
 			span.close X
-			h2 Manage Lectures 
-			ul
-				li Lecture 1 
-				li Lecture 2 
-				li Lecture 3
+			h2 Manage Subjects
+			.subject 
+				h3 Subject
+			.subject 
+				h3 Subject 
+			.subject 
+				h3 Subject 
+			.subject 
+				h3 Subject 
+				
 				
 	// Teachers modal 
 	#teachersModal.modal 
 		.modal-content 
 			span.close X
 			h2 Manage Teachers 
-			ul
-				li Teacher 1
-				li Teacher 2 
-				li Teacher 3
+			
+			.alignment-grid
+				ul
+					li <a href="#">Teacher name</a>
+					li <a href="#">Teacher name</a>					
+					li <a href="#">Teacher name</a>
+					li <a href="#">Teacher name</a>
+					li <a href="#">Teacher name</a>
+					li <a href="#">Teacher name</a>
+					li <a href="#">Teacher name</a>
+					li <a href="#">Teacher name</a>
+					li <a href="#">Teacher name</a>
+					li <a href="#">Teacher name</a>
 	
 	// Students modal 
 	#studentsModal.modal 
 		.modal-content 
 			span.close X
 			h2 Manage Students 
-			ul
-				li Student 1
-				li Student 2 
-				li Student 3
-	
+			
+			.alignment-grid 
+				.year-enrolled
+					h3 2013
+					ul
+						li <a href="#">Camilla Svensen</a>
+						li <a href="#">Karl Svenning</a>
+						li <a href="#">Kristine Nilsen</a>
+						li <a href="#">Ola Kristiansen</a>
+						li <a href="#">Rajesh Singh</a>
+						li <a href="#">Student name</a>
+						li <a href="#">Student name</a>
+						li <a href="#">Student name</a>
+					
+				.year-enrolled
+					h3 2014 
+					ul
+						li <a href="#">Camilla Svensen</a>
+						li <a href="#">Karl Svenning</a>
+						li <a href="#">Kristine Nilsen</a>
+						li <a href="#">Ola Kristiansen</a>
+						li <a href="#">Rajesh Singh</a>
+						li <a href="#">Student name</a>
+						li <a href="#">Student name</a>
+						li <a href="#">Student name</a>
+					
+				.year-enrolled
+					h3 2015 
+					ul
+						li <a href="#">Camilla Svensen</a>
+						li <a href="#">Karl Svenning</a>
+						li <a href="#">Kristine Nilsen</a>
+						li <a href="#">Ola Kristiansen</a>
+						li <a href="#">Rajesh Singh</a>
+						li <a href="#">Student name</a>
+						li <a href="#">Student name</a>
+						li <a href="#">Student name</a>
+					
+				.year-enrolled
+					h3 2016 
+					ul
+						li <a href="#">Camilla Svensen</a>
+						li <a href="#">Karl Svenning</a>
+						li <a href="#">Kristine Nilsen</a>
+						li <a href="#">Ola Kristiansen</a>
+						li <a href="#">Rajesh Singh</a>
+						li <a href="#">Student name</a>
+						li <a href="#">Student name</a>
+						li <a href="#">Student name</a>
+					
+				
 	.row 
 		// Content (not profile)
 		.col.col--4-of-5
@@ -40,13 +100,13 @@
 				.monitor.col.col--1-of-5
 					.lectures
 						// When clicked, lectures modal triggers 
-						button(id="btnLectures") Lectures  
+						button#btnLectures Lectures  
 					.teachers
 						// When clicked, teachers modal triggers 
-						button(id="btnTeachers") Teachers
+						button#btnTeachers Teachers
 					.students
 						// When clicked, students modal triggers 
-						button(id="btnStudents") Students 
+						button#btnStudents Students 
 
 				// notifications content 
 				.notification-content.col.col--3-of-5 
@@ -56,28 +116,28 @@
 					.row
 					
 						.notification.first.col.col--2-of-2
-							h3 Reported comment 1 
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-								| sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-							p.author Bad Boy 1 
+							h3 IMT1292: Web Coding 
+							p Fuck off dude. You don't know anything about this.
+							p.date 11.05.2016 
+							p.reported-student Written by: Gustav Trulsen
+							button.removeComment Remove 
+							button.allowComment Allow 
 							
-					// Notification 2
-					.row
-					
 						.notification.col.col--2-of-2
-							h3 Reported comment 2
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-								| sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-							p.author Bad Boy 2
-				
-					// Notification 2
-					.row
-					
+							h3 IMT2661: Mobile Media Design 
+							p GTFO man, this is none of your business. 
+							p.date 11.05.2016 
+							p.reported-student Written by: Erik Haug
+							button.removeComment Remove 
+							button.allowComment Allow 
+						
 						.notification.col.col--2-of-2
-							h3 Reported comment 3
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-								| sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-							p.author Bad Boy 3
+							h3 IMT2661: Mobile Media Design 
+							p Calm your tits woman!
+							p.date 11.05.2016 
+							p.reported-student Written by: Erik Haug
+							button.removeComment Remove 
+							button.allowComment Allow 
 				
 				// Approve teachers 
 				.approve-teachers.col.col--1-of-5
