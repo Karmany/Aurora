@@ -1,46 +1,124 @@
 #main-admin.content
-	
 	// MODAL STUFF 
 	// Lectures modal 
-	#lecturesModal.modal 
+	#subjectsModal.modal 
 		.modal-content 
 			span.close X
 			h2 Manage Subjects
-			.subject 
-				h3 Subject
-			.subject 
-				h3 Subject 
-			.subject 
-				h3 Subject 
-			.subject 
-				h3 Subject 
-				
-				
+			.subject#webProject 
+				// Should be able to add, modify and delete a subject category
+				h3 IMT1471: Web Project 1
+				//- img.headline-icon(src="../img/iconography/ic_keyboard_arrow_right_black_24px.svg")
+				.lecture-list
+					.lecture 
+						a(href="#") Project Management and Planning
+						//- button.delete Delete
+						
+					.lecture
+						a(href="#") Technical Design Specification Document
+						//- button.delete Delete 
+						
+					.lecture
+						a(href="#") Slicing web pages
+						//- button.delete Delete 
+						
+					.lecture
+						a(href="#") Something here
+						//- button.delete Delete 
+						
+			.subject#webCoding
+				// Should be able to add, modify and delete a subject category
+				h3 IMT1292: Web Coding
+				//- img.headline-icon(src="../img/iconography/ic_keyboard_arrow_right_black_24px.svg")
+				.lecture-list 
+					.lecture 
+						a(href="#") 1st Introductury Lecture to HTML
+						//- button.delete Remove
+						
+					.lecture
+						a(href="#") 2nd Introductury Lecture to HTML
+						//- button.delete Remove 
+						
+					.lecture
+						a(href="#") 1st Introductory Lecture to CSS
+						//- button.delete Remove
+						
+					.lecture
+						a(href="#") 3rd Introductury Lecture to HTML
+						//- button.delete Remove 
+						
+			.subject#mobileMedia
+				// Should be able to add, modify and delete a subject category
+				h3 IMT1292: Mobile Media Design 
+				//- img.headline-icon(src="../img/iconography/ic_keyboard_arrow_right_black_24px.svg")
+				.lecture-list 
+					.lecture 
+						a(href="#") Mobile and Games
+						//- button.delete Remove
+						
+					.lecture
+						a(href="#") Mobile Design
+						//- button.delete Remove 
+						
+					.lecture
+						a(href="#") Something here 
+						//- button.delete Remove 
+						
+					.lecture
+						a(href="#") Something here
+						//- button.delete Remove 
+			
+			.subject#colourManagement
+				// Should be able to add, modify and delete a subject category
+				h3 IMT2002: Digital Image Reproduction and Colour Management 
+				//- img.headline-icon(src="../img/iconography/ic_keyboard_arrow_right_black_24px.svg")
+				.lecture-list 
+					.lecture 
+						a(href="#") Introduction to RAW format
+						//- button.delete Remove
+						
+					.lecture
+						a(href="#") Digital Image Capture Technology
+						//- button.delete Remove 
+						
+					.lecture
+						a(href="#") Display Technology and Display Quality
+						//- button.delete Remove 
+						
+					.lecture
+						a(href="#") Digital Printer Technology
+						//- button.delete Remove 	
+						
 	// Teachers modal 
 	#teachersModal.modal 
 		.modal-content 
 			span.close X
 			h2 Manage Teachers 
+			hr 
 			
 			.alignment-grid
 				ul
-					li <a href="#">Teacher name</a>
-					li <a href="#">Teacher name</a>					
-					li <a href="#">Teacher name</a>
-					li <a href="#">Teacher name</a>
-					li <a href="#">Teacher name</a>
-					li <a href="#">Teacher name</a>
-					li <a href="#">Teacher name</a>
-					li <a href="#">Teacher name</a>
-					li <a href="#">Teacher name</a>
-					li <a href="#">Teacher name</a>
+					li <a href="#">Frida Nygaard</a>
+					li <a href="#">Frode Grefsen</a>
+					li <a href="#">Gunnar Olsen</a>					
+					li <a href="#">Henriette Jacobsen</a>
+					li <a href="#">Jonas Meek</a>
+					li <a href="#">Lillian Johansen</a>
+					li <a href="#">Tobias Moe</a>
+					li <a href="#">Torgeir Hansen</a>
+					li <a href="#">Ove Nakken</a>
+					li <a href="#">Vegard Lillebakk</a>
 	
 	// Students modal 
 	#studentsModal.modal 
 		.modal-content 
 			span.close X
-			h2 Manage Students 
+			h2 Manage Students
+			hr
 			
+			// ----------------------------------------
+			// SHOULD BE ABLE TO DE-ACTIVATE AN ACCOUNT
+			// --------------------------------------- 
 			.alignment-grid 
 				.year-enrolled
 					h3 2013
@@ -100,7 +178,7 @@
 				.monitor.col.col--1-of-5
 					.lectures
 						// When clicked, lectures modal triggers 
-						button#btnLectures Lectures  
+						button#btnSubjects Subjects  
 					.teachers
 						// When clicked, teachers modal triggers 
 						button#btnTeachers Teachers
