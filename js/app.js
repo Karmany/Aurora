@@ -12,13 +12,14 @@ var page5 = 'main-teacher';
 var page6 = 'main-admin'
 var page7 = 'play'
 var page8 = 'profile-student'
+var page9 = 'lectures-teacher'
 
-$('.page-1-link a').text(page1);
-$('.page-2-link a').text(page2);
-$('.page-3-link a').text(page3);
-$('.page-4-link a').text(page4);
-$('.page-5-link a').text(page5);
-$('.page-6-link a').text(page6);
+$('.page-1-link a').text(page1.replace('-', ' '));
+$('.page-2-link a').text(page2.replace('-', ' '));
+$('.page-3-link a').text(page3.replace('-', ' '));
+$('.page-4-link a').text(page4.replace('-', ' '));
+$('.page-5-link a').text(page5.replace('-', ' '));
+$('.page-6-link a').text(page6.replace('-', ' '));
 
 $(".page-1-link a").attr("href", '#' + page1);
 $(".page-2-link a").attr("href", '#' + page2);
@@ -52,6 +53,9 @@ app.config(['$routeProvider', function($routeProvider){
 	})
 	.when('/' + page8,{
 	templateUrl: 'partials/profile-student.html'
+	})
+	.when('/' + page9,{
+	templateUrl: 'partials/lectures-teacher.html'
 	})
 	.otherwise({
 	templateUrl: 'partials/default.html'

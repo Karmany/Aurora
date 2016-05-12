@@ -13,11 +13,14 @@ html(lang="en", ng-app="myApp")
       .page-wrap
             
          header#header
-            #flex
+            .flex1
+               include ./includes/nav-mobile.jade
             
             include ./includes/logo.jade
             
-            nav
+            .flex2
+            
+            nav.desktop
                ul
                   li.page-1-link
                      .desktop-nav-icon 
@@ -43,22 +46,21 @@ html(lang="en", ng-app="myApp")
                      .desktop-nav-icon
                         include ./includes/svg-icons/profile-icon.jade
                      a
+                  li.logout
+                     .desktop-nav-icon
+                        include ./includes/svg-icons/logout-icon.jade
+                     a(href='logintest.html') log out
                   li.search
                      .desktop-nav-icon.search-icon
                         include ./includes/svg-icons/search-icon.jade
                      .desktop-nav-icon.close-icon(style='display: none')
                         include ./includes/svg-icons/close-icon.jade
-                     a search
-                  li.logout
-                     .desktop-nav-icon
-                        include ./includes/svg-icons/logout-icon.jade
-                     a(href='logintest.html') log out
+                        
          include ./includes/nav-indicator.jade
-         #searchbox
+         .searchbox
             input(placeholder='Search for e.g. a partical subject')
             
          .container(ng-view)
-         #title
          
       footer#footer
          include ./includes/footer.jade

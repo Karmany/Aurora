@@ -1,0 +1,42 @@
+nav.mobile
+   .nav-items
+      p.hamburger
+         img(src='img/iconography/hamburger.svg')
+         
+      h3#title
+      
+      p 
+         img.search-icon(src='img/iconography/search-3.svg')
+      
+.slideout-wrap
+   .slideout
+      ul
+         li.page-1-link
+            .desktop-nav-icon 
+               include ../includes/svg-icons/home-icon.jade
+            a
+         li.page-2-link
+            .desktop-nav-icon
+               include ../includes/svg-icons/lectures-icon.jade
+            a
+         li.page-3-link
+            .desktop-nav-icon
+               include ../includes/svg-icons/profile-icon.jade
+            a
+         li.page-4-link
+            .desktop-nav-icon
+               include ../includes/svg-icons/subjects-icon.jade
+            a
+         li.page-5-link
+            .desktop-nav-icon
+               include ../includes/svg-icons/profile-icon.jade
+            a
+         li.page-6-link
+            .desktop-nav-icon
+               include ../includes/svg-icons/profile-icon.jade
+            a
+         li.logout
+            .desktop-nav-icon
+               include ../includes/svg-icons/logout-icon.jade
+            a(href='logintest.html') log out
+   .body-overlay

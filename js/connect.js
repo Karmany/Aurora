@@ -12,7 +12,11 @@
 var vid = document.getElementById('lectureVideo');
 var timeStamp = 0;
 
-vid.ontimeupdate = function() {getStarted();};
+setInterval(function() {
+   getStarted();
+}, 5000);
+
+//vid.ontimeupdate = function() {getStarted();};
 
 function getStarted() {
    pageTime();
@@ -23,7 +27,7 @@ function getStarted() {
 function pageTime() {
     document.getElementById("demo").innerHTML = vid.currentTime;
     timeStamp = vid.currentTime;
-    console.log("Page time is updated to " + vid.currentTime);
+    //console.log("Page time is updated to " + vid.currentTime);
 }
 
 // This function change the slide based on how far the video have played
@@ -98,11 +102,27 @@ fourthLink.addEventListener('click', function (event) {
 var numimg = 11;
 var curimg = 0;
 
-function  goback() {
+/*
+var item = document.getElementById('slides').getAttribute("src")
+function gofwd(){
+   for (var i=0; i<slides.length; i++){
+      slides.indexOf(item);
+      var code = slides[i+1];
+      console.log(item)
+      console.log(code)
+      document.getElementById('slides').setAttribute("src", "../img/slides/Lecture3-1.004.jpeg");
+   break;
+   }
+}
+*/
+
+function goback() {
    var im=document.getElementById("slides");
    if(curimg>0) {
    im.src = slides[curimg-1];
    curimg = curimg - 1;
+   console.log("Previous image will be loaded")
+   vidTime();
    }
 }
 
@@ -111,9 +131,83 @@ var im=document.getElementById("slides");
    if(curimg < numimg){
    im.src = slides[curimg+1];
    curimg = curimg + 1;
+   vidTime();
+   console.log("Next image will be loaded")
    }
 }
 
+function vidTime(){
+var loadedImg = document.getElementById('slides').getAttribute("src")
+   if (loadedImg = slides[0]) {
+      vid.play();
+      vid.pause();
+      vid.currentTime = 0;
+      vid.play();
+      console.log("Image 1 is loaded, and the video will change to 0")
+   } else if (loadedImg = slides[1]) {
+      vid.play();
+      vid.pause();
+      vid.currentTime = 32;
+      vid.play();
+      console.log("Image 2 is loaded, and the video will change to 32")
+   } else if (loadedImg = slides[2]) {
+      vid.play();
+      vid.pause();
+      vid.currentTime = 52;
+      vid.play();
+      console.log("Image 3 is loaded, and the video will change to 52")
+   } else if (loadedImg = slides[3]) {
+      vid.play();
+      vid.pause();
+      vid.currentTime = 80;
+      vid.play();
+      console.log("Image 4 is loaded, and the video will change to 80")
+   } else if (loadedImg = slides[4]) {
+      vid.play();
+      vid.pause();
+      vid.currentTime = 428;
+      vid.play();
+      console.log("Image 5 is loaded, and the video will change to 428")
+   } else if (loadedImg = slides[5]) {
+      vid.play();
+      vid.pause();
+      vid.currentTime = 446;
+      vid.play();
+      console.log("Image 6 is loaded, and the video will change to 446")
+   } else if (loadedImg = slides[6]) {
+      vid.play();
+      vid.pause();
+      vid.currentTime = 483;
+      vid.play();
+      console.log("Image 7 is loaded, and the video will change to 483")
+   } else if (loadedImg = slides[7]) {
+      vid.play();
+      vid.pause();
+      vid.currentTime = 502;
+      vid.play();
+      console.log("Image 8 is loaded, and the video will change to 502")
+   } else if (loadedImg = slides[8]) {
+      vid.play();
+      vid.pause();
+      vid.currentTime = 521;
+      vid.play();
+      console.log("Image 9 is loaded, and the video will change to 521")
+   } else if (loadedImg = slides[9]) {
+      vid.play();
+      vid.pause();
+      vid.currentTime = 555;
+      vid.play();
+      console.log("Image 10 is loaded, and the video will change to 555")
+   }
+/*
+   } else {
+      vid.play();
+      vid.pause();
+      vid.currentTime = 0;
+      vid.play();
+   }
+*/
+}
 
 
 
@@ -131,25 +225,19 @@ var slides = [
    "../img/slides/Lecture3-1.007.jpeg",
    "../img/slides/Lecture3-1.008.jpeg",
    "../img/slides/Lecture3-1.009.jpeg",
-   "../img/slides/Lecture3-1.010.jpeg",
-   "../img/slides/Lecture3-1.011.jpeg"
+   "../img/slides/Lecture3-1.010.jpeg"
 ];
 
 //When is the video we want to change slide
 var breakpoints = [
    "0",
-   "15",
-   "184",
-   "538",
-   "578",
-   "930",
-   "1193",
-   "1295",
-   "2080",
-   "2480",
-   "2480",
-   "2480",
-   "2480",
-   "2480",
-   "2487"
+   "32",
+   "52",
+   "80",
+   "428",
+   "446",
+   "483",
+   "502",
+   "521",
+   "555"
 ];
