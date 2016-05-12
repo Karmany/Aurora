@@ -4,11 +4,11 @@
          .row
             .col.col--4-of-4
                #playVideo
-                  video#lectureVideo(width='320', height='240', controls )
+                  video#lectureVideo(width='320', height='240', controls, preload )
                      source(src='../img/lecture.mp4', type='video/mp4')
-                     track(src='transcript.vtt', kind='subtitles', srclang='en', label='English')
-                  input#prev(type='button', value='PREVIOUS', name='prev', onclick='goback();')
-                  input#next(type='button', value='NEXT', name='next', onclick='gofwd();')
+                     track(src='../img/transcript.vtt', kind='subtitles', srclang='en', label='English')
+                  input#prev(type='button', value='PREVIOUS', name='prev', onclick='prev();')
+                  input#next(type='button', value='NEXT', name='next', onclick='next();')
 
             .col.col--4-of-4
                #playText

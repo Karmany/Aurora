@@ -70,19 +70,23 @@ $('#role').text(sessionStorage.role)
 // END - SESSIONSTORAGE
 
 // START - SEARCHBOX
-	$('li.search, .search-icon').on('click', function(){
+	$('.search-press, .search-press-mobile').on('click', function(){
 			$('.searchbox').addClass('open');
 			$('li.search').addClass('activeColor');
-			$('li.search .search-icon').hide();
-			$('li.search .close-icon').show();
+			$('nav.mobile .nav-items').addClass('search-active');
+			$('.blur-trigger, .blur-trigger-mobile').show();
+			$('.search-icon').hide();
+			$('.close-icon').show();
 			$('.searchbox input').focus();
 	});
 
 $('.searchbox input').on('blur', function(){
 	$('.searchbox').removeClass('open');
 	$('li.search').removeClass('activeColor');
-	$('li.search .search-icon').show();
-	$('li.search .close-icon').hide();
+	$('nav.mobile .nav-items').removeClass('search-active');
+	$('.search-icon').show();
+	$('.close-icon').hide();
+	$('.blur-trigger, .blur-trigger-mobile').hide();
 });
 /*
 $('.searchbox input').on('blur', function(){
