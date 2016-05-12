@@ -2713,8 +2713,8 @@ textarea {
 
 .profile-student .avatar {
   border-radius: 50%;
-  width: 90%;
-  left: 5%;
+  width: 80%;
+  left: 10%;
   position: relative;
 }
 
@@ -2747,6 +2747,24 @@ textarea {
   text-decoration: none;
 }
 
+.profile-student .deleteBtn {
+  padding: 10px 0;
+  background-color: red;
+  color: white;
+  width: 100%;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.profile-student hr {
+  margin: 15px 0;
+  background-color: #314650;
+  height: 1px;
+  border: 0;
+}
+
 .profile-student .change {
   display: none;
   padding: 5px;
@@ -2767,7 +2785,7 @@ textarea {
   outline-width: 0;
 }
 
-.profile-student .change ::-webkit-input-value {
+.profile-student .change ::-webkit-input-placeholder {
   color: #79d894;
 }
 

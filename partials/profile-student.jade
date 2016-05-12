@@ -38,6 +38,10 @@
                input#phoneInput(placeholder='New Phone Number' value='')
                p#phoneCancel Cancel
                p#phoneSave Save
+            hr
+            .deleteBtn Delete Account
+               
+                  
                   
             
    script. //Change Phone number toggle script
@@ -89,14 +93,7 @@
             $('#changePicBtn').toggle()
          });
       });
-      /*
-      $('#phoneSave').click(function() {
-          var linkText = $(phoneInput).text();
-          $('#phoneNumber').html(linkText);
-          return false;
-      });
-      */
-      
+      //Change Phonenumber Script
       $('#phoneSave').click(function() {
          var a = $('#phoneInput').val()
          $('#phoneNumber').replaceWith(a)
