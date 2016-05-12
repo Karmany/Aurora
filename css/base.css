@@ -2255,8 +2255,16 @@ nav.mobile {
   height: 100vh;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   position: relative;
+}
+
+body {
+  overflow: hidden !important;
+}
+
+#loginWrapper {
+  overflow: auto;
+  max-height: 100%;
 }
 
 #loginvideo {
@@ -2290,7 +2298,7 @@ nav.mobile {
   text-align: center;
   color: #ffffff;
   font-weight: 300;
-  margin: 30 0 30 0;
+  margin: 0px 0px 30px 0px;
 }
 
 .logininput {
@@ -2332,6 +2340,16 @@ textarea {
   color: #138566;
 }
 
+.unregistered {
+  text-decoration: none;
+  color: #1ab188;
+  transition: .5s ease;
+}
+
+.unregistered:hover {
+  color: #138566;
+}
+
 .loginbutton {
   border: 0;
   outline: none;
@@ -2356,6 +2374,10 @@ textarea {
 .forgot {
   margin-top: -20px;
   text-align: right;
+  margin-bottom: 20px;
+}
+
+.field1 {
   margin-bottom: 20px;
 }
 

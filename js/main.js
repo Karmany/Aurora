@@ -3,21 +3,21 @@
 $(function() {
 	if(sessionStorage.role == undefined){
 		sessionStorage.role = 'unregistered';
-		window.location.href = 'logintest.html';
+		window.location.href = 'login.html';
 	}
 });
 
-$('button').on('click', function(){
+$('.loginbutton').on('click', function(){
 
-  if($('.username').val() == 'student'){
+  if($('.username').val() == 'student@aurora.com'){
 	  window.location.href = 'index.html#/' + page3;
 	  sessionStorage.role = 'student';
 
-  }else if ($('.username').val() == 'teacher'){
+  }else if ($('.username').val() == 'teacher@aurora.com'){
 	  window.location.href = 'index.html#/' + page5;
 	  sessionStorage.role = 'teacher';
 
-  }else if ($('.username').val() == 'admin') {
+  }else if ($('.username').val() == 'admin@aurora.com') {
 	  window.location.href = 'index.html#/' + page6;
 	  sessionStorage.role = 'admin';
   }

@@ -5,8 +5,14 @@
    height: 100vh
    margin: 0
    padding: 0
-   overflow: hidden
    position: relative
+
+body
+   overflow: hidden !important
+
+#loginWrapper
+   overflow: auto
+   max-height: 100%
 
 #loginvideo
    position: absolute
@@ -33,7 +39,7 @@
    text-align: center
    color: #ffffff
    font-weight: 300
-   margin: 30 0 30 0
+   margin: 0px 0px 30px 0px
 
 .logininput
    font-size: 22px
@@ -68,6 +74,14 @@ textarea
    &:hover
       color: darken(#1ab188, 10%)
 
+.unregistered
+   text-decoration: none
+   color: #1ab188
+   -webkit-transition: .5s ease
+   transition: .5s ease
+   &:hover
+      color: darken(#1ab188, 10%)
+
 .loginbutton
    border: 0
    outline: none
@@ -90,4 +104,7 @@ textarea
 .forgot
    margin-top: -20px
    text-align: right
+   margin-bottom: 20px
+
+.field1
    margin-bottom: 20px
