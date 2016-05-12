@@ -1,28 +1,67 @@
-#playWrapper
-   .row
-      .col.col--2-of-4
-         .row
-            .col.col--4-of-4
-               #playVideo
-                  video#lectureVideo(width='320', height='240', controls, preload )
-                     source(src='../img/lecture.mp4', type='video/mp4')
-                     track(src='../img/transcript.vtt', kind='subtitles', srclang='en', label='English')
-                  input#prev(type='button', value='PREVIOUS', name='prev', onclick='prev();')
-                  input#next(type='button', value='NEXT', name='next', onclick='next();')
+.content
+   #playWrapper(style='border: 2px solid red; display: none;')
+      .row
+         .col.col--2-of-4(style='border: 2px solid purple')
+            .row
+               .col.col--4-of-4(style='border: 2px solid blue')
+                  #playVideo
+                     video#lectureVideo(width='320', height='240', controls, preload )
+                        source(src='../img/lecture.mp4', type='video/mp4')
+                        track(src='../img/transcript.vtt', kind='subtitles', srclang='en', label='English')
+                     input#prev(type='button', value='PREVIOUS', name='prev', onclick='prev();')
+                     input#next(type='button', value='NEXT', name='next', onclick='next();')
 
-            .col.col--4-of-4
-               #playText
-                  p
-                     | Playback position: 
-                     span#demo
+               .col.col--4-of-4(style='border: 2px solid pink')
+                  #playText
+                     p
+                        | Playback position: 
+                        span#demo
 
-      .col.col--2-of-4
-         .row
-            .col.col--4-of-4
-               #playSlides
-                  img(id="slides", src="../img/slides/Lecture3-1.001.jpeg", alt="Slides", height='500', width='500')
-            .col.col--4-of-4
-               ul
+         .col.col--2-of-4
+            .row
+               .col.col--4-of-4
+                  #playSlides(style='border: 2px solid white')
+                     img(id="slides", src="../img/slides/Lecture3-1.001.jpeg", alt="Slides", height='500', width='500')
+               .col.col--4-of-4(style='border: 2px solid green')
+                  ul
+                     li 
+                        a(id="first", href="") First link
+                     li 
+                        a(id="second", href="") Second link
+                     li 
+                        a(id="third", href="") Third link
+                     li 
+                        a(id="fourth", href="") Fourth link
+            
+   // HOY WHADDUP MY NAGGAH      
+                        
+   #playWrapper(style='border: 2px solid red')
+      
+      .row
+         
+         .col.col--6-of-12
+            
+            #playVideo
+               video#lectureVideo(controls, preload)
+                  source(src='../img/lecture.mp4', type='video/mp4')
+                  track(src='../img/transcript.vtt', kind='subtitles', srclang='en', label='English')
+         
+         .col.col--6-of-12
+            
+            #playSlides
+               img(id="slides", src="../img/slides/Lecture3-1.001.jpeg", alt="Slides")
+      
+      .change-slides
+         input#prev(type='button', value='PREVIOUS', name='prev', onclick='prev();')
+         .slide-title slides
+         input#next(type='button', value='NEXT', name='next', onclick='next();')
+      
+      .row   
+         
+         .col.col--3-of-12
+            .slide-timeline-wrap   
+               h2 Slide timeline
+               ul.slide-timeline
                   li 
                      a(id="first", href="") First link
                   li 
@@ -31,5 +70,9 @@
                      a(id="third", href="") Third link
                   li 
                      a(id="fourth", href="") Fourth link
+                  
+         .col.col--9-of-12
+            .description
+               h2 Introductory Lecture to HTML
                
 script(src='../js/connect.js')
