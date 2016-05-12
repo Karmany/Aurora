@@ -70,27 +70,14 @@ $('#role').text(sessionStorage.role)
 // END - SESSIONSTORAGE
 
 // START - SEARCHBOX
-
-$(function(){
-	$('li.search, .search-icon').click(function(){
-		$('.searchbox').addClass('open');
-		$('li.search').addClass('activeColor');
-		$('li.search .search-icon').hide();
-		$('li.search .close-icon').show();
-		$('.searchbox input').focus();
+	$('li.search, .search-icon').on('click', function(){
+			$('.searchbox').addClass('open');
+			$('li.search').addClass('activeColor');
+			$('li.search .search-icon').hide();
+			$('li.search .close-icon').show();
+			$('.searchbox input').focus();
 	});
-});
-/*
-$('li.search').on('click', function(){
-	$('#searchbox').removeClass('force-closed')
-	$('#searchbox').toggleClass('closed open')
-	if($('#searchbox').hasClass('open')){
-		$('#searchbox input').focus();
-	}else if($('#searchbox').hasClass('closed')){
-		$('#searchbox input').blur();
-	}
-});
-*/
+
 $('.searchbox input').on('blur', function(){
 	$('.searchbox').removeClass('open');
 	$('li.search').removeClass('activeColor');
