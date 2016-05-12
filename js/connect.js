@@ -12,22 +12,16 @@
 var vid = document.getElementById('lectureVideo');
 var timeStamp = 0;
 
-setInterval(function() {
-   getStarted();
-}, 5000);
-
-//vid.ontimeupdate = function() {getStarted();};
-
-function getStarted() {
+vid.ontimeupdate = function() {
    pageTime();
    changeImg();
+   console.log("Time is updated!");
 }
 
 // This updates the timer on the page
 function pageTime() {
     document.getElementById("demo").innerHTML = vid.currentTime;
     timeStamp = vid.currentTime;
-    //console.log("Page time is updated to " + vid.currentTime);
 }
 
 // This function change the slide based on how far the video have played
@@ -99,120 +93,61 @@ fourthLink.addEventListener('click', function (event) {
    vid.play();
 });
 
-var numimg = 11;
-var curimg = 0;
 
-/*
-var item = document.getElementById('slides').getAttribute("src")
-function gofwd(){
-   for (var i=0; i<slides.length; i++){
-      slides.indexOf(item);
-      var code = slides[i+1];
-      console.log(item)
-      console.log(code)
-      document.getElementById('slides').setAttribute("src", "../img/slides/Lecture3-1.004.jpeg");
-   break;
-   }
+///////IMAGE SWITCH VARS////////
+var imageNum=0;
+var count=0;
+//////////NEXT BUTTON///////////
+function next() {
+   switchImage();
+   next_event();
 }
-*/
-
-function goback() {
-   var im=document.getElementById("slides");
-   if(curimg>0) {
-   im.src = slides[curimg-1];
-   curimg = curimg - 1;
-   console.log("Previous image will be loaded")
-   vidTime();
-   }
+function switchImage()
+{
+   if(imageNum<slides.length-1)
+   {
+      imageNum=imageNum+1;
+      if(imageNum<slides.length)
+      document.getElementById('slides').src=slides[imageNum];
+      console.log("switchImage");
+	}
 }
-
-function gofwd(){
-var im=document.getElementById("slides");
-   if(curimg < numimg){
-   im.src = slides[curimg+1];
-   curimg = curimg + 1;
-   vidTime();
-   console.log("Next image will be loaded")
-   }
+function next_event()
+{
+   if(count<slides.length-1)
+   {
+      count+=1;
+      var video = document.getElementById("lectureVideo");
+      video.currentTime = breakpoints[count];
+      console.log("next_event");
+	}
 }
 
-function vidTime(){
-var loadedImg = document.getElementById('slides').getAttribute("src")
-   if (loadedImg = slides[0]) {
-      vid.play();
-      vid.pause();
-      vid.currentTime = 0;
-      vid.play();
-      console.log("Image 1 is loaded, and the video will change to 0")
-   } else if (loadedImg = slides[1]) {
-      vid.play();
-      vid.pause();
-      vid.currentTime = 32;
-      vid.play();
-      console.log("Image 2 is loaded, and the video will change to 32")
-   } else if (loadedImg = slides[2]) {
-      vid.play();
-      vid.pause();
-      vid.currentTime = 52;
-      vid.play();
-      console.log("Image 3 is loaded, and the video will change to 52")
-   } else if (loadedImg = slides[3]) {
-      vid.play();
-      vid.pause();
-      vid.currentTime = 80;
-      vid.play();
-      console.log("Image 4 is loaded, and the video will change to 80")
-   } else if (loadedImg = slides[4]) {
-      vid.play();
-      vid.pause();
-      vid.currentTime = 428;
-      vid.play();
-      console.log("Image 5 is loaded, and the video will change to 428")
-   } else if (loadedImg = slides[5]) {
-      vid.play();
-      vid.pause();
-      vid.currentTime = 446;
-      vid.play();
-      console.log("Image 6 is loaded, and the video will change to 446")
-   } else if (loadedImg = slides[6]) {
-      vid.play();
-      vid.pause();
-      vid.currentTime = 483;
-      vid.play();
-      console.log("Image 7 is loaded, and the video will change to 483")
-   } else if (loadedImg = slides[7]) {
-      vid.play();
-      vid.pause();
-      vid.currentTime = 502;
-      vid.play();
-      console.log("Image 8 is loaded, and the video will change to 502")
-   } else if (loadedImg = slides[8]) {
-      vid.play();
-      vid.pause();
-      vid.currentTime = 521;
-      vid.play();
-      console.log("Image 9 is loaded, and the video will change to 521")
-   } else if (loadedImg = slides[9]) {
-      vid.play();
-      vid.pause();
-      vid.currentTime = 555;
-      vid.play();
-      console.log("Image 10 is loaded, and the video will change to 555")
-   }
-/*
-   } else {
-      vid.play();
-      vid.pause();
-      vid.currentTime = 0;
-      vid.play();
-   }
-*/
+/////////PREV BUTTON////////
+function prev() {
+   prevImage();
+   prev_event();
 }
-
-
-
-
-
+function prevImage()
+{
+   if(imageNum>0)
+   {
+      imageNum=imageNum-1;
+      if(imageNum>=0)
+      document.getElementById('slides').src=slides[imageNum];
+      console.log("prevImage");
+	}
+}
+function prev_event()
+{
+   if(count>0)
+   {
+      count-=1;
+      var video = document.getElementById("lectureVideo");
+      video.currentTime = breakpoints[count];
+      console.log("prev_event");
+	}
+}
 
 //Links to the different slides that we will put in the page
 var slides = [
@@ -227,7 +162,6 @@ var slides = [
    "../img/slides/Lecture3-1.009.jpeg",
    "../img/slides/Lecture3-1.010.jpeg"
 ];
-
 //When is the video we want to change slide
 var breakpoints = [
    "0",
