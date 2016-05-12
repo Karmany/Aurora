@@ -2648,6 +2648,23 @@ textarea {
   position: relative;
 }
 
+.profile-student .profile-edit-wrap {
+  background-color: #455A64;
+  padding: 20px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.profile-student .profile-edit-wrap img {
+  color: white;
+  float: left;
+}
+
+.profile-student .profile-edit-wrap h2 {
+  margin-top: -3px;
+  margin-left: 30px;
+}
+
 .profile-student .btn {
   padding: 10px 0;
   background-color: #79d894;
@@ -2656,8 +2673,66 @@ textarea {
   text-align: center;
   margin-top: 20px;
   border-radius: 2px;
-  display: block;
+  cursor: pointer;
   text-decoration: none;
+}
+
+.profile-student .change {
+  display: none;
+  padding: 5px;
+  background-color: #455A64;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 20px;
+}
+
+.profile-student .change input {
+  width: 100%;
+  background-color: #314650;
+  border: 0;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.profile-student .change input:focus {
+  outline-width: 0;
+}
+
+.profile-student .change ::-webkit-input-value {
+  color: #79d894;
+}
+
+.profile-student .change p {
+  width: 48%;
+  margin: 0;
+  padding: 0;
+  padding: 5px 10px 0 10px;
+  background-color: #455A64;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.profile-student #changePass input {
+  margin-top: 5px;
+}
+
+.profile-student #changePass .space-fix {
+  margin-top: 0;
+}
+
+.profile-student #changePic input {
+  display: none;
+}
+
+.profile-student #changePic label {
+  width: 100%;
+  text-align: center;
+  display: block;
+  background-color: #314650;
+  color: #79d894;
+  border-radius: 2px;
+  padding: 5px;
+  cursor: pointer;
 }
 
 /* BEGIN Thin */

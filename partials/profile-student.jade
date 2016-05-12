@@ -1,9 +1,9 @@
 .content.profile-student
    .row
-      .col.col--1-of-5
+      .col.col--1-of-4
          img.avatar(src='img/profile_images/main-student.jpg')
-         a.btn(href='') Change profile picture  
-      .col.col--3-of-5
+         
+      .col.col--2-of-4
          .row
             .col.col--2-of-5
                p.hue Name:
@@ -14,10 +14,91 @@
                p Kim Pedersen
                p 592734
                p kim.pedersen@aurora.no
-               p 95827363   
-       .col.col--1-of-5
-         a.btn(href='') Change password
-         a.btn(href='') Change phone number
-        
-         
+               p#phoneNumber 95827363   
+       .col.col--1-of-4
+         .profile-edit-wrap
+            img(src="../img/iconography/ic_mode_edit_black_24px.svg")
+            h2 Edit profile 
+            .btn#changePicBtn Change profile picture
+            .change#changePic
+               .upload
+                  input(type="file" name="upload" id="file")
+                  label(for="file") Upload File
+               p.picCancel Cancel
+               p.picCancel Save
+            .btn#changePassBtn Change password
+            .change#changePass
+               input.space-fix(type='password' placeholder='Old password')
+               input(type='password' placeholder='New Password')
+               input(type='password' placeholder='New Password')
+               p.passCancel Cancel
+               p.passCancel Save
+            .btn#changePhoneBtn Change phone number
+            .change#changePhone
+               input#phoneInput(placeholder='New Phone Number' value='')
+               p#phoneCancel Cancel
+               p#phoneSave Save
+                  
             
+   script. //Change Phone number toggle script
+      $(document).ready(function(){
+         $('#changePhoneBtn').click(function(){
+            $('#changePhone').toggle()
+         });
+         $('#phoneCancel').click(function(){
+            $('#changePhone').toggle()
+         });
+         $('#phoneCancel').click(function(){
+            $('#changePhoneBtn').toggle()
+         });
+         $('#phoneSave').click(function(){
+            $('#changePhone').toggle()
+         });
+         $('#phoneSave').click(function(){
+            $('#changePhoneBtn').toggle()
+         });
+         $('#changePhoneBtn').click(function(){
+            $('#changePhoneBtn').toggle()
+         });
+         
+         // Change Password toggle script
+         $('#changePassBtn').click(function(){
+            $('#changePass').toggle()
+         });
+         $('.passCancel').click(function(){
+            $('#changePass').toggle()
+         });
+         $('.passCancel').click(function(){
+            $('#changePassBtn').toggle()
+         });
+         $('#changePassBtn').click(function(){
+            $('#changePassBtn').toggle()
+         });
+      
+         // Change Profile Pic toggle script
+         $('#changePicBtn').click(function(){
+            $('#changePic').toggle()
+         });
+         $('.picCancel').click(function(){
+            $('#changePic').toggle()
+         });
+         $('.picCancel').click(function(){
+            $('#changePicBtn').toggle()
+         });
+         $('#changePicBtn').click(function(){
+            $('#changePicBtn').toggle()
+         });
+      });
+      /*
+      $('#phoneSave').click(function() {
+          var linkText = $(phoneInput).text();
+          $('#phoneNumber').html(linkText);
+          return false;
+      });
+      */
+      
+      $('#phoneSave').click(function() {
+         var a = $('#phoneInput').val()
+         $('#phoneNumber').replaceWith(a)
+      });   
+      
