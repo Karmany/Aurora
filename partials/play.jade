@@ -1,8 +1,8 @@
 .content
-            
-   // HOY WHADDUP MY NAGGAH      
-                        
+   
    #playWrapper
+      
+      h2.center-text.pull-up.margin-bottom-regular Third introdutory course to HTML
       
       .row
 
@@ -12,29 +12,36 @@
                video#lectureVideo(controls, preload)
                   source(src='../img/lecture.mp4', type='video/mp4')
                   track(src='../img/transcript.vtt', kind='subtitles', srclang='en', label='English')
+               
+            .change-slides.mobile
+               input#prev(type='button', name='prev', onclick='prev();')
+               .slide-title
+                  span slides
+               input#next(type='button', name='next', onclick='next();')
          
-         .col.col--6-of-12.col--am
+         .col.col--6-of-12
             
             #playSlides
                .tabs
-                  span
-                     img(src='../img/iconography/slideshow.svg') 
+                  span#slide-button.active
+                     include ../includes/svg-icons/slideshow-icon.jade 
                      | slides
-                  span 
-                     img(src='../img/iconography/info.svg')
+                  span.line
+                  span#wiki-button
+                     include ../includes/svg-icons/info-icon.jade
                      | wiki
-               img#slides(src="../img/slides/Lecture3-1.001.jpeg", alt="Slides")
-               #wiki
-                  .wiki-content
-                     h2 HTML entities
-                     p Some characters are reserved in HTML. If you use the less than (<) or greater than (>) signs in your text, the browser might mix them with tags. Character entities are used to display reserved characters in HTML. A character entity looks like this:
-                     h2 Lists
-                     p An unordered list starts with the &lt;ul&gt; tag. Each list item starts with the &lt;li&gt; tag. The list items will be marked with bullets (small black circles), which can be further modified with css.
-                     h3 Three types:
-                     ul
-                        li Unordered lists
-                        li Ordered lists
-                        li Definition lists
+               #slide-wrap   
+                  img#slides(src="../img/slides/Lecture3-1.001.jpeg", alt="Slides")
+               #wiki.closed
+                  h2 HTML entities
+                  p Some characters are reserved in HTML. If you use the less than (<) or greater than (>) signs in your text, the browser might mix them with tags. Character entities are used to display reserved characters in HTML. A character entity looks like this:
+                  h2 Lists
+                  p An unordered list starts with the &lt;ul&gt; tag. Each list item starts with the &lt;li&gt; tag. The list items will be marked with bullets (small black circles), which can be further modified with css.
+                  h3 Three types:
+                  ul
+                     li Unordered lists
+                     li Ordered lists
+                     li Definition lists
       
       .controllers
          .like-dislike
@@ -64,25 +71,59 @@
       
       .row   
          
-         .col.col--3-of-12
+         .col.col--3-of-12.col--m-4-of-4
             .slide-timeline-wrap   
                h2 
                   | Jump to:
                ul.slide-timeline
                   li 
-                     a(id="first", href="") First link
+                     a(id="first", href="") HTML entities
                   li 
-                     a(id="second", href="") Second link
+                     a(id="second", href="") What are HTML entities?
                   li 
-                     a(id="third", href="") Third link
+                     a(id="third", href="") How they work
                   li 
-                     a(id="fourth", href="") Fourth link
+                     a(id="fourth", href="") History
+                  li 
+                     a(id="fourth", href="") What is &amp;aring; ?
+                  li 
+                     a(id="fourth", href="") What is &amp;AElig; ?
+                  li 
+                     a(id="fourth", href="") Lists
+                  li 
+                     a(id="fourth", href="") List types
+                  li 
+                     a(id="fourth", href="") Unordered lists
+                  li 
+                     a(id="fourth", href="") List syntax
                   
          .col.col--9-of-12
-            .description
-               h2 Introductory Lecture to HTML
-               p In this lecture we go through four main topics. Entities, lists, images and namegiving. If you have not seen the previous lectures on this, I would recommend you watching those before this one, since this one builds on what we learned from them.
-               p.secondary 19.05.2016
+            .video-page-right
+               .description
+                  h2 Desctription
+                  p In this lecture we go through four main topics. Entities, lists, images and namegiving. If you have not seen the previous lectures on this, I would recommend you watching those before this one, since this one builds on what we learned from them.
+                  p.secondary Published: 19.05.2016
+                  
+                  .lecture-poster   
+                     img.profile-img(src="../img/profile_images/female_student1.jpg")
+                     a.author(href='#notmy-profile-student')
+                        p
+                           | Camilla Svensen
+                           span (camilla.svensen@aurora.no)
+               
+               .comment-section
+                  h2 Comments
+                  p THIS IS GRAT VIDO, TANK U
+                  h3 Write a reply
+                  textarea.comment(name='comment' placeholder="Your message here" rows="5")
+                  button.comment Publish comment
+                        
                
 script(src='../js/connect.js')
 script(src="js/main.js")
+
+script.
+   $(function(){
+      console.log('runs');
+      slideHeight();
+   });

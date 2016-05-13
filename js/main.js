@@ -69,6 +69,8 @@ $('#role').text(sessionStorage.role)
 
 // END - SESSIONSTORAGE
 
+// ____________________________________
+
 // START - SEARCHBOX
 	$('.search-press, .search-press-mobile').on('click', function(){
 			$('.searchbox').addClass('open');
@@ -95,6 +97,8 @@ $('.searchbox input').on('blur', function(){
 */
 // END - SEARCHBOX
 
+// ____________________________________
+
 // START - HAMBURGER
 
 $(function(){
@@ -113,9 +117,9 @@ $(".slideout ul li a, .body-overlay").click(function(){
 
 // END - HAMBURGER
 
+// ____________________________________
+
 // LIKE - DISLIKE
-
-
 
 $(function(){
 	$('.controllers .icons .like').on('click', function(){
@@ -132,6 +136,8 @@ $(function(){
 });
 
 // END LIKE - DISLIKE
+
+// ____________________________________
 
 // fetch subpage from Url and display as title and in header and tab
 
@@ -198,6 +204,8 @@ function setActiveMenuItem(){
 			//document.getElementById('page-five-mobile').setAttribute('class', 'nav-list-mobile__item nav-list-mobile__item--active');
 			$('.nav-desktop-indicator .page-6-link').addClass('active');
 			break;
+		default:
+			removeActiveClass();
 	};
 }
 
@@ -210,3 +218,66 @@ function removeActiveClass(){
    $('.nav-desktop-indicator .page-6-link').removeClass('active');
 	$('.nav-desktop-indicator .search').removeClass('active');
 };
+
+// ____________________________________
+
+// START | PLAY VIDEO - ETC
+
+$(function(){
+
+	if(url = window.location.href.split(pageDivider)[1] == page7){
+		console.log('plaeh!!')
+	};
+
+	$('.tabs').click(function(e){
+
+		if(e.target.id == 'slide-button' ){
+
+			if($('#slides').css('display') == 'none'){
+				$('#wiki').hide();
+				$('#slides').fadeIn(300);
+				wikiHeight();
+				slideHeight();
+				$('.tabs').removeClass('active');
+				$('#slide-button').addClass('active');
+				$('#wiki-button').removeClass('active');
+			}
+
+		} else if (e.target.id == 'wiki-button' ) {
+
+			if($('#wiki').css('display') == 'none'){
+				$('#wiki').fadeIn(300);
+				$('#slides').hide();
+				wikiHeight();
+				slideHeight();
+				$('.tabs').addClass('active');
+				$('#slide-button').removeClass('active');
+				$('#wiki-button').addClass('active');
+			}
+
+		}
+	});
+
+})
+
+$(window).resize(function(){
+	wikiHeight();
+	slideHeight();
+});
+
+function wikiHeight(){
+	$('#wiki').css({
+		'height' : parseInt($('#lectureVideo').css('height')) - parseInt($('.tabs').css('height')) + 'px',
+	})
+}
+
+function slideHeight(){
+	$('#slides').css({
+		'height' : parseInt($('#lectureVideo').css('height')) - parseInt($('.tabs').css('height')) - 20 + 'px',
+		'marginBottom' :  20 + 'px',
+	})
+}
+
+// END | PLAY VIDEO - ETC
+
+// ____________________________________
