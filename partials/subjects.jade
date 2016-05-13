@@ -14,11 +14,11 @@
                            
                            p 
                               strong Henriette Jacobsen
-                           p Subject Lecturer
+                           p.p-space-fix Subject Lecturer
                         .col.col--3-of-4.col--m-2-of-4.marginTop
                            .row   
                               p.col.col--2-of-2.col--s-2-of-2.p-space-fix After completing the course, students will have a basic understanding of and skills in visual design of web pages. They should be able to plan and carry out the development of Web pages and sites based on the most important client based web tecnologies as well as a basic understanding for the server based content management systems.  
-                              p.col.col--2-of-2.col--s-2-of-2 The students will also be able to independently assess and describe the most important aspects of a site's usability, effectiveness, and information architecture, and further to decide what any changes needed to improve the quality of the site / page.
+                              p.col.col--2-of-2.col--s-2-of-2.p-space-fix The students will also be able to independently assess and describe the most important aspects of a site's usability, effectiveness, and information architecture, and further to decide what any changes needed to improve the quality of the site / page.
                      .row
                         .col.col--2-of-2.sub-wrap
                            hr
@@ -39,46 +39,144 @@
                               .comment-txt
                                  a(href='') Comments (2)
                         .col.col--3-of-4
-                           
-                           h3.lecture-head IMT1292: Web Coding  -  3rd Introductury Lecture to HTML
-                           p In this lecture we go through four main topics. Entities, lists, images and namegiving. If you have not seen the previous lectures on this, I would recommend you watching those before this one, since this one builds on what we learned from them.
-                           p.date-space-fix 19.05.2016
+                           a.lec-link(href='#play')   
+                              h3.lecture-head IMT1292 Web Coding:  -  3rd Introductury Lecture to HTML
+                              p In this lecture we go through four main topics. Entities, lists, images and namegiving. If you have not seen the previous lectures on this, I would recommend you watching those before this one, since this one builds on what we learned from them.
+                              p.secondary.date-space-fix 19.05.2016
                         
                         .col.col--2-of-2
-                           a.all-lectures View all subrscibed lectures   
+                           a.all-lectures(href='#lectures-student') View all subscribed lectures   
                            
 
                   button.accordion.expand IMT2661: Mobile Media Design
-                  .panel   
+                     include ../includes/svg-icons/expand.jade
+                  .panel
                      .row
-                        .col.col--2-of-5.col--m-2-of-4.col--s-4-of-4.sMiddle.marginTop
-                           img.panelImage(src='http://placehold.it/200x200')
-                        .col.col--3-of-5.col--m-2-of-4.col--s-4-of-4.marginTop
-                           p.panelTxt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Et dolore magna aliqua. Ut enim ad minim veniam, laboris.
-                        .col.col-5-of-5.col--m-2-of-4.col--s-4-of-4.middleBtn.marginTop
-                           button.subscribeBtn(type='button')
-                              | Subscribe
+                        .col.col--1-of-4.col--m-2-of-4.marginTop.teacherCol
+                           img.panelImage(src='../img/profile_images/clooney.jpg')
+                           
+                           p 
+                              strong Torgeir Hansen
+                           p.p-space-fix Subject Lecturer
+                        .col.col--3-of-4.col--m-2-of-4.marginTop
+                           .row   
+                              p.col.col--2-of-2.col--s-2-of-2.p-space-fix After successfully completing this course, the students will know the characteristics, including the limitations and possibilities of modern smartphone devices. They will also have knowledge about how the open web standards and technologies is adapted to - and can be used to present information on modern smartphone and tablet devices.  interfaces for these kinds of devices.
+                              p.col.col--2-of-2.col--s-2-of-2.p-space-fix The students will also know more about the key accessibility challenges that users of small-screen devices face, and how to design web-based user
+                     .row
+                        .col.col--2-of-2.sub-wrap
+                           hr
+                           a.subBtn
+                              include ../includes/svg-icons/unchecked.jade
+                              p Subscribe
+                           a.subPressed
+                              include ../includes/svg-icons/checked.jade
+                              p Subscribe
+                           hr
+                     .row
+                        h2.col.col--4-of-4.latest-lecture Latest Lecture 
+                     .row   
+                        .col.col--1-of-4.hue
+                           img.lecture-img(src='../img/lecture_images/mobile_lecture1.png')
+                           .comment-wrap
+                              img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                              .comment-txt
+                                 a(href='') Comments (2)
+                        .col.col--3-of-4
+                           a.lec-link(href='#play')   
+                              h3.lecture-head IMT2661 Mobile Media Design: - Mobile Design
+                              p In this lecture we go though alot of diffrent topics it is important to be aware of when designing for mobile. There is alot of diffrent topics, but it is important, so I would recommend taking notes.
+                              p.secondary.date-space-fix 17.05.2016
+                        
+                        .col.col--2-of-2
+                           a.all-lectures(href='#lectures-student') View all subscribed lectures   
+                           
+
 
                   button.accordion.expand IMT1471: Web Project
+                     include ../includes/svg-icons/expand.jade
                   .panel
                      .row
-                        .col.col--2-of-5.col--m-2-of-4.col--s-4-of-4.sMiddle.marginTop
-                           img.panelImage(src='http://placehold.it/200x200')
-                        .col.col--3-of-5.col--m-2-of-4.col--s-4-of-4.marginTop
-                           p.panelTxt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Et dolore magna aliqua. Ut enim ad minim veniam, laboris.
-                        .col.col-5-of-5.col--m-2-of-4.col--s-4-of-4.middleBtn.marginTop
-                           button.subscribeBtn(type='button')
-                              | Subscribe
+                        .col.col--1-of-4.col--m-2-of-4.marginTop.teacherCol
+                           img.panelImage(src='../img/profile_images/female_teacher.jpg')
+                           
+                           p 
+                              strong Frida Nygaard
+                           p.p-space-fix Subject Lecturer
+                        .col.col--3-of-4.col--m-2-of-4.marginTop
+                           .row   
+                              p.col.col--2-of-2.col--s-2-of-2.p-space-fix Webproject is a practical development project that supplement or continue the topics from Web Coding and other web development subjects. 
+                              p.col.col--2-of-2.col--s-2-of-2.p-space-fix The aim is for the students to be better web developers with practical experience in the industry, as well as typical approaches to new, and anticipated future methods for development of active web solutions
+                     .row
+                        .col.col--2-of-2.sub-wrap
+                           hr
+                           a.subBtn
+                              include ../includes/svg-icons/unchecked.jade
+                              p Subscribe
+                           a.subPressed
+                              include ../includes/svg-icons/checked.jade
+                              p Subscribe
+                           hr
+                     .row
+                        h2.col.col--4-of-4.latest-lecture Latest Lecture 
+                     .row   
+                        .col.col--1-of-4.hue
+                           img.lecture-img(src='img/lecture_images/webproject_lecture1.png')
+                           .comment-wrap
+                              img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                              .comment-txt
+                                 a(href='') Comments (2)
+                        .col.col--3-of-4
+                           a.lec-link(href='#play')   
+                              h3.lecture-head IMT1471 Web Project: - Technical Design Specification Document
+                              p In this lecture we go through the Technical Design Specification Document. I will give guidance to how you should write it, and which parts are most important for us as web developers.
+                              p.secondary.date-space-fix 16.05.2016
+                        
+                        .col.col--2-of-2
+                           a.all-lectures(href='#lectures-student') View all subscribed lectures   
+                           
+
                   button.accordion.expand IMT2002: Color Management
+                     include ../includes/svg-icons/expand.jade
                   .panel
                      .row
-                        .col.col--2-of-5.col--m-2-of-4.col--s-4-of-4.sMiddle.marginTop
-                           img.panelImage(src='http://placehold.it/200x200')
-                        .col.col--3-of-5.col--m-2-of-4.col--s-4-of-4.marginTop
-                           p.panelTxt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Et dolore magna aliqua. Ut enim ad minim veniam, laboris.
-                        .col.col-5-of-5.col--m-2-of-4.col--s-4-of-4.middleBtn.marginTop
-                           button.subscribeBtn(type='button')
-                              | Subscribe            
+                        .col.col--1-of-4.col--m-2-of-4.marginTop.teacherCol
+                           img.panelImage(src='../img/profile_images/teacher1.jpg')
+                           
+                           p 
+                              strong Gunnar Olsen
+                           p.p-space-fix Subject Lecturer
+                        .col.col--3-of-4.col--m-2-of-4.marginTop
+                           .row   
+                              p.col.col--2-of-2.col--s-2-of-2.p-space-fix After completing the course, students will have a basic understanding of and skills in visual design of web pages. They should be able to plan and carry out the development of Web pages and sites based on the most important client based web tecnologies as well as a basic understanding for the server based content management systems.  
+                              p.col.col--2-of-2.col--s-2-of-2 The students will also be able to independently assess and describe the most important aspects of a site's usability, effectiveness, and information architecture, and further to decide what any changes needed to improve the quality of the site / page.
+                     .row
+                        .col.col--2-of-2.sub-wrap
+                           hr
+                           a.subBtn
+                              include ../includes/svg-icons/unchecked.jade
+                              p Subscribe
+                           a.subPressed
+                              include ../includes/svg-icons/checked.jade
+                              p Subscribe
+                           hr
+                     .row
+                        h2.col.col--4-of-4.latest-lecture Latest Lecture 
+                     .row   
+                        .col.col--1-of-4.hue
+                           img.lecture-img(src='img/lecture_images/color_lecture1.png')
+                           .comment-wrap
+                              img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                              .comment-txt
+                                 a(href='') Comments (2)
+                        .col.col--3-of-4
+                           a.lec-link(href='#play')   
+                              h3.lecture-head IMT2002 Color Management:  -  Principles and components in ICC colour management
+                              p In this lecture we go through some topics essential to ICC color management. Input profiles, Output profiles, ICC colour workflow, Colour gamut - Gamut mapping, Colour Rendering Intents, Assign Profile - Convert to Profile.
+                              p.secondary.date-space-fix 17.05.2016
+                        
+                        .col.col--2-of-2
+                           a.all-lectures(href='#lectures-student') View all subscribed lectures   
+                           
 
       .col.col--1-of-5
          include ../includes/profile.jade
@@ -110,14 +208,28 @@ script.
 // Star og starborder må bytte klasse hver for seg da de blir trykket på. 
 
 script.
+   var notSub = true;
    $(document).ready(function(){
       $('.subBtn').click(function(){
          $('.subBtn').toggle()
          $('.subPressed').toggle()
+         $('.all-lectures').toggle()
+         $('.all-lectures').css('display', 'block')
+         notSub = false;
+         console.log('false');
       });
       $('.subPressed').click(function(){
          $('.subBtn').toggle()
          $('.subPressed').toggle()
+         $('.all-lectures').toggle()
+         notSub = true;
+         console.log('true');
       });
-      
+      $('.lec-link').click(function(e) {
+         if(notSub){ 
+            e.preventDefault();
+            console.log('hue');
+         };
+      });  
    });
+   

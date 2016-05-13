@@ -25,8 +25,7 @@
 
    .expand-arrow
       float: right
-      margin: 3px
-      margin-top: 5px
+      margin-top: 2px
       transition: all 0.4s ease
       transform: rotate(0deg)
       //background-color: red
@@ -40,8 +39,7 @@
          display: block !important
 
 
-   .panel .teacherCol p
-      margin: 0
+   .panel p
       color: white
 
    #accordion
@@ -67,8 +65,13 @@
    .teacherCol p
       text-align: center
 
+
+
+
    .p-space-fix
-      margin: 0
+      margin-top: 0
+   .teacherCol .p-space-fix
+      margin-top: -15px
 
    .middleBtn
       width: 100%
@@ -99,6 +102,7 @@
       cursor: pointer
       border-radius: 2px
       box-shadow: $regular
+      transition: all 0.3s ease
       .checkIcon
          padding: 0
          width: 20%
@@ -110,13 +114,15 @@
          margin: 0
          width: 75%
          display: inline-block
+      &:hover
+         background-color: $primaryColorLight
 
    .subPressed
       display: block
       background-color: $green1
       width: 30%
       margin: 0 15px
-
+      transition: all 0.3s ease
       display: none
       text-align: center
       padding: 0
@@ -136,15 +142,23 @@
          width: 75%
          display: inline-block
          color: $primaryColor
+      &:hover
+         background-color: $green2
 
 
    //lecture list CSS
+   .lec-link
+      text-decoration: none
+      color: white
+
    .latest-lecture
       border-bottom: 2px solid $green1
-      width: 410px
+      width: 310px
       margin-bottom: -20px
       padding-left: 0
       margin-left: 20px
+
+
 
    .lecture-img
       width: 100%
@@ -157,11 +171,15 @@
    .all-lectures
       width: 100%
       text-align: center
-      display: block
       color: $green1
+      display: block
+      text-decoration: none
+      display: none
+      &.show
+         display: block !important
 
    .date-space-fix
-      padding-top: 5px
+      margin-top: -15px
 
    .comment-icon
       margin-top: 5px
@@ -193,26 +211,31 @@
       //margin-left: 15px
    @media (max-width: 1000px)
       .subBtn, .subPressed
+         width: 38%
       .comment-wrap
          display: none
       .latest-lecture
-         width: 300px
+         width: 250px
 
    @media (max-width: 700px)
       .hue
          display: none
       .subBtn, .subPressed
          width: 40%
+      .sub-wrap
+         margin-bottom: 50px
       hr
          width: 30%
+      .expand-arrow
+         margin-top: 0
       .latest-lecture
-         width: 200px   
+         width: 200px
    @media (max-width: 480px)
       button.accordion
          font-size: 1.8rem
       .subBtn, .subPressed
-         width: 60%
-         margin: 0 5px
+         width: 65%
+
       hr
          width: 20%
       .latest-lecture
