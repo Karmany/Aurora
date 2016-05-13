@@ -14,11 +14,23 @@
       text-align: left
       outline: none
       margin-top: 20px
-      font-size: 15px
-      transition: 0.4s
+      font-size: 2.2rem
+      transition: all 0.4s ease
 
       &:hover, &.active
          background-color: $primaryColor
+      &.active
+         .expand-arrow
+            transform: rotate(180deg)
+
+   .expand-arrow
+      float: right
+      margin: 3px
+      margin-top: 5px
+      transition: all 0.4s ease
+      transform: rotate(0deg)
+      //background-color: red
+
 
    div.panel
       padding: 10px 18px
@@ -28,7 +40,7 @@
          display: block !important
 
 
-   .panel p
+   .panel .teacherCol p
       margin: 0
       color: white
 
@@ -36,58 +48,12 @@
       margin-top: -12px
 
    .expand
-      background-image: url(../img/iconography/expand.svg)
       background-repeat: no-repeat
       background-position: right
       background-color: transparent
 
    button:focus, input:focus
       outline: none !important
-
-
-   // Prøver å lage en annen sub knapp
-      .starborder
-         background-image: url(../img/iconography/starborder.svg)
-         background-repeat: no-repeat
-         background-position: center
-         background-color: transparent
-         width: 24px
-         height: 24px
-         float: right
-         display: inline-block
-         margin: auto
-         position: absolute
-         top: 0
-         bottom: 0
-         right: 0
-      .star
-         background-image: url(../img/iconography/star.svg)
-         background-repeat: no-repeat
-         background-position: center
-         background-color: transparent
-         width: 24px
-         height: 24px
-         margin: auto
-         position: absolute
-         top: 0
-         bottom: 0
-         right: 0
-      .subscribeBtn
-         border: 1px solid black !important
-         padding-left: 0px
-         border-radius: 6px
-         width: 120px
-         height: 30px
-         background-image: url(../img/iconography/starborder.svg)
-         background-repeat: no-repeat
-         background-position: right
-         background-color: transparent
-         border: none
-         cursor: pointer
-         float: right
-         color: black
-         margin: 0 auto
-         display: block
 
    .panelImage
       width: 100%
@@ -98,6 +64,12 @@
       display: block
       border-radius: 50%
 
+   .teacherCol p
+      text-align: center
+
+   .p-space-fix
+      margin: 0
+
    .middleBtn
       width: 100%
 
@@ -106,43 +78,81 @@
 
 
    //sub btn
+   .sub-wrap
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin: 50px 0 20px 0
+   hr
+      background-color: $primaryColorLight
+      height: 2px
+      border: 0
+      width: 35%
    .subBtn
       display: block
       background-color: $primaryColorDark
       width: 30%
-      position: relative
-      left: 35%
+      margin: 0 15px
+
       text-align: center
       padding: 0
-
       cursor: pointer
       border-radius: 2px
+      box-shadow: $regular
       .checkIcon
-
          padding: 0
          width: 20%
          margin-bottom: -6px
          margin-right: -12px
          display: inline-block
-         box-shadow: $regular
-         //background-color: blue
       p
          padding: 10px
          margin: 0
          width: 75%
          display: inline-block
 
-         //background-color: red
-
    .subPressed
+      display: block
+      background-color: $green1
+      width: 30%
+      margin: 0 15px
 
-
+      display: none
+      text-align: center
+      padding: 0
+      cursor: pointer
+      border-radius: 2px
+      box-shadow: $regular
+      .checkIcon
+         padding: 0
+         width: 20%
+         margin-bottom: -6px
+         margin-right: -12px
+         display: inline-block
+         fill: $primaryColor
+      p
+         padding: 10px
+         margin: 0
+         width: 75%
+         display: inline-block
+         color: $primaryColor
 
 
    //lecture list CSS
+   .latest-lecture
+      border-bottom: 2px solid $green1
+      width: 410px
+      margin-bottom: -20px
+      padding-left: 0
+      margin-left: 20px
+
    .lecture-img
       width: 100%
-      margin-top: 30px
+      margin-top: 40px
+
+   .lecture-head
+      margin-top: 35px
+      margin-bottom: 10px
 
    .all-lectures
       width: 100%
@@ -150,8 +160,10 @@
       display: block
       color: $green1
 
-   .comment-icon
+   .date-space-fix
+      padding-top: 5px
 
+   .comment-icon
       margin-top: 5px
       width: 20px
       height: 20px
@@ -170,7 +182,8 @@
       width: 100%
       float: left
       margin-top: 10px
-
+   .hue
+      font-weight: 600
 
    .comment-wrap-teacher
       margin-top: -15px
@@ -178,3 +191,31 @@
       width: 100%
       float: left
       //margin-left: 15px
+   @media (max-width: 1000px)
+      .subBtn, .subPressed
+      .comment-wrap
+         display: none
+      .latest-lecture
+         width: 300px
+
+   @media (max-width: 700px)
+      .hue
+         display: none
+      .subBtn, .subPressed
+         width: 40%
+      hr
+         width: 30%
+      .latest-lecture
+         width: 200px   
+   @media (max-width: 480px)
+      button.accordion
+         font-size: 1.8rem
+      .subBtn, .subPressed
+         width: 60%
+         margin: 0 5px
+      hr
+         width: 20%
+      .latest-lecture
+         margin-top: 10px
+      .all-lectures
+         margin-top: 15px

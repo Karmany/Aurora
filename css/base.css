@@ -2720,12 +2720,24 @@ textarea {
   text-align: left;
   outline: none;
   margin-top: 20px;
-  font-size: 15px;
-  transition: 0.4s;
+  font-size: 2.2rem;
+  transition: all 0.4s ease;
 }
 
 #subjectWrapper button.accordion:hover, #subjectWrapper button.accordion.active {
   background-color: #455A64;
+}
+
+#subjectWrapper button.accordion.active .expand-arrow {
+  transform: rotate(180deg);
+}
+
+#subjectWrapper .expand-arrow {
+  float: right;
+  margin: 3px;
+  margin-top: 5px;
+  transition: all 0.4s ease;
+  transform: rotate(0deg);
 }
 
 #subjectWrapper div.panel {
@@ -2738,7 +2750,7 @@ textarea {
   display: block !important;
 }
 
-#subjectWrapper .panel p {
+#subjectWrapper .panel .teacherCol p {
   margin: 0;
   color: white;
 }
@@ -2748,7 +2760,6 @@ textarea {
 }
 
 #subjectWrapper .expand {
-  background-image: url(../img/iconography/expand.svg);
   background-repeat: no-repeat;
   background-position: right;
   background-color: transparent;
@@ -2768,6 +2779,14 @@ textarea {
   border-radius: 50%;
 }
 
+#subjectWrapper .teacherCol p {
+  text-align: center;
+}
+
+#subjectWrapper .p-space-fix {
+  margin: 0;
+}
+
 #subjectWrapper .middleBtn {
   width: 100%;
 }
@@ -2776,16 +2795,30 @@ textarea {
   margin-top: 20px;
 }
 
+#subjectWrapper .sub-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0 20px 0;
+}
+
+#subjectWrapper hr {
+  background-color: #6d828c;
+  height: 2px;
+  border: 0;
+  width: 35%;
+}
+
 #subjectWrapper .subBtn {
   display: block;
   background-color: #314650;
   width: 30%;
-  position: relative;
-  left: 35%;
+  margin: 0 15px;
   text-align: center;
   padding: 0;
   cursor: pointer;
   border-radius: 2px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
 }
 
 #subjectWrapper .subBtn .checkIcon {
@@ -2794,7 +2827,6 @@ textarea {
   margin-bottom: -6px;
   margin-right: -12px;
   display: inline-block;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
 }
 
 #subjectWrapper .subBtn p {
@@ -2804,9 +2836,52 @@ textarea {
   display: inline-block;
 }
 
+#subjectWrapper .subPressed {
+  display: block;
+  background-color: #79d894;
+  width: 30%;
+  margin: 0 15px;
+  display: none;
+  text-align: center;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
+}
+
+#subjectWrapper .subPressed .checkIcon {
+  padding: 0;
+  width: 20%;
+  margin-bottom: -6px;
+  margin-right: -12px;
+  display: inline-block;
+  fill: #455A64;
+}
+
+#subjectWrapper .subPressed p {
+  padding: 10px;
+  margin: 0;
+  width: 75%;
+  display: inline-block;
+  color: #455A64;
+}
+
+#subjectWrapper .latest-lecture {
+  border-bottom: 2px solid #79d894;
+  width: 410px;
+  margin-bottom: -20px;
+  padding-left: 0;
+  margin-left: 20px;
+}
+
 #subjectWrapper .lecture-img {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 40px;
+}
+
+#subjectWrapper .lecture-head {
+  margin-top: 35px;
+  margin-bottom: 10px;
 }
 
 #subjectWrapper .all-lectures {
@@ -2814,6 +2889,10 @@ textarea {
   text-align: center;
   display: block;
   color: #79d894;
+}
+
+#subjectWrapper .date-space-fix {
+  padding-top: 5px;
 }
 
 #subjectWrapper .comment-icon {
@@ -2840,11 +2919,58 @@ textarea {
   margin-top: 10px;
 }
 
+#subjectWrapper .hue {
+  font-weight: 600;
+}
+
 #subjectWrapper .comment-wrap-teacher {
   margin-top: -15px;
   margin-bottom: 25px;
   width: 100%;
   float: left;
+}
+
+@media (max-width: 1000px) {
+  #subjectWrapper .comment-wrap {
+    display: none;
+  }
+  #subjectWrapper .latest-lecture {
+    width: 300px;
+  }
+}
+
+@media (max-width: 700px) {
+  #subjectWrapper .hue {
+    display: none;
+  }
+  #subjectWrapper .subBtn, #subjectWrapper .subPressed {
+    width: 40%;
+  }
+  #subjectWrapper hr {
+    width: 30%;
+  }
+  #subjectWrapper .latest-lecture {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  #subjectWrapper button.accordion {
+    font-size: 1.8rem;
+  }
+  #subjectWrapper .subBtn, #subjectWrapper .subPressed {
+    width: 60%;
+    margin: 0 5px;
+  }
+  #subjectWrapper hr {
+    width: 20%;
+  }
+  #subjectWrapper .latest-lecture {
+    margin-top: 10px;
+  }
+  #subjectWrapper .all-lectures {
+    margin-top: 15px;
+  }
 }
 
 .profile .profile-wrapper {

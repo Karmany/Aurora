@@ -6,29 +6,43 @@
             #results.col.col--5-of-5
                #accordion
                   button.accordion.expand IMT1292: Web Coding
+                     include ../includes/svg-icons/expand.jade
                   .panel
                      .row
-                        .col.col--2-of-5.sMiddle.marginTop
+                        .col.col--1-of-4.col--m-2-of-4.marginTop.teacherCol
                            img.panelImage(src='../img/profile_images/teacher2.jpg')
-                        .col.col--3-of-5.marginTop
-                           p.panelTxt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Et dolore magna aliqua. Ut enim ad minim veniam, laboris.
-                           a.subBtn
-                              include ../includes/svg-icons/unchecked
-                              p Subscribe
-                              
-                     
+                           
+                           p 
+                              strong Henriette Jacobsen
+                           p Subject Lecturer
+                        .col.col--3-of-4.col--m-2-of-4.marginTop
+                           .row   
+                              p.col.col--2-of-2.col--s-2-of-2.p-space-fix After completing the course, students will have a basic understanding of and skills in visual design of web pages. They should be able to plan and carry out the development of Web pages and sites based on the most important client based web tecnologies as well as a basic understanding for the server based content management systems.  
+                              p.col.col--2-of-2.col--s-2-of-2 The students will also be able to independently assess and describe the most important aspects of a site's usability, effectiveness, and information architecture, and further to decide what any changes needed to improve the quality of the site / page.
                      .row
-                        .col.col--1-of-4
+                        .col.col--2-of-2.sub-wrap
+                           hr
+                           a.subBtn
+                              include ../includes/svg-icons/unchecked.jade
+                              p Subscribe
+                           a.subPressed
+                              include ../includes/svg-icons/checked.jade
+                              p Subscribe
+                           hr
+                     .row
+                        h2.col.col--4-of-4.latest-lecture Latest Lecture 
+                     .row   
+                        .col.col--1-of-4.hue
                            img.lecture-img(src='img/slides/Lecture3-1.010.jpeg')
                            .comment-wrap
                               img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
                               .comment-txt
                                  a(href='') Comments (2)
                         .col.col--3-of-4
-                                     
-                           h3 IMT1292: Web Coding  -  3rd Introductury Lecture to HTML
-                           p.date-space-fix In this lecture we go through four main topics. Entities, lists, images and namegiving. If you have not seen the previous lectures on this, I would recommend you watching those before this one, since this one builds on what we learned from them.
-                           p 19.05.2016
+                           
+                           h3.lecture-head IMT1292: Web Coding  -  3rd Introductury Lecture to HTML
+                           p In this lecture we go through four main topics. Entities, lists, images and namegiving. If you have not seen the previous lectures on this, I would recommend you watching those before this one, since this one builds on what we learned from them.
+                           p.date-space-fix 19.05.2016
                         
                         .col.col--2-of-2
                            a.all-lectures View all subrscibed lectures   
@@ -94,3 +108,16 @@ script.
    }
 
 // Star og starborder må bytte klasse hver for seg da de blir trykket på. 
+
+script.
+   $(document).ready(function(){
+      $('.subBtn').click(function(){
+         $('.subBtn').toggle()
+         $('.subPressed').toggle()
+      });
+      $('.subPressed').click(function(){
+         $('.subBtn').toggle()
+         $('.subPressed').toggle()
+      });
+      
+   });
