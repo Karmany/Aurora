@@ -14,7 +14,7 @@
       text-align: left
       outline: none
       margin-top: 20px
-      font-size: 15px
+      font-size: 2.2rem
       transition: 0.4s
 
       &:hover, &.active
@@ -28,7 +28,7 @@
          display: block !important
 
 
-   .panel p
+   .panel .teacherCol p
       margin: 0
       color: white
 
@@ -36,7 +36,7 @@
       margin-top: -12px
 
    .expand
-      background-image: url(../img/iconography/expand.svg)
+      //background-image: url(../img/iconography/expand.svg)
       background-repeat: no-repeat
       background-position: right
       background-color: transparent
@@ -98,6 +98,12 @@
       display: block
       border-radius: 50%
 
+   .teacherCol p
+      text-align: center
+
+   .p-space-fix
+      margin: 0
+
    .middleBtn
       width: 100%
 
@@ -106,43 +112,81 @@
 
 
    //sub btn
+   .sub-wrap
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin: 50px 0 20px 0
+   hr
+      background-color: $primaryColorLight
+      height: 2px
+      border: 0
+      width: 35%
    .subBtn
       display: block
       background-color: $primaryColorDark
       width: 30%
-      position: relative
-      left: 35%
+      margin: 0 15px
+
       text-align: center
       padding: 0
-
       cursor: pointer
       border-radius: 2px
+      box-shadow: $regular
       .checkIcon
-
          padding: 0
          width: 20%
          margin-bottom: -6px
          margin-right: -12px
          display: inline-block
-         box-shadow: $regular
-         //background-color: blue
       p
          padding: 10px
          margin: 0
          width: 75%
          display: inline-block
 
-         //background-color: red
-
    .subPressed
+      display: block
+      background-color: $green1
+      width: 30%
+      margin: 0 15px
 
-
+      display: none
+      text-align: center
+      padding: 0
+      cursor: pointer
+      border-radius: 2px
+      box-shadow: $regular
+      .checkIcon
+         padding: 0
+         width: 20%
+         margin-bottom: -6px
+         margin-right: -12px
+         display: inline-block
+         fill: $primaryColor
+      p
+         padding: 10px
+         margin: 0
+         width: 75%
+         display: inline-block
+         color: $primaryColor
 
 
    //lecture list CSS
+   .latest-lecture
+      border-bottom: 2px solid $green1
+      width: 410px
+      margin-bottom: -20px
+      padding-left: 0
+      margin-left: 20px
+
    .lecture-img
       width: 100%
-      margin-top: 30px
+      margin-top: 40px
+
+   .lecture-head
+      margin-top: 35px
+      margin-bottom: 10px
 
    .all-lectures
       width: 100%
@@ -150,8 +194,10 @@
       display: block
       color: $green1
 
-   .comment-icon
+   .date-space-fix
+      padding-top: 5px
 
+   .comment-icon
       margin-top: 5px
       width: 20px
       height: 20px
@@ -170,7 +216,8 @@
       width: 100%
       float: left
       margin-top: 10px
-
+   .hue
+      font-weight: 600
 
    .comment-wrap-teacher
       margin-top: -15px
@@ -178,3 +225,25 @@
       width: 100%
       float: left
       //margin-left: 15px
+   @media (max-width: 1000px)
+      .subBtn, .subPressed
+
+   @media (max-width: 700px)
+      .hue
+         display: none
+      .subBtn, .subPressed
+         width: 40%
+      hr
+         width: 30%
+   @media (max-width: 480px)
+      button.accordion
+         font-size: 1.8rem
+      .subBtn, .subPressed
+         width: 60%
+         margin: 0 5px
+      hr
+         width: 20%
+      .latest-lecture
+         margin-top: 10px
+      .all-lectures
+         margin-top: 15px
