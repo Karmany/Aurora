@@ -15,10 +15,22 @@
       outline: none
       margin-top: 20px
       font-size: 2.2rem
-      transition: 0.4s
+      transition: all 0.4s ease
 
       &:hover, &.active
          background-color: $primaryColor
+      &.active
+         .expand-arrow
+            transform: rotate(180deg)
+
+   .expand-arrow
+      float: right
+      margin: 3px
+      margin-top: 5px
+      transition: all 0.4s ease
+      transform: rotate(0deg)
+      //background-color: red
+
 
    div.panel
       padding: 10px 18px
@@ -36,58 +48,12 @@
       margin-top: -12px
 
    .expand
-      //background-image: url(../img/iconography/expand.svg)
       background-repeat: no-repeat
       background-position: right
       background-color: transparent
 
    button:focus, input:focus
       outline: none !important
-
-
-   // Prøver å lage en annen sub knapp
-      .starborder
-         background-image: url(../img/iconography/starborder.svg)
-         background-repeat: no-repeat
-         background-position: center
-         background-color: transparent
-         width: 24px
-         height: 24px
-         float: right
-         display: inline-block
-         margin: auto
-         position: absolute
-         top: 0
-         bottom: 0
-         right: 0
-      .star
-         background-image: url(../img/iconography/star.svg)
-         background-repeat: no-repeat
-         background-position: center
-         background-color: transparent
-         width: 24px
-         height: 24px
-         margin: auto
-         position: absolute
-         top: 0
-         bottom: 0
-         right: 0
-      .subscribeBtn
-         border: 1px solid black !important
-         padding-left: 0px
-         border-radius: 6px
-         width: 120px
-         height: 30px
-         background-image: url(../img/iconography/starborder.svg)
-         background-repeat: no-repeat
-         background-position: right
-         background-color: transparent
-         border: none
-         cursor: pointer
-         float: right
-         color: black
-         margin: 0 auto
-         display: block
 
    .panelImage
       width: 100%
@@ -227,6 +193,10 @@
       //margin-left: 15px
    @media (max-width: 1000px)
       .subBtn, .subPressed
+      .comment-wrap
+         display: none
+      .latest-lecture
+         width: 300px
 
    @media (max-width: 700px)
       .hue
@@ -235,6 +205,8 @@
          width: 40%
       hr
          width: 30%
+      .latest-lecture
+         width: 200px   
    @media (max-width: 480px)
       button.accordion
          font-size: 1.8rem

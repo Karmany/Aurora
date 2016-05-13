@@ -2723,11 +2723,23 @@ textarea {
   outline: none;
   margin-top: 20px;
   font-size: 2.2rem;
-  transition: 0.4s;
+  transition: all 0.4s ease;
 }
 
 #subjectWrapper button.accordion:hover, #subjectWrapper button.accordion.active {
   background-color: #455A64;
+}
+
+#subjectWrapper button.accordion.active .expand-arrow {
+  transform: rotate(180deg);
+}
+
+#subjectWrapper .expand-arrow {
+  float: right;
+  margin: 3px;
+  margin-top: 5px;
+  transition: all 0.4s ease;
+  transform: rotate(0deg);
 }
 
 #subjectWrapper div.panel {
@@ -2920,6 +2932,15 @@ textarea {
   float: left;
 }
 
+@media (max-width: 1000px) {
+  #subjectWrapper .comment-wrap {
+    display: none;
+  }
+  #subjectWrapper .latest-lecture {
+    width: 300px;
+  }
+}
+
 @media (max-width: 700px) {
   #subjectWrapper .hue {
     display: none;
@@ -2929,6 +2950,9 @@ textarea {
   }
   #subjectWrapper hr {
     width: 30%;
+  }
+  #subjectWrapper .latest-lecture {
+    width: 200px;
   }
 }
 
