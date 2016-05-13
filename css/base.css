@@ -2360,14 +2360,18 @@ textarea {
   margin: 0;
 }
 
-#main-admin .monitor .lectures, #main-admin .monitor .students, #main-admin .monitor .teachers {
-  border: 1px solid black;
-  border-radius: 8px;
-  color: black;
+#main-admin .monitor .subjects button, #main-admin .monitor .students button, #main-admin .monitor .teachers button {
+  width: 100%;
+  border: none;
+  border-radius: 2px;
+  color: #455A64;
+  height: 35px;
+  background-color: #79d894;
+  border: none;
 }
 
-#main-admin .monitor .lectures button, #main-admin .monitor .students button, #main-admin .monitor .teachers button {
-  width: 100%;
+#main-admin .monitor .subjects button:hover, #main-admin .monitor .students button:hover, #main-admin .monitor .teachers button:hover {
+  background-color: #98ff9b;
 }
 
 #main-admin .students {
@@ -2390,10 +2394,9 @@ textarea {
 #main-admin .modal-content {
   position: relative;
   background-color: #6d828c;
-  margin: 0 auto;
-  width: 75%;
   padding: 5px;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 0px 0px;
+  border-radius: 2px;
 }
 
 #main-admin .close {
@@ -2411,20 +2414,28 @@ textarea {
   cursor: pointer;
 }
 
+#main-admin #subjectsModal .modal-content {
+  width: 100%;
+}
+
 #main-admin #subjectsModal .modal-content h2 {
   margin-left: 30px;
   margin-bottom: 10px;
   margin-top: 15px;
   padding-bottom: 2px;
   border-bottom: 2px solid #79d894;
-  width: 50%;
+  max-width: 210px;
+}
+
+#main-admin #subjectsModal .modal-content .subject {
+  margin-bottom: 10px;
 }
 
 #main-admin #subjectsModal .modal-content .subject h3 {
   margin-left: 30px;
+  margin: 30px;
   margin-top: 5px;
   margin-bottom: 5px;
-  display: inline;
 }
 
 #main-admin #subjectsModal .modal-content .subject h3:hover {
@@ -2441,11 +2452,22 @@ textarea {
 
 #main-admin #subjectsModal .modal-content .subject .lecture-list .lecture {
   margin-left: 30px;
+  margin-right: 30px;
 }
 
 #main-admin #subjectsModal .modal-content .subject .lecture-list .lecture a {
+  color: white;
+  line-height: 2.5rem;
+  margin-left: 20px;
   text-decoration: none;
-  color: #79d894;
+}
+
+#main-admin #subjectsModal .modal-content .subject .lecture-list .lecture a:hover {
+  text-decoration: underline;
+}
+
+#main-admin #subjectsModal .modal-content .subject .lecture-list .first {
+  margin-top: 5px;
 }
 
 #main-admin #subjectsModal .modal-content #colourManagement {
@@ -2463,79 +2485,66 @@ textarea {
 
 #main-admin #studentsModal .modal-content h3, #main-admin #teachersModal .modal-content h3 {
   margin-bottom: -10px;
-  margin-top: -10px;
+  margin-top: -15px;
 }
 
-#main-admin #studentsModal h2 {
-  margin-bottom: -5px;
+#main-admin #studentsModal .modal-content {
+  max-width: 80%;
+  margin: 0 auto;
 }
 
-#main-admin #studentsModal hr {
-  border: 0;
-  clear: both;
-  display: inline-block;
-  width: 90%;
-  background-color: #79d894;
-  height: 2px;
-  margin-left: 30px;
-  margin-bottom: 10px;
+#main-admin #studentsModal .modal-content h2 {
+  border-bottom: 2px solid #79d894;
+  margin-right: 30px;
 }
 
-#main-admin #studentsModal .alignment-grid {
+#main-admin #studentsModal .modal-content .alignment-grid {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  margin-left: 30px;
+  justify-content: space-between;
 }
 
-#main-admin #studentsModal .alignment-grid .year-enrolled {
-  float: left;
+#main-admin #studentsModal .modal-content .alignment-grid .year-enrolled {
+  margin-right: 20px;
 }
 
-#main-admin #studentsModal .alignment-grid .year-enrolled ul {
+#main-admin #studentsModal .modal-content .alignment-grid .year-enrolled ul {
   list-style: none;
   margin-left: -40px;
 }
 
-#main-admin #studentsModal .alignment-grid .year-enrolled ul li {
+#main-admin #studentsModal .modal-content .alignment-grid .year-enrolled ul li {
   margin-bottom: 2px;
 }
 
-#main-admin #studentsModal .alignment-grid .year-enrolled ul li a {
+#main-admin #studentsModal .modal-content .alignment-grid .year-enrolled ul li a {
   text-decoration: none;
   color: white;
 }
 
-#main-admin #studentsModal .alignment-grid .year-enrolled ul li a:hover {
+#main-admin #studentsModal .modal-content .alignment-grid .year-enrolled ul li a:hover {
   color: #79d894;
 }
 
 #main-admin #teachersModal .modal-content {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
+  max-width: 60%;
+  margin: 0 auto;
 }
 
 #main-admin #teachersModal .modal-content h2 {
-  text-align: center;
-  margin-left: 0;
-}
-
-#main-admin #teachersModal .modal-content hr {
-  border: 0;
-  clear: both;
-  display: block;
-  width: 80%;
-  background-color: #79d894;
-  height: 2px;
-  margin-top: -20px;
+  margin-left: 30px;
+  margin: 30px;
   margin-bottom: 20px;
+  margin-top: 15px;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #79d894;
+  max-width: 210px;
 }
 
 #main-admin #teachersModal .alignment-grid {
-  display: flex;
-  justify-content: center;
-  margin-left: -40px;
-  margin-top: -30px;
+  margin-left: -10px;
+  margin-top: -15px;
 }
 
 #main-admin #teachersModal .alignment-grid ul {
@@ -2555,37 +2564,152 @@ textarea {
   color: #79d894;
 }
 
-#main-admin .notification-content .notification {
-  margin-top: -20px;
+#main-admin .notification-content h3 {
+  margin-left: 20px;
+  margin-top: -5px;
+  border-bottom: 2px solid #79d894;
+  max-width: 200px;
+  padding-bottom: 2px;
+}
+
+#main-admin .notification-content .first {
+  margin-top: -25px;
 }
 
 #main-admin .notification-content .notification p {
   margin-top: -15px;
 }
 
+#main-admin .notification-content .notification .reported-student a {
+  color: #6d828c;
+  text-decoration: none;
+}
+
+#main-admin .notification-content .notification .reported-student a:hover {
+  color: white;
+}
+
+#main-admin .notification-content .notification .button-alignment {
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+#main-admin .notification-content .notification .button-alignment .removeComment {
+  background-color: #E57373;
+  border-radius: 6px;
+  font-size: 1rem;
+  border: none;
+  display: inline;
+  text-align: center;
+  color: white;
+  margin-top: -20px;
+  transition: all 0.3 ease;
+  transform: scale(1);
+}
+
+#main-admin .notification-content .notification .button-alignment .removeComment:hover {
+  transform: scale(1.2);
+  margin-right: 10px;
+}
+
+#main-admin .notification-content .notification .button-alignment .allowComment {
+  background-color: #79d894;
+  border-radius: 6px;
+  font-size: 1rem;
+  border: none;
+  display: inline;
+  text-align: center;
+  color: #314650;
+  transition: all 0.3 ease;
+  transform: scale(1);
+}
+
+#main-admin .notification-content .notification .button-alignment .allowComment:hover {
+  transform: scale(1.2);
+  margin-left: 10px;
+}
+
 #main-admin .notification-content .notification .reported-student {
-  color: grey;
+  color: #6d828c;
+}
+
+#main-admin .approve-teachers h3 {
+  margin-top: -5px;
+  border-bottom: 2px solid #79d894;
+  max-width: 175px;
+  padding-bottom: 2px;
+}
+
+#main-admin .approve-teachers form {
+  margin-top: 25px;
 }
 
 #main-admin .approve-teachers form ul {
   list-style: none;
   margin-left: -40px;
+  margin-top: -10px;
+  margin-bottom: -0;
+}
+
+#main-admin .approve-teachers form ul li {
+  margin: 5px 0;
 }
 
 #main-admin .approve-teachers form ul input[type="checkbox"] {
-  width: 15px;
-  height: 15px;
-  margin: 5px;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 #main-admin .approve-teachers form ul a {
+  margin-left: 10px;
   text-decoration: none;
   color: white;
 }
 
+#main-admin .approve-teachers form ul a:hover {
+  color: #79d894;
+}
+
 #main-admin .approve-teachers form input[type="submit"] {
-  border-radius: 4px;
-  color: black;
+  background-color: #79d894;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  border: none;
+  color: #455A64;
+  transition: all 0.3 ease;
+  transform: scale(1);
+}
+
+#main-admin .approve-teachers form input[type="submit"]:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 700px) {
+  #main-admin #teachersModal .modal-content {
+    max-width: 80%;
+  }
+  #main-admin .monitor {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+  }
+  #main-admin .monitor .teachers, #main-admin .monitor .students, #main-admin .monitor .subjects {
+    margin-top: 0;
+    width: 33%;
+  }
+  #main-admin .monitor .teachers button, #main-admin .monitor .students button, #main-admin .monitor .subjects button {
+    width: 95%;
+  }
+  #main-admin .notification-content h4 {
+    margin-top: 40px;
+  }
+  #main-admin .approve-teachers {
+    margin-left: 20px;
+    margin-top: 40px;
+  }
 }
 
 #subjectWrapper button.accordion {
