@@ -6,38 +6,64 @@
       width: 100%
 
 #playSlides
+   background-color: $primaryColor
+   border-radius: 2px
+   box-shadow: $regular
 
    .tabs
       font-variant: small-caps
       width: 100%
-      margin-bottom: 20px
       height: 40px
       display: flex
       font-size: 2rem
       line-height: 35px
       justify-content: space-between
+      align-items: center
+
+      &.active
+         border-bottom: 2px solid $primaryColorLight
 
       span
+         //height: 30px
          width: 50%
          text-align: center
 
-         img
+         svg
             height: 1.6rem
             margin-bottom: -0.3rem
             margin-right: 10px
 
-         &:first-child
-            border-right: 2px solid white
+      span.line
+         width: 0
+         height: 20px
+         border-right: 2px solid white
 
-   img#slides
-      width: 100%
-      height: auto
+      span.active
+         color: $green1
+
+         svg
+            fill: $green1
+
+   #slide-wrap
+      margin: 0
+      padding: 0
+      text-align: center
+      font-size: 0
+
+      img#slides
+         margin: 0
+         padding: 0
+         overflow: hidden
+         border-radius: 3px
 
    #wiki
-      width: 600px
+      width: 100%
+      padding: 0px 20px
       overflow-y: scroll
-      position: relative
-      height: 300px
+      border-bottom: 2px solid $primaryColorLight
+
+   #wiki.closed, #slides.closed
+      display: none
 
 // Change slides
 
@@ -53,8 +79,11 @@
 
 .change-slides
    width: auto
-   display: inline-block
+   //display: inline-block
    height: 50px
+
+   &.mobile
+      display: none
 
    .slide-title
       height: 100%
@@ -91,20 +120,35 @@
          outline: none
 // slide-timeline
 
-.slide-timeline-wrap
-   border-right: 2px solid $primaryColorLight
+//
+   .slide-timeline-wrap
+      border-right: 2px solid $primaryColorLight
 
 ul.slide-timeline
    margin: 0
    padding: 0
-   line-height: 40px
+   font-size: 1.6rem
+   line-height: 1.6rem
 
    li
       list-style-type: none
+      background-image: url(../img/iconography/small-arrow-2.svg)
+      background-size: 0.8rem auto
+      background-position: left top
+      background-repeat: no-repeat
+      margin: 25px 0px
 
       a
          color: white
+         font-weight: 300
+         background-color: $primaryColorDark
          text-decoration: none
+         position: relative
+         left: 0px
+         transition: left 0.3s ease
+
+         &:hover
+            left: 15px
 
 // LIKE || DISLIKE
 
@@ -174,3 +218,89 @@ ul.slide-timeline
    position: relative
    top: 2px
    left: 2px
+
+// Lecture poster
+
+.lecture-poster
+
+   .profile-img
+      margin-top: 16px
+      width: 40px
+      height: 40px
+      border-radius: 100%
+      float: left
+
+   .author
+      border-top: 2px solid $primaryColorLight
+      padding-top: 5px
+      width: 200px
+      display: block
+      text-decoration: none
+
+      p
+         margin-left: 50px
+         margin-top: 10px
+         color: white
+         span
+            font-size: 1.4rem
+            color: $green1
+            display: block
+
+// comment section
+
+textarea.comment
+   background-color: transparent
+   border: 2px solid $green1
+   border-radius: 2px
+   font-weight: 300
+   width: 100%
+   padding: 0.5rem
+   font-size: 1.3rem
+   margin-bottom: 15px
+   resize: none
+   transition: background-color 0.3s ease
+
+   &::-webkit-input-placeholder
+      color: $primaryColorLight
+
+   &:-moz-placeholder
+      /* Firefox 18- */
+      color: $primaryColorLight
+
+   &::-moz-placeholder
+      /* Firefox 19+ */
+      color: $primaryColorLight
+
+   &:-ms-input-placeholder
+      color: $primaryColorLight
+
+   &:focus
+      outline: none
+      color: white
+      background-color: $primaryColorLight
+
+button.comment
+   border-radius: 2px
+   box-shadow: $regular
+   width: 33%
+   text-align: center
+   font-weight: 300
+   background-repeat: no-repeat
+   border: none
+   background-color: $primaryColor
+   color: white
+   padding: 1rem
+   font-size: 1.3rem
+   transition: background-color 0.3s ease
+
+   &:hover
+      background-color: $primaryColorLight
+      outline: none
+
+   &:active
+      background-color: $primaryColorDark
+      outline: none
+
+.video-page-right
+   border-left: 2px solid $primaryColorLight
+   padding-left: 40px
