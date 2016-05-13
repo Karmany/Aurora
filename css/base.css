@@ -2466,10 +2466,6 @@ textarea {
   text-decoration: underline;
 }
 
-#main-admin #subjectsModal .modal-content .subject .lecture-list .first {
-  margin-top: 5px;
-}
-
 #main-admin #subjectsModal .modal-content #colourManagement {
   margin-bottom: 15px;
 }
@@ -2496,6 +2492,7 @@ textarea {
 #main-admin #studentsModal .modal-content h2 {
   border-bottom: 2px solid #79d894;
   margin-right: 30px;
+  max-width: 220px;
 }
 
 #main-admin #studentsModal .modal-content .alignment-grid {
@@ -2507,6 +2504,7 @@ textarea {
 
 #main-admin #studentsModal .modal-content .alignment-grid .year-enrolled {
   margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 #main-admin #studentsModal .modal-content .alignment-grid .year-enrolled ul {
