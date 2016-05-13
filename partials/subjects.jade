@@ -2,26 +2,39 @@
    .row
       .col.col--4-of-5.col--m-4-of-4
          .row
-            .col.col--5-of-5
-               .container-100
-                  form.searchboxx(name='searchbox', action='')
-                     input(type='search', name='search', placeholder='Search for subject by name or eg. "computer"', onblur='changeText()')
-                     button(type='submit', id="sButton", value='search', onclick='showResults()')
             
             #results.col.col--5-of-5
                #accordion
-                  button.accordion.expand Computer Result 1
+                  button.accordion.expand IMT1292: Web Coding
                   .panel
                      .row
-                        .col.col--2-of-5.col--m-2-of-4.col--s-4-of-4.sMiddle.marginTop
-                           img.panelImage(src='http://placehold.it/200x200')
-                        .col.col--3-of-5.col--m-2-of-4.col--s-4-of-4.marginTop
+                        .col.col--2-of-5.sMiddle.marginTop
+                           img.panelImage(src='../img/profile_images/teacher2.jpg')
+                        .col.col--3-of-5.marginTop
                            p.panelTxt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Et dolore magna aliqua. Ut enim ad minim veniam, laboris.
-                        .col.col-5-of-5.col--m-2-of-4.col--s-4-of-4.middleBtn.marginTop
-                           button.subscribeBtn(type='button')
-                              | Subscribe
+                           a.subBtn
+                              include ../includes/svg-icons/unchecked
+                              p Subscribe
+                              
+                     
+                     .row
+                        .col.col--1-of-4
+                           img.lecture-img(src='img/slides/Lecture3-1.010.jpeg')
+                           .comment-wrap
+                              img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                              .comment-txt
+                                 a(href='') Comments (2)
+                        .col.col--3-of-4
+                                     
+                           h3 IMT1292: Web Coding  -  3rd Introductury Lecture to HTML
+                           p.date-space-fix In this lecture we go through four main topics. Entities, lists, images and namegiving. If you have not seen the previous lectures on this, I would recommend you watching those before this one, since this one builds on what we learned from them.
+                           p 19.05.2016
+                        
+                        .col.col--2-of-2
+                           a.all-lectures View all subrscibed lectures   
+                           
 
-                  button.accordion.expand Computer Result 2
+                  button.accordion.expand IMT2661: Mobile Media Design
                   .panel   
                      .row
                         .col.col--2-of-5.col--m-2-of-4.col--s-4-of-4.sMiddle.marginTop
@@ -32,7 +45,7 @@
                            button.subscribeBtn(type='button')
                               | Subscribe
 
-                  button.accordion.expand Computer Result 3
+                  button.accordion.expand IMT1471: Web Project
                   .panel
                      .row
                         .col.col--2-of-5.col--m-2-of-4.col--s-4-of-4.sMiddle.marginTop
@@ -42,6 +55,16 @@
                         .col.col-5-of-5.col--m-2-of-4.col--s-4-of-4.middleBtn.marginTop
                            button.subscribeBtn(type='button')
                               | Subscribe
+                  button.accordion.expand IMT2002: Color Management
+                  .panel
+                     .row
+                        .col.col--2-of-5.col--m-2-of-4.col--s-4-of-4.sMiddle.marginTop
+                           img.panelImage(src='http://placehold.it/200x200')
+                        .col.col--3-of-5.col--m-2-of-4.col--s-4-of-4.marginTop
+                           p.panelTxt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Et dolore magna aliqua. Ut enim ad minim veniam, laboris.
+                        .col.col-5-of-5.col--m-2-of-4.col--s-4-of-4.middleBtn.marginTop
+                           button.subscribeBtn(type='button')
+                              | Subscribe            
 
       .col.col--1-of-5
          include ../includes/profile.jade
