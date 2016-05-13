@@ -3035,18 +3035,29 @@ textarea {
 .profile .profile-btn {
   text-align: center;
   color: #455A64;
-  display: block;
   text-decoration: none;
   width: 80%;
   left: 10%;
   position: relative;
   background-color: #79d894;
   border-radius: 2px;
-  padding: 5px 0px;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .profile .profile-btn:hover {
   background-color: #98ff9b;
+}
+
+.profile .profile-btn p {
+  margin: 5px 0 5px -35px;
+}
+
+.profile .profile-btn .profile-icon {
+  fill: #455A64;
+  margin: 5px 0 5px -10px;
 }
 
 .profile .more-notifications {
@@ -3066,6 +3077,7 @@ textarea {
 
 .profile .read-fix {
   color: #79d894;
+  cursor: pointer;
 }
 
 .profile .older-notifications {

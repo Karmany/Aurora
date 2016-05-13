@@ -216,14 +216,12 @@ script.
          $('.all-lectures').toggle()
          $('.all-lectures').css('display', 'block')
          notSub = false;
-         console.log('false');
       });
       $('.subPressed').click(function(){
          $('.subBtn').toggle()
          $('.subPressed').toggle()
          $('.all-lectures').toggle()
          notSub = true;
-         console.log('true');
       });
       $('.lec-link').click(function(e) {
          if(notSub){ 
