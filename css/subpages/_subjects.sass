@@ -1,135 +1,57 @@
 //SUBJECT-GLOBAL
 #subjectWrapper
 
-   // SEARCH-BOX
-   .searchbox
-      background-color: #fffbf8
-      padding: 13px
-      width: auto
-      margin: 0
-      box-sizing: border-box
-      border-radius: 6px
-      box-shadow: 0 2px 4px rgba(72, 72, 72, 0.83), 0 10px 15px 0 rgba(126, 126, 126, 0.12), 0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset, 0 2px 4px 2px rgba(255, 255, 255, 0.83) inset
-      display: inline-block
-      min-width: 100%
 
-   input[type="search"]
-      width: 50%
-      max-width: 50%
-      padding: 10px
-      border-radius: 6px
-      border: none
-      color: #939393
-      font-weight: 500
-      background-color: #fffbf8
-      box-shadow: 0 -2px 2px 0 rgba(199, 199, 199, 0.55), 0 1px 1px 0 #fff, 0 2px 2px 1px #fafafa, 0 2px 4px 0 #b2b2b2 inset, 0 -1px 1px 0 #f2f2f2 inset, 0 15px 15px 0 rgba(41, 41, 41, 0.09) inset
-      float: left
-      max-width: 70%
-
-   button[type="submit"]
-      border-radius: 6px
-      width: 20%
-      background-image: url(../img/iconography/search.svg)
-      background-repeat: no-repeat
-      background-position: center
-      background-color: transparent
-      border: none
-      cursor: pointer
-      box-shadow: 0 -2px 2px 0 rgba(199, 199, 199, 0.55), 0 1px 1px 0 #fff, 0 2px 2px 1px #fafafa, 0 2px 4px 0 #b2b2b2 inset, 0 -1px 1px 0 #f2f2f2 inset, 0 15px 15px 0 rgba(41, 41, 41, 0.09) inset
-      float: right
-
-   input, #sButton
-      height: 30px
-      padding: 10px
-      vertical-align: top
-      box-sizing: content-box
-      display: inline
 
    //ACCORDION V.2
    button.accordion
       padding: 10px
-      background-color: $green1
-      color: #444
+      color: #white
       cursor: pointer
       width: 100%
       border: none
+      border-bottom: 2px solid $primaryColor
       text-align: left
       outline: none
-      font-size: 15px
-      transition: 0.4s
-      &.active, &:hover
-         background-color: $green2
+      margin-top: 20px
+      font-size: 2.2rem
+      transition: all 0.4s ease
+
+      &:hover, &.active
+         background-color: $primaryColor
+      &.active
+         .expand-arrow
+            transform: rotate(180deg)
+
+   .expand-arrow
+      float: right
+      margin-top: 2px
+      transition: all 0.4s ease
+      transform: rotate(0deg)
+      //background-color: red
+
 
    div.panel
       padding: 10px 18px
       display: none
-      background-color: darken($green2, 10%)
+      background-color: $primaryColor
       &.show
          display: block !important
 
+
    .panel p
-      margin: 0
-      color: black
+      color: white
 
    #accordion
-      margin-top: 50px
+      margin-top: -12px
 
    .expand
-      background-image: url(../img/iconography/expand.svg)
       background-repeat: no-repeat
       background-position: right
       background-color: transparent
 
    button:focus, input:focus
       outline: none !important
-
-   #results
-      display: none
-
-   .starborder
-      background-image: url(../img/iconography/starborder.svg)
-      background-repeat: no-repeat
-      background-position: center
-      background-color: transparent
-      width: 24px
-      height: 24px
-      float: right
-      display: inline-block
-      margin: auto
-      position: absolute
-      top: 0
-      bottom: 0
-      right: 0
-
-   .star
-      background-image: url(../img/iconography/star.svg)
-      background-repeat: no-repeat
-      background-position: center
-      background-color: transparent
-      width: 24px
-      height: 24px
-      margin: auto
-      position: absolute
-      top: 0
-      bottom: 0
-      right: 0
-
-   .subscribeBtn
-      border: 1px solid black !important
-      padding-left: 0px
-      border-radius: 6px
-      width: 120px
-      height: 30px
-      background-image: url(../img/iconography/starborder.svg)
-      background-repeat: no-repeat
-      background-position: right
-      background-color: transparent
-      border: none
-      cursor: pointer
-      float: right
-      color: black
-      margin: 0 auto
-      display: block
 
    .panelImage
       width: 100%
@@ -138,9 +60,185 @@
       margin-left: auto
       margin-right: auto
       display: block
+      border-radius: 50%
+
+   .teacherCol p
+      text-align: center
+
+
+
+
+   .p-space-fix
+      margin-top: 0
+   .teacherCol .p-space-fix
+      margin-top: -15px
 
    .middleBtn
       width: 100%
 
    .marginTop
       margin-top: 20px
+
+
+   //sub btn
+   .sub-wrap
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin: 50px 0 20px 0
+   hr
+      background-color: $primaryColorLight
+      height: 2px
+      border: 0
+      width: 35%
+   .subBtn
+      display: block
+      background-color: $primaryColorDark
+      width: 30%
+      margin: 0 15px
+
+      text-align: center
+      padding: 0
+      cursor: pointer
+      border-radius: 2px
+      box-shadow: $regular
+      transition: all 0.3s ease
+      .checkIcon
+         padding: 0
+         width: 20%
+         margin-bottom: -6px
+         margin-right: -12px
+         display: inline-block
+      p
+         padding: 10px
+         margin: 0
+         width: 75%
+         display: inline-block
+      &:hover
+         background-color: $primaryColorLight
+
+   .subPressed
+      display: block
+      background-color: $green1
+      width: 30%
+      margin: 0 15px
+      transition: all 0.3s ease
+      display: none
+      text-align: center
+      padding: 0
+      cursor: pointer
+      border-radius: 2px
+      box-shadow: $regular
+      .checkIcon
+         padding: 0
+         width: 20%
+         margin-bottom: -6px
+         margin-right: -12px
+         display: inline-block
+         fill: $primaryColor
+      p
+         padding: 10px
+         margin: 0
+         width: 75%
+         display: inline-block
+         color: $primaryColor
+      &:hover
+         background-color: $green2
+
+
+   //lecture list CSS
+   .lec-link
+      text-decoration: none
+      color: white
+
+   .latest-lecture
+      border-bottom: 2px solid $green1
+      width: 310px
+      margin-bottom: -20px
+      padding-left: 0
+      margin-left: 20px
+
+
+
+   .lecture-img
+      width: 100%
+      margin-top: 40px
+
+   .lecture-head
+      margin-top: 35px
+      margin-bottom: 10px
+
+   .all-lectures
+      width: 100%
+      text-align: center
+      color: $green1
+      display: block
+      text-decoration: none
+      display: none
+      &.show
+         display: block !important
+
+   .date-space-fix
+      margin-top: -15px
+
+   .comment-icon
+      margin-top: 5px
+      width: 20px
+      height: 20px
+      float: left
+
+   .comment-txt
+      padding-top: 5px
+
+      a
+         margin-left: 5px
+         margin-top: 10px
+         color: $green1
+         text-decoration: none
+
+   .comment-wrap
+      width: 100%
+      float: left
+      margin-top: 10px
+   .hue
+      font-weight: 600
+
+   .comment-wrap-teacher
+      margin-top: -15px
+      margin-bottom: 25px
+      width: 100%
+      float: left
+      //margin-left: 15px
+   @media (max-width: 1000px)
+      .subBtn, .subPressed
+         width: 38%
+      .comment-wrap
+         display: none
+      .latest-lecture
+         width: 250px
+
+   @media (max-width: 700px)
+      .hue
+         display: none
+      .subBtn, .subPressed
+         width: 40%
+      .sub-wrap
+         margin-bottom: 50px
+      hr
+         width: 30%
+      .expand-arrow
+         margin-top: 0
+      .latest-lecture
+         width: 200px
+   @media (max-width: 480px)
+      button.accordion
+         font-size: 1.8rem
+      .subBtn, .subPressed
+         width: 65%
+
+      hr
+         width: 20%
+      .latest-lecture
+         margin-top: 10px
+      .all-lectures
+         margin-top: 15px

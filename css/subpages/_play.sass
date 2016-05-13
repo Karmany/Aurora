@@ -1,28 +1,94 @@
 #playVideo
-   border: 2px solid pink
    width: 100%
+   height: 100%
 
    #lectureVideo
-      border: 2px solid purple
       width: 100%
 
 #playSlides
-   border: 2px solid white
 
-   img
+   .tabs
+      font-variant: small-caps
+      width: 100%
+      margin-bottom: 20px
+      height: 40px
+      display: flex
+      font-size: 2rem
+      line-height: 35px
+      justify-content: space-between
+
+      span
+         width: 50%
+         text-align: center
+
+         img
+            height: 1.6rem
+            margin-bottom: -0.3rem
+            margin-right: 10px
+
+         &:first-child
+            border-right: 2px solid white
+
+   img#slides
       width: 100%
       height: auto
 
+   #wiki
+      width: 600px
+      overflow-y: scroll
+      position: relative
+      height: 300px
+
 // Change slides
 
-.change-slides
+.controllers
+   height: 80px
    width: 100%
+   margin-top: 20px
+   background-color: $primaryColor
+   box-shadow: $regular
+   display: flex
+   align-items: center
+   justify-content: space-between
+
+.change-slides
+   width: auto
+   display: inline-block
    height: 50px
-   border: 3px solid green
+
+   .slide-title
+      height: 100%
+      display: block
+      line-height: 50px
+      text-align: center
+      font-variant: small-caps
+
+      span
+         position: relative
+         top: -16px
+         font-size: 2rem
 
    input, .slide-title
       display: inline-block
 
+      &#prev
+         background-image: url(../img/iconography/nav-prev.svg)
+         margin-right: 20px
+
+      &#next
+         background-image: url(../img/iconography/nav-next.svg)
+         margin-left: 20px
+
+   input
+      background-size: 30px auto
+      background-position: center center
+      background-color: transparent
+      border: none
+      height: 100%
+      background-repeat: no-repeat
+
+      &:focus
+         outline: none
 // slide-timeline
 
 .slide-timeline-wrap
@@ -39,3 +105,72 @@ ul.slide-timeline
       a
          color: white
          text-decoration: none
+
+// LIKE || DISLIKE
+
+.like-dislike
+   width: 180px
+
+   .icons
+      margin-left: 18px
+
+      .like, .dislike
+         display: inline
+         fill: $primaryColorLight
+         margin-right: 5px
+
+      .like:hover
+         fill: $green1
+
+      .dislike:hover
+         fill: $alert
+
+      .like.checked
+         fill: $green1
+
+      .dislike.checked
+         fill: $alert
+
+// !STAR-RATING
+
+.rating
+   transform: scale(0.8)
+   width: 180px
+   transform-origin: center center
+
+.rating:not(:checked) > input
+   position: absolute
+   top: -9999px
+
+.rating:not(:checked) > label
+   float: right
+   width: 1em
+   padding: 0 .1em
+   overflow: hidden
+   white-space: nowrap
+   cursor: pointer
+   font-size: 200%
+   line-height: 1.2
+   color: $primaryColorLight
+
+.rating:not(:checked) > label:before
+   content: '★ '
+
+.rating > input:checked ~ label
+   color: $green1
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label
+   color: $green1
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label
+   color: $green1
+
+.rating > label:active
+   position: relative
+   top: 2px
+   left: 2px

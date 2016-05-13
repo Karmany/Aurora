@@ -1,44 +1,11 @@
 .content
-   #playWrapper(style='border: 2px solid red; display: none;')
-      .row
-         .col.col--2-of-4(style='border: 2px solid purple')
-            .row
-               .col.col--4-of-4(style='border: 2px solid blue')
-                  #playVideo
-                     video#lectureVideo(width='320', height='240', controls, preload )
-                        source(src='../img/lecture.mp4', type='video/mp4')
-                        track(src='../img/transcript.vtt', kind='subtitles', srclang='en', label='English')
-                     input#prev(type='button', value='PREVIOUS', name='prev', onclick='prev();')
-                     input#next(type='button', value='NEXT', name='next', onclick='next();')
-
-               .col.col--4-of-4(style='border: 2px solid pink')
-                  #playText
-                     p
-                        | Playback position: 
-                        span#demo
-
-         .col.col--2-of-4
-            .row
-               .col.col--4-of-4
-                  #playSlides(style='border: 2px solid white')
-                     img(id="slides", src="../img/slides/Lecture3-1.001.jpeg", alt="Slides", height='500', width='500')
-               .col.col--4-of-4(style='border: 2px solid green')
-                  ul
-                     li 
-                        a(id="first", href="") First link
-                     li 
-                        a(id="second", href="") Second link
-                     li 
-                        a(id="third", href="") Third link
-                     li 
-                        a(id="fourth", href="") Fourth link
             
    // HOY WHADDUP MY NAGGAH      
                         
-   #playWrapper(style='border: 2px solid red')
+   #playWrapper
       
       .row
-         
+
          .col.col--6-of-12
             
             #playVideo
@@ -46,21 +13,61 @@
                   source(src='../img/lecture.mp4', type='video/mp4')
                   track(src='../img/transcript.vtt', kind='subtitles', srclang='en', label='English')
          
-         .col.col--6-of-12
+         .col.col--6-of-12.col--am
             
             #playSlides
-               img(id="slides", src="../img/slides/Lecture3-1.001.jpeg", alt="Slides")
+               .tabs
+                  span
+                     img(src='../img/iconography/slideshow.svg') 
+                     | slides
+                  span 
+                     img(src='../img/iconography/info.svg')
+                     | wiki
+               img#slides(src="../img/slides/Lecture3-1.001.jpeg", alt="Slides")
+               #wiki
+                  .wiki-content
+                     h2 HTML entities
+                     p Some characters are reserved in HTML. If you use the less than (<) or greater than (>) signs in your text, the browser might mix them with tags. Character entities are used to display reserved characters in HTML. A character entity looks like this:
+                     h2 Lists
+                     p An unordered list starts with the &lt;ul&gt; tag. Each list item starts with the &lt;li&gt; tag. The list items will be marked with bullets (small black circles), which can be further modified with css.
+                     h3 Three types:
+                     ul
+                        li Unordered lists
+                        li Ordered lists
+                        li Definition lists
       
-      .change-slides
-         input#prev(type='button', value='PREVIOUS', name='prev', onclick='prev();')
-         .slide-title slides
-         input#next(type='button', value='NEXT', name='next', onclick='next();')
+      .controllers
+         .like-dislike
+            .icons
+               .like
+                  include ../includes/svg-icons/like-icon.jade
+               .dislike   
+                  include ../includes/svg-icons/dislike-icon.jade
+            
+         .change-slides
+            input#prev(type='button', name='prev', onclick='prev();')
+            .slide-title
+               span slides
+            input#next(type='button', name='next', onclick='next();')
+            
+         .rating
+            input#star5(type='radio', name='rating', value='5')
+            label(for='star5', title='Rocks!') 5 stars
+            input#star4(type='radio', name='rating', value='4')
+            label(for='star4', title='Pretty good') 4 stars
+            input#star3(type='radio', name='rating', value='3')
+            label(for='star3', title='Meh') 3 stars
+            input#star2(type='radio', name='rating', value='2')
+            label(for='star2', title='Kinda bad') 2 stars
+            input#star1(type='radio', name='rating', value='1')
+            label(for='star1', title='Sucks big time') 1 star
       
       .row   
          
          .col.col--3-of-12
             .slide-timeline-wrap   
-               h2 Slide timeline
+               h2 
+                  | Jump to:
                ul.slide-timeline
                   li 
                      a(id="first", href="") First link
@@ -74,5 +81,8 @@
          .col.col--9-of-12
             .description
                h2 Introductory Lecture to HTML
+               p In this lecture we go through four main topics. Entities, lists, images and namegiving. If you have not seen the previous lectures on this, I would recommend you watching those before this one, since this one builds on what we learned from them.
+               p.secondary 19.05.2016
                
 script(src='../js/connect.js')
+script(src="js/main.js")

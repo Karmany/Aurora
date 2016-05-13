@@ -113,6 +113,26 @@ $(".slideout ul li a, .body-overlay").click(function(){
 
 // END - HAMBURGER
 
+// LIKE - DISLIKE
+
+
+
+$(function(){
+	$('.controllers .icons .like').on('click', function(){
+		$('.dislike').removeClass('checked');
+		$('.like').addClass('checked');
+	});
+});
+
+$(function(){
+	$('.controllers .icons .dislike').on('click', function(){
+		$('.like').removeClass('checked');
+		$('.dislike').addClass('checked');
+	});
+});
+
+// END LIKE - DISLIKE
+
 // fetch subpage from Url and display as title and in header and tab
 
 var pageBaseTitle = "Aurora";

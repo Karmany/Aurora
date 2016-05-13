@@ -1,6 +1,6 @@
 #main-admin.content
-	// MODAL STUFF 
-	// Lectures modal 
+	// ------------------ MODAL CONTENT ----------------------
+	// Subjects modal 
 	#subjectsModal.modal 
 		.modal-content 
 			span.close X
@@ -10,91 +10,74 @@
 				h3 IMT1471: Web Project 1
 				//- img.headline-icon(src="../img/iconography/ic_keyboard_arrow_right_black_24px.svg")
 				.lecture-list
-					.lecture 
+					.lecture.first
 						a(href="#") Project Management and Planning
-						//- button.delete Delete
 						
 					.lecture
 						a(href="#") Technical Design Specification Document
-						//- button.delete Delete 
 						
 					.lecture
 						a(href="#") Slicing web pages
-						//- button.delete Delete 
 						
 					.lecture
 						a(href="#") Something here
-						//- button.delete Delete 
 						
 			.subject#webCoding
 				// Should be able to add, modify and delete a subject category
 				h3 IMT1292: Web Coding
 				//- img.headline-icon(src="../img/iconography/ic_keyboard_arrow_right_black_24px.svg")
 				.lecture-list 
-					.lecture 
+					.lecture.first
 						a(href="#") 1st Introductury Lecture to HTML
-						//- button.delete Remove
 						
 					.lecture
 						a(href="#") 2nd Introductury Lecture to HTML
-						//- button.delete Remove 
 						
 					.lecture
 						a(href="#") 1st Introductory Lecture to CSS
-						//- button.delete Remove
 						
 					.lecture
 						a(href="#") 3rd Introductury Lecture to HTML
-						//- button.delete Remove 
 						
 			.subject#mobileMedia
 				// Should be able to add, modify and delete a subject category
 				h3 IMT1292: Mobile Media Design 
 				//- img.headline-icon(src="../img/iconography/ic_keyboard_arrow_right_black_24px.svg")
 				.lecture-list 
-					.lecture 
+					.lecture.first
 						a(href="#") Mobile and Games
-						//- button.delete Remove
 						
 					.lecture
 						a(href="#") Mobile Design
-						//- button.delete Remove 
 						
 					.lecture
 						a(href="#") Something here 
-						//- button.delete Remove 
 						
 					.lecture
 						a(href="#") Something here
-						//- button.delete Remove 
 			
 			.subject#colourManagement
 				// Should be able to add, modify and delete a subject category
 				h3 IMT2002: Digital Image Reproduction and Colour Management 
 				//- img.headline-icon(src="../img/iconography/ic_keyboard_arrow_right_black_24px.svg")
 				.lecture-list 
-					.lecture 
+					.lecture.first
 						a(href="#") Introduction to RAW format
-						//- button.delete Remove
 						
 					.lecture
 						a(href="#") Digital Image Capture Technology
-						//- button.delete Remove 
 						
 					.lecture
 						a(href="#") Display Technology and Display Quality
-						//- button.delete Remove 
 						
 					.lecture
 						a(href="#") Digital Printer Technology
-						//- button.delete Remove 	
 						
 	// Teachers modal 
 	#teachersModal.modal 
 		.modal-content 
 			span.close X
 			h2 Manage Teachers 
-			hr 
 			
 			.alignment-grid
 				ul
@@ -114,11 +97,7 @@
 		.modal-content 
 			span.close X
 			h2 Manage Students
-			hr
 			
-			// ----------------------------------------
-			// SHOULD BE ABLE TO DE-ACTIVATE AN ACCOUNT
-			// --------------------------------------- 
 			.alignment-grid 
 				.year-enrolled
 					h3 2013
@@ -129,8 +108,6 @@
 						li <a href="#">Ola Kristiansen</a>
 						li <a href="#">Rajesh Singh</a>
 						li <a href="#">Student name</a>
-						li <a href="#">Student name</a>
-						li <a href="#">Student name</a>
 					
 				.year-enrolled
 					h3 2014 
@@ -140,6 +117,7 @@
 						li <a href="#">Kristine Nilsen</a>
 						li <a href="#">Ola Kristiansen</a>
 						li <a href="#">Rajesh Singh</a>
+						li <a href="#">Student name</a>
 						li <a href="#">Student name</a>
 						li <a href="#">Student name</a>
 						li <a href="#">Student name</a>
@@ -167,86 +145,87 @@
 						li <a href="#">Student name</a>
 						li <a href="#">Student name</a>
 						li <a href="#">Student name</a>
-					
-				
-	.row 
-		// Content (not profile)
-		.col.col--4-of-5
+						li <a href="#">Student name</a>
+						li <a href="#">Student name</a>
+						li <a href="#">Student name</a>
+	//  END OF MODALS 
 	
-			.row 
-				// Left section (settings/students/teachers)
-				.monitor.col.col--1-of-5
-					.lectures
-						// When clicked, lectures modal triggers 
-						button#btnSubjects Subjects  
-					.teachers
-						// When clicked, teachers modal triggers 
-						button#btnTeachers Teachers
-					.students
-						// When clicked, students modal triggers 
-						button#btnStudents Students 
+	.row 
+		// ------------ START OF CONTENT ----------------------
+		.col.col--4-of-5
+			
+			// ------------------- MANAGEMENT CONTENT -----------------------------
+			.monitor.col.col--1-of-6
+			
+				.subjects
+					// When clicked, lectures modal triggers 
+					button#btnSubjects Subjects  
+				.teachers
+					// When clicked, teachers modal triggers 
+					button#btnTeachers Teachers
+				.students
+					// When clicked, students modal triggers 
+					button#btnStudents Students 
 
-				// notifications content 
-				.notification-content.col.col--3-of-5 
-					// h2 Reported comments 
-					
-					// Notification 1
-					.row
-					
-						.notification.first.col.col--2-of-2
-							h3 IMT1292: Web Coding 
-							p Fuck off dude. You don't know anything about this.
-							p.date 11.05.2016 
-							p.reported-student Written by: Gustav Trulsen
-							button.removeComment Remove 
-							button.allowComment Allow 
-							
-						.notification.col.col--2-of-2
-							h3 IMT2661: Mobile Media Design 
-							p GTFO man, this is none of your business. 
-							p.date 11.05.2016 
-							p.reported-student Written by: Erik Haug
-							button.removeComment Remove 
-							button.allowComment Allow 
-						
-						.notification.col.col--2-of-2
-							h3 IMT2661: Mobile Media Design 
-							p Calm your tits woman!
-							p.date 11.05.2016 
-							p.reported-student Written by: Erik Haug
-							button.removeComment Remove 
-							button.allowComment Allow 
+			// -------------------- NOTIFICATIONS CONTENT --------------------------
+			.notification-content.col.col--3-of-6
+			
+				h3 Reported comments 
 				
-				// Approve teachers 
-				.approve-teachers.col.col--1-of-5
-					h2 Pending requests
-					// What action to use? 
-					form#approveTeachersForm(name='approveTeachersForm', action='#', method='get')
-						ul 
-							li
-								label
-									input(type="checkbox")
-									a(href="#") Ali Sharif
-							li
-								label
-									input(type="checkbox")
-									a(href="#") Randi Rikberg
-							li
-								label
-									input(type="checkbox")
-									a(href="#") Tina Tvist 
-							li
-								label
-									input(type="checkbox")
-									a(href="#") Ole Olsen		
-							li
-								label
-									input(type="checkbox")
-									a(href="#") Nina Nilsen
-						input(type="submit", value="Approve")
-		
-		// Profile content
-		.col.col--1-of-5			 
+				.notification.first.col.col--2-of-2
+					h4 IMT1292: Web Coding 
+					p Fuck off dude. You don't know anything about this.
+					p.date 11.05.2016 
+					p.reported-student Written by: <a href="">Gustav Trulsen</a>
+					.button-alignment   
+						button.removeComment Remove comment
+						button.allowComment Allow comment
+					
+				.notification.col.col--2-of-2
+					h4 IMT2661: Mobile Media Design 
+					p GTFO man, this is none of your business. 
+					p.date 11.05.2016 
+					p.reported-student Written by: <a href="">Erik Haug</a>
+					.button-alignment
+						button.removeComment Remove comment
+						button.allowComment Allow comment
+				
+				.notification.col.col--2-of-2
+					h4 IMT2661: Mobile Media Design 
+					p Calm your tits woman!
+					p.date 11.05.2016 
+					p.reported-student Written by: <a href="">Kristine Nilsen</a>
+					.button-alignment
+						button.removeComment Remove comment
+						button.allowComment Allow comment
+			
+			// ----------------- APPROVE TEACHERS ---------------------- 
+			.approve-teachers.col.col--2-of-6
+			
+				h3 Pending requests
+				// What action to use? 
+				form#approveTeachersForm(name='approveTeachersForm', action='#', method='get')
+					ul 
+						li
+							input(type="checkbox")
+							a(href="#") Ali Sharif
+						li
+							input(type="checkbox")
+							a(href="#") Randi Rikberg
+						li
+							input(type="checkbox")
+							a(href="#") Tina Tvist 
+						li
+							input(type="checkbox")
+							a(href="#") Ole Olsen		
+						li
+							input(type="checkbox")
+							a(href="#") Nina Nilsen
+							
+					input(type="submit", value="Approve teacher(s)")
+					
+		// ---------------------- PROFILE CONTENT ---------------------------
+		.col.col--1-of-5	 
 			include ../includes/profile-sidebar-admin.jade
 			
 include ../includes/partialscript.jade

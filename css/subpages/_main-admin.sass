@@ -9,25 +9,30 @@
 // 	// z-index: 3
 
 #main-admin
-	// Monitor section
+	// ------------- MANAGEMENT STYLES -----------------
 	.monitor
 		padding: 0
 		margin: 0
 
-		.lectures, .students, .teachers
-			border: 1px solid black
-			border-radius: 8px
-			color: black
+		.subjects, .students, .teachers
 
 			button
 				width: 100%
+				border: none
+				border-radius: 2px
+				color: $primaryColor
+				height: 35px
+				background-color: $green1
+				border: none
+
+				&:hover
+					background-color: $green2
 
 	.students
 		margin-top: 10px
 
 	.teachers
 		margin-top: 10px
-
 
 	// ----------- MODAL STYLES ----------
 	.modal
@@ -43,10 +48,11 @@
 	.modal-content
 		position: relative
 		background-color: $primaryColorLight
-		margin: 0 auto
-		width: 75%
+		// margin: 0 auto
+		// width: 75%
 		padding: 5px
-		box-shadow: 0px 0px 0px rgba(0,0,0, 0.45)
+		box-shadow: 0px 0px 0px
+		border-radius: 2px
 
 	// Close button
 	.close
@@ -64,6 +70,8 @@
 
 	#subjectsModal
 		.modal-content
+			width: 100%
+
 			h2
 				margin-left: 30px
 				margin-bottom: 10px
@@ -71,14 +79,17 @@
 				// color: $green1
 				padding-bottom: 2px
 				border-bottom: 2px solid $green1
-				width: 50%
+				max-width: 210px
 
 			.subject
+				margin-bottom: 10px
+
 				h3
 					margin-left: 30px
+					margin: 30px
 					margin-top: 5px
 					margin-bottom: 5px
-					display: inline
+					// display: inline
 
 					&:hover
 						cursor: pointer
@@ -87,32 +98,26 @@
 					margin-bottom: -5px
 
 				.lecture-list
-					// background-color: $primaryColor
 					display: none
-					// margin: 0 -5px
 
 					.lecture
 						margin-left: 30px
+						margin-right: 30px
 
 						a
+							color: white
+							line-height: 2.5rem
+							margin-left: 20px
 							text-decoration: none
-							color: $green1
 
-						// .delete
-						// 	background-color: #E57373
-						// 	border-radius: 2px
-						// 	font-size: 10px
-						// 	border: none
-						// 	display: inline
-						// 	text-align: center
-						// 	color: white
+							&:hover
+								text-decoration: underline
 
 			#colourManagement
 				margin-bottom: 15px
 
 	#studentsModal, #teachersModal
 		.modal-content
-			// margin-left: 30px
 			margin-bottom: -10px
 
 			h2
@@ -121,73 +126,61 @@
 
 			h3
 				margin-bottom: -10px
-				margin-top: -10px
+				margin-top: -15px
 
 	#studentsModal
-		h2
-			margin-bottom: -5px
+		.modal-content
+			max-width: 80%
+			margin: 0 auto
 
-		hr
-			border: 0
-			clear: both
-			display: inline-block
-			width: 90%
-			background-color: $green1
-			height: 2px
-			margin-left: 30px
-			margin-bottom: 10px
+			h2
+				border-bottom: 2px solid $green1
+				margin-right: 30px
+				max-width: 220px
 
-		.alignment-grid
-			display: flex
-			justify-content: space-around
-			flex-wrap: wrap
+			.alignment-grid
+				display: flex
+				flex-wrap: wrap
+				margin-left: 30px
+				justify-content: space-between
 
-			.year-enrolled
-				float: left
+				.year-enrolled
+					margin-right: 20px
+					margin-bottom: 20px
 
-				ul
-					list-style: none
-					margin-left: -40px
+					ul
+						list-style: none
+						margin-left: -40px
 
-					li
-						margin-bottom: 2px
+						li
+							margin-bottom: 2px
 
-						a
-							text-decoration: none
-							color: white
+							a
+								text-decoration: none
+								color: white
 
-							&:hover
-								color: $green1
+								&:hover
+									color: $green1
 
 	#teachersModal
 		.modal-content
-			width: 30%
-			display: flex
-			flex-direction: column
+			max-width: 60%
+			margin: 0 auto
 
 			h2
-				text-align: center
-				margin-left: 0
-				// margin-top: -20px
-
-			hr
-				border: 0
-				clear: both
-				display: block
-				width: 80%
-				background-color: $green1
-				height: 2px
-				margin-top: -20px
+				margin-left: 30px
+				margin: 30px
 				margin-bottom: 20px
+				margin-top: 15px
+				padding-bottom: 2px
+				border-bottom: 2px solid #79d894
+				max-width: 210px
 
 		.alignment-grid
-			display: flex
-			justify-content: center
-			margin-left: -40px
-			margin-top: -30px
+			margin-left: -10px
+			margin-top: -15px
 
 			ul
-				// margin-left: -40px
 				list-style: none
 
 				li
@@ -202,35 +195,139 @@
 
 	// ------------- NOTIFICATION CONTENT STYLES ------------
 	.notification-content
+		h3
+			margin-left: 20px
+			margin-top: -5px
+			border-bottom: 2px solid $green1
+			max-width: 200px
+			padding-bottom: 2px
+
+		.first
+			margin-top: -25px
 
 		.notification
-			margin-top: -20px
 
 			p
 				margin-top: -15px
 
+			.reported-student a
+				color: $primaryColorLight
+				text-decoration: none
+
+				&:hover
+					color: white
+
+			.button-alignment
+				// border: 2px solid black
+				margin-top: -10px
+				margin-bottom: 10px
+
+				.removeComment
+					background-color: $alert
+					border-radius: 6px
+					font-size: 1rem
+					border: none
+					display: inline
+					text-align: center
+					color: white
+					margin-top: -20px
+					transition: all 0.3 ease
+					transform: scale(1)
+
+					&:hover
+						transform: scale(1.2)
+						margin-right: 10px
+
+				.allowComment
+					background-color: $green1
+					border-radius: 6px
+					font-size: 1rem
+					border: none
+					display: inline
+					text-align: center
+					color: $primaryColorDark
+					transition: all 0.3 ease
+					transform: scale(1)
+
+					&:hover
+						transform: scale(1.2)
+						margin-left: 10px
+
 			.reported-student
-				color: grey
+				color: $primaryColorLight
 
 	// ---------- APPROVE TEACHERS STYLES  ----------------
 	.approve-teachers
-		// height: 500px
-		// background-color: lightGrey
+
+		h3
+			margin-top: -5px
+			border-bottom: 2px solid $green1
+			max-width: 175px
+			padding-bottom: 2px
+
 		form
+			// border: 1px solid $primaryColor
+			margin-top: 25px
 
 			ul
 				list-style: none
 				margin-left: -40px
+				margin-top: -10px
+				margin-bottom: -0
+
+				li
+					margin: 5px 0
 
 				input[type="checkbox"]
-					width: 15px
-					height: 15px
-					margin: 5px
+					width: 1.2rem
+					height: 1.2rem
 
 				a
+					margin-left: 10px
 					text-decoration: none
 					color: white
 
+					&:hover
+						color: $green1
+
 			input[type="submit"]
-				border-radius: 4px
-				color: black
+				background-color: #79d894
+				border-radius: 6px
+				font-size: 1.2rem
+				border: none
+				color: $primaryColor
+				transition: all 0.3 ease
+				transform: scale(1)
+
+				&:hover
+					transform: scale(1.2)
+
+@media (max-width: 700px)
+	#main-admin
+		#teachersModal
+			.modal-content
+				max-width: 80%
+
+		.monitor
+			display: flex
+			flex-direction: row
+			margin-bottom: 40px
+			margin-left: 40px
+			margin-right: 40px
+			margin-top: 20px
+
+			.teachers, .students, .subjects
+				margin-top: 0
+				// display: inline-block
+				width: 33%
+
+				button
+					width: 95%
+
+		.notification-content
+			h4
+				margin-top: 40px
+
+		.approve-teachers
+			margin-left: 20px
+			margin-top: 40px

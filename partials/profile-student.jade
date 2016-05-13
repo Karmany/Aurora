@@ -91,10 +91,12 @@
          $('#changePicBtn').click(function(){
             $('#changePicBtn').toggle()
          });
+         
+         $('#phoneSave').click(function() {
+            var a = $('#phoneInput').val()
+            $('#phoneNumber').replaceWith(a)
+         });   
       });
       //Change Phonenumber Script
-      $('#phoneSave').click(function() {
-         var a = $('#phoneInput').val()
-         $('#phoneNumber').replaceWith(a)
-      });   
+      
       
