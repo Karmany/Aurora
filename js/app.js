@@ -4,7 +4,7 @@ var app = angular.module('myApp', [
 	'ngRoute'
 ]);
 
-var page1 = 'hjem';
+var page1 = 'home';
 var page2 = 'lectures-student';
 var page3 = 'main-student';
 var page4 = 'subjects';
@@ -12,7 +12,7 @@ var page5 = 'main-teacher';
 var page6 = 'main-admin'
 var page7 = 'play'
 var page8 = 'profile-student'
-var page9 = 'your-lectures'
+var page9 = 'lectures-teacher'
 var page10 = 'profile-teacher'
 var page11 = 'profile-admin'
 var page12 = 'notmy-profile-student'
@@ -24,12 +24,12 @@ var page17 = 'testpage'
 var page18 = 'upload'
 
 $('.page-1-link a').text(page1.replace('-', ' '));
-$('.page-2-link a').text(page2.replace('-', ' '));
-$('.page-3-link a').text(page3.replace('-', ' '));
+$('.page-2-link a').text(page2.replace(page2, 'your lectures'));
+$('.page-3-link a').text(page3.replace(page3, 'home'));
 $('.page-4-link a').text(page4.replace('-', ' '));
-$('.page-5-link a').text(page5.replace('-', ' '));
-$('.page-6-link a').text(page6.replace('-', ' '));
-$('.page-9-link a').text(page9.replace('-', ' '));
+$('.page-5-link a').text(page5.replace(page5, 'home'));
+$('.page-6-link a').text(page6.replace(page6, 'home'));
+$('.page-9-link a').text(page9.replace(page9, 'your lectures'));
 
 $(".page-1-link a").attr("href", '#' + page1);
 $(".page-2-link a").attr("href", '#' + page2);
