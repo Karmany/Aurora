@@ -2369,7 +2369,7 @@ textarea {
 #links {
   width: 100%;
   height: 20px;
-  margin-top: -20px;
+  margin-top: 0px;
   text-align: left;
   margin-bottom: 20px;
 }
@@ -2411,7 +2411,7 @@ textarea {
   background: #98ff9b;
 }
 
-#loginField1 {
+#loginField1, #loginField2 {
   margin-bottom: 20px;
 }
 
@@ -2426,7 +2426,6 @@ textarea {
   font-weight: 300;
   font-size: 2rem;
   display: none;
-  padding-bottom: 20px;
 }
 
 #registerState {
@@ -2736,7 +2735,9 @@ textarea {
 
 #main-admin #subjectsModal .modal-content .subject .lecture-list .lecture svg:hover {
   fill: #E57373;
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 #main-admin #subjectsModal .modal-content .subject .lecture-list .lecture a {
