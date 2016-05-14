@@ -1847,6 +1847,24 @@ footer .links-mobile {
   }
 }
 
+.profile-shit {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.profile-shit .left-kuk {
+  width: calc(100% - 250px);
+  border: 2px solid pink;
+  height: auto;
+}
+
+.profile-shit .right {
+  width: 250px;
+  border: 2px solid purple;
+  height: 500px;
+}
+
 body {
   font-family: roboto;
   font-size: 1.6rem;
@@ -3929,6 +3947,15 @@ button.comment:active {
 
 nav.mobile {
   display: none;
+}
+
+@media (max-width: 1000px) {
+  .left-kuk {
+    width: 100vw !important;
+  }
+  .right {
+    display: none;
+  }
 }
 
 @media (max-width: 700px) {
