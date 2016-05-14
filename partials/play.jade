@@ -105,36 +105,71 @@
                   p.secondary Published: 19.05.2016
                   
                   .lecture-poster   
-                     img.profile-img(src="../img/profile_images/female_student1.jpg")
+                     img.profile-img(src="../img/profile_images/teacher2.jpg")
                      a.author(href='#notmy-profile-student')
                         p
-                           | Camilla Svensen
-                           span (camilla.svensen@aurora.no)
+                           | Henriette Jacobsen
+                           span (henriette.jacobsen@aurora.no)
                
                .comment-section
                   h2 Comments
                   
-                  .comment.two
+                  .comment.one
                      img.profile-img(src="../img/profile_images/female_student1.jpg")
                      a.author(href='#notmy-profile-student')
                         p
                            | Camilla Svensen - 
                            strong Student
                            span (camilla.svensen@aurora.no)
+                     h4 Lists are wierd..
                      p Great lecture! But i'm curious, how can i style a list to prevent it from having those bullet points? Those pesky lists also take up so much space, why is that?
-                     p.secondary 20.05.16
+                     p.secondary 20.05.16 - 
+                        strong Relpy
+                           include ../includes/svg-icons/reply-icon.jade
                      
                   .comment.two
-                     img.profile-img(src="../img/profile_images/female_student1.jpg")
+                     img.profile-img(src="../img/profile_images/teacher2.jpg")
+                     a.author(href='#notmy-profile-student')
+                        p
+                           | Henriette Jacobsen - 
+                           strong Teacher
+                           span (henriette.jacobsen@aurora.no)
+                     h4 Great question!
+                     p If you style the &LT;li&GT; element with 'list style type: none;', then the bullet points will dissapear. A list will often have some default margins/paddings, to reset these, style the &LT;ul&GT; element with 'margin: 0; padding 0;'.
+                     p.secondary 20.05.16 - 
+                        strong Relpy
+                           include ../includes/svg-icons/reply-icon.jade
+                     
+                  .comment.one
+                     img.profile-img(src="../img/profile_images/male_student1.png")
+                     a.author(href='#notmy-profile-student')
+                        p
+                           | Rajesh Singh - 
+                           strong Student
+                           span (rajesh.singh@aurora.no)
+                     h4 Missing lectures slides
+                     p It seems like the last few slides from the lecture is missing. Can you please add them?
+                     p.secondary 20.05.16 - 
+                        strong Relpy
+                           include ../includes/svg-icons/reply-icon.jade
+                     
+                  .comment.two
+                     img.profile-img(src="../img/profile_images/teacher2.jpg")
                      a.author(href='#notmy-profile-student')
                         p
                            | Camilla Svensen - 
-                           strong Student
-                           span (camilla.svensen@aurora.no)
-                     p Great lecture! But i'm curious, how can i style a list to prevent it from having those bullet points? Those pesky lists also take up so much space, why is that?
-                     p.secondary 20.05.16
-                     
-                  h3 Write a reply
+                           strong Teacher
+                           span (henriette.jacobsen@aurora.no)
+                     h4 Oops!
+                     p I will get to it!
+                     p.secondary 20.05.16 - 
+                        strong Relpy
+                           include ../includes/svg-icons/reply-icon.jade
+                  
+                  a.hyperlink view more comments..
+                  
+                  br
+                  h2 Write a comment
                   textarea.comment(name='comment' placeholder="Your message here" rows="5")
                   button.comment Publish comment
                         

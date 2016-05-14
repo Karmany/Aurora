@@ -248,6 +248,9 @@ ul.slide-timeline
 
 // comment section
 
+.comment-section
+   margin-top: 40px
+
 textarea.comment
    background-color: transparent
    border: 2px solid $green1
@@ -305,6 +308,18 @@ button.comment
    width: 100%
    height: auto
 
+   strong
+      color: white
+      svg
+         height: 2rem
+         position: relative
+         top: 5px
+
+      &:hover
+         color: $green1
+         svg
+            fill: $green1
+
    .profile-img
       margin-top: 16px
       width: 40px
@@ -332,6 +347,10 @@ button.comment
    width: 100%
    padding-left: 40px
    height: auto
+   background-image: url(../img/iconography/replied.svg)
+   background-size: 2rem auto
+   background-position: left center
+   background-repeat: no-repeat
 
 .video-page-right
    border-left: 2px solid $primaryColorLight
