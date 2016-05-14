@@ -34,6 +34,7 @@ header
    svg#logo
       //align-self: center
       height: 50px
+      margin: 0 auto
 
    nav
       height: 50px
@@ -375,20 +376,23 @@ nav.mobile
 
 .page-wrap
    /* equal to footer height */
-   margin-bottom: -410px
+   margin-bottom: -450px
+   min-height: 100%
 
    &:after
       content: ""
       display: block
 
 footer, .page-wrap:after
-   height: 410px
+   height: 450px
 
 footer
    background-color:  $green1
    color: $primaryColor
    display: flex
    width: 100%
+   flex-flow: column
+   justify-content: space-between
 
    .container
       padding-top: 20px
@@ -471,10 +475,12 @@ footer
 
 .copyright
    background-color: $green1 - 35
+   width: 100%
+   margin-top: 50px
+   height: 50px
+   line-height: 50px
    text-align: center
    color: $primaryColor
-   padding-top: 1rem
-   padding-bottom: 1rem
    font-weight: 300
 
 
