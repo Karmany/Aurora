@@ -19,6 +19,12 @@
                            .row   
                               p.col.col--2-of-2.col--s-2-of-2.p-space-fix After completing the course, students will have a basic understanding of and skills in visual design of web pages. They should be able to plan and carry out the development of Web pages and sites based on the most important client based web tecnologies as well as a basic understanding for the server based content management systems.  
                               p.col.col--2-of-2.col--s-2-of-2.p-space-fix The students will also be able to independently assess and describe the most important aspects of a site's usability, effectiveness, and information architecture, and further to decide what any changes needed to improve the quality of the site / page.
+                              a(href='').admin-delete 
+                                 include ../includes/svg-icons/delete-forever-icon.jade
+                                 p Delete Subject
+                              a(href='').admin-edit 
+                                 include ../includes/svg-icons/edit-icon.jade
+                                 p Edit Subject
                      .row
                         .col.col--2-of-2.sub-wrap
                            hr
@@ -458,6 +464,8 @@ script.
          $('.sidebar-admin').show()
          $('.admin-delete').show()
          $('.admin-delete').css('display', 'inline-block')
+         $('.admin-edit').show()
+         $('.admin-edit').css('display', 'inline-block')
       }
       
    // Scripts for sub button og lecture link

@@ -1849,27 +1849,6 @@ footer .links a, footer .links-mobile a {
     transform: translateY(0px);
     opacity: 1;
   }
-<<<<<<< HEAD
-}
-
-.profile-shit {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.profile-shit .left-kuk {
-  width: calc(100% - 250px);
-  border: 2px solid pink;
-  height: auto;
-}
-
-.profile-shit .right {
-  width: 250px;
-  border: 2px solid purple;
-  height: 500px;
-=======
->>>>>>> 497462d754e01314ab2d2f07d4260d91d3eff7c8
 }
 
 body {
@@ -3271,6 +3250,33 @@ textarea {
   margin: 7px 0;
 }
 
+#subjectWrapper .admin-edit {
+  display: none;
+  background-color: #79d894;
+  text-decoration: none;
+  color: #455A64;
+  width: auto;
+  border-radius: 2px;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  padding: 0 10px;
+}
+
+#subjectWrapper .admin-edit .edit-icon {
+  display: inline-block;
+  fill: #455A64;
+  margin-bottom: -3px;
+  padding: 0;
+}
+
+#subjectWrapper .admin-edit p {
+  display: inline-block;
+  padding: 0;
+  margin: 7px 0;
+}
+
 #subjectWrapper .teacher-edit {
   display: none;
   background-color: #79d894;
@@ -4036,8 +4042,6 @@ button.comment:active {
 
 .about .usDescription {
   margin-bottom: 50px;
-<<<<<<< HEAD
-=======
 }
 
 #uploadWrapper #uploadForm {
@@ -4120,7 +4124,6 @@ button.comment:active {
 
 #finalUpload {
   margin-top: 100px;
->>>>>>> 497462d754e01314ab2d2f07d4260d91d3eff7c8
 }
 
 /* BEGIN Thin */
