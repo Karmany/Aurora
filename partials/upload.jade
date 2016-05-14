@@ -1,21 +1,24 @@
 #uploadWrapper
    .row
-      .col.col--2-of-4.col--m-2-of-4
+      .col.col--2-of-4.col--m-4-of-4.upFiX
          form#uploadForm(name='uploadFiles', action='index.html', method='get')
             #uploadVid
                label.upLabel(for="video") Video
+               br
                input(type='file', id='videoUpload' name='videoUpload')
             #uploadTrans
                label.upLabel(for="transcript") Transcript
+               br
                input(type='file', id='transUpload', name='transUpload')
             #uploadSlides
                label.upLabel(for="slides") Slides
+               br
                input(type='file', id='slidesUpload', name='slidesUpload')
             button(id='finalUpload', type='button') Upload lecture
             
                
       
-      .col.col--2-of-4.col--m-2-of-4
+      .col.col--2-of-4.col--m-4-of-4.upFiX
          form#uploadBreakpoints(name='uploadBreakpoints', action='index.html', method='get')
             #wrapperBreakpoints
                row

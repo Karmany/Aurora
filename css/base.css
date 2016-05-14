@@ -1712,6 +1712,10 @@ footer {
   justify-content: space-between;
 }
 
+footer p.secondary a {
+  text-decoration: none;
+}
+
 footer .container {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -2315,6 +2319,10 @@ textarea {
   width: 100%;
 }
 
+#main-student .notification-content {
+  margin-left: -15px;
+}
+
 #main-student .notification-content .teacher-headline, #main-student .notification-content .student-headline {
   margin-bottom: 10px;
   padding-bottom: 5px;
@@ -2592,7 +2600,7 @@ textarea {
 }
 
 #main-admin #subjectsModal .modal-content .icon-alignment .edit-icon:hover {
-  fill: #91C2F9;
+  fill: #79d894;
   cursor: pointer;
   transform: scale(1.3);
 }
@@ -2640,16 +2648,17 @@ textarea {
   margin-right: 30px;
 }
 
-#main-admin #subjectsModal .modal-content .subject .lecture-list .lecture svg {
+#main-admin #subjectsModal .modal-content .subject .lecture-list .lecture .delete-forever-icon {
   float: left;
   margin-top: 5px;
   width: 14px;
   height: 14px;
 }
 
-#main-admin #subjectsModal .modal-content .subject .lecture-list .lecture svg:hover {
+#main-admin #subjectsModal .modal-content .subject .lecture-list .lecture .delete-forever-icon:hover {
   fill: #E57373;
   transform: scale(1.2);
+  cursor: pointer;
 }
 
 #main-admin #subjectsModal .modal-content .subject .lecture-list .lecture a {
@@ -2712,6 +2721,25 @@ textarea {
   max-width: 220px;
 }
 
+#main-admin #studentsModal .modal-content .info-text {
+  margin-left: 30px;
+  margin-bottom: 35px;
+  max-width: 80%;
+}
+
+#main-admin #studentsModal .modal-content .info-text .secondary {
+  color: white;
+}
+
+#main-admin #studentsModal .modal-content .info-text p, #main-admin #studentsModal .modal-content .info-text img {
+  display: inline;
+}
+
+#main-admin #studentsModal .modal-content .info-text img {
+  height: 14px;
+  width: 14px;
+}
+
 #main-admin #studentsModal .modal-content .alignment-grid {
   display: flex;
   flex-wrap: wrap;
@@ -2734,7 +2762,7 @@ textarea {
   display: flex;
 }
 
-#main-admin #studentsModal .modal-content .alignment-grid .year-enrolled ul li svg {
+#main-admin #studentsModal .modal-content .alignment-grid .year-enrolled ul li .deactivate-icon {
   height: 14px;
   width: 14px;
   fill: white;
@@ -2742,7 +2770,7 @@ textarea {
   margin-left: -20px;
 }
 
-#main-admin #studentsModal .modal-content .alignment-grid .year-enrolled ul li svg:hover {
+#main-admin #studentsModal .modal-content .alignment-grid .year-enrolled ul li .deactivate-icon:hover {
   fill: #E57373;
   cursor: pointer;
   transform: scale(1.3);
@@ -2773,21 +2801,40 @@ textarea {
   max-width: 210px;
 }
 
-#main-admin #teachersModal .alignment-grid {
+#main-admin #teachersModal .modal-content .info-text {
+  margin-left: 30px;
+  margin-bottom: 30px;
+  max-width: 80%;
+}
+
+#main-admin #teachersModal .modal-content .info-text .secondary {
+  color: white;
+}
+
+#main-admin #teachersModal .modal-content .info-text p, #main-admin #teachersModal .modal-content .info-text img {
+  display: inline;
+}
+
+#main-admin #teachersModal .modal-content .info-text img {
+  height: 14px;
+  width: 14px;
+}
+
+#main-admin #teachersModal .modal-content .alignment-grid {
   margin-left: -10px;
   margin-top: -15px;
 }
 
-#main-admin #teachersModal .alignment-grid ul {
+#main-admin #teachersModal .modal-content .alignment-grid ul {
   list-style: none;
 }
 
-#main-admin #teachersModal .alignment-grid ul li {
+#main-admin #teachersModal .modal-content .alignment-grid ul li {
   margin-bottom: 2px;
   display: flex;
 }
 
-#main-admin #teachersModal .alignment-grid ul li svg {
+#main-admin #teachersModal .modal-content .alignment-grid ul li .deactivate-icon {
   height: 14px;
   width: 14px;
   fill: white;
@@ -2795,19 +2842,19 @@ textarea {
   margin-left: -20px;
 }
 
-#main-admin #teachersModal .alignment-grid ul li svg:hover {
+#main-admin #teachersModal .modal-content .alignment-grid ul li .deactivate-icon:hover {
   fill: #E57373;
   cursor: pointer;
   transform: scale(1.3);
 }
 
-#main-admin #teachersModal .alignment-grid ul li a {
+#main-admin #teachersModal .modal-content .alignment-grid ul li a {
   text-decoration: none;
   color: white;
   margin-left: 5px;
 }
 
-#main-admin #teachersModal .alignment-grid ul li a:hover {
+#main-admin #teachersModal .modal-content .alignment-grid ul li a:hover {
   color: #98ff9b;
 }
 
@@ -3260,6 +3307,37 @@ textarea {
 
 #subjectWrapper .admin-delete:hover {
   background-color: #ff9b9b;
+}
+
+#subjectWrapper .delete-space-fix {
+  margin-left: 20px;
+}
+
+#subjectWrapper .admin-edit {
+  display: none;
+  background-color: #79d894;
+  text-decoration: none;
+  color: #455A64;
+  width: auto;
+  border-radius: 2px;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  padding: 0 10px;
+}
+
+#subjectWrapper .admin-edit .edit-icon {
+  display: inline-block;
+  fill: #455A64;
+  margin-bottom: -3px;
+  padding: 0;
+}
+
+#subjectWrapper .admin-edit p {
+  display: inline-block;
+  padding: 0;
+  margin: 7px 0;
 }
 
 #subjectWrapper .teacher-edit {
@@ -4299,6 +4377,10 @@ nav.mobile {
 }
 
 @media (max-width: 700px) {
+  .upFiX {
+    display: block !important;
+    margin-top: 20px;
+  }
   #login {
     width: 80%;
   }

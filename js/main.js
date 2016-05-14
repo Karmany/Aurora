@@ -190,6 +190,7 @@ $(function(){
 window.addEventListener("hashchange", function(){
 	urlTitle();
 	setActiveMenuItem();
+	$('body').animate({scrollTop:0}, '500', 'swing');
 });
 
 // See which subpage is currently active in the navigation
