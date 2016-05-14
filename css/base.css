@@ -1849,6 +1849,7 @@ footer .links a, footer .links-mobile a {
     transform: translateY(0px);
     opacity: 1;
   }
+<<<<<<< HEAD
 }
 
 .profile-shit {
@@ -1867,6 +1868,8 @@ footer .links a, footer .links-mobile a {
   width: 250px;
   border: 2px solid purple;
   height: 500px;
+=======
+>>>>>>> 497462d754e01314ab2d2f07d4260d91d3eff7c8
 }
 
 body {
@@ -1934,6 +1937,12 @@ a.hyperlink:active {
   color: #98ff9b;
 }
 
+.lectures-student {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .lectures-student a {
   text-decoration: none;
   color: white;
@@ -1951,6 +1960,7 @@ a.hyperlink:active {
 .lectures-student .txt-wrap h3 {
   margin-top: 0;
   margin-bottom: 10px;
+  clear: both;
 }
 
 .lectures-student .date-space-fix {
@@ -1966,7 +1976,8 @@ a.hyperlink:active {
   padding-bottom: 5px;
   width: 410px;
   border-bottom: 2px solid #79d894;
-  display: inline-block;
+  display: block;
+  clear: both;
 }
 
 .lectures-student .profile-img {
@@ -2037,13 +2048,26 @@ a.hyperlink:active {
 .lectures-student .admin-delete {
   display: inline-block;
   background-color: #E57373;
-  width: 45%;
+  width: auto;
   border-radius: 2px;
   text-align: center;
-  padding: 5px 0;
+  padding: 0;
   text-decoration: none;
   margin-bottom: 20px;
   color: white;
+  padding: 0 10px;
+}
+
+.lectures-student .admin-delete .delete-forever-icon {
+  display: inline-block;
+  margin-bottom: -3px;
+  padding: 0;
+}
+
+.lectures-student .admin-delete p {
+  display: inline-block;
+  padding: 0;
+  margin: 7px 0;
 }
 
 .lectures-student .teacher-edit {
@@ -2051,29 +2075,75 @@ a.hyperlink:active {
   background-color: #79d894;
   text-decoration: none;
   color: #455A64;
-  width: 45%;
+  width: auto;
   border-radius: 2px;
   text-align: center;
-  padding: 5px 0;
+  padding: 0;
   margin-bottom: 30px;
-  margin-left: 10%;
+  margin-left: 20px;
+  padding: 0 10px;
 }
 
-@media (max-width: 1050px) {
+.lectures-student .teacher-edit .edit-icon {
+  display: inline-block;
+  fill: #455A64;
+  margin-bottom: -3px;
+  padding: 0;
+}
+
+.lectures-student .teacher-edit p {
+  display: inline-block;
+  padding: 0;
+  margin: 7px 0;
+}
+
+.lectures-student .notprofile-content {
+  width: calc(100% - 200px);
+  height: auto;
+  padding-right: 20px;
+}
+
+.lectures-student .profile-content {
+  width: 200px;
+  height: 500px;
+}
+
+@media (max-width: 900px) {
+  .lectures-student .notprofile-content {
+    width: 100vw !important;
+  }
+  .lectures-student .profile-content {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
   .lectures-student .img-wrap {
     display: none;
   }
   .lectures-student .txt-wrap {
     padding-left: 0;
   }
+  .lectures-student .lecture-time {
+    padding-top: 100px;
+  }
   .lectures-student .lecture-time h2 {
     width: 200px;
+  }
+  .lectures-student .top-space-fix {
+    padding: 0;
   }
 }
 
 @media (max-width: 480px) {
   .lectures-student .author p span {
     font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 348) {
+  .lectures-student .teacher-edit {
+    margin-left: 10px;
   }
 }
 
@@ -2145,7 +2215,7 @@ a.hyperlink:active {
 
 .field-wrap {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 textarea {
@@ -2186,7 +2256,7 @@ textarea {
 #links {
   width: 100%;
   height: 20px;
-  margin-top: -20px;
+  margin-top: 0px;
   text-align: left;
   margin-bottom: 20px;
 }
@@ -2230,7 +2300,7 @@ textarea {
   background: #98ff9b;
 }
 
-#loginField1 {
+#loginField1, #loginField2 {
   margin-bottom: 20px;
 }
 
@@ -2246,7 +2316,6 @@ textarea {
   font-weight: 300;
   font-size: 2rem;
   display: none;
-  padding-bottom: 20px;
 }
 
 #registerState {
@@ -3180,13 +3249,26 @@ textarea {
 #subjectWrapper .admin-delete {
   display: none;
   background-color: #E57373;
-  width: 45%;
+  width: auto;
   border-radius: 2px;
   text-align: center;
-  padding: 5px 0;
+  padding: 0;
   text-decoration: none;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: white;
+  padding: 0 10px;
+}
+
+#subjectWrapper .admin-delete .delete-forever-icon {
+  display: inline-block;
+  margin-bottom: -3px;
+  padding: 0;
+}
+
+#subjectWrapper .admin-delete p {
+  display: inline-block;
+  padding: 0;
+  margin: 7px 0;
 }
 
 #subjectWrapper .teacher-edit {
@@ -3194,12 +3276,26 @@ textarea {
   background-color: #79d894;
   text-decoration: none;
   color: #455A64;
-  width: 45%;
+  width: auto;
   border-radius: 2px;
   text-align: center;
-  padding: 5px 0;
-  margin-bottom: 15px;
-  margin-left: 10%;
+  padding: 0;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  padding: 0 10px;
+}
+
+#subjectWrapper .teacher-edit .edit-icon {
+  display: inline-block;
+  fill: #455A64;
+  margin-bottom: -3px;
+  padding: 0;
+}
+
+#subjectWrapper .teacher-edit p {
+  display: inline-block;
+  padding: 0;
+  margin: 7px 0;
 }
 
 @media (max-width: 1000px) {
@@ -3260,7 +3356,7 @@ textarea {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
   position: relative;
   margin-top: 7px;
-  min-width: 180px;
+  min-width: 200px;
 }
 
 .profile .profile-list {
@@ -3940,6 +4036,91 @@ button.comment:active {
 
 .about .usDescription {
   margin-bottom: 50px;
+<<<<<<< HEAD
+=======
+}
+
+#uploadWrapper #uploadForm {
+  background: #314650;
+  border-radius: 4px;
+  padding: 40px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+#uploadWrapper #uploadForm .field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+#uploadWrapper #uploadVid, #uploadWrapper #uploadTrans, #uploadWrapper #uploadSlides {
+  padding: 10px;
+}
+
+#uploadWrapper .upLabel {
+  color: #79d894;
+}
+
+#uploadBreakpoints {
+  background: #314650;
+  border-radius: 4px;
+  padding: 40px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.theBreakpoints, .theKeywords {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 2px solid #6d828c;
+  color: #ffffff;
+  border-radius: 2px;
+  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+  transition: border-color .25s ease, box-shadow .25s ease;
+  -webkit-appearance: none;
+}
+
+.theBreakpoints:focus, .theKeywords:focus {
+  outline: #98ff9b;
+}
+
+.theBreakpoints {
+  border-bottom: none;
+}
+
+.theKeywords {
+  margin-bottom: 30px;
+  border-top: none;
+}
+
+#addButton, #finalUpload {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  display: block;
+  width: 100%;
+  background: #79d894;
+  color: #455A64;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+
+#addButton:hover, #addButton:focus, #finalUpload:hover, #finalUpload:focus {
+  background: #98ff9b;
+}
+
+#finalUpload {
+  margin-top: 100px;
+>>>>>>> 497462d754e01314ab2d2f07d4260d91d3eff7c8
 }
 
 /* BEGIN Thin */
@@ -4086,16 +4267,10 @@ nav.mobile {
   display: none;
 }
 
-@media (max-width: 1000px) {
-  .left-kuk {
-    width: 100vw !important;
-  }
-  .right {
-    display: none;
-  }
-}
-
 @media (max-width: 700px) {
+  #login {
+    width: 80%;
+  }
   .container {
     width: 100%;
     padding: 50px 20px;
@@ -4177,6 +4352,9 @@ nav.mobile {
   }
   footer, .page-wrap:after {
     height: 410px;
+  }
+  #login {
+    width: 100%;
   }
 }
 

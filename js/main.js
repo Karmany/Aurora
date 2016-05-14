@@ -24,7 +24,7 @@ $(window).on('hashchange load', function(e){
 	  }else if (sessionStorage.role == 'teacher') {
 		  hideNavItems();
 		  // teacher header nav links
-		  $('.page-4-link, .search, .logout, .page-9-link').show();
+		  $('.page-4-link, .page-5-link, .search, .logout, .page-9-link').show();
 
 	  }else if (sessionStorage.role == 'admin') {
 		  hideNavItems();
@@ -129,16 +129,57 @@ var ttl = document.getElementById("title");
 
 function getUrl(){
 	var url = window.location.href.split(pageDivider)[1];
-	if(url !== undefined){
-	}
 	return (typeof url == 'undefined' ? page1 : url);
 }
 String.prototype.ucFirst = function(){
 	 return this.charAt(0).toUpperCase() + this.slice(1);
 }
 function urlTitle() {
-	document.title = pageBaseTitle + " - " + getUrl().ucFirst();
-	ttl.textContent = getUrl().replace('-', ' ');
+	if(
+		getUrl() == page1 ||
+		getUrl() == page2 ||
+		getUrl() == page3 ||
+		getUrl() == page4 ||
+		getUrl() == page5 ||
+		getUrl() == page6 ||
+		getUrl() == page9
+	){
+		switch (url = window.location.href.split(pageDivider)[1]) {
+			case page1:
+				ttl.textContent = getUrl().replace('-', ' ');
+				document.title = pageBaseTitle + " - " + getUrl().ucFirst();
+				break;
+			case page2:
+				ttl.textContent = 'your lectures'
+				document.title = pageBaseTitle + " - " + 'Your lectures';
+				break;
+			case page3:
+				ttl.textContent = 'home'
+				document.title = pageBaseTitle + " - " + 'Home';
+				break;
+			case page4:
+				ttl.textContent = getUrl().replace('-', ' ');
+				document.title = pageBaseTitle + " - " + getUrl().ucFirst();
+				break;
+			case page5:
+				ttl.textContent = 'home'
+				document.title = pageBaseTitle + " - " + 'Home';
+				break;
+			case page6:
+				ttl.textContent = 'home'
+				document.title = pageBaseTitle + " - " + 'Home';
+				break;
+			case page9:
+				ttl.textContent = 'your lectures'
+				document.title = pageBaseTitle + " - " + 'Your lectures';
+				break;
+			default:
+
+		}
+	} else {
+		ttl.textContent = ''
+		document.title = pageBaseTitle
+	}
 }
 
 $(function(){

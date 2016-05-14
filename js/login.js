@@ -16,6 +16,12 @@ function validateLogin() {
             sessionStorage.role = 'student';
             $('#logmein').attr('action', 'index.html#/' + page3);
             return true;
+        } else {
+         console.log("Some error");
+         document.getElementById('loginError').style.display = "block";
+         document.getElementById('loginEmail').style.border = "2px solid #E57373";
+         document.getElementById('loginPassword').style.border = "2px solid #E57373";
+         return false;
         }
     } else if (email === teacherEmail) {
         if (pass === teacherPassword) {
@@ -23,6 +29,12 @@ function validateLogin() {
             sessionStorage.role = 'teacher';
             $('#logmein').attr('action', 'index.html#/' + page5);
             return true;
+        } else {
+         console.log("Some error");
+         document.getElementById('loginError').style.display = "block";
+         document.getElementById('loginEmail').style.border = "2px solid #E57373";
+         document.getElementById('loginPassword').style.border = "2px solid #E57373";
+         return false;
         }
     } else if (email === adminEmail) {
         if (pass === adminPassword) {
@@ -30,6 +42,12 @@ function validateLogin() {
             $('#logmein').attr('action', 'index.html#/' + page6);
             sessionStorage.role = 'admin';
             return true;
+        } else {
+         console.log("Some error");
+         document.getElementById('loginError').style.display = "block";
+         document.getElementById('loginEmail').style.border = "2px solid #E57373";
+         document.getElementById('loginPassword').style.border = "2px solid #E57373";
+         return false;
         }
     } else {
         console.log("FAILED!");
