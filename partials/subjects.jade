@@ -22,10 +22,10 @@
                      .row
                         .col.col--2-of-2.sub-wrap
                            hr
-                           a.subBtn
+                           a.subBtn.codingOff
                               include ../includes/svg-icons/unchecked.jade
                               p Subscribe
-                           a.subPressed
+                           a.subPressed.codingOn
                               include ../includes/svg-icons/checked.jade
                               p Subscribe
                            hr
@@ -39,13 +39,13 @@
                               .comment-txt
                                  a(href='') Comments (2)
                         .col.col--3-of-4
-                           a.lec-link(href='#play')   
+                           a.lec-link.codingLink(href='#play')   
                               h3.lecture-head IMT1292 Web Coding:  -  3rd Introductury Lecture to HTML
                               p In this lecture we go through four main topics. Entities, lists, images and namegiving. If you have not seen the previous lectures on this, I would recommend you watching those before this one, since this one builds on what we learned from them.
                               p.secondary.date-space-fix 19.05.2016
                         
                         .col.col--2-of-2
-                           a.all-lectures(href='#lectures-student') View all subscribed lectures   
+                           a.all-lectures.codingAll(href='#lectures-student') View all subscribed lectures   
                            
 
                   button.accordion.expand IMT2661: Mobile Media Design
@@ -65,10 +65,10 @@
                      .row
                         .col.col--2-of-2.sub-wrap
                            hr
-                           a.subBtn
+                           a.subBtn.mobileOff
                               include ../includes/svg-icons/unchecked.jade
                               p Subscribe
-                           a.subPressed
+                           a.subPressed.mobileOn
                               include ../includes/svg-icons/checked.jade
                               p Subscribe
                            hr
@@ -82,13 +82,13 @@
                               .comment-txt
                                  a(href='') Comments (2)
                         .col.col--3-of-4
-                           a.lec-link(href='#play')   
+                           a.lec-link.mobileLink(href='#play')   
                               h3.lecture-head IMT2661 Mobile Media Design: - Mobile Design
                               p In this lecture we go though alot of diffrent topics it is important to be aware of when designing for mobile. There is alot of diffrent topics, but it is important, so I would recommend taking notes.
                               p.secondary.date-space-fix 17.05.2016
                         
                         .col.col--2-of-2
-                           a.all-lectures(href='#lectures-student') View all subscribed lectures   
+                           a.all-lectures.mobileAll(href='#lectures-student') View all subscribed lectures   
                            
 
 
@@ -109,10 +109,10 @@
                      .row
                         .col.col--2-of-2.sub-wrap
                            hr
-                           a.subBtn
+                           a.subBtn.projectOff
                               include ../includes/svg-icons/unchecked.jade
                               p Subscribe
-                           a.subPressed
+                           a.subPressed.projectOn
                               include ../includes/svg-icons/checked.jade
                               p Subscribe
                            hr
@@ -126,13 +126,13 @@
                               .comment-txt
                                  a(href='') Comments (2)
                         .col.col--3-of-4
-                           a.lec-link(href='#play')   
+                           a.lec-link.projectLink(href='#play')   
                               h3.lecture-head IMT1471 Web Project: - Technical Design Specification Document
                               p In this lecture we go through the Technical Design Specification Document. I will give guidance to how you should write it, and which parts are most important for us as web developers.
                               p.secondary.date-space-fix 16.05.2016
                         
                         .col.col--2-of-2
-                           a.all-lectures(href='#lectures-student') View all subscribed lectures   
+                           a.all-lectures.projectAll(href='#lectures-student') View all subscribed lectures   
                            
 
                   button.accordion.expand IMT2002: Color Management
@@ -152,10 +152,10 @@
                      .row
                         .col.col--2-of-2.sub-wrap
                            hr
-                           a.subBtn
+                           a.subBtn.colorOff
                               include ../includes/svg-icons/unchecked.jade
                               p Subscribe
-                           a.subPressed
+                           a.subPressed.colorOn
                               include ../includes/svg-icons/checked.jade
                               p Subscribe
                            hr
@@ -169,13 +169,13 @@
                               .comment-txt
                                  a(href='') Comments (2)
                         .col.col--3-of-4
-                           a.lec-link(href='#play')   
+                           a.lec-link.colorLink(href='#play')   
                               h3.lecture-head IMT2002 Color Management:  -  Principles and components in ICC colour management
                               p In this lecture we go through some topics essential to ICC color management. Input profiles, Output profiles, ICC colour workflow, Colour gamut - Gamut mapping, Colour Rendering Intents, Assign Profile - Convert to Profile.
                               p.secondary.date-space-fix 17.05.2016
                         
                         .col.col--2-of-2
-                           a.all-lectures(href='#lectures-student') View all subscribed lectures   
+                           a.all-lectures.colorAll(href='#lectures-student') View all subscribed lectures   
                            
 
       .col.col--1-of-5
@@ -208,26 +208,93 @@ script.
 // Star og starborder må bytte klasse hver for seg da de blir trykket på. 
 
 script.
-   var notSub = true;
+   var codingNotSub = true;
    $(document).ready(function(){
-      $('.subBtn').click(function(){
-         $('.subBtn').toggle()
-         $('.subPressed').toggle()
-         $('.all-lectures').toggle()
-         $('.all-lectures').css('display', 'block')
-         notSub = false;
+      $('.codingOff').click(function(){
+         $('.codingOff').toggle()
+         $('.codingOn').toggle()
+         $('.codingAll').toggle()
+         $('.codingAll').css('display', 'block')
+         codingNotSub = false;
       });
-      $('.subPressed').click(function(){
-         $('.subBtn').toggle()
-         $('.subPressed').toggle()
-         $('.all-lectures').toggle()
-         notSub = true;
+      $('.codingOn').click(function(){
+         $('.codingOn').toggle()
+         $('.codingOff').toggle()
+         $('.codingAll').toggle()
+         codingNotSub = true;
       });
-      $('.lec-link').click(function(e) {
-         if(notSub){ 
+      $('.codingLink').click(function(e) {
+         if(codingNotSub){ 
             e.preventDefault();
-            console.log('hue');
          };
       });  
    });
+   
+   var mobileNotSub = true;
+   $(document).ready(function(){
+      $('.mobileOff').click(function(){
+         $('.mobileOff').toggle()
+         $('.mobileOn').toggle()
+         $('.mobileAll').toggle()
+         $('.mobileAll').css('display', 'block')
+         mobileNotSub = false;
+      });
+      $('.mobileOn').click(function(){
+         $('.mobileOn').toggle()
+         $('.mobileOff').toggle()
+         $('.mobileAll').toggle()
+         mobileNotSub = true;
+      });
+      $('.mobileLink').click(function(e) {
+         if(mobileNotSub){ 
+            e.preventDefault();
+         };
+      });  
+   });
+   
+   var projectNotSub = true;
+   $(document).ready(function(){
+      $('.projectOff').click(function(){
+         $('.projectOff').toggle()
+         $('.projectOn').toggle()
+         $('.projectAll').toggle()
+         $('.projectAll').css('display', 'block')
+         projectNotSub = false;
+      });
+      $('.projectOn').click(function(){
+         $('.projectOn').toggle()
+         $('.projectOff').toggle()
+         $('.projectAll').toggle()
+         projectNotSub = true;
+      });
+      $('.projectLink').click(function(e) {
+         if(projectNotSub){ 
+            e.preventDefault();
+         };
+      });  
+   });
+   
+   var colorNotSub = true;
+   $(document).ready(function(){
+      $('.colorOff').click(function(){
+         $('.colorOff').toggle()
+         $('.colorOn').toggle()
+         $('.colorAll').toggle()
+         $('.colorAll').css('display', 'block')
+         colorNotSub = false;
+      });
+      $('.colorOn').click(function(){
+         $('.colorOn').toggle()
+         $('.colorOff').toggle()
+         $('.colorAll').toggle()
+         colorNotSub = true;
+      });
+      $('.colorLink').click(function(e) {
+         if(colorNotSub){ 
+            e.preventDefault();
+         };
+      });  
+   });
+   
+   
    

@@ -2208,6 +2208,10 @@ textarea {
   display: block;
 }
 
+#main-student .notification-content .notification .date {
+  margin-top: -7px;
+}
+
 @media (max-width: 700px) {
   #main-student .notification-content #main-student {
     margin-top: -10px;
