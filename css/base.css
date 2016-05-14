@@ -2003,19 +2003,34 @@ footer .links a, footer .links-mobile a {
 }
 
 .content {
+<<<<<<< HEAD
   -webkit-animation: fade-in 0.5s 0.5s ease forwards;
           animation: fade-in 0.5s 0.5s ease forwards;
 }
 
 @-webkit-keyframes fade-in {
+=======
+  animation: fade-in 0.5s 0.5s ease forwards;
+<<<<<<< HEAD
+}
+
+@keyframes fade-in {
+>>>>>>> origin/master
   33% {
     opacity: 1;
   }
   100% {
+<<<<<<< HEAD
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
     opacity: 1;
   }
+=======
+    transform: translateY(0px);
+    opacity: 1;
+  }
+=======
+>>>>>>> origin/master
 }
 
 @keyframes fade-in {
@@ -2049,6 +2064,7 @@ footer .links a, footer .links-mobile a {
   width: 250px;
   border: 2px solid purple;
   height: 500px;
+>>>>>>> 4a42c68afa1dea19672d5186a8af102aab5be042
 }
 
 body {
@@ -2116,6 +2132,11 @@ a.hyperlink:active {
   color: #98ff9b;
 }
 
+.lectures-student a {
+  text-decoration: none;
+  color: white;
+}
+
 .lectures-student .img-wrap {
   padding-left: 0px;
 }
@@ -2128,10 +2149,6 @@ a.hyperlink:active {
 .lectures-student .txt-wrap h3 {
   margin-top: 0;
   margin-bottom: 10px;
-}
-
-.lectures-student .txt-wrap p {
-  margin-top: 0;
 }
 
 .lectures-student .date-space-fix {
@@ -2183,7 +2200,7 @@ a.hyperlink:active {
 }
 
 .lectures-student .comment-wrap-teacher {
-  margin-top: -15px;
+  margin-top: 10px;
   margin-bottom: 25px;
   width: 100%;
   float: left;
@@ -2207,13 +2224,37 @@ a.hyperlink:active {
 .lectures-student .author p {
   margin-left: 50px;
   margin-top: 10px;
-  color: white;
 }
 
 .lectures-student .author p span {
   font-size: 1.4rem;
   color: #79d894;
   display: block;
+}
+
+.lectures-student .admin-delete {
+  display: inline-block;
+  background-color: #E57373;
+  width: 45%;
+  border-radius: 2px;
+  text-align: center;
+  padding: 5px 0;
+  text-decoration: none;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.lectures-student .teacher-edit {
+  display: inline-block;
+  background-color: #79d894;
+  text-decoration: none;
+  color: #455A64;
+  width: 45%;
+  border-radius: 2px;
+  text-align: center;
+  padding: 5px 0;
+  margin-bottom: 30px;
+  margin-left: 10%;
 }
 
 @media (max-width: 1050px) {
@@ -3318,6 +3359,35 @@ textarea {
   float: left;
 }
 
+#subjectWrapper .sidebar-teacher, #subjectWrapper .sidebar-admin, #subjectWrapper .sidebar-student {
+  display: none;
+}
+
+#subjectWrapper .admin-delete {
+  display: none;
+  background-color: #E57373;
+  width: 45%;
+  border-radius: 2px;
+  text-align: center;
+  padding: 5px 0;
+  text-decoration: none;
+  margin-bottom: 15px;
+  color: white;
+}
+
+#subjectWrapper .teacher-edit {
+  display: none;
+  background-color: #79d894;
+  text-decoration: none;
+  color: #455A64;
+  width: 45%;
+  border-radius: 2px;
+  text-align: center;
+  padding: 5px 0;
+  margin-bottom: 15px;
+  margin-left: 10%;
+}
+
 @media (max-width: 1000px) {
   #subjectWrapper .subBtn, #subjectWrapper .subPressed {
     width: 38%;
@@ -4046,6 +4116,12 @@ button.comment:active {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
   padding: 20px;
   border-radius: 2px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
   margin-top: 50px;
 }
 
@@ -4078,6 +4154,24 @@ button.comment:active {
 
 .about .usDescription {
   margin-bottom: 50px;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4a42c68afa1dea19672d5186a8af102aab5be042
+}
+
+.about ul {
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+
+.about ul li {
+  list-style-type: none;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
+>>>>>>> 4a42c68afa1dea19672d5186a8af102aab5be042
+>>>>>>> origin/master
 }
 
 /* BEGIN Thin */

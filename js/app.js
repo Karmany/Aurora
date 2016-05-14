@@ -12,7 +12,7 @@ var page5 = 'main-teacher';
 var page6 = 'main-admin'
 var page7 = 'play'
 var page8 = 'profile-student'
-var page9 = 'lectures-teacher'
+var page9 = 'your-lectures'
 var page10 = 'profile-teacher'
 var page11 = 'profile-admin'
 var page12 = 'notmy-profile-student'
@@ -28,6 +28,7 @@ $('.page-3-link a').text(page3.replace('-', ' '));
 $('.page-4-link a').text(page4.replace('-', ' '));
 $('.page-5-link a').text(page5.replace('-', ' '));
 $('.page-6-link a').text(page6.replace('-', ' '));
+$('.page-9-link a').text(page9.replace('-', ' '));
 
 $(".page-1-link a").attr("href", '#' + page1);
 $(".page-2-link a").attr("href", '#' + page2);
@@ -35,6 +36,7 @@ $(".page-3-link a").attr("href", '#' + page3);
 $(".page-4-link a").attr("href", '#' + page4);
 $(".page-5-link a").attr("href", '#' + page5);
 $(".page-6-link a").attr("href", '#' + page6);
+$(".page-9-link a").attr("href", '#' + page9);
 
 app.config(['$routeProvider', function($routeProvider){
 	$routeProvider
