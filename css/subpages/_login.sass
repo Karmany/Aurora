@@ -64,13 +64,36 @@ textarea
    border: 2px solid #a0b3b0
    resize: vertical
 
-.loginlink
+#forgotlink
+   float: right
    text-decoration: none
    color: $green1
    -webkit-transition: .5s ease
    transition: .5s ease
    &:hover
       color: $green2
+   font-family: roboto
+   font-weight: 300
+   font-size: 1.6rem
+
+#registerlink
+   float: left
+   text-decoration: none
+   color: $green1
+   -webkit-transition: .5s ease
+   transition: .5s ease
+   &:hover
+      color: $green2
+   font-family: roboto
+   font-weight: 300
+   font-size: 1.6rem
+
+#links
+   width: 100%
+   height: 20px
+   margin-top: -20px
+   text-align: left
+   margin-bottom: 20px
 
 .unregistered
    text-decoration: none
@@ -86,7 +109,7 @@ textarea
    font-weight: 300
    font-size: 1.6rem
 
-.loginbutton
+#loginbutton
    border: 0
    outline: none
    border-radius: 0
@@ -105,12 +128,7 @@ textarea
    &:hover, &:focus
       background: $green2
 
-.forgot
-   margin-top: -20px
-   text-align: right
-   margin-bottom: 20px
-
-#field1
+#loginField1
    margin-bottom: 20px
 
 #loginError
@@ -126,3 +144,6 @@ textarea
    font-size: 2rem
    display: none
    padding-bottom: 20px
+
+#register
+   display: none

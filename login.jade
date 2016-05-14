@@ -13,14 +13,26 @@ html#loginhtml(lang="en", ng-app="myApp")
          #login
             h1#loginheader Welcome Back
             form#logmein(name='loginForm', action='index.html', method='post', onsubmit='return validate(this);')
-               #field1.field-wrap
-                  input.username.logininput#loginEmail(type='email', name='email' placeholder='Email Address', required='')
-               #field2.field-wrap
-                  input.logininput#loginPassword(type='password', name='password' placeholder='Password', required='')
+               #login
+                  #loginField1.field-wrap
+                     input.username.loginInput#loginEmail(type='email', name='email' placeholder='Email Address', required='')
+                  #loginField2.field-wrap
+                     input.loginInput#loginPassword(type='password', name='password' placeholder='Password', required='')
+               #register
+                  #field1.field-wrap
+                     input.username.registerInput#registerEmail(type='email', name='email' placeholder='Email Address', required='')
+                  #field1.field-wrap
+                     input.
+                  #field1.field-wrap
+                  
+                  #field1.field-wrap
+                  
+                  #field1.field-wrap
                p#loginError Wrong email or password
-               p.forgot
-                  a.loginlink(href='#') Forgot Password?
-               input.loginbutton(type='submit', value='LOGIN')
+               #links
+                  a#registerlink(href='#') Register
+                  a#forgotlink(href='#') Forgot Password?
+               input#loginbutton(type='submit', value='LOGIN')
             a.unregistered(href='index.html') View page unregistered
       script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
       script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js")

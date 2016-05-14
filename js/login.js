@@ -1,6 +1,6 @@
+//VALIDATION
 function validate() {
     "use strict";
-
     var email = document.forms.logmein.email.value;
     var pass = document.forms.logmein.password.value;
     var studentEmail = "student@aurora.no";
@@ -40,3 +40,28 @@ function validate() {
         return false;
     }
 }
+
+//CHANGE TO REGISTER
+var toggle = true;
+window.onload = function() {
+   var a = document.getElementById('registerlink');
+   a.onclick = function() {
+      if(toggle === true) {
+         console.log('Change to register');
+         console.log(toggle);
+         document.getElementById('loginbutton').value = 'REGISTER';
+         document.getElementById('loginheader').innerHTML = 'Welcome';
+         document.getElementById('registerlink').innerHTML = 'Login';
+         toggle = false;
+         return false;
+      } else if(toggle === false) {
+         console.log('Change to login');
+         console.log(toggle);
+         document.getElementById('loginbutton').value = 'LOGIN';
+         document.getElementById('loginheader').innerHTML = 'Welcome Back';
+         document.getElementById('registerlink').innerHTML = 'Register';
+         toggle = true;
+         return false;
+      }
+   };
+};

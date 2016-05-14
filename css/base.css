@@ -1863,8 +1863,12 @@ footer {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  flex-flow: column;
-  justify-content: space-between;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 footer .container {
@@ -2268,14 +2272,40 @@ textarea {
   resize: vertical;
 }
 
-.loginlink {
+#forgotlink {
+  float: right;
   text-decoration: none;
   color: #79d894;
   transition: .5s ease;
+  font-family: roboto;
+  font-weight: 300;
+  font-size: 1.6rem;
 }
 
-.loginlink:hover {
+#forgotlink:hover {
   color: #98ff9b;
+}
+
+#registerlink {
+  float: left;
+  text-decoration: none;
+  color: #79d894;
+  transition: .5s ease;
+  font-family: roboto;
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+#registerlink:hover {
+  color: #98ff9b;
+}
+
+#links {
+  width: 100%;
+  height: 20px;
+  margin-top: -20px;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
 .unregistered {
@@ -2294,7 +2324,7 @@ textarea {
   color: #98ff9b;
 }
 
-.loginbutton {
+#loginbutton {
   border: 0;
   outline: none;
   border-radius: 0;
@@ -2311,17 +2341,11 @@ textarea {
   -webkit-appearance: none;
 }
 
-.loginbutton:hover, .loginbutton:focus {
+#loginbutton:hover, #loginbutton:focus {
   background: #98ff9b;
 }
 
-.forgot {
-  margin-top: -20px;
-  text-align: right;
-  margin-bottom: 20px;
-}
-
-#field1 {
+#loginField1 {
   margin-bottom: 20px;
 }
 
@@ -2337,6 +2361,10 @@ textarea {
   font-size: 2rem;
   display: none;
   padding-bottom: 20px;
+}
+
+#register {
+  display: none;
 }
 
 #main-student .notification-content .teacher-headline, #main-student .notification-content .student-headline {
