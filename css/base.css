@@ -3250,6 +3250,10 @@ textarea {
   margin: 7px 0;
 }
 
+#subjectWrapper .delete-space-fix {
+  margin-left: 20px;
+}
+
 #subjectWrapper .admin-edit {
   display: none;
   background-color: #79d894;
