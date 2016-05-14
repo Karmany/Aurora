@@ -2049,6 +2049,10 @@ a.hyperlink:active {
   margin: 7px 0;
 }
 
+.lectures-student .admin-delete:hover {
+  background-color: #ff9b9b;
+}
+
 .lectures-student .teacher-edit {
   display: inline-block;
   background-color: #79d894;
@@ -2074,6 +2078,10 @@ a.hyperlink:active {
   display: inline-block;
   padding: 0;
   margin: 7px 0;
+}
+
+.lectures-student .teacher-edit:hover {
+  background-color: #98ff9b;
 }
 
 .lectures-student .notprofile-content {
@@ -2301,6 +2309,12 @@ textarea {
   display: none;
 }
 
+#main-student {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 #main-student .notification-content .teacher-headline, #main-student .notification-content .student-headline {
   margin-bottom: 10px;
   padding-bottom: 5px;
@@ -2362,12 +2376,23 @@ textarea {
   margin-top: -7px;
 }
 
-@media (max-width: 700px) {
-  #main-student .notification-content #main-student {
-    margin-top: -10px;
+#main-student .notprofile-content {
+  width: calc(100% - 200px);
+  height: auto;
+  padding-right: 20px;
+}
+
+#main-student .profile-content {
+  width: 200px;
+  height: 500px;
+}
+
+@media (max-width: 900px) {
+  #main-student .notprofile-content {
+    width: 100vw !important;
   }
-  #main-student .notification-content #main-student .student-headline {
-    margin-top: 50px;
+  #main-student .profile-content {
+    display: none;
   }
 }
 
@@ -2375,6 +2400,12 @@ textarea {
   #main-student .author p span {
     font-size: 1.1rem !important;
   }
+}
+
+#main-teacher {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 #main-teacher .notification-content h3, #main-teacher .notification-content h4 {
@@ -2437,6 +2468,26 @@ textarea {
   font-size: 1.4rem;
   color: #79d894;
   display: block;
+}
+
+#main-teacher .notprofile-content {
+  width: calc(100% - 200px);
+  height: auto;
+  padding-right: 20px;
+}
+
+#main-teacher .profile-content {
+  width: 200px;
+  height: 500px;
+}
+
+@media (max-width: 900px) {
+  #main-teacher .notprofile-content {
+    width: 100vw !important;
+  }
+  #main-teacher .profile-content {
+    display: none;
+  }
 }
 
 @media (max-width: 700px) {
@@ -3207,6 +3258,10 @@ textarea {
   margin: 7px 0;
 }
 
+#subjectWrapper .admin-delete:hover {
+  background-color: #ff9b9b;
+}
+
 #subjectWrapper .teacher-edit {
   display: none;
   background-color: #79d894;
@@ -3232,6 +3287,10 @@ textarea {
   display: inline-block;
   padding: 0;
   margin: 7px 0;
+}
+
+#subjectWrapper .teacher-edit:hover {
+  background-color: #98ff9b;
 }
 
 @media (max-width: 1000px) {
@@ -3341,6 +3400,35 @@ textarea {
   margin: 5px 0 5px -10px;
 }
 
+.profile .upload-btn {
+  text-align: center;
+  color: #455A64;
+  margin-top: 20px;
+  text-decoration: none;
+  width: 80%;
+  left: 10%;
+  position: relative;
+  background-color: #79d894;
+  border-radius: 2px;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.profile .upload-btn:hover {
+  background-color: #98ff9b;
+}
+
+.profile .upload-btn p {
+  margin: 5px 0 5px -35px;
+}
+
+.profile .upload-btn .upload-icon {
+  fill: #455A64;
+  margin: 5px 0 5px -10px;
+}
+
 .profile .more-notifications {
   text-decoration: none;
   color: white;
@@ -3402,6 +3490,8 @@ textarea {
 .profile-student .profile-edit-wrap img {
   color: white;
   float: left;
+  margin-right: 5px;
+  margin-left: 10px;
 }
 
 .profile-student .profile-edit-wrap h2 {
@@ -3419,6 +3509,10 @@ textarea {
   border-radius: 2px;
   cursor: pointer;
   text-decoration: none;
+}
+
+.profile-student .btn:hover {
+  background-color: #98ff9b;
 }
 
 .profile-student .deleteBtn {
@@ -3440,6 +3534,10 @@ textarea {
 .profile-student .deleteBtn img {
   margin: -2px -15px 0 15px;
   padding: 0;
+}
+
+.profile-student .deleteBtn:hover {
+  background-color: #ff9b9b;
 }
 
 .profile-student hr {

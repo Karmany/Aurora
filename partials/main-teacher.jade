@@ -1,92 +1,92 @@
-#main-teacher.content
-
-	.row 
-		// notifications content 
-		.col.col--4-of-5.notification-content
-			h1.center-text.pull-up Welcome Back, Henriette!
-			// TEACHER AND MANAGEMENT NOTIFICATIONS 
-			.teacher.col.col--1-of-2 
-				
-				.teacher-headline
-					h2 Management 
-					img.headline-icon(src="../img/iconography/ic_notifications_green_24px.svg")
-					
-				// Notification 1
-				.row
-					.notification.first.col.col--2-of-2
-						h3 IMT1292 Web Coding: Last lecture May 20th.
-						p Due to a scheduling issue, your lecture for IMT1292 Web Coding 
-							| has been moved from Monday 19.05.2016 (08:15-10) to
-							| Tuesday 20.05.2016 (10:15-12). 
-						p.secondary 17.05.16	
-						img.profile-img(src="../img/profile_images/kristian_management.jpg")
-						a.author(href='#notmy-profile-admin')
-							p
-								| Kristian Fjell
-								span (kristian.fjell@aurora.mgmt.no) 
+.content
+	#main-teacher
+		.notprofile-content
+			.row 
+				// notifications content 
+				.col.col--4-of-4.notification-content
+					h1.center-text.pull-up Welcome Back, Henriette!
+					// TEACHER AND MANAGEMENT NOTIFICATIONS 
+					.teacher.col.col--1-of-2 
 						
-				// Notification 2
-				.row
-					.notification.col.col--2-of-2
-						h3 Guest lecture in Mobile Media Design
-						p Would you be interested in holding a 
-							| small guest lecture for my class. The topic in question  is 
-							| "Typography on the web". I was originally thinking Tuesday
-							| May 15th (10:15 - 12:00), but we could change that if it doesn't work for you.
-						p.secondary 12.05.16	
-						img.profile-img(src="../img/profile_images/clooney.jpg")
-						a.author(href='#notmy-profile-teacher')
-							p
-								| Torgeir Hansen
-								span (torgeir.hansen@aurora.no)
-								
-			// STUDENT NOTIFICATIONS
-			.student.col.col--1-of-2 
-				
-				.student-headline
-					h2 Comments 
-					img.headline-icon(src="../img/iconography/ic_comment_green_24px.svg")
-					
-				// Comment 1
-				.row 
-					.notification.first.col.col--2-of-2
-						h3 Centering my text
-						p
-							| The text in my link tag will not center even though I tried the "text-align" that you showed in your oblig. Anyone got any ideas whats wrong? 
-						p.secondary 20.05.16	
-						img.profile-img(src="../img/profile_images/female_student1.jpg")
-						a.author(href='#notmy-profile-student')
-							p
-								| Camilla Svensen
-								span (camilla.svensen@aurora.no)
+						.teacher-headline
+							h2 Management 
+							img.headline-icon(src="../img/iconography/ic_notifications_green_24px.svg")
 							
-					.notification.col.col--2-of-2
-						h3 Missing lectures slides
-						p 
-							| It seems like the last few slides from the lecture is missing. 
-							| Can you please add them? 
-						p.secondary 19.05.16	
-						img.profile-img(src="../img/profile_images/male_student1.png")
-						a.author(href='#notmy-profile-student')
-							p
-								| Rajesh Singh
-								span (rajesh.singh@aurora.no)
-					
-					.notification.col.col--2-of-2
-						h3 Frameworks for oblig 
-						p 
-							| Are we allowed to use any frameworks like Bootstrap or 
-							| Foundation for Oblig 2? 
-						p.secondary 12.05.16	
-						img.profile-img(src="../img/profile_images/male_student3.jpg")
-						a.author(href='#notmy-profile-student')
-							p
-								| Ola Kristiansen
-								span (ola.kristiansen@aurora.no)					
-				
-		// Profile content 
-		.col.col--1-of-5
+						// Notification 1
+						.row
+							.notification.first.col.col--2-of-2
+								h3 IMT1292 Web Coding: Last lecture May 20th.
+								p Due to a scheduling issue, your lecture for IMT1292 Web Coding 
+									| has been moved from Monday 19.05.2016 (08:15-10) to
+									| Tuesday 20.05.2016 (10:15-12). 
+								p.secondary 17.05.16	
+								img.profile-img(src="../img/profile_images/kristian_management.jpg")
+								a.author(href='#notmy-profile-admin')
+									p
+										| Kristian Fjell
+										span (kristian.fjell@aurora.mgmt.no) 
+								
+						// Notification 2
+						.row
+							.notification.col.col--2-of-2
+								h3 Guest lecture in Mobile Media Design
+								p Would you be interested in holding a 
+									| small guest lecture for my class. The topic in question  is 
+									| "Typography on the web". I was originally thinking Tuesday
+									| May 15th (10:15 - 12:00), but we could change that if it doesn't work for you.
+								p.secondary 12.05.16	
+								img.profile-img(src="../img/profile_images/clooney.jpg")
+								a.author(href='#notmy-profile-teacher')
+									p
+										| Torgeir Hansen
+										span (torgeir.hansen@aurora.no)
+										
+					// STUDENT NOTIFICATIONS
+					.student.col.col--1-of-2 
+						
+						.student-headline
+							h2 Comments 
+							img.headline-icon(src="../img/iconography/ic_comment_green_24px.svg")
+							
+						// Comment 1
+						.row 
+							.notification.first.col.col--2-of-2
+								h3 Centering my text
+								p
+									| The text in my link tag will not center even though I tried the "text-align" that you showed in your oblig. Anyone got any ideas whats wrong? 
+								p.secondary 20.05.16	
+								img.profile-img(src="../img/profile_images/female_student1.jpg")
+								a.author(href='#notmy-profile-student')
+									p
+										| Camilla Svensen
+										span (camilla.svensen@aurora.no)
+									
+							.notification.col.col--2-of-2
+								h3 Missing lectures slides
+								p 
+									| It seems like the last few slides from the lecture is missing. 
+									| Can you please add them? 
+								p.secondary 19.05.16	
+								img.profile-img(src="../img/profile_images/male_student1.png")
+								a.author(href='#notmy-profile-student')
+									p
+										| Rajesh Singh
+										span (rajesh.singh@aurora.no)
+							
+							.notification.col.col--2-of-2
+								h3 Frameworks for oblig 
+								p 
+									| Are we allowed to use any frameworks like Bootstrap or 
+									| Foundation for Oblig 2? 
+								p.secondary 12.05.16	
+								img.profile-img(src="../img/profile_images/male_student3.jpg")
+								a.author(href='#notmy-profile-student')
+									p
+										| Ola Kristiansen
+										span (ola.kristiansen@aurora.no)	
+						
+		.profile-content
 			include ../includes/profile-sidebar-teacher.jade
-		
-		include ../includes/partialscript.jade
+include ../includes/partialscript.jade			
+
 			
