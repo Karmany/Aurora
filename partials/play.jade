@@ -113,7 +113,27 @@
                
                .comment-section
                   h2 Comments
-                  p THIS IS GRAT VIDO, TANK U
+                  
+                  .comment.two
+                     img.profile-img(src="../img/profile_images/female_student1.jpg")
+                     a.author(href='#notmy-profile-student')
+                        p
+                           | Camilla Svensen - 
+                           strong Student
+                           span (camilla.svensen@aurora.no)
+                     p Great lecture! But i'm curious, how can i style a list to prevent it from having those bullet points? Those pesky lists also take up so much space, why is that?
+                     p.secondary 20.05.16
+                     
+                  .comment.two
+                     img.profile-img(src="../img/profile_images/female_student1.jpg")
+                     a.author(href='#notmy-profile-student')
+                        p
+                           | Camilla Svensen - 
+                           strong Student
+                           span (camilla.svensen@aurora.no)
+                     p Great lecture! But i'm curious, how can i style a list to prevent it from having those bullet points? Those pesky lists also take up so much space, why is that?
+                     p.secondary 20.05.16
+                     
                   h3 Write a reply
                   textarea.comment(name='comment' placeholder="Your message here" rows="5")
                   button.comment Publish comment
@@ -124,6 +144,5 @@ script(src="js/main.js")
 
 script.
    $(function(){
-      console.log('runs');
-      slideHeight();
+   	setTimeout(slideHeight, 400);
    });

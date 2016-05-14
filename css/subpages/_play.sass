@@ -223,28 +223,28 @@ ul.slide-timeline
 
 .lecture-poster
 
-   .profile-img
-      margin-top: 16px
-      width: 40px
-      height: 40px
-      border-radius: 100%
-      float: left
+.profile-img
+   margin-top: 16px
+   width: 40px
+   height: 40px
+   border-radius: 100%
+   float: left
 
-   .author
-      border-top: 2px solid $primaryColorLight
-      padding-top: 5px
-      width: 200px
-      display: block
-      text-decoration: none
+.author
+   border-top: 2px solid $primaryColorLight
+   padding-top: 5px
+   width: 200px
+   display: block
+   text-decoration: none
 
-      p
-         margin-left: 50px
-         margin-top: 10px
-         color: white
-         span
-            font-size: 1.4rem
-            color: $green1
-            display: block
+   p
+      margin-left: 50px
+      margin-top: 10px
+      color: white
+      span
+         font-size: 1.4rem
+         color: $green1
+         display: block
 
 // comment section
 
@@ -300,6 +300,38 @@ button.comment
    &:active
       background-color: $primaryColorDark
       outline: none
+
+.comment
+   width: 100%
+   height: auto
+
+   .profile-img
+      margin-top: 16px
+      width: 40px
+      height: 40px
+      border-radius: 100%
+      float: left
+
+   .author
+      border-top: none
+      padding-top: 5px
+      width: 100%
+      display: block
+      text-decoration: none
+
+      p
+         margin-left: 50px
+         margin-top: 10px
+         color: white
+         span
+            font-size: 1.4rem
+            color: $green1
+            display: block
+
+.comment.two
+   width: 100%
+   padding-left: 40px
+   height: auto
 
 .video-page-right
    border-left: 2px solid $primaryColorLight
