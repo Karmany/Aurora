@@ -119,8 +119,18 @@
 					display: none
 
 					.lecture
-						margin-left: 40px
+						margin-left: 60px
 						margin-right: 30px
+
+						svg
+							float: left
+							margin-top: 5px
+							width: 14px
+							height: 14px
+
+							&:hover
+								fill: $alert
+								transform: scale(1.2)
 
 						a
 							display: block
@@ -144,6 +154,7 @@
 				// Hover for the add-lecture div
 				&:hover
 					color: $green2
+					cursor: pointer
 
 					.add-icon
 						fill: $green2

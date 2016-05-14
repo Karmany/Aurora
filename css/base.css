@@ -2508,8 +2508,20 @@ textarea {
 }
 
 #main-admin #subjectsModal .modal-content .subject .lecture-list .lecture {
-  margin-left: 40px;
+  margin-left: 60px;
   margin-right: 30px;
+}
+
+#main-admin #subjectsModal .modal-content .subject .lecture-list .lecture svg {
+  float: left;
+  margin-top: 5px;
+  width: 14px;
+  height: 14px;
+}
+
+#main-admin #subjectsModal .modal-content .subject .lecture-list .lecture svg:hover {
+  fill: #E57373;
+  transform: scale(1.2);
 }
 
 #main-admin #subjectsModal .modal-content .subject .lecture-list .lecture a {
@@ -2536,6 +2548,7 @@ textarea {
 
 #main-admin #subjectsModal .modal-content .add-lecture:hover {
   color: #98ff9b;
+  cursor: pointer;
 }
 
 #main-admin #subjectsModal .modal-content .add-lecture:hover .add-icon {
