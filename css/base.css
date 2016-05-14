@@ -2063,6 +2063,10 @@ p.secondary {
   line-height: 3.2rem / 1.3;
 }
 
+footer p.secondary {
+  color: #455A64;
+}
+
 .center-text {
   text-align: center;
 }
@@ -3885,6 +3889,45 @@ button.comment:active {
 .video-page-right {
   border-left: 2px solid #6d828c;
   padding-left: 40px;
+}
+
+.about .maps {
+  background-color: #455A64;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
+  padding: 20px;
+  border-radius: 2px;
+  margin-top: 50px;
+}
+
+.about .usSection {
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+  text-align: center;
+}
+
+.about li {
+  list-style-type: none;
+  display: block;
+  margin: auto;
+}
+
+.about .usImg {
+  height: 150px;
+  border: 5px solid #79d894;
+  border-radius: 50px;
+  padding: 30px;
+}
+
+.about .usH3 {
+  margin-bottom: 0px !important;
+}
+
+.about .usTxt {
+  margin-top: 0px;
+}
+
+.about .usDescription {
+  margin-bottom: 50px;
 }
 
 /* BEGIN Thin */

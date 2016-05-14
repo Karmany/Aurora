@@ -13,7 +13,7 @@ html#loginhtml(lang="en", ng-app="myApp")
             source(src='img/aurora.webm', type='video/webm')
          #login
             h1#loginheader Welcome Back
-            form#logmein(name='loginForm', action='index.html', method='post', onsubmit='return validateLogin(this);')
+            form#logmein(name='loginForm', action='index.html', method='get', onsubmit='return validateLogin(this);')
                #loginState
                   #loginField1.field-wrap
                      input.loginInput#loginEmail(type='email', name='email' placeholder='Email Address', required='')
