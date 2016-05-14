@@ -13,21 +13,25 @@ html#loginhtml(lang="en", ng-app="myApp")
          #login
             h1#loginheader Welcome Back
             form#logmein(name='loginForm', action='index.html', method='post', onsubmit='return validate(this);')
-               #login
+               #loginState
                   #loginField1.field-wrap
-                     input.username.loginInput#loginEmail(type='email', name='email' placeholder='Email Address', required='')
+                     input.loginInput#loginEmail(type='email', name='email' placeholder='Email Address', required='')
                   #loginField2.field-wrap
                      input.loginInput#loginPassword(type='password', name='password' placeholder='Password', required='')
-               #register
-                  #field1.field-wrap
-                     input.username.registerInput#registerEmail(type='email', name='email' placeholder='Email Address', required='')
-                  #field1.field-wrap
-                     input.
-                  #field1.field-wrap
+               #registerState
+                  #registerfield1.field-wrap
+                     input.registerInput#registerFirstName(type='text', name='name1' placeholder='First name', required='')
+                  #registerfield2.field-wrap
+                     input.registerInput#registerLastName(type='text', name='name2' placeholder='Last name', required='')
+                  #registerfield3.field-wrap
+                     input.registerInput#registerEmail(type='email', name='email' placeholder='Email Address', required='')
+                  #registerfield4.field-wrap
+                     input.registerInput#registerTlf(type='text', name='tlf' placeholder='Phone number', required='')
+                  #registerfield5.field-wrap
+                     input.registerInput#registerPass1(type='password', name='password1' placeholder='Password', required='')
+                  #registerfield6.field-wrap
+                     input.registerInput#registerPass2(type='password', name='password2' placeholder='Repeat password', required='')
                   
-                  #field1.field-wrap
-                  
-                  #field1.field-wrap
                p#loginError Wrong email or password
                #links
                   a#registerlink(href='#') Register
