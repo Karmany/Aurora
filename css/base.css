@@ -1808,6 +1808,10 @@ footer .links-mobile {
   display: none;
 }
 
+footer .links a, footer .links-mobile a {
+  color: #455A64;
+}
+
 .copyright {
   background-color: #56b571;
   width: 100%;
@@ -1835,18 +1839,6 @@ footer .links-mobile {
 
 .content {
   animation: fade-in 0.5s 0.5s ease forwards;
-<<<<<<< HEAD
-}
-
-@keyframes fade-in {
-  33% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-=======
 }
 
 @keyframes fade-in {
@@ -1875,7 +1867,6 @@ footer .links-mobile {
   width: 250px;
   border: 2px solid purple;
   height: 500px;
->>>>>>> 4a42c68afa1dea19672d5186a8af102aab5be042
 }
 
 body {
@@ -2046,13 +2037,26 @@ a.hyperlink:active {
 .lectures-student .admin-delete {
   display: inline-block;
   background-color: #E57373;
-  width: 45%;
+  width: auto;
   border-radius: 2px;
   text-align: center;
-  padding: 5px 0;
+  padding: 0;
   text-decoration: none;
   margin-bottom: 20px;
   color: white;
+  padding: 0 10px;
+}
+
+.lectures-student .admin-delete .delete-forever-icon {
+  display: inline-block;
+  margin-bottom: -3px;
+  padding: 0;
+}
+
+.lectures-student .admin-delete p {
+  display: inline-block;
+  padding: 0;
+  margin: 7px 0;
 }
 
 .lectures-student .teacher-edit {
@@ -2060,12 +2064,26 @@ a.hyperlink:active {
   background-color: #79d894;
   text-decoration: none;
   color: #455A64;
-  width: 45%;
+  width: auto;
   border-radius: 2px;
   text-align: center;
-  padding: 5px 0;
+  padding: 0;
   margin-bottom: 30px;
-  margin-left: 10%;
+  margin-left: 20px;
+  padding: 0 10px;
+}
+
+.lectures-student .teacher-edit .edit-icon {
+  display: inline-block;
+  fill: #455A64;
+  margin-bottom: -3px;
+  padding: 0;
+}
+
+.lectures-student .teacher-edit p {
+  display: inline-block;
+  padding: 0;
+  margin: 7px 0;
 }
 
 @media (max-width: 1050px) {
@@ -3133,13 +3151,26 @@ textarea {
 #subjectWrapper .admin-delete {
   display: none;
   background-color: #E57373;
-  width: 45%;
+  width: auto;
   border-radius: 2px;
   text-align: center;
-  padding: 5px 0;
+  padding: 0;
   text-decoration: none;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: white;
+  padding: 0 10px;
+}
+
+#subjectWrapper .admin-delete .delete-forever-icon {
+  display: inline-block;
+  margin-bottom: -3px;
+  padding: 0;
+}
+
+#subjectWrapper .admin-delete p {
+  display: inline-block;
+  padding: 0;
+  margin: 7px 0;
 }
 
 #subjectWrapper .teacher-edit {
@@ -3147,12 +3178,26 @@ textarea {
   background-color: #79d894;
   text-decoration: none;
   color: #455A64;
-  width: 45%;
+  width: auto;
   border-radius: 2px;
   text-align: center;
-  padding: 5px 0;
-  margin-bottom: 15px;
-  margin-left: 10%;
+  padding: 0;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  padding: 0 10px;
+}
+
+#subjectWrapper .teacher-edit .edit-icon {
+  display: inline-block;
+  fill: #455A64;
+  margin-bottom: -3px;
+  padding: 0;
+}
+
+#subjectWrapper .teacher-edit p {
+  display: inline-block;
+  padding: 0;
+  margin: 7px 0;
 }
 
 @media (max-width: 1000px) {
@@ -3861,9 +3906,6 @@ button.comment:active {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
   padding: 20px;
   border-radius: 2px;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   margin-top: 50px;
 }
 
@@ -3896,21 +3938,6 @@ button.comment:active {
 
 .about .usDescription {
   margin-bottom: 50px;
-=======
->>>>>>> 4a42c68afa1dea19672d5186a8af102aab5be042
-}
-
-.about ul {
-  margin: 0;
-  padding: 0 0 20px 0;
-}
-
-.about ul li {
-  list-style-type: none;
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
->>>>>>> 4a42c68afa1dea19672d5186a8af102aab5be042
 }
 
 /* BEGIN Thin */
