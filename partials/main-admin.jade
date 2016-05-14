@@ -5,10 +5,12 @@
 		.modal-content 
 			span.close X
 			h2 Manage Subjects
-			.subject#webProject 
-				// Should be able to add, modify and delete a subject category
+			.subject#webProject
+				.icon-alignment 
+					include ../includes/svg-icons/edit-icon.jade
+					include ../includes/svg-icons/delete-forever-icon.jade
+					
 				h3 IMT1471: Web Project 1
-				//- img.headline-icon(src="../img/iconography/ic_keyboard_arrow_right_black_24px.svg")
 				.lecture-list
 					.lecture.first
 						a(href="#") Project Management and Planning
@@ -23,9 +25,11 @@
 						a(href="#") Something here
 						
 			.subject#webCoding
-				// Should be able to add, modify and delete a subject category
+				.icon-alignment 
+					include ../includes/svg-icons/edit-icon.jade
+					include ../includes/svg-icons/delete-forever-icon.jade
+					
 				h3 IMT1292: Web Coding
-				//- img.headline-icon(src="../img/iconography/ic_keyboard_arrow_right_black_24px.svg")
 				.lecture-list 
 					.lecture.first
 						a(href="#") 1st Introductury Lecture to HTML
@@ -40,9 +44,11 @@
 						a(href="#") 3rd Introductury Lecture to HTML
 						
 			.subject#mobileMedia
-				// Should be able to add, modify and delete a subject category
+				.icon-alignment 
+					include ../includes/svg-icons/edit-icon.jade
+					include ../includes/svg-icons/delete-forever-icon.jade
+					
 				h3 IMT1292: Mobile Media Design 
-				//- img.headline-icon(src="../img/iconography/ic_keyboard_arrow_right_black_24px.svg")
 				.lecture-list 
 					.lecture.first
 						a(href="#") Mobile and Games
@@ -57,9 +63,11 @@
 						a(href="#") Something here
 			
 			.subject#colourManagement
-				// Should be able to add, modify and delete a subject category
+				.icon-alignment 
+					include ../includes/svg-icons/edit-icon.jade
+					include ../includes/svg-icons/delete-forever-icon.jade
+					
 				h3 IMT2002: Digital Image Reproduction and Colour Management 
-				//- img.headline-icon(src="../img/iconography/ic_keyboard_arrow_right_black_24px.svg")
 				.lecture-list 
 					.lecture.first
 						a(href="#") Introduction to RAW format
@@ -72,6 +80,10 @@
 						
 					.lecture
 						a(href="#") Digital Printer Technology
+			
+			.add-lecture
+				include ../includes/svg-icons/add-icon.jade
+				h3 Add a new subject category
 						
 	// Teachers modal 
 	#teachersModal.modal 
@@ -114,8 +126,6 @@
 					ul
 						li <a href="#">Camilla Svensen</a>
 						li <a href="#">Karl Svenning</a>
-						li <a href="#">Kristine Nilsen</a>
-						li <a href="#">Ola Kristiansen</a>
 						li <a href="#">Rajesh Singh</a>
 						li <a href="#">Student name</a>
 						li <a href="#">Student name</a>
@@ -127,9 +137,6 @@
 					ul
 						li <a href="#">Camilla Svensen</a>
 						li <a href="#">Karl Svenning</a>
-						li <a href="#">Kristine Nilsen</a>
-						li <a href="#">Ola Kristiansen</a>
-						li <a href="#">Rajesh Singh</a>
 						li <a href="#">Student name</a>
 						li <a href="#">Student name</a>
 						li <a href="#">Student name</a>
@@ -137,11 +144,6 @@
 				.year-enrolled
 					h3 2016 
 					ul
-						li <a href="#">Camilla Svensen</a>
-						li <a href="#">Karl Svenning</a>
-						li <a href="#">Kristine Nilsen</a>
-						li <a href="#">Ola Kristiansen</a>
-						li <a href="#">Rajesh Singh</a>
 						li <a href="#">Student name</a>
 						li <a href="#">Student name</a>
 						li <a href="#">Student name</a>

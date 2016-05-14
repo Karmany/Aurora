@@ -17,33 +17,10 @@ btnOpenSubjects.onclick = function() {
 	$('.background-opacity').fadeIn(200);
 };
 
-// Get the background-opacity from css
-
-
 // When the user clicks on <span> (X), close the modal
 subjectsClose.onclick = function() {
 	subjectsModal.style.display = 'none';
 };
-
-
-
-
-// $('#subjectsModal').click(function(){
-// 	$('#subjectsModal').show(function(){
-// 		document.body.addEventListener('click', boxCloser, false);
-// 	});
-// });
-//
-// function boxCloser(e){
-// 	if(e.target.id != '#subjectsModal'){
-// 		document.body.removeEventListener('click', boxCloser, false);
-// 		$('#subjectsModal').hide();
-// 	}
-// }
-
-
-
-
 
 // jQuery to toggle visibility for subjects
 // IMT1471 WEB PROJECT
