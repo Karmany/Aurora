@@ -21,6 +21,7 @@ var page14 = 'notmy-profile-admin'
 var page15 = 'faq'
 var page16 = 'about'
 var page17 = 'testpage'
+var page18 = 'upload'
 
 $('.page-1-link a').text(page1.replace('-', ' '));
 $('.page-2-link a').text(page2.replace('-', ' '));
@@ -90,6 +91,9 @@ app.config(['$routeProvider', function($routeProvider){
 	})
 	.when('/' + page17,{
 	templateUrl: 'partials/testpage.html'
+	})
+	.when('/' + page18,{
+	templateUrl: 'partials/upload.html'
 	})
 	.otherwise({
 	templateUrl: 'partials/default.html'

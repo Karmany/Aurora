@@ -1,0 +1,41 @@
+#uploadWrapper
+   .row
+      .col.col--2-of-4.col--m-2-of-4
+         form#uploadForm(name='uploadFiles', action='index.html', method='get')
+            #uploadVid
+               label.upLabel(for="video") Video
+               input(type='file', id='videoUpload' name='videoUpload')
+            #uploadTrans
+               label.upLabel(for="transcript") Transcript
+               input(type='file', id='transUpload', name='transUpload')
+            #uploadSlides
+               label.upLabel(for="slides") Slides
+               input(type='file', id='slidesUpload', name='slidesUpload')
+            button(id='finalUpload', type='button') Upload lecture
+            
+               
+      
+      .col.col--2-of-4.col--m-2-of-4
+         form#uploadBreakpoints(name='uploadBreakpoints', action='index.html', method='get')
+            #wrapperBreakpoints
+               row
+                  .col.col--2-of-2
+                     input.theBreakpoints(type='text', name='breakpoint1', placeholder='1:01')
+                     input.theKeywords(type='text', name='keyword1', placeholder='My Keyword 1')
+                  .col.col--2-of-2
+                     input.theBreakpoints(type='text', name='breakpoint2', placeholder='1:02')
+                     input.theKeywords(type='text', name='keyword2', placeholder='My Keyword 2')
+                  .col.col--2-of-2
+                     input.theBreakpoints(type='text', name='breakpoint3', placeholder='1:03')
+                     input.theKeywords(type='text', name='keyword3', placeholder='My Keyword 3')
+                  .col.col--2-of-2
+                     input.theBreakpoints(type='text', name='breakpoint4', placeholder='1:04')
+                     input.theKeywords(type='text', name='keyword4', placeholder='My Keyword 4')
+                  .col.col--2-of-2
+                     input.theBreakpoints(type='text', name='breakpoint5', placeholder='1:05')
+                     input.theKeywords(type='text', name='keyword5', placeholder='My Keyword 5')
+                  .col.col--2-of-2
+                     button(id='addButton', type='button') Add new keyword
+                  
+         
+            

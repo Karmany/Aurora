@@ -1,0 +1,69 @@
+#uploadWrapper
+   #uploadForm
+      background: $primaryColorDark
+      border-radius: 4px
+      padding: 40px
+      box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3)
+
+      .field-wrap
+         position: relative
+         margin-bottom: 40px
+
+   #uploadVid, #uploadTrans, #uploadSlides
+      padding: 10px
+
+   .upLabel
+      color: $green1
+
+#uploadBreakpoints
+   background: $primaryColorDark
+   border-radius: 4px
+   padding: 40px
+   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3)
+
+.theBreakpoints, .theKeywords
+   font-size: 22px
+   display: block
+   width: 100%
+   height: 100%
+   padding: 5px 10px
+   background: none
+   background-image: none
+   border: 2px solid $primaryColorLight
+   color: #ffffff
+   border-radius: 2px
+   -webkit-transition: border-color .25s ease, box-shadow .25s ease
+   transition: border-color .25s ease, box-shadow .25s ease
+   -webkit-appearance: none
+   &:focus
+      outline: $green2
+
+.theBreakpoints
+   //margin-bottom: 5px
+   border-bottom: none
+
+.theKeywords
+   margin-bottom: 30px
+   border-top: none
+
+#addButton, #finalUpload
+   border: 0
+   outline: none
+   border-radius: 0
+   padding: 15px 0
+   font-size: 2rem
+   font-weight: 600
+   text-transform: uppercase
+   letter-spacing: .1em
+   display: block
+   width: 100%
+   background: $green1
+   color: $primaryColor
+   -webkit-transition: all 0.5s ease
+   transition: all 0.5s ease
+   -webkit-appearance: none
+   &:hover, &:focus
+      background: $green2
+
+#finalUpload
+   margin-top: 100px
