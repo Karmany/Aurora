@@ -7,23 +7,6 @@ $(function() {
 	}
 });
 
-$('.loginbutton').on('click', function(){
-
-  if($('.username').val() == 'student@aurora.com'){
-	  window.location.href = 'index.html#/' + page3;
-	  sessionStorage.role = 'student';
-
-  }else if ($('.username').val() == 'teacher@aurora.com'){
-	  window.location.href = 'index.html#/' + page5;
-	  sessionStorage.role = 'teacher';
-
-  }else if ($('.username').val() == 'admin@aurora.com') {
-	  window.location.href = 'index.html#/' + page6;
-	  sessionStorage.role = 'admin';
-  }
-
-});
-
 $('.logout').on('click', function() {
 	sessionStorage.removeItem('role');
 });

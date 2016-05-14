@@ -1708,8 +1708,12 @@ footer {
   color: #455A64;
   display: flex;
   width: 100%;
-  flex-flow: column;
-  justify-content: space-between;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 footer .container {
@@ -1897,6 +1901,17 @@ p.secondary {
   margin-bottom: 40px;
 }
 
+a.hyperlink {
+  font-weight: 300;
+  line-height: 60px;
+  text-decoration: underline;
+  color: #79d894;
+}
+
+a.hyperlink:active {
+  color: #98ff9b;
+}
+
 .lectures-student .img-wrap {
   padding-left: 0px;
 }
@@ -2061,7 +2076,7 @@ p.secondary {
   margin: 0px 0px 30px 0px;
 }
 
-.logininput {
+.loginInput, .registerInput {
   font-size: 22px;
   display: block;
   width: 100%;
@@ -2077,7 +2092,7 @@ p.secondary {
   -webkit-appearance: none;
 }
 
-.logininput:focus {
+.loginInput:focus, .registerInput:focus {
   outline: #98ff9b;
 }
 
@@ -2091,15 +2106,41 @@ textarea {
   resize: vertical;
 }
 
-.loginlink {
+#forgotlink {
+  float: right;
   text-decoration: none;
   color: #79d894;
   -webkit-transition: .5s ease;
   transition: .5s ease;
+  font-family: roboto;
+  font-weight: 300;
+  font-size: 1.6rem;
 }
 
-.loginlink:hover {
+#forgotlink:hover {
   color: #98ff9b;
+}
+
+#registerlink {
+  float: left;
+  text-decoration: none;
+  color: #79d894;
+  transition: .5s ease;
+  font-family: roboto;
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+#registerlink:hover {
+  color: #98ff9b;
+}
+
+#links {
+  width: 100%;
+  height: 20px;
+  margin-top: -20px;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
 .unregistered {
@@ -2119,7 +2160,7 @@ textarea {
   color: #98ff9b;
 }
 
-.loginbutton {
+#loginbutton {
   border: 0;
   outline: none;
   border-radius: 0;
@@ -2137,17 +2178,11 @@ textarea {
   -webkit-appearance: none;
 }
 
-.loginbutton:hover, .loginbutton:focus {
+#loginbutton:hover, #loginbutton:focus {
   background: #98ff9b;
 }
 
-.forgot {
-  margin-top: -20px;
-  text-align: right;
-  margin-bottom: 20px;
-}
-
-#field1 {
+#loginField1 {
   margin-bottom: 20px;
 }
 
@@ -2164,6 +2199,10 @@ textarea {
   font-size: 2rem;
   display: none;
   padding-bottom: 20px;
+}
+
+#registerState {
+  display: none;
 }
 
 #main-student .notification-content .teacher-headline, #main-student .notification-content .student-headline {
@@ -3461,7 +3500,7 @@ ul.slide-timeline li a:hover {
   left: 2px;
 }
 
-.lecture-poster .profile-img {
+.profile-img {
   margin-top: 16px;
   width: 40px;
   height: 40px;
@@ -3469,7 +3508,7 @@ ul.slide-timeline li a:hover {
   float: left;
 }
 
-.lecture-poster .author {
+.author {
   border-top: 2px solid #6d828c;
   padding-top: 5px;
   width: 200px;
@@ -3477,16 +3516,20 @@ ul.slide-timeline li a:hover {
   text-decoration: none;
 }
 
-.lecture-poster .author p {
+.author p {
   margin-left: 50px;
   margin-top: 10px;
   color: white;
 }
 
-.lecture-poster .author p span {
+.author p span {
   font-size: 1.4rem;
   color: #79d894;
   display: block;
+}
+
+.comment-section {
+  margin-top: 40px;
 }
 
 textarea.comment {
@@ -3549,6 +3592,67 @@ button.comment:hover {
 button.comment:active {
   background-color: #314650;
   outline: none;
+}
+
+.comment {
+  width: 100%;
+  height: auto;
+}
+
+.comment strong {
+  color: white;
+}
+
+.comment strong svg {
+  height: 2rem;
+  position: relative;
+  top: 5px;
+}
+
+.comment strong:hover {
+  color: #79d894;
+}
+
+.comment strong:hover svg {
+  fill: #79d894;
+}
+
+.comment .profile-img {
+  margin-top: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  float: left;
+}
+
+.comment .author {
+  border-top: none;
+  padding-top: 5px;
+  width: 100%;
+  display: block;
+  text-decoration: none;
+}
+
+.comment .author p {
+  margin-left: 50px;
+  margin-top: 10px;
+  color: white;
+}
+
+.comment .author p span {
+  font-size: 1.4rem;
+  color: #79d894;
+  display: block;
+}
+
+.comment.two {
+  width: 100%;
+  padding-left: 40px;
+  height: auto;
+  background-image: url(../img/iconography/replied.svg);
+  background-size: 2rem auto;
+  background-position: left center;
+  background-repeat: no-repeat;
 }
 
 .video-page-right {
