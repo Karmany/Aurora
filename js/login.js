@@ -13,16 +13,22 @@ function validate() {
     if (email === studentEmail) {
         if (pass === studentPassword) {
             console.log("Student ok!");
+            sessionStorage.role = 'student';
+            $('#logmein').attr('action', 'index.html#/' + page3)
             return true;
         }
     } else if (email === teacherEmail) {
         if (pass === teacherPassword) {
             console.log("Teacher ok!");
+            sessionStorage.role = 'teacher';
+            $('#logmein').attr('action', 'index.html#/' + page5)
             return true;
         }
     } else if (email === adminEmail) {
         if (pass === adminPassword) {
             console.log("Admin ok!");
+            $('#logmein').attr('action', 'index.html#/' + page6)
+            sessionStorage.role = 'admin';
             return true;
         }
     } else {
