@@ -1296,6 +1296,7 @@ header {
 
 header svg#logo {
   height: 50px;
+  margin: 0 auto;
 }
 
 header nav {
@@ -1689,7 +1690,8 @@ nav.mobile .nav-items .search-mobile .blur-trigger-mobile {
 
 .page-wrap {
   /* equal to footer height */
-  margin-bottom: -410px;
+  margin-bottom: -450px;
+  min-height: 100%;
 }
 
 .page-wrap:after {
@@ -1698,7 +1700,7 @@ nav.mobile .nav-items .search-mobile .blur-trigger-mobile {
 }
 
 footer, .page-wrap:after {
-  height: 410px;
+  height: 450px;
 }
 
 footer {
@@ -1706,6 +1708,8 @@ footer {
   color: #455A64;
   display: flex;
   width: 100%;
+  flex-flow: column;
+  justify-content: space-between;
 }
 
 footer .container {
@@ -1806,10 +1810,12 @@ footer .links-mobile {
 
 .copyright {
   background-color: #56b571;
+  width: 100%;
+  margin-top: 50px;
+  height: 50px;
+  line-height: 50px;
   text-align: center;
   color: #455A64;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   font-weight: 300;
 }
 
