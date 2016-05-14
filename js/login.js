@@ -1,8 +1,8 @@
 //LOGIN VALIDATION
 function validateLogin() {
     "use strict";
-    var email = document.forms.logmein.email.value;
-    var pass = document.forms.logmein.password.value;
+    var email = document.forms.logmein.loginEmail.value;
+    var pass = document.forms.logmein.loginPassword.value;
     var studentEmail = "student@aurora.no";
     var studentPassword = "studentpwd";
     var teacherEmail = "teacher@aurora.no";
