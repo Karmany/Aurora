@@ -39,8 +39,7 @@ $(window).on('hashchange load', function(e){
 		  $('.page-1-link, .page-4-link, .search, .logout').show();
 		  $('.logout a').text('sign in')
 
-		  // Subjects coding
-		  $('.sub-wrap').hide();
+
 	  }
 
   });
