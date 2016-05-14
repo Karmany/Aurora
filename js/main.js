@@ -55,6 +55,9 @@ $(window).on('hashchange load', function(e){
 		  // unregistered header nav links
 		  $('.page-1-link, .page-4-link, .search, .logout').show();
 		  $('.logout a').text('sign in')
+
+		  // Subjects coding
+		  $('.sub-wrap').hide();
 	  }
 
   });
