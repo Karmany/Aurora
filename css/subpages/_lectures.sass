@@ -1,5 +1,9 @@
 .lectures-student
 
+   a
+      text-decoration: none
+      color: white
+
    .img-wrap
       padding-left: 0px
 
@@ -11,7 +15,7 @@
       margin-top: 0
       margin-bottom: 10px
 
-   .txt-wrap p
+   //.txt-wrap p
       margin-top: 0
 
    .date-space-fix
@@ -58,7 +62,7 @@
 
 
    .comment-wrap-teacher
-      margin-top: -15px
+      margin-top: 10px
       margin-bottom: 25px
       width: 100%
       float: left
@@ -81,12 +85,34 @@
       p
          margin-left: 50px
          margin-top: 10px
-         color: white
 
          span
             font-size: 1.4rem
             color: $green1
             display: block
+
+   .admin-delete
+      display: inline-block
+      background-color: $alert
+      width: 45%
+      border-radius: 2px
+      text-align: center
+      padding: 5px 0
+      text-decoration: none
+      margin-bottom: 20px
+      color: white
+
+   .teacher-edit
+      display: inline-block
+      background-color: $green1
+      text-decoration: none
+      color: $primaryColor
+      width: 45%
+      border-radius: 2px
+      text-align: center
+      padding: 5px 0
+      margin-bottom: 30px
+      margin-left: 10%
 
    @media (max-width: 1050px)
       .img-wrap
