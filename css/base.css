@@ -1708,12 +1708,8 @@ footer {
   color: #455A64;
   display: flex;
   width: 100%;
-  -webkit-flex-flow: column;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: column;
+  justify-content: space-between;
 }
 
 footer .container {
@@ -2125,6 +2121,7 @@ textarea {
   float: left;
   text-decoration: none;
   color: #79d894;
+  -webkit-transition: .5s ease;
   transition: .5s ease;
   font-family: roboto;
   font-weight: 300;

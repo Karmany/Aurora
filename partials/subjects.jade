@@ -345,12 +345,43 @@ script.
 
 // Star og starborder må bytte klasse hver for seg da de blir trykket på. 
 
-
-
-// Scripts for sub button og lecture link
 script.
+   
    var codingNotSub = true;
+   var mobileNotSub = true;
+   var projectNotSub = true;
+   var colorNotSub = true;
    $(document).ready(function(){
+      
+      if(sessionStorage.role == 'unregistered'){
+         $('.sub-wrap').hide();
+      }
+      if(sessionStorage.role == 'student'){
+         $('.codingOn').toggle()
+         $('.codingOff').toggle()
+         $('.mobileOn').toggle()
+         $('.mobileOff').toggle()
+         $('.projectOn').toggle()
+         $('.projectOff').toggle()
+      }
+      if(sessionStorage.role == 'teacher'){
+         $('.sub-wrap').hide();
+         var codingNotSub = false;
+         var mobileNotSub = false;
+         var projectNotSub = false;
+         var colorNotSub = false;
+      }
+      if(sessionStorage.role == 'admin'){
+         $('.sub-wrap').hide();
+         var codingNotSub = false;
+         var mobileNotSub = false;
+         var projectNotSub = false;
+         var colorNotSub = false;
+      }
+      
+   // Scripts for sub button og lecture link
+   
+   
       $('.codingOff').click(function(){
          $('.codingOff').toggle()
          $('.codingOn').toggle()
@@ -366,9 +397,8 @@ script.
             e.preventDefault();
          };
       });  
-   });
+   }); 
    
-   var mobileNotSub = true;
    $(document).ready(function(){
       $('.mobileOff').click(function(){
          $('.mobileOff').toggle()
@@ -387,7 +417,6 @@ script.
       });  
    });
    
-   var projectNotSub = true;
    $(document).ready(function(){
       $('.projectOff').click(function(){
          $('.projectOff').toggle()
@@ -406,7 +435,6 @@ script.
       });  
    });
    
-   var colorNotSub = true;
    $(document).ready(function(){
       $('.colorOff').click(function(){
          $('.colorOff').toggle()
@@ -501,5 +529,6 @@ script.
          $('.colorHeaderLatest').toggle()
       });   
    });
+
    
    
