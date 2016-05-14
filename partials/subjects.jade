@@ -2,9 +2,9 @@
    .row
       .col.col--4-of-5.col--m-4-of-4
          .row
-            
             #results.col.col--5-of-5
                #accordion
+                  //SUBJECT 1 WEB CODING
                   button.accordion.expand IMT1292: Web Coding
                      include ../includes/svg-icons/expand.jade
                   .panel
@@ -22,32 +22,77 @@
                      .row
                         .col.col--2-of-2.sub-wrap
                            hr
-                           a.subBtn
+                           a.subBtn.codingOff
                               include ../includes/svg-icons/unchecked.jade
                               p Subscribe
-                           a.subPressed
+                           a.subPressed.codingOn
                               include ../includes/svg-icons/checked.jade
                               p Subscribe
                            hr
                      .row
-                        h2.col.col--4-of-4.latest-lecture Latest Lecture 
+                        h2.col.col--4-of-4.latest-lecture.codingHeaderLatest Latest Lecture 
+                        h2.col.col--4-of-4.header-all.codingHeaderAll All Lectures 
+                     //WEBCODING LECTURE 1   
                      .row   
-                        .col.col--1-of-4.hue
+                        .col.col--1-of-4.displayNoneTablet
                            img.lecture-img(src='img/slides/Lecture3-1.010.jpeg')
                            .comment-wrap
                               img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
                               .comment-txt
-                                 a(href='') Comments (2)
+                                 a(href='') Comments (4)
                         .col.col--3-of-4
-                           a.lec-link(href='#play')   
+                           a.lec-link.codingLink(href='#play')   
                               h3.lecture-head IMT1292 Web Coding:  -  3rd Introductury Lecture to HTML
-                              p In this lecture we go through four main topics. Entities, lists, images and namegiving. If you have not seen the previous lectures on this, I would recommend you watching those before this one, since this one builds on what we learned from them.
-                              p.secondary.date-space-fix 19.05.2016
+                              p In this lecture we go though alot of diffrent topics it is important to be aware of when designing for mobile. There is alot of diffrent topics, but it is important, so I would recommend taking notes.
+                              p.secondary 17.05.2016
+                     
+                     a.all-lectures.codingAll(href='') View all lectures          
+                     .hiddenLec.codingHiddenLec
+                        //WEBCODING LECTURE 2   
+                        .row   
+                           .col.col--1-of-4.displayNoneTablet
+                              img.lecture-img(src='img/lecture_images/webcoding_lecture2.png')
+                              .comment-wrap
+                                 img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                 .comment-txt
+                                    a(href='') Comments (6)
+                           .col.col--3-of-4
+                              a.lec-link.codingLink(href='#play')   
+                                 h3.lecture-head IMT1292 Web Coding: 1st Introductory Lecture to CSS
+                                 p In this lecture we go through the first basics of CSS and how it connects to the HTML we've already learned. If you havent seen the previous HTML lectures, or know about HTML from before, I would recommend going back and watching from the start of this subject.
+                                 p.secondary 12.05.2016
+                        //WEBCODING LECTURE 3   
+                        .row   
+                           .col.col--1-of-4.displayNoneTablet
+                              img.lecture-img(src='img/lecture_images/webcoding_lecture3.png')
+                              .comment-wrap
+                                 img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                 .comment-txt
+                                    a(href='') Comments (5)
+                           .col.col--3-of-4
+                              a.lec-link.codingLink(href='#play')   
+                                 h3.lecture-head IMT1292 Web Coding: 2rd Introductury Lecture to HTML
+                                 p In this lecture we continue on the intro to HTML. If you are new to HTML and havent watched the last lecture, I would recommend watching the first lecture in this subject first.
+                                 p.secondary 05.05.2016   
                         
-                        .col.col--2-of-2
-                           a.all-lectures(href='#lectures-student') View all subscribed lectures   
+                        //WEBCODING LECTURE 4
+                        .row   
+                           .col.col--1-of-4.displayNoneTablet
+                              img.lecture-img(src='img/lecture_images/webcoding_lecture4.png')
+                              .comment-wrap
+                                 img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                 .comment-txt
+                                    a(href='') Comments (4)
+                           .col.col--3-of-4
+                              a.lec-link.codingLink(href='#play')   
+                                 h3.lecture-head IMT1292 Web Coding: 1st Introductury Lecture to HTML
+                                 p In this lecture we go through the first basics of HTML. This will be completely from scratch so if you are new to HTML and don't know anything, this is the lecture for you.
+                                 p.secondary 28.04.2016
                            
-
+                        
+                        a.all-lectures.codingNone(href='') Close Lectures 
+                                 
+                  // SUBJECT 2 - MOBILE MEDIA DESIGN
                   button.accordion.expand IMT2661: Mobile Media Design
                      include ../includes/svg-icons/expand.jade
                   .panel
@@ -65,33 +110,63 @@
                      .row
                         .col.col--2-of-2.sub-wrap
                            hr
-                           a.subBtn
+                           a.subBtn.mobileOff
                               include ../includes/svg-icons/unchecked.jade
                               p Subscribe
-                           a.subPressed
+                           a.subPressed.mobileOn
                               include ../includes/svg-icons/checked.jade
                               p Subscribe
                            hr
                      .row
-                        h2.col.col--4-of-4.latest-lecture Latest Lecture 
+                        h2.col.col--4-of-4.latest-lecture.mobileHeaderLatest Latest Lecture 
+                        h2.col.col--4-of-4.header-all.mobileHeaderAll All Lectures 
+                     //MOBILE LECTURE 1   
                      .row   
-                        .col.col--1-of-4.hue
-                           img.lecture-img(src='../img/lecture_images/mobile_lecture1.png')
+                        .col.col--1-of-4.displayNoneTablet
+                           img.lecture-img(src='img/lecture_images/mobile_lecture1.png')
                            .comment-wrap
                               img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
                               .comment-txt
-                                 a(href='') Comments (2)
+                                 a(href='') Comments (3)
                         .col.col--3-of-4
-                           a.lec-link(href='#play')   
-                              h3.lecture-head IMT2661 Mobile Media Design: - Mobile Design
+                           a.lec-link.mobileLink(href='#play')   
+                              h3.lecture-head IMT2661 Mobile Media Design: Mobile Design
                               p In this lecture we go though alot of diffrent topics it is important to be aware of when designing for mobile. There is alot of diffrent topics, but it is important, so I would recommend taking notes.
-                              p.secondary.date-space-fix 17.05.2016
+                              p.secondary 17.05.2016
+                     
+                     a.all-lectures.mobileAll(href='') View all lectures          
+                     .hiddenLec.mobileHiddenLec
+                        //MOBILE LECTURE 2   
+                        .row   
+                           .col.col--1-of-4.displayNoneTablet
+                              img.lecture-img(src='img/lecture_images/mobile_lecture2.png')
+                              .comment-wrap
+                                 img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                 .comment-txt
+                                    a(href='') Comments (5)
+                           .col.col--3-of-4
+                              a.lec-link.mobileLink(href='#play')   
+                                 h3.lecture-head IMT2661 Mobile Media Design: Mobile and Games
+                                 p In this lecture we go through some basics of what play and gaming is. Afterwards we talk about the mobile gaming industry and the future of mobile gaming.
+                                 p.secondary 10.05.2016
+                        //MOBILE LECTURE 3   
+                        .row   
+                           .col.col--1-of-4.displayNoneTablet
+                              img.lecture-img(src='img/lecture_images/mobile_lecture3.png')
+                              .comment-wrap
+                                 img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                 .comment-txt
+                                    a(href='') Comments (4)
+                           .col.col--3-of-4
+                              a.lec-link.mobileLink(href='#play')   
+                                 h3.lecture-head IMT2661 Mobile Media Design: Mobile communication technology
+                                 p In this lecture we continue on the intro to HTML. If you are new to HTML and havent watched the last lecture, I would recommend watching the first lecture in this subject first.
+                                 p.secondary 03.05.2016   
                         
-                        .col.col--2-of-2
-                           a.all-lectures(href='#lectures-student') View all subscribed lectures   
-                           
+                        a.all-lectures.mobileNone(href='') Close Lectures 
 
 
+                  //SUBJECT 3 WEB PROJECT
                   button.accordion.expand IMT1471: Web Project
                      include ../includes/svg-icons/expand.jade
                   .panel
@@ -109,32 +184,63 @@
                      .row
                         .col.col--2-of-2.sub-wrap
                            hr
-                           a.subBtn
+                           a.subBtn.projectOff
                               include ../includes/svg-icons/unchecked.jade
                               p Subscribe
-                           a.subPressed
+                           a.subPressed.projectOn
                               include ../includes/svg-icons/checked.jade
                               p Subscribe
                            hr
                      .row
-                        h2.col.col--4-of-4.latest-lecture Latest Lecture 
+                        h2.col.col--4-of-4.latest-lecture.projectHeaderLatest Latest Lecture 
+                        h2.col.col--4-of-4.header-all.projectHeaderAll All Lectures 
+                     //WEB PROJECT LECTURE 1   
                      .row   
-                        .col.col--1-of-4.hue
+                        .col.col--1-of-4.displayNoneTablet
                            img.lecture-img(src='img/lecture_images/webproject_lecture1.png')
                            .comment-wrap
                               img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
                               .comment-txt
-                                 a(href='') Comments (2)
+                                 a(href='') Comments (4)
                         .col.col--3-of-4
-                           a.lec-link(href='#play')   
-                              h3.lecture-head IMT1471 Web Project: - Technical Design Specification Document
-                              p In this lecture we go through the Technical Design Specification Document. I will give guidance to how you should write it, and which parts are most important for us as web developers.
-                              p.secondary.date-space-fix 16.05.2016
+                           a.lec-link.projectLink(href='#play')   
+                              h3.lecture-head IMT1471 Web Project: Technical Design Specification Document
+                              p In this lecture we go through the Technical Design Specification Document. I will give guidance to how you should write it, and which parts are most relevant for us as web developers.
+                              p.secondary 16.05.2016
+                     
+                     a.all-lectures.projectAll(href='') View all lectures          
+                     .hiddenLec.projectHiddenLec
+                        //WEB PROJECT LECTURE 2   
+                        .row   
+                           .col.col--1-of-4.displayNoneTablet
+                              img.lecture-img(src='img/lecture_images/webproject_lecture3.png')
+                              .comment-wrap
+                                 img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                 .comment-txt
+                                    a(href='') Comments (6)
+                           .col.col--3-of-4
+                              a.lec-link.projectLink(href='#play')   
+                                 h3.lecture-head IMT1471 Web Project: Website requirements specification document.
+                                 p In this lecture we go through the Website requirements specification document. i will give duidance to how you should write it, and which parts are most relevant for us as web developers.
+                                 p.secondary 09.05.2016
+                        //WEB PROJECT LECTURE 3   
+                        .row   
+                           .col.col--1-of-4.displayNoneTablet
+                              img.lecture-img(src='img/lecture_images/webproject_lecture2.png')
+                              .comment-wrap
+                                 img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                 .comment-txt
+                                    a(href='') Comments (4)
+                           .col.col--3-of-4
+                              a.lec-link.projectLink(href='#play')   
+                                 h3.lecture-head IMT1471 Web Project: Project Management and Planning
+                                 p In this lecture we go through some topics relevant to planning and managing a project. We talk about managing risks and people aswell as going through some methods you can use to manage and plan your project.
+                                 p.secondary 02.05.2016   
                         
-                        .col.col--2-of-2
-                           a.all-lectures(href='#lectures-student') View all subscribed lectures   
-                           
+                        a.all-lectures.projectNone(href='') Close Lectures 
 
+
+                  // SUBJECT 4 COLOR MANAGEMENT
                   button.accordion.expand IMT2002: Color Management
                      include ../includes/svg-icons/expand.jade
                   .panel
@@ -152,36 +258,68 @@
                      .row
                         .col.col--2-of-2.sub-wrap
                            hr
-                           a.subBtn
+                           a.subBtn.colorOff
                               include ../includes/svg-icons/unchecked.jade
                               p Subscribe
-                           a.subPressed
+                           a.subPressed.colorOn
                               include ../includes/svg-icons/checked.jade
                               p Subscribe
                            hr
                      .row
-                        h2.col.col--4-of-4.latest-lecture Latest Lecture 
+                        h2.col.col--4-of-4.latest-lecture.colorHeaderLatest Latest Lecture 
+                        h2.col.col--4-of-4.header-all.colorHeaderAll All Lectures 
+                     //COLOR MANAGEMENT LECTURE 1   
                      .row   
-                        .col.col--1-of-4.hue
-                           img.lecture-img(src='img/lecture_images/color_lecture1.png')
+                        .col.col--1-of-4.displayNoneTablet
+                           img.lecture-img(src='img/lecture_images/color_lecture3.png')
                            .comment-wrap
                               img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
                               .comment-txt
-                                 a(href='') Comments (2)
+                                 a(href='') Comments (3)
                         .col.col--3-of-4
-                           a.lec-link(href='#play')   
-                              h3.lecture-head IMT2002 Color Management:  -  Principles and components in ICC colour management
-                              p In this lecture we go through some topics essential to ICC color management. Input profiles, Output profiles, ICC colour workflow, Colour gamut - Gamut mapping, Colour Rendering Intents, Assign Profile - Convert to Profile.
-                              p.secondary.date-space-fix 17.05.2016
+                           a.lec-link.colorLink(href='#play')   
+                              h3.lecture-head IMT2002 Color Management: Colorimetry
+                              p In this lecture we go through diffrent topics regarding colorimetry. These include, what is colorimetry?, describing colour, additive - subtractive colour mixing, what is «colour»?  - the triplet!, light sources and properties (colour temperature), object properties, standard observer, CIE colour systems, colour differences. 
+                              
+                              p.secondary 14.05.2016
+                     
+                     a.all-lectures.colorAll(href='') View all lectures          
+                     .hiddenLec.colorHiddenLec
+                        //COLOR MANAGEMENT LECTURE 2   
+                        .row   
+                           .col.col--1-of-4.displayNoneTablet
+                              img.lecture-img(src='img/lecture_images/color_lecture2.png')
+                              .comment-wrap
+                                 img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                 .comment-txt
+                                    a(href='') Comments (2)
+                           .col.col--3-of-4
+                              a.lec-link.colorLink(href='#play')   
+                                 h3.lecture-head IMT2002 Color Management: Introduction to Colour Management 2
+                                 p In this lecture we will continue covering diffrent topics regaring color management. These incude, standard colour spaces for electronic publishing, principles and components in professional colour management, input profiles and output profiles, ICC colour workflow, colour gamut - gamut mapping, colour Rendering Intents, assign profile - convert to profile.
+                                 p.secondary 07.05.2016
+                        //COLOR MANAGEMENT LECTURE 3   
+                        .row   
+                           .col.col--1-of-4.displayNoneTablet
+                              img.lecture-img(src='img/lecture_images/color_lecture1.png')
+                              .comment-wrap
+                                 img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                 .comment-txt
+                                    a(href='') Comments (5)
+                           .col.col--3-of-4
+                              a.lec-link.colorLink(href='#play')   
+                                 h3.lecture-head IMT2002 Color Management: Introduction to Colour Management
+                                 p In this lecture we go through some introductory topics regarding ICC color management. These include, factors affecting the appearance of colour, why do we need colour management?, device-dependent colour models, device-independent colour models, colour management architecture, basic professional colour management workflow, principles of device profiling
+                                 p.secondary 30.04.2016   
                         
-                        .col.col--2-of-2
-                           a.all-lectures(href='#lectures-student') View all subscribed lectures   
-                           
+                        a.all-lectures.colorNone(href='') Close Lectures 
 
       .col.col--1-of-5
          include ../includes/profile.jade
 include ../includes/partialscript.jade
 
+
+// Usikker på om disse kan slettes
 script.
    var acc = document.getElementsByClassName("accordion");
    var i;
@@ -208,26 +346,189 @@ script.
 // Star og starborder må bytte klasse hver for seg da de blir trykket på. 
 
 script.
-   var notSub = true;
+   
+   var codingNotSub = true;
+   var mobileNotSub = true;
+   var projectNotSub = true;
+   var colorNotSub = true;
    $(document).ready(function(){
-      $('.subBtn').click(function(){
-         $('.subBtn').toggle()
-         $('.subPressed').toggle()
-         $('.all-lectures').toggle()
-         $('.all-lectures').css('display', 'block')
-         notSub = false;
+      
+      if(sessionStorage.role == 'unregistered'){
+         $('.sub-wrap').hide();
+      }
+      if(sessionStorage.role == 'student'){
+         $('.codingOn').toggle()
+         $('.codingOff').toggle()
+         $('.mobileOn').toggle()
+         $('.mobileOff').toggle()
+         $('.projectOn').toggle()
+         $('.projectOff').toggle()
+      }
+      if(sessionStorage.role == 'teacher'){
+         $('.sub-wrap').hide();
+         var codingNotSub = false;
+         var mobileNotSub = false;
+         var projectNotSub = false;
+         var colorNotSub = false;
+      }
+      if(sessionStorage.role == 'admin'){
+         $('.sub-wrap').hide();
+         var codingNotSub = false;
+         var mobileNotSub = false;
+         var projectNotSub = false;
+         var colorNotSub = false;
+      }
+      
+   // Scripts for sub button og lecture link
+   
+   
+      $('.codingOff').click(function(){
+         $('.codingOff').toggle()
+         $('.codingOn').toggle()
+         codingNotSub = false;
       });
-      $('.subPressed').click(function(){
-         $('.subBtn').toggle()
-         $('.subPressed').toggle()
-         $('.all-lectures').toggle()
-         notSub = true;
+      $('.codingOn').click(function(){
+         $('.codingOn').toggle()
+         $('.codingOff').toggle()
+         codingNotSub = true;
       });
-      $('.lec-link').click(function(e) {
-         if(notSub){ 
+      $('.codingLink').click(function(e) {
+         if(codingNotSub){ 
             e.preventDefault();
-            console.log('hue');
+         };
+      });  
+   }); 
+   
+   $(document).ready(function(){
+      $('.mobileOff').click(function(){
+         $('.mobileOff').toggle()
+         $('.mobileOn').toggle()
+         mobileNotSub = false;
+      });
+      $('.mobileOn').click(function(){
+         $('.mobileOn').toggle()
+         $('.mobileOff').toggle()
+         mobileNotSub = true;
+      });
+      $('.mobileLink').click(function(e) {
+         if(mobileNotSub){ 
+            e.preventDefault();
          };
       });  
    });
+   
+   $(document).ready(function(){
+      $('.projectOff').click(function(){
+         $('.projectOff').toggle()
+         $('.projectOn').toggle()
+         projectNotSub = false;
+      });
+      $('.projectOn').click(function(){
+         $('.projectOn').toggle()
+         $('.projectOff').toggle()
+         projectNotSub = true;
+      });
+      $('.projectLink').click(function(e) {
+         if(projectNotSub){ 
+            e.preventDefault();
+         };
+      });  
+   });
+   
+   $(document).ready(function(){
+      $('.colorOff').click(function(){
+         $('.colorOff').toggle()
+         $('.colorOn').toggle()
+         colorNotSub = false;
+      });
+      $('.colorOn').click(function(){
+         $('.colorOn').toggle()
+         $('.colorOff').toggle()
+         colorNotSub = true;
+      });
+      $('.colorLink').click(function(e) {
+         if(colorNotSub){ 
+            e.preventDefault();
+         };
+      });  
+   });
+   
+   //script for å see alle lectures
+   
+   $(document).ready(function(){
+      // Script for viewing all lectures on Web Coding 
+      $('.codingAll').click(function(){
+         $('.codingAll').toggle()
+         $('.codingHiddenLec').toggle()
+         $('.codingNone').toggle()
+         $('.codingHeaderAll').toggle()
+         $('.codingHeaderLatest').toggle()
+         $('.codingHeaderAll').css('display', 'block')
+         $('.codingNone').css('display', 'block')
+      });
+      $('.codingNone').click(function(){
+         $('.codingAll').toggle()
+         $('.codingHiddenLec').toggle()
+         $('.codingNone').toggle()
+         $('.codingHeaderAll').toggle()
+         $('.codingHeaderLatest').toggle()
+      });   
+      
+      
+      
+      // Script for viewing all lectures on Mobile Media Design
+      $('.mobileAll').click(function(){
+         $('.mobileAll').toggle()
+         $('.mobileHiddenLec').toggle()
+         $('.mobileNone').toggle()
+         $('.mobileHeaderAll').toggle()
+         $('.mobileHeaderLatest').toggle()
+         $('.mobileHeaderAll').css('display', 'block')
+         $('.mobileNone').css('display', 'block')
+      });
+      $('.mobileNone').click(function(){
+         $('.mobileAll').toggle()
+         $('.mobileHiddenLec').toggle()
+         $('.mobileNone').toggle()
+         $('.mobileHeaderAll').toggle()
+         $('.mobileHeaderLatest').toggle()
+      });         
+         
+      // Script for viewing all lectures on Web Project   
+      $('.projectAll').click(function(){
+         $('.projectAll').toggle()
+         $('.projectHiddenLec').toggle()
+         $('.projectNone').toggle()
+         $('.projectHeaderAll').toggle()
+         $('.projectHeaderLatest').toggle()
+         $('.projectHeaderAll').css('display', 'block')
+         $('.projectNone').css('display', 'block')
+      });
+      $('.projectNone').click(function(){
+         $('.projectAll').toggle()
+         $('.projectHiddenLec').toggle()
+         $('.projectNone').toggle()
+         $('.projectHeaderAll').toggle()
+         $('.projectHeaderLatest').toggle()
+      });   
+         // Script for viewing all lectures on Color Management   
+      $('.colorAll').click(function(){
+         $('.colorAll').toggle()
+         $('.colorHiddenLec').toggle()
+         $('.colorNone').toggle()
+         $('.colorHeaderAll').toggle()
+         $('.colorHeaderLatest').toggle()
+         $('.colorHeaderAll').css('display', 'block')
+         $('.colorNone').css('display', 'block')
+      });
+      $('.colorNone').click(function(){
+         $('.colorAll').toggle()
+         $('.colorHiddenLec').toggle()
+         $('.colorNone').toggle()
+         $('.colorHeaderAll').toggle()
+         $('.colorHeaderLatest').toggle()
+      });   
+   });
+
+   
    

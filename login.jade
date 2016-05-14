@@ -1,6 +1,7 @@
 doctype html
 html#loginhtml(lang="en", ng-app="myApp")
    head
+      include ./includes/favicons.jade
       meta(charset="utf-8")
       meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
       title Login
@@ -12,14 +13,31 @@ html#loginhtml(lang="en", ng-app="myApp")
             source(src='img/aurora.webm', type='video/webm')
          #login
             h1#loginheader Welcome Back
-            form#logmein(name='loginForm', action='index.html', method='post', onsubmit='return validate(this);')
-               #field1.field-wrap
-                  input.username.logininput#loginEmail(type='email', name='email' placeholder='Email Address', required='')
-               #field2.field-wrap
-                  input.logininput#loginPassword(type='password', name='password' placeholder='Password', required='')
-               p.forgot
-                  a.loginlink(href='#') Forgot Password?
-               input.loginbutton(type='submit', value='LOGIN')
+            form#logmein(name='loginForm', action='index.html', method='post', onsubmit='return validateLogin(this);')
+               #loginState
+                  #loginField1.field-wrap
+                     input.loginInput#loginEmail(type='email', name='email' placeholder='Email Address', required='')
+                  #loginField2.field-wrap
+                     input.loginInput#loginPassword(type='password', name='password' placeholder='Password', required='')
+               #registerState
+                  #registerfield1.field-wrap
+                     input.registerInput#registerFirstName(type='text', name='name1' placeholder='First name')
+                  #registerfield2.field-wrap
+                     input.registerInput#registerLastName(type='text', name='name2' placeholder='Last name')
+                  #registerfield3.field-wrap
+                     input.registerInput#registerEmail(type='email', name='email' placeholder='Email Address')
+                  #registerfield4.field-wrap
+                     input.registerInput#registerTlf(type='text', name='tlf' placeholder='Phone number')
+                  #registerfield5.field-wrap
+                     input.registerInput#registerPass1(type='password', name='password1' placeholder='Password')
+                  #registerfield6.field-wrap
+                     input.registerInput#registerPass2(type='password', name='password2' placeholder='Repeat password')
+                  
+               p#loginError Wrong email or password
+               #links
+                  a#registerlink(href='#') Register
+                  a#forgotlink(href='#') Forgot Password?
+               input#loginbutton(type='submit', value='LOGIN')
             a.unregistered(href='index.html') View page unregistered
       script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
       script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js")
