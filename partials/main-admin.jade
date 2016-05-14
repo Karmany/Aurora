@@ -3,7 +3,7 @@
 	// Subjects modal 
 	#subjectsModal.modal 
 		.modal-content 
-			span.close X
+			img.close(src="../img/iconography/x.svg")
 			h2 Manage Subjects
 			.subject#webProject
 				.icon-alignment 
@@ -18,15 +18,11 @@
 						
 					.lecture
 						include ../includes/svg-icons/delete-forever-icon.jade
+						a(href="#") Website Requirements Specification Document
+						
+					.lecture
+						include ../includes/svg-icons/delete-forever-icon.jade
 						a(href="#") Technical Design Specification Document
-						
-					.lecture
-						include ../includes/svg-icons/delete-forever-icon.jade
-						a(href="#") Slicing web pages
-						
-					.lecture
-						include ../includes/svg-icons/delete-forever-icon.jade
-						a(href="#") Something here
 						
 			.subject#webCoding
 				.icon-alignment 
@@ -60,19 +56,15 @@
 				.lecture-list 
 					.lecture.first
 						include ../includes/svg-icons/delete-forever-icon.jade
+						a(href="#") Mobile Communication Technology
+						
+					.lecture
+						include ../includes/svg-icons/delete-forever-icon.jade
 						a(href="#") Mobile and Games
 						
 					.lecture
 						include ../includes/svg-icons/delete-forever-icon.jade
 						a(href="#") Mobile Design
-						
-					.lecture
-						include ../includes/svg-icons/delete-forever-icon.jade
-						a(href="#") Something here 
-						
-					.lecture
-						include ../includes/svg-icons/delete-forever-icon.jade
-						a(href="#") Something here
 			
 			.subject#colourManagement
 				.icon-alignment 
@@ -83,20 +75,16 @@
 				.lecture-list 
 					.lecture.first
 						include ../includes/svg-icons/delete-forever-icon.jade
-						a(href="#") Introduction to RAW format
+						a(href="#") Introduction to Color Management 
 						
 					.lecture
 						include ../includes/svg-icons/delete-forever-icon.jade
-						a(href="#") Digital Image Capture Technology
+						a(href="#") Introduction to Color Management 2
 						
 					.lecture
 						include ../includes/svg-icons/delete-forever-icon.jade
-						a(href="#") Display Technology and Display Quality
+						a(href="#") Colorimetry
 						
-					.lecture
-						include ../includes/svg-icons/delete-forever-icon.jade
-						a(href="#") Digital Printer Technology
-			
 			.add-lecture
 				include ../includes/svg-icons/add-icon.jade
 				h3 Add a new subject category
@@ -104,8 +92,14 @@
 	// Teachers modal 
 	#teachersModal.modal 
 		.modal-content 
-			span.close X
+			img.close(src="../img/iconography/x.svg")
 			h2 Manage teachers
+			
+			.info-text
+				p.secondary Click the 
+				img(src="../img/iconography/ic_deactivate_24px.svg")
+				p.secondary icon to de-activate a student account
+			//- p Click the <img src="../img/iconography/ic_deactivate_24px.svg")/> icon to de-activate a user 
 			
 			.alignment-grid
 				ul
@@ -141,8 +135,13 @@
 	// Students modal 
 	#studentsModal.modal 
 		.modal-content 
-			span.close X
+			img.close(src="../img/iconography/x.svg")
 			h2 Manage Students
+			
+			.info-text
+				p.secondary Click the 
+				img(src="../img/iconography/ic_deactivate_24px.svg")
+				p.secondary icon to de-activate a student account
 			
 			.alignment-grid 
 				.year-enrolled
@@ -292,19 +291,19 @@
 					ul 
 						li
 							input(type="checkbox")
-							a(href="#") Ali Sharif
+							a(href="#notmy-profile-teacher") Ali Sharif
 						li
 							input(type="checkbox")
-							a(href="#") Randi Rikberg
+							a(href="#notmy-profile-teacher") Randi Rikberg
 						li
 							input(type="checkbox")
-							a(href="#") Tina Tvist 
+							a(href="#notmy-profile-teacher") Tina Tvist 
 						li
 							input(type="checkbox")
-							a(href="#") Ole Olsen		
+							a(href="#notmy-profile-teacher") Ole Olsen		
 						li
 							input(type="checkbox")
-							a(href="#") Nina Nilsen
+							a(href="#notmy-profile-teacher") Nina Nilsen
 							
 					input(type="submit", value="Approve teacher(s)")
 					
