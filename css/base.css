@@ -1369,6 +1369,7 @@ header {
 
 header svg#logo {
   height: 50px;
+  margin: 0 auto;
 }
 
 header nav {
@@ -1842,7 +1843,8 @@ nav.mobile .nav-items .search-mobile .blur-trigger-mobile {
 
 .page-wrap {
   /* equal to footer height */
-  margin-bottom: -410px;
+  margin-bottom: -450px;
+  min-height: 100%;
 }
 
 .page-wrap:after {
@@ -1851,7 +1853,7 @@ nav.mobile .nav-items .search-mobile .blur-trigger-mobile {
 }
 
 footer, .page-wrap:after {
-  height: 410px;
+  height: 450px;
 }
 
 footer {
@@ -1861,6 +1863,8 @@ footer {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  flex-flow: column;
+  justify-content: space-between;
 }
 
 footer .container {
@@ -1965,10 +1969,12 @@ footer .links-mobile {
 
 .copyright {
   background-color: #56b571;
+  width: 100%;
+  margin-top: 50px;
+  height: 50px;
+  line-height: 50px;
   text-align: center;
   color: #455A64;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   font-weight: 300;
 }
 
@@ -2337,7 +2343,7 @@ textarea {
   margin-bottom: 10px;
   padding-bottom: 5px;
   border-bottom: 2px solid #79d894;
-  width: 200px;
+  max-width: 200px;
 }
 
 #main-student .notification-content .teacher-headline h2, #main-student .notification-content .student-headline h2 {
@@ -2373,7 +2379,7 @@ textarea {
 #main-student .notification-content .notification .author {
   border-top: 2px solid #455A64;
   padding-top: 5px;
-  width: 200px;
+  max-width: 200px;
   display: block;
   text-decoration: none;
 }
@@ -2391,17 +2397,17 @@ textarea {
 }
 
 @media (max-width: 700px) {
-  #main-student {
+  #main-student .notification-content #main-student {
     margin-top: -10px;
   }
-  #main-student .student-headline {
+  #main-student .notification-content #main-student .student-headline {
     margin-top: 50px;
   }
 }
 
 @media (max-width: 820px) {
-  .author p span {
-    color: red;
+  #main-student .notification-content .author p span {
+    font-size: 1.1rem !important;
   }
 }
 
