@@ -1851,24 +1851,6 @@ footer .links a, footer .links-mobile a {
   }
 }
 
-.profile-shit {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.profile-shit .left-kuk {
-  width: calc(100% - 250px);
-  border: 2px solid pink;
-  height: auto;
-}
-
-.profile-shit .right {
-  width: 250px;
-  border: 2px solid purple;
-  height: 500px;
-}
-
 body {
   font-family: roboto;
   font-size: 1.6rem;
@@ -1934,6 +1916,12 @@ a.hyperlink:active {
   color: #98ff9b;
 }
 
+.lectures-student {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .lectures-student a {
   text-decoration: none;
   color: white;
@@ -1951,6 +1939,7 @@ a.hyperlink:active {
 .lectures-student .txt-wrap h3 {
   margin-top: 0;
   margin-bottom: 10px;
+  clear: both;
 }
 
 .lectures-student .date-space-fix {
@@ -1966,7 +1955,8 @@ a.hyperlink:active {
   padding-bottom: 5px;
   width: 410px;
   border-bottom: 2px solid #79d894;
-  display: inline-block;
+  display: block;
+  clear: both;
 }
 
 .lectures-student .profile-img {
@@ -2086,21 +2076,53 @@ a.hyperlink:active {
   margin: 7px 0;
 }
 
-@media (max-width: 1050px) {
+.lectures-student .notprofile-content {
+  width: calc(100% - 200px);
+  height: auto;
+  padding-right: 20px;
+}
+
+.lectures-student .profile-content {
+  width: 200px;
+  height: 500px;
+}
+
+@media (max-width: 900px) {
+  .lectures-student .notprofile-content {
+    width: 100vw !important;
+  }
+  .lectures-student .profile-content {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
   .lectures-student .img-wrap {
     display: none;
   }
   .lectures-student .txt-wrap {
     padding-left: 0;
   }
+  .lectures-student .lecture-time {
+    padding-top: 100px;
+  }
   .lectures-student .lecture-time h2 {
     width: 200px;
+  }
+  .lectures-student .top-space-fix {
+    padding: 0;
   }
 }
 
 @media (max-width: 480px) {
   .lectures-student .author p span {
     font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 348) {
+  .lectures-student .teacher-edit {
+    margin-left: 10px;
   }
 }
 
@@ -2564,8 +2586,20 @@ textarea {
 }
 
 #main-admin #subjectsModal .modal-content .subject .lecture-list .lecture {
-  margin-left: 40px;
+  margin-left: 60px;
   margin-right: 30px;
+}
+
+#main-admin #subjectsModal .modal-content .subject .lecture-list .lecture svg {
+  float: left;
+  margin-top: 5px;
+  width: 14px;
+  height: 14px;
+}
+
+#main-admin #subjectsModal .modal-content .subject .lecture-list .lecture svg:hover {
+  fill: #E57373;
+  transform: scale(1.2);
 }
 
 #main-admin #subjectsModal .modal-content .subject .lecture-list .lecture a {
@@ -2592,6 +2626,7 @@ textarea {
 
 #main-admin #subjectsModal .modal-content .add-lecture:hover {
   color: #98ff9b;
+  cursor: pointer;
 }
 
 #main-admin #subjectsModal .modal-content .add-lecture:hover .add-icon {
@@ -3258,7 +3293,7 @@ textarea {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
   position: relative;
   margin-top: 7px;
-  min-width: 180px;
+  min-width: 200px;
 }
 
 .profile .profile-list {
@@ -4082,15 +4117,6 @@ button.comment:active {
 
 nav.mobile {
   display: none;
-}
-
-@media (max-width: 1000px) {
-  .left-kuk {
-    width: 100vw !important;
-  }
-  .right {
-    display: none;
-  }
 }
 
 @media (max-width: 700px) {

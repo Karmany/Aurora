@@ -1,5 +1,4 @@
 .lectures-student
-
    a
       text-decoration: none
       color: white
@@ -14,6 +13,7 @@
    .txt-wrap h3
       margin-top: 0
       margin-bottom: 10px
+      clear: both
 
    .date-space-fix
       margin-bottom: 5px
@@ -26,7 +26,8 @@
       padding-bottom: 5px
       width: 410px
       border-bottom: 2px solid $green1
-      display: inline-block
+      display: block
+      clear: both
 
    .profile-img
 
@@ -125,21 +126,55 @@
          display: inline-block
          fill: $primaryColor
          margin-bottom: -3px
-         
+
          padding: 0
 
       p
          display: inline-block
          padding: 0
          margin: 7px 0
-   @media (max-width: 1050px)
+
+   // content + Profile CSS
+   display: flex
+   justify-content: space-between
+   width: 100%
+
+   .notprofile-content
+      width: calc(100% - 200px)
+      height: auto
+      padding-right: 20px
+
+   .profile-content
+      width: 200px
+      height: 500px
+
+   @media (max-width: 900px)
+      .notprofile-content
+         width: 100vw !important
+      .profile-content
+         display: none
+   //Content + profile End
+
+
+
+
+   @media (max-width: 700px)
       .img-wrap
          display: none
       .txt-wrap
          padding-left: 0
+      .lecture-time
+         padding-top: 100px
+         h2
+            width: 200px
+      .top-space-fix
+         padding: 0
       .lecture-time h2
-         width: 200px
+
 
    @media (max-width: 480px)
       .author p span
          font-size: 1.1rem
+   @media (max-width: 348)
+      .teacher-edit
+         margin-left: 10px
