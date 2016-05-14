@@ -28,10 +28,7 @@
 				&:hover
 					background-color: $green2
 
-	.students
-		margin-top: 10px
-
-	.teachers
+	.students, .teachers
 		margin-top: 10px
 
 	// ----------- MODAL STYLES ----------
@@ -60,9 +57,9 @@
 		font-weight: bold
 
 	.close:hover, .close:focus
-		color: $alert
 		text-decoration: none
 		cursor: pointer
+		transform: scale(1.3)
 
 	#subjectsModal
 		.modal-content
@@ -168,7 +165,7 @@
 
 	#studentsModal
 		.modal-content
-			max-width: 80%
+			max-width: 100%
 			margin: 0 auto
 
 			h2
@@ -192,10 +189,24 @@
 
 						li
 							margin-bottom: 2px
+							display: flex
+
+							svg
+								height: 14px
+								width: 14px
+								fill: white
+								margin-top: 3px
+								margin-left: -20px
+
+								&:hover
+									fill: $alert
+									cursor: pointer
+									transform: scale(1.3)
 
 							a
 								text-decoration: none
 								color: white
+								margin-left: 5px
 
 								&:hover
 									color: $green2
@@ -223,10 +234,24 @@
 
 				li
 					margin-bottom: 2px
+					display: flex
+
+					svg
+						height: 14px
+						width: 14px
+						fill: white
+						margin-top: 3px
+						margin-left: -20px
+
+						&:hover
+							fill: $alert
+							cursor: pointer
+							transform: scale(1.3)
 
 					a
 						text-decoration: none
 						color: white
+						margin-left: 5px
 
 						&:hover
 							color: $green2
