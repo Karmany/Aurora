@@ -2149,7 +2149,7 @@ textarea {
   margin-bottom: 10px;
   padding-bottom: 5px;
   border-bottom: 2px solid #79d894;
-  width: 200px;
+  max-width: 200px;
 }
 
 #main-student .notification-content .teacher-headline h2, #main-student .notification-content .student-headline h2 {
@@ -2185,7 +2185,7 @@ textarea {
 #main-student .notification-content .notification .author {
   border-top: 2px solid #455A64;
   padding-top: 5px;
-  width: 200px;
+  max-width: 200px;
   display: block;
   text-decoration: none;
 }
