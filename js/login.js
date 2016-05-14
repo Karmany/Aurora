@@ -3,11 +3,11 @@ function validate() {
 
     var email = document.forms.logmein.email.value;
     var pass = document.forms.logmein.password.value;
-    var studentEmail = "student@aurora.com";
+    var studentEmail = "student@aurora.no";
     var studentPassword = "studentpwd";
-    var teacherEmail = "teacher@aurora.com";
+    var teacherEmail = "teacher@aurora.no";
     var teacherPassword = "teacherpwd";
-    var adminEmail = "admin@aurora.com";
+    var adminEmail = "admin@aurora.no";
     var adminPassword = "adminpwd";
 
     if (email === studentEmail) {
@@ -27,6 +27,10 @@ function validate() {
         }
     } else {
         console.log("FAILED!");
+        event.preventDefault()
+        document.getElementById('loginError').style.display = "block"
+        document.getElementById('loginEmail').style.border = "2px solid #E57373"
+        document.getElementById('loginPassword').style.border = "2px solid #E57373"
         return false;
     }
 }
