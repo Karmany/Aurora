@@ -3340,6 +3340,10 @@ textarea {
   margin: 7px 0;
 }
 
+#subjectWrapper .admin-edit:hover {
+  background-color: #98ff9b;
+}
+
 #subjectWrapper .teacher-edit {
   display: none;
   background-color: #79d894;
@@ -3602,6 +3606,7 @@ textarea {
   border-radius: 2px;
   cursor: pointer;
   text-decoration: none;
+  display: block;
 }
 
 .profile-student .deleteBtn p {
