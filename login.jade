@@ -12,7 +12,7 @@ html#loginhtml(lang="en", ng-app="myApp")
             source(src='img/aurora.webm', type='video/webm')
          #login
             h1#loginheader Welcome Back
-            form#logmein(name='loginForm', action='index.html', method='post', onsubmit='return validate(this);')
+            form#logmein(name='loginForm', action='index.html', method='post', onsubmit='return validateLogin(this);')
                #loginState
                   #loginField1.field-wrap
                      input.loginInput#loginEmail(type='email', name='email' placeholder='Email Address', required='')
@@ -20,17 +20,17 @@ html#loginhtml(lang="en", ng-app="myApp")
                      input.loginInput#loginPassword(type='password', name='password' placeholder='Password', required='')
                #registerState
                   #registerfield1.field-wrap
-                     input.registerInput#registerFirstName(type='text', name='name1' placeholder='First name', required='')
+                     input.registerInput#registerFirstName(type='text', name='name1' placeholder='First name')
                   #registerfield2.field-wrap
-                     input.registerInput#registerLastName(type='text', name='name2' placeholder='Last name', required='')
+                     input.registerInput#registerLastName(type='text', name='name2' placeholder='Last name')
                   #registerfield3.field-wrap
-                     input.registerInput#registerEmail(type='email', name='email' placeholder='Email Address', required='')
+                     input.registerInput#registerEmail(type='email', name='email' placeholder='Email Address')
                   #registerfield4.field-wrap
-                     input.registerInput#registerTlf(type='text', name='tlf' placeholder='Phone number', required='')
+                     input.registerInput#registerTlf(type='text', name='tlf' placeholder='Phone number')
                   #registerfield5.field-wrap
-                     input.registerInput#registerPass1(type='password', name='password1' placeholder='Password', required='')
+                     input.registerInput#registerPass1(type='password', name='password1' placeholder='Password')
                   #registerfield6.field-wrap
-                     input.registerInput#registerPass2(type='password', name='password2' placeholder='Repeat password', required='')
+                     input.registerInput#registerPass2(type='password', name='password2' placeholder='Repeat password')
                   
                p#loginError Wrong email or password
                #links

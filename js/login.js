@@ -1,5 +1,5 @@
-//VALIDATION
-function validate() {
+//LOGIN VALIDATION
+function validateLogin() {
     "use strict";
     var email = document.forms.logmein.email.value;
     var pass = document.forms.logmein.password.value;
@@ -14,29 +14,29 @@ function validate() {
         if (pass === studentPassword) {
             console.log("Student ok!");
             sessionStorage.role = 'student';
-            $('#logmein').attr('action', 'index.html#/' + page3)
+            $('#logmein').attr('action', 'index.html#/' + page3);
             return true;
         }
     } else if (email === teacherEmail) {
         if (pass === teacherPassword) {
             console.log("Teacher ok!");
             sessionStorage.role = 'teacher';
-            $('#logmein').attr('action', 'index.html#/' + page5)
+            $('#logmein').attr('action', 'index.html#/' + page5);
             return true;
         }
     } else if (email === adminEmail) {
         if (pass === adminPassword) {
             console.log("Admin ok!");
-            $('#logmein').attr('action', 'index.html#/' + page6)
+            $('#logmein').attr('action', 'index.html#/' + page6);
             sessionStorage.role = 'admin';
             return true;
         }
     } else {
         console.log("FAILED!");
-        event.preventDefault()
-        document.getElementById('loginError').style.display = "block"
-        document.getElementById('loginEmail').style.border = "2px solid #E57373"
-        document.getElementById('loginPassword').style.border = "2px solid #E57373"
+        event.preventDefault();
+        document.getElementById('loginError').style.display = "block";
+        document.getElementById('loginEmail').style.border = "2px solid #E57373";
+        document.getElementById('loginPassword').style.border = "2px solid #E57373";
         return false;
     }
 }
@@ -52,6 +52,9 @@ window.onload = function() {
          document.getElementById('loginbutton').value = 'REGISTER';
          document.getElementById('loginheader').innerHTML = 'Welcome';
          document.getElementById('registerlink').innerHTML = 'Login';
+         document.getElementById('loginState').style.display = 'none';
+         document.getElementById('registerState').style.display = 'block';
+         document.getElementById('forgotlink').style.display = 'none';
          toggle = false;
          return false;
       } else if(toggle === false) {
@@ -60,8 +63,14 @@ window.onload = function() {
          document.getElementById('loginbutton').value = 'LOGIN';
          document.getElementById('loginheader').innerHTML = 'Welcome Back';
          document.getElementById('registerlink').innerHTML = 'Register';
+         document.getElementById('registerState').style.display = 'none';
+         document.getElementById('loginState').style.display = 'block';
+         document.getElementById('forgotlink').style.display = 'block';
          toggle = true;
          return false;
       }
    };
 };
+
+//REGISTER VALIDATION
+//   This can be implemented later
