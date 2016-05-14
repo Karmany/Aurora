@@ -2194,7 +2194,7 @@ a.hyperlink:active {
 
 .field-wrap {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 textarea {
@@ -2235,7 +2235,7 @@ textarea {
 #links {
   width: 100%;
   height: 20px;
-  margin-top: -20px;
+  margin-top: 0px;
   text-align: left;
   margin-bottom: 20px;
 }
@@ -2279,7 +2279,7 @@ textarea {
   background: #98ff9b;
 }
 
-#loginField1 {
+#loginField1, #loginField2 {
   margin-bottom: 20px;
 }
 
@@ -2295,7 +2295,6 @@ textarea {
   font-weight: 300;
   font-size: 2rem;
   display: none;
-  padding-bottom: 20px;
 }
 
 #registerState {
@@ -3975,6 +3974,88 @@ button.comment:active {
   margin-bottom: 50px;
 }
 
+#uploadWrapper #uploadForm {
+  background: #314650;
+  border-radius: 4px;
+  padding: 40px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+#uploadWrapper #uploadForm .field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+#uploadWrapper #uploadVid, #uploadWrapper #uploadTrans, #uploadWrapper #uploadSlides {
+  padding: 10px;
+}
+
+#uploadWrapper .upLabel {
+  color: #79d894;
+}
+
+#uploadBreakpoints {
+  background: #314650;
+  border-radius: 4px;
+  padding: 40px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.theBreakpoints, .theKeywords {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 2px solid #6d828c;
+  color: #ffffff;
+  border-radius: 2px;
+  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+  transition: border-color .25s ease, box-shadow .25s ease;
+  -webkit-appearance: none;
+}
+
+.theBreakpoints:focus, .theKeywords:focus {
+  outline: #98ff9b;
+}
+
+.theBreakpoints {
+  border-bottom: none;
+}
+
+.theKeywords {
+  margin-bottom: 30px;
+  border-top: none;
+}
+
+#addButton, #finalUpload {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  display: block;
+  width: 100%;
+  background: #79d894;
+  color: #455A64;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+
+#addButton:hover, #addButton:focus, #finalUpload:hover, #finalUpload:focus {
+  background: #98ff9b;
+}
+
+#finalUpload {
+  margin-top: 100px;
+}
+
 /* BEGIN Thin */
 @font-face {
   font-family: Roboto;
@@ -4120,6 +4201,9 @@ nav.mobile {
 }
 
 @media (max-width: 700px) {
+  #login {
+    width: 80%;
+  }
   .container {
     width: 100%;
     padding: 50px 20px;
@@ -4201,6 +4285,9 @@ nav.mobile {
   }
   footer, .page-wrap:after {
     height: 410px;
+  }
+  #login {
+    width: 100%;
   }
 }
 
