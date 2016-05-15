@@ -98,6 +98,7 @@
       padding: 0
       text-decoration: none
       margin-bottom: 20px
+      margin-right: 20px
       color: white
       padding: 0 10px
       .delete-forever-icon
@@ -122,7 +123,7 @@
       text-align: center
       padding: 0
       margin-bottom: 30px
-      margin-left: 20px
+      width: 141px
       padding: 0 10px
       .edit-icon
          display: inline-block
@@ -151,13 +152,16 @@
       width: 200px
       height: 500px
 
-   @media (max-width: 900px)
+   @media (max-width: 955px)
       .notprofile-content
          width: 100vw !important
       .profile-content
          display: none
    //Content + profile End
 
+   @media (max-width: 750px)
+      .comment-wrap
+         display: none
 
 
 
@@ -172,8 +176,6 @@
             width: 200px
       .top-space-fix
          padding: 0
-      .lecture-time h2
-
 
    @media (max-width: 480px)
       .author p span
@@ -182,6 +184,7 @@
          font-size: 1.4rem
       .author
          width: 180px
-   @media (max-width: 348)
+
+   @media (max-width: 380px)
       .teacher-edit
-         margin-left: 10px
+         margin-left: 0

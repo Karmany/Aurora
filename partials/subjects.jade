@@ -428,6 +428,9 @@
                            input
                            h3 Subject description
                            textarea.hue
+                           a.add-subject-btn
+                              p Add Subject
+                           
                            
 
       .profile-content
@@ -476,6 +479,9 @@ script.
       
       if(sessionStorage.role == 'unregistered'){
          $('.sub-wrap').hide();
+         $('.profile-content').css('display', 'none');
+         $('.notprofile-content').css('width', '100%');
+         console.log('hue')
       }
       if(sessionStorage.role == 'student'){
          codingNotSub = false;
@@ -571,6 +577,10 @@ script.
                $('.error-wrap').slideDown('200')
                codingError = true;
             };
+            if(sessionStorage.role == 'unregistered'){
+               $('.error-wrap').slideDown('200')
+               codingError = true;
+            };
          };
       });  
    }); 
@@ -592,7 +602,11 @@ script.
             if(sessionStorage.role == 'student'){
                $('.error-wrap').slideDown('200')
                mobileError = true;
-            };   
+            };  
+            if(sessionStorage.role == 'unregistered'){
+               $('.error-wrap').slideDown('200')
+               mobileError = true;
+            };    
          };
       });  
    });
@@ -615,6 +629,10 @@ script.
                $('.error-wrap').slideDown('200')
                projectError = true;
             }; 
+            if(sessionStorage.role == 'unregistered'){
+               $('.error-wrap').slideDown('200')
+               projectError = true;
+            }; 
          };
       });  
    });
@@ -634,6 +652,10 @@ script.
          if(colorNotSub && colorError === false){ 
             e.preventDefault();
             if(sessionStorage.role == 'student'){
+               $('.error-wrap').slideDown('200')
+               colorError = true;
+            }; 
+            if(sessionStorage.role == 'unregistered'){
                $('.error-wrap').slideDown('200')
                colorError = true;
             }; 

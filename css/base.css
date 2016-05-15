@@ -2037,6 +2037,7 @@ a.hyperlink:active {
   padding: 0;
   text-decoration: none;
   margin-bottom: 20px;
+  margin-right: 20px;
   color: white;
   padding: 0 10px;
 }
@@ -2067,7 +2068,7 @@ a.hyperlink:active {
   text-align: center;
   padding: 0;
   margin-bottom: 30px;
-  margin-left: 20px;
+  width: 141px;
   padding: 0 10px;
 }
 
@@ -2099,11 +2100,17 @@ a.hyperlink:active {
   height: 500px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 955px) {
   .lectures-student .notprofile-content {
     width: 100vw !important;
   }
   .lectures-student .profile-content {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  .lectures-student .comment-wrap {
     display: none;
   }
 }
@@ -2138,9 +2145,9 @@ a.hyperlink:active {
   }
 }
 
-@media (max-width: 348) {
+@media (max-width: 380px) {
   .lectures-student .teacher-edit {
-    margin-left: 10px;
+    margin-left: 0;
   }
 }
 
@@ -3511,6 +3518,7 @@ textarea {
   margin-bottom: 30px;
   margin-left: 20px;
   padding: 0 10px;
+  width: 141px;
 }
 
 #subjectWrapper .admin-edit .edit-icon {
@@ -3594,6 +3602,28 @@ textarea {
   font-size: 1.2rem;
   cursor: pointer;
   border: 2px solid #79d894;
+}
+
+#subjectWrapper .add-subject-btn {
+  display: block;
+  border-radius: 2px;
+  background-color: #79d894;
+  color: #455A64;
+  position: relative;
+  width: 50%;
+  left: 25%;
+  text-align: center;
+  padding: 1px 0;
+  margin: 10px 0;
+}
+
+#subjectWrapper .add-subject-btn:hover {
+  background-color: #98ff9b;
+}
+
+#subjectWrapper .add-subject-btn p {
+  padding: 10px 0;
+  margin: 0;
 }
 
 #subjectWrapper .notprofile-content {
