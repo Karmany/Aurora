@@ -2128,7 +2128,13 @@ a.hyperlink:active {
 
 @media (max-width: 480px) {
   .lectures-student .author p span {
-    font-size: 1.1rem;
+    font-size: 1rem;
+  }
+  .lectures-student .author p {
+    font-size: 1.4rem;
+  }
+  .lectures-student .author {
+    width: 180px;
   }
 }
 
@@ -3375,6 +3381,41 @@ textarea {
   background-color: #98ff9b;
 }
 
+#subjectWrapper .admin-add-subject {
+  display: none;
+}
+
+#subjectWrapper .add-icon {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 4px;
+  right: 5px;
+}
+
+#subjectWrapper .add-subject input {
+  background-color: #6d828c;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  width: 100%;
+  cursor: pointer;
+  border: 2px solid #79d894;
+}
+
+#subjectWrapper .add-subject textarea {
+  width: 100%;
+  background-color: #6d828c;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  resize: none;
+  height: 200px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: 2px solid #79d894;
+}
+
 @media (max-width: 1000px) {
   #subjectWrapper .subBtn, #subjectWrapper .subPressed {
     width: 38%;
@@ -3567,6 +3608,7 @@ textarea {
   padding: 20px;
   border-radius: 2px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  min-width: 210px;
 }
 
 .profile-student .profile-edit-wrap img {
@@ -3644,6 +3686,7 @@ textarea {
   border: 0;
   border-radius: 2px;
   padding: 5px;
+  border: 2px solid #79d894;
 }
 
 .profile-student .change input:focus {
@@ -3681,11 +3724,15 @@ textarea {
   width: 100%;
   text-align: center;
   display: block;
-  background-color: #314650;
-  color: #79d894;
+  background-color: #79d894;
+  color: #455A64;
   border-radius: 2px;
   padding: 5px;
   cursor: pointer;
+}
+
+.profile-student #changePic label:hover {
+  background-color: #98ff9b;
 }
 
 .profile-student .p-col1 p {
@@ -3703,6 +3750,78 @@ textarea {
 .profile-student .p-col2 p a {
   text-decoration: none;
   color: #79d894;
+}
+
+.profile-student .deactivate-btn {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  width: 70%;
+  position: relative;
+  left: 15%;
+  background-color: #E57373;
+  border-radius: 2px;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  display: none;
+}
+
+.profile-student .deactivate-btn:hover {
+  background-color: #ff9b9b;
+}
+
+.profile-student .deactivate-btn p {
+  margin: 5px 0 5px -35px;
+}
+
+.profile-student .deactivate-btn .deactivate-icon {
+  fill: white;
+  width: 20px;
+  margin: 5px 0 5px -10px;
+}
+
+@media (max-width: 1000px) {
+  .profile-student .p-col1 p {
+    font-size: 1.4rem;
+  }
+  .profile-student .p-col2 p {
+    font-size: 1.4rem;
+  }
+  .profile-student .p-col2 span {
+    font-size: 1.2rem;
+  }
+  .profile-student .p-col2 a {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .profile-student .deactivate-btn {
+    width: 40%;
+    position: relative;
+    left: 30%;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-student .p-col1 p {
+    font-size: 1.2rem;
+  }
+  .profile-student .p-col2 p {
+    font-size: 1.2rem;
+  }
+  .profile-student .p-col2 span {
+    font-size: 1rem;
+  }
+  .profile-student .p-col2 a {
+    font-size: 1rem;
+  }
+  .profile-student .deactivate-btn {
+    width: 80%;
+    left: 10%;
+  }
 }
 
 #playVideo {

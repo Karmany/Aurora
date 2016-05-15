@@ -8,15 +8,29 @@
          .row
             img.avatar(src='img/profile_images/female_student2.png')   
          .row      
-            .p-col1.col.col--2-of-4
+            .p-col1.col.col--2-of-4.col--m-1-of-2.col--s-1-of-2
                p Name:
                p Student number:
                p Email:
                p Phone number:
-            .p-col2.col.col--2-of-4
+            .p-col2.col.col--2-of-4.col--m-1-of-2.col--s-1-of-2
                p Kristine Nilsen
                p 302947
                p
                   a(href='mailto:kristine.nilsen@aurora.no') kristine.nilsen@aurora.no
                p#phoneNumber 94783710   
+         .row
+            .col.col--4-of-4
+               a.deactivate-btn
+                  include ../includes/svg-icons/deactivate-icon.jade
+                  p Deactivate User
+
+
+script.      
+   $(document).ready(function(){
+      if(sessionStorage.role == 'admin'){
+         $('.deactivate-btn').show()
+         $('.deactivate-btn').css('display','flex')
+      }
+   });
       

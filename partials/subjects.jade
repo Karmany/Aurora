@@ -407,7 +407,21 @@
                                     include ../includes/svg-icons/edit-icon.jade
                                     p Edit Lecture
                         a.all-lectures.colorNone(href='') Close Lectures 
-
+                  
+                  button.accordion.expand.admin-add-subject
+                     include ../includes/svg-icons/add-icon.jade
+                     | Add new subject
+                     include ../includes/svg-icons/expand.jade
+                  .panel.add-subject
+                     h3 Subject name
+                     input
+                     h3 Subject teacher
+                     input
+                     h3 Subject description
+                     textarea.hue
+                     
+                     
+               
       .col.col--1-of-5
          include ../includes/profile.jade
          include ../includes/profile-sidebar-admin.jade
@@ -484,6 +498,7 @@ script.
          $('.admin-delete').css('display', 'inline-block')
          $('.admin-edit').show()
          $('.admin-edit').css('display', 'inline-block')
+         $('.admin-add-subject').show()
       }
       
    // Scripts for sub button og lecture link
@@ -638,6 +653,4 @@ script.
          $('.colorHeaderLatest').toggle()
       });   
    });
-
-   
    

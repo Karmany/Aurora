@@ -7,15 +7,28 @@
          .row
             img.avatar(src='img/profile_images/clooney.jpg')   
          .row      
-            .p-col1.col.col--2-of-4
+            .p-col1.col.col--2-of-4.col--m-1-of-2.col--s-1-of-2
                p Name:
                p Position:
                p Email:
                p Phone number:
-            .p-col2.col.col--2-of-4
+            .p-col2.col.col--2-of-4.col--m-1-of-2.col--s-1-of-2
                p Torgeir Hansen
                p Assistant Prof.
                p 
                   a(href='mailto:torgeir.hansen@aurora.no') torgeir.hansen@aurora.no
                p#phoneNumber 43918233
-      
+         .row
+            .col.col--4-of-4
+               a.deactivate-btn
+                  include ../includes/svg-icons/deactivate-icon.jade
+                  p Deactivate User
+
+
+script.      
+   $(document).ready(function(){
+      if(sessionStorage.role == 'admin'){
+         $('.deactivate-btn').show()
+         $('.deactivate-btn').css('display','flex')
+      }
+   });
