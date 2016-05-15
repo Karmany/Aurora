@@ -1,8 +1,15 @@
+.error-wrap
+   p 
+      span You need to subscribe before you can view a lecture
+   include ../includes/svg-icons/close-icon.jade   
+      
 .content
    #subjectWrapper
       .notprofile-content
+         
          .row
             .col.col--4-of-4.col--m-4-of-4
+            
                .row
                   #results.col.col--5-of-5
                      #accordion
@@ -455,8 +462,12 @@ script.
 
 // Star og starborder må bytte klasse hver for seg da de blir trykket på. 
 
+
 script.
-   
+   var codingError = false;
+   var mobileError = false;
+   var projectError = false;
+   var colorError = false;
    var codingNotSub = true;
    var mobileNotSub = true;
    var projectNotSub = true;
@@ -467,6 +478,9 @@ script.
          $('.sub-wrap').hide();
       }
       if(sessionStorage.role == 'student'){
+         codingNotSub = false;
+         mobileNotSub = false;
+         projectNotSub = false;
          $('.codingOn').toggle()
          $('.codingOff').toggle()
          $('.mobileOn').toggle()
@@ -477,10 +491,10 @@ script.
       }
       if(sessionStorage.role == 'teacher'){
          $('.sub-wrap').hide();
-         var codingNotSub = false;
-         var mobileNotSub = false;
-         var projectNotSub = false;
-         var colorNotSub = false;
+         codingNotSub = false;
+         mobileNotSub = false;
+         projectNotSub = false;
+         colorNotSub = false;
          $('.sidebar-teacher').show()
          $('.admin-delete').show()
          $('.admin-delete').css('display', 'inline-block')
@@ -489,10 +503,10 @@ script.
       }
       if(sessionStorage.role == 'admin'){
          $('.sub-wrap').hide();
-         var codingNotSub = false;
-         var mobileNotSub = false;
-         var projectNotSub = false;
-         var colorNotSub = false;
+         codingNotSub = false;
+         mobileNotSub = false;
+         projectNotSub = false;
+         colorNotSub = false;
          $('.sidebar-admin').show()
          $('.admin-delete').show()
          $('.admin-delete').css('display', 'inline-block')
@@ -501,8 +515,44 @@ script.
          $('.admin-add-subject').show()
       }
       
+      
+      $(document).mouseup(function (e){
+         var container = $(".error-wrap");
+
+         if (codingError) {
+            $('.error-wrap').slideUp('200');
+            codingError = false
+          }
+      });
+      $(document).mouseup(function (e){
+         var container = $(".error-wrap");
+
+         if (mobileError) {
+            $('.error-wrap').slideUp('200');
+            mobileError = false
+          }
+      });
+      $(document).mouseup(function (e){
+         var container = $(".error-wrap");
+
+         if (projectError) {
+            $('.error-wrap').slideUp('200');
+            projectError = false
+          }
+      });
+      $(document).mouseup(function (e){
+         var container = $(".error-wrap");
+
+         if (colorError) {
+            $('.error-wrap').slideUp('200');
+            colorError = false
+          }
+      });
+   
+   
    // Scripts for sub button og lecture link
    
+      
    
       $('.codingOff').click(function(){
          $('.codingOff').toggle()
@@ -515,8 +565,12 @@ script.
          codingNotSub = true;
       });
       $('.codingLink').click(function(e) {
-         if(codingNotSub){ 
+         if(codingNotSub && codingError === false){ 
             e.preventDefault();
+            if(sessionStorage.role == 'student'){
+               $('.error-wrap').slideDown('200')
+               codingError = true;
+            };
          };
       });  
    }); 
@@ -533,8 +587,12 @@ script.
          mobileNotSub = true;
       });
       $('.mobileLink').click(function(e) {
-         if(mobileNotSub){ 
+         if(mobileNotSub && mobileError === false){ 
             e.preventDefault();
+            if(sessionStorage.role == 'student'){
+               $('.error-wrap').slideDown('200')
+               mobileError = true;
+            };   
          };
       });  
    });
@@ -551,8 +609,12 @@ script.
          projectNotSub = true;
       });
       $('.projectLink').click(function(e) {
-         if(projectNotSub){ 
+         if(projectNotSub && projectError === false){ 
             e.preventDefault();
+            if(sessionStorage.role == 'student'){
+               $('.error-wrap').slideDown('200')
+               projectError = true;
+            }; 
          };
       });  
    });
@@ -569,8 +631,12 @@ script.
          colorNotSub = true;
       });
       $('.colorLink').click(function(e) {
-         if(colorNotSub){ 
+         if(colorNotSub && colorError === false){ 
             e.preventDefault();
+            if(sessionStorage.role == 'student'){
+               $('.error-wrap').slideDown('200')
+               colorError = true;
+            }; 
          };
       });  
    });
@@ -651,6 +717,10 @@ script.
          $('.colorNone').toggle()
          $('.colorHeaderAll').toggle()
          $('.colorHeaderLatest').toggle()
-      });   
-   });
+      });
+   });   
+  
+
+   
+   
    
