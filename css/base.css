@@ -1394,9 +1394,6 @@ header nav ul {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1439,6 +1436,12 @@ header nav ul li.search {
   right: 4px;
 }
 
+header nav ul li.search .search-icon svg, header nav ul li.search .close-icon svg {
+  fill: #455A64;
+  margin-top: 5px;
+  margin-left: 3px;
+}
+
 header nav ul li.search .search-press {
   width: 100%;
   height: 100%;
@@ -1455,14 +1458,28 @@ header nav ul li.search .blur-trigger {
 }
 
 header nav ul li.search.activeColor {
-  background-color: #98ff9b;
+  background-color: #79d894;
+  -webkit-transform: scale(0.4);
+      -ms-transform: scale(0.4);
+          transform: scale(0.4);
   top: 65px;
+  right: 40px;
 }
 
-header nav ul li.search .search-icon svg, header nav ul li.search .close-icon svg {
-  fill: #455A64;
-  margin-top: 5px;
-  margin-left: 3px;
+header nav ul li.search.activeColor .search-icon, header nav ul li.search.activeColor .close-icon {
+  opacity: 0;
+}
+
+.flex-around {
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+.flex-between {
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .searchbox {
@@ -1547,9 +1564,6 @@ header nav ul li.search .search-icon svg, header nav ul li.search .close-icon sv
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1639,6 +1653,7 @@ nav.mobile .nav-items .flex-item {
 
 nav.mobile .nav-items.search-active {
   margin-top: 10px;
+  transition: all 0.3s;
 }
 
 nav.mobile .nav-items.search-active .flex-item {
@@ -2031,6 +2046,11 @@ footer .links a, footer .links-mobile a {
             transform: translateY(0px);
     opacity: 1;
   }
+}
+
+.round-center {
+  border-radius: 50%;
+  margin: 0 auto;
 }
 
 body {
@@ -2748,8 +2768,12 @@ textarea {
 }
 
 #main-admin {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
 }
 
@@ -2830,14 +2854,10 @@ textarea {
 }
 
 #main-admin #subjectsModal .modal-content .help-button:hover {
-<<<<<<< HEAD
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
-=======
-  transform: scale(1.2);
   cursor: pointer;
->>>>>>> origin/master
 }
 
 #main-admin #subjectsModal .modal-content .info-text-alignment {
@@ -3302,16 +3322,6 @@ textarea {
 
 #main-admin .approve-teachers form {
   margin-top: 25px;
-<<<<<<< HEAD
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-=======
->>>>>>> origin/master
 }
 
 #main-admin .approve-teachers form ul {
@@ -4580,13 +4590,24 @@ ul.slide-timeline li a:hover {
   margin-left: 18px;
 }
 
-.like-dislike .icons .like, .like-dislike .icons .dislike {
+.like-dislike .icons .like, .like-dislike .icons .dislike, .like-dislike .icons .favorite, .like-dislike .icons .mail {
   display: inline;
   fill: #6d828c;
   margin-right: 5px;
+  transition: all 0.3s ease;
 }
 
-.like-dislike .icons .like:hover {
+.like-dislike .icons .like:hover svg, .like-dislike .icons .dislike:hover svg, .like-dislike .icons .favorite:hover svg, .like-dislike .icons .mail:hover svg {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.like-dislike .icons .favorite {
+  margin-left: 20px;
+}
+
+.like-dislike .icons .like:hover, .like-dislike .icons .favorite:hover, .like-dislike .icons .mail:hover {
   fill: #79d894;
 }
 
@@ -4594,7 +4615,7 @@ ul.slide-timeline li a:hover {
   fill: #E57373;
 }
 
-.like-dislike .icons .like.checked {
+.like-dislike .icons .like.checked, .like-dislike .icons .favorite.checked {
   fill: #79d894;
 }
 
@@ -4610,6 +4631,7 @@ ul.slide-timeline li a:hover {
   -webkit-transform-origin: center center;
       -ms-transform-origin: center center;
           transform-origin: center center;
+  transition: all 0.3s ease;
 }
 
 .rating:not(:checked) > input {
@@ -4639,6 +4661,10 @@ ul.slide-timeline li a:hover {
 
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
+  transition: all 0.3s ease;
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
   color: #79d894;
 }
 
@@ -4647,6 +4673,10 @@ ul.slide-timeline li a:hover {
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label,
 .rating > label:hover ~ input:checked ~ label {
+  transition: all 0.3s ease;
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
   color: #79d894;
 }
 
