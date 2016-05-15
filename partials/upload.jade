@@ -2,21 +2,43 @@
    .row
       .col.col--2-of-4.col--m-4-of-4.upFiX
          form#uploadForm(name='uploadFiles', action='index.html', method='get')
-            #uploadVid
-               label.upLabel(for="video") Video
-               br
-               input(type='file', id='videoUpload' name='videoUpload')
-            #uploadTrans
-               label.upLabel(for="transcript") Transcript
-               br
-               input(type='file', id='transUpload', name='transUpload')
-            #uploadSlides
-               label.upLabel(for="slides") Slides
-               br
-               input(type='file', id='slidesUpload', name='slidesUpload')
-            button(id='finalUpload', type='button') Upload lecture
-            
+            #upSubject
                
+                  select.btn(name='subject')
+                     option(selected='', disabled='', hidden='') Subject
+                     option(value='IMT1292') IMT1292
+                     option(value='IMT2661') IMT2661
+                     option(value='IMT1471') IMT1471
+                     option(value='IMT2002') IMT2002
+                     
+            .btn#changeVidBtn Upload video
+            .change#changeVid
+               .upload
+                  input(type="file" name="upload" id="file")
+                  label(for="file") Choose video.. 
+               p.VidCancel Cancel
+               p.VidCancel Save
+            
+            .btn#changeTraBtn Upload transcript
+            .change#changeTra
+               .upload
+                  input(type="file" name="upload" id="file")
+                  label(for="file") Choose transcript...
+               p.TraCancel Cancel
+               p.TraCancel Save           
+      
+            .btn#changeSliBtn Upload slides
+            .change#changeSli
+               .upload
+                  input(type="file" name="upload" id="file")
+                  label(for="file") Choose slides...
+               p.SliCancel Cancel
+               p.SliCancel Save 
+               
+         input#finalUpload(type='submit', value='Upload', onclick='move()')   
+         #myProgress
+            #myBar
+               #label 10%
       
       .col.col--2-of-4.col--m-4-of-4.upFiX
          form#uploadBreakpoints(name='uploadBreakpoints', action='index.html', method='get')
@@ -35,10 +57,71 @@
                      input.theBreakpoints(type='text', name='breakpoint4', placeholder='1:04')
                      input.theKeywords(type='text', name='keyword4', placeholder='My Keyword 4')
                   .col.col--2-of-2
-                     input.theBreakpoints(type='text', name='breakpoint5', placeholder='1:05')
-                     input.theKeywords(type='text', name='keyword5', placeholder='My Keyword 5')
+                     input#key5time.theBreakpoints(type='text', name='breakpoint5', placeholder='1:05')
+                     input#key5title.theKeywords(type='text', name='keyword5', placeholder='My Keyword 5')
                   .col.col--2-of-2
                      button(id='addButton', type='button') Add new keyword
-                  
-         
-            
+
+script. 
+   $(document).ready(function(){
+      $("#addButton").click(function(event){
+         $("#key5title").show();
+         $("#key5time").show();
+      });
+      //VID
+      $('#changeVidBtn').click(function(){
+         $('#changeVid').toggle()
+      });
+      $('.VidCancel').click(function(){
+         $('#changeVid').toggle()
+      });
+      $('.VidCancel').click(function(){
+         $('#changeVidBtn').toggle()
+      });
+      $('#changeVidBtn').click(function(){
+         $('#changeVidBtn').toggle()
+      });
+      //transcript
+      $('#changeTraBtn').click(function(){
+         $('#changeTra').toggle()
+      });
+      $('.TraCancel').click(function(){
+         $('#changeTra').toggle()
+      });
+      $('.TraCancel').click(function(){
+         $('#changeTraBtn').toggle()
+      });
+      $('#changeTraBtn').click(function(){
+         $('#changeTraBtn').toggle()
+      });
+      //slides
+      $('#changeSliBtn').click(function(){
+         $('#changeSli').toggle()
+      });
+      $('.SliCancel').click(function(){
+         $('#changeSli').toggle()
+      });
+      $('.SliCancel').click(function(){
+         $('#changeSliBtn').toggle()
+      });
+      $('#changeSliBtn').click(function(){
+         $('#changeSliBtn').toggle()
+      });      
+   });
+   
+script.
+   function move() {
+      document.getElementById('myProgress').style.visibility = 'visible'
+      var elem = document.getElementById("myBar");
+      var width = 10;
+      var id = setInterval(frame, 10);
+      function frame() {
+         if (width >= 100) {
+            clearInterval(id);
+         } else {
+         width++;
+         elem.style.width = width + '%';
+         document.getElementById("label").innerHTML = width * 1  + '%';
+         }
+      }
+   }
