@@ -342,7 +342,7 @@
 
    .profile-content
       width: 200px
-      height: 500px
+      height: auto
 
    @media (max-width: 800px)
       .notprofile-content
@@ -383,11 +383,13 @@
 
       .subBtn, .subPressed
          width: 65%
-      .admin-edit
-         width: 141px
       .teacher-edit
          margin-left: 0
          width: 141px
+      .admin-edit
+         width: 141px
+      .admin-delete
+         margin-right: 20px
 
       hr
          width: 20%
@@ -395,3 +397,10 @@
          margin-top: 10px
       .all-lectures
          margin-top: 15px
+@media (max-width: 380px)
+   #subjectWrapper
+      .teacher-edit
+         margin-left: 0
+         width: 141px
+      .admin-edit
+         width: 141px

@@ -2552,6 +2552,12 @@ textarea {
   }
 }
 
+#main-admin {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 #main-admin .monitor {
   padding: 0;
   margin: 0;
@@ -3061,9 +3067,6 @@ textarea {
 
 #main-admin .approve-teachers form {
   margin-top: 25px;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
 }
 
 #main-admin .approve-teachers form ul {
@@ -3106,22 +3109,22 @@ textarea {
   transform: scale(1.2);
 }
 
-#main-admin .approve-teachers form .notprofile-content {
+#main-admin .notprofile-content {
   width: calc(100% - 200px);
   height: auto;
   padding-right: 20px;
 }
 
-#main-admin .approve-teachers form .profile-content {
+#main-admin .profile-content {
   width: 200px;
   height: 500px;
 }
 
-@media (max-width: 900px) {
-  #main-admin .approve-teachers form .notprofile-content {
+@media (max-width: 1000px) {
+  #main-admin .notprofile-content {
     width: 100vw !important;
   }
-  #main-admin .approve-teachers form .profile-content {
+  #main-admin .profile-content {
     display: none;
   }
 }
@@ -3572,7 +3575,7 @@ textarea {
 
 #subjectWrapper .profile-content {
   width: 200px;
-  height: 500px;
+  height: auto;
 }
 
 @media (max-width: 800px) {
@@ -3624,12 +3627,15 @@ textarea {
   #subjectWrapper .subBtn, #subjectWrapper .subPressed {
     width: 65%;
   }
-  #subjectWrapper .admin-edit {
-    width: 141px;
-  }
   #subjectWrapper .teacher-edit {
     margin-left: 0;
     width: 141px;
+  }
+  #subjectWrapper .admin-edit {
+    width: 141px;
+  }
+  #subjectWrapper .admin-delete {
+    margin-right: 20px;
   }
   #subjectWrapper hr {
     width: 20%;
@@ -3639,6 +3645,16 @@ textarea {
   }
   #subjectWrapper .all-lectures {
     margin-top: 15px;
+  }
+}
+
+@media (max-width: 380px) {
+  #subjectWrapper .teacher-edit {
+    margin-left: 0;
+    width: 141px;
+  }
+  #subjectWrapper .admin-edit {
+    width: 141px;
   }
 }
 
