@@ -330,8 +330,31 @@
          cursor: pointer
          border: 2px solid $green1
 
+   // content + Profile CSS
+   display: flex
+   justify-content: space-between
+   width: 100%
 
-   @media (max-width: 1000px)
+   .notprofile-content
+      width: calc(100% - 200px)
+      height: auto
+      padding-right: 20px
+
+   .profile-content
+      width: 200px
+      height: 500px
+
+   @media (max-width: 800px)
+      .notprofile-content
+         width: 100vw !important
+      .profile-content
+         display: none
+   //Content + profile End
+
+
+
+@media (max-width: 1000px)
+   #subjectWrapper
       .subBtn, .subPressed
          width: 38%
       .comment-wrap
@@ -339,7 +362,8 @@
       .latest-lecture, .header-all
          width: 250px
 
-   @media (max-width: 700px)
+@media (max-width: 700px)
+   #subjectWrapper
       .displayNoneTablet
          display: none
       .subBtn, .subPressed
@@ -352,11 +376,18 @@
          margin-top: 0
       .latest-lecture, .header-all
          width: 200px
-   @media (max-width: 480px)
+@media (max-width: 480px)
+   #subjectWrapper
       button.accordion
-         font-size: 1.8rem
+         font-size: 1.3rem
+
       .subBtn, .subPressed
          width: 65%
+      .admin-edit
+         width: 141px
+      .teacher-edit
+         margin-left: 0
+         width: 141px
 
       hr
          width: 20%
