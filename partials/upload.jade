@@ -1,4 +1,5 @@
 #uploadWrapper
+   h2#upTitle Upload lecture
    .row
       .col.col--2-of-4.col--m-4-of-4.upFiX
          form#uploadForm(name='uploadFiles', action='index.html', method='get')
@@ -35,10 +36,10 @@
                p.SliCancel Cancel
                p.SliCancel Save 
                
-         input#finalUpload(type='submit', value='Upload', onclick='move()')   
-         #myProgress
-            #myBar
-               #label 10%
+            input#finalUpload(type='button', value='Upload', onclick='move()')   
+            #myProgress
+               #myBar
+                  #label 10%
       
       .col.col--2-of-4.col--m-4-of-4.upFiX
          form#uploadBreakpoints(name='uploadBreakpoints', action='index.html', method='get')
