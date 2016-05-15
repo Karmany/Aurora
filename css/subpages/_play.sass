@@ -158,18 +158,26 @@ ul.slide-timeline
    .icons
       margin-left: 18px
 
-      .like, .dislike
+      .like, .dislike, .favorite, .mail
          display: inline
          fill: $primaryColorLight
          margin-right: 5px
+         transition: all 0.3s ease
 
-      .like:hover
+         &:hover
+            svg
+               transform: scale(1.2)
+
+      .favorite
+         margin-left: 20px
+
+      .like:hover, .favorite:hover, .mail:hover
          fill: $green1
 
       .dislike:hover
          fill: $alert
 
-      .like.checked
+      .like.checked, .favorite.checked
          fill: $green1
 
       .dislike.checked
@@ -181,6 +189,7 @@ ul.slide-timeline
    transform: scale(0.8)
    width: 180px
    transform-origin: center center
+   transition: all 0.3s ease
 
 .rating:not(:checked) > input
    position: absolute
@@ -205,6 +214,8 @@ ul.slide-timeline
 
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label
+   transition: all 0.3s ease
+   transform: scale(1.2)
    color: $green1
 
 .rating > input:checked + label:hover,
@@ -212,6 +223,8 @@ ul.slide-timeline
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label,
 .rating > label:hover ~ input:checked ~ label
+   transition: all 0.3s ease
+   transform: scale(1.2)
    color: $green1
 
 .rating > label:active

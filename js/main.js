@@ -19,17 +19,17 @@ $(window).on('hashchange load', function(e){
 	  if (sessionStorage.role == 'student') {
 		  hideNavItems();
 		  // student header nav links
-		  $('.page-2-link, .page-3-link, .page-4-link, .search, .logout').show();
+		  $('.page-2-link, .page-3-link, .page-4-link, .page-10-link, .search, .logout').show();
 
 	  }else if (sessionStorage.role == 'teacher') {
 		  hideNavItems();
 		  // teacher header nav links
-		  $('.page-4-link, .page-5-link, .search, .logout, .page-9-link').show();
+		  $('.page-4-link, .page-5-link, .search, .page-11-link, .logout, .page-9-link').show();
 
 	  }else if (sessionStorage.role == 'admin') {
 		  hideNavItems();
 		  // admin header nav links
-		  $(' .page-4-link, .page-6-link, .search, .logout').show();
+		  $(' .page-4-link, .page-6-link, .page-12-link, .search, .logout').show();
 
 	  }else if (sessionStorage.role == 'unregistered') {
 		  hideNavItems();
@@ -53,16 +53,46 @@ $('#role').text(sessionStorage.role)
 
 // ____________________________________
 
+// START - NAV FLEX
+
+$(function(){
+
+	$(function(){
+   	setTimeout(function(){
+			if(
+
+				$('nav.desktop ul li').filter(function() {
+					return $(this).css('display') !== 'none';
+				}).length <= 4
+
+			){
+				console.log('yay');
+				$('nav.desktop ul').removeClass('flex-between');
+				$('nav.desktop ul').addClass('flex-around');
+				$('.nav-desktop-indicator ul').removeClass('flex-between');
+				$('.nav-desktop-indicator ul').addClass('flex-around');
+			}else{
+				console.log('y u do dis');
+			};
+		}, 600);
+   });
+
+});
+
+// END - NAV FLEX
+
+// ____________________________________
+
 // START - SEARCHBOX
-	$('.search-press, .search-press-mobile').on('click', function(){
-			$('.searchbox').addClass('open');
-			$('li.search').addClass('activeColor');
-			$('nav.mobile .nav-items').addClass('search-active');
-			$('.blur-trigger, .blur-trigger-mobile').show();
-			$('.search-icon').hide();
-			$('.close-icon').show();
-			$('.searchbox input').focus();
-	});
+$('.search-press, .search-press-mobile').on('click', function(){
+		$('.searchbox').addClass('open');
+		$('li.search').addClass('activeColor');
+		$('nav.mobile .nav-items').addClass('search-active');
+		$('.blur-trigger, .blur-trigger-mobile').show();
+		$('.search-icon').hide();
+		$('.close-icon').show();
+		$('.searchbox input').focus();
+});
 
 $('.searchbox input').on('blur', function(){
 	$('.searchbox').removeClass('open');
@@ -72,11 +102,7 @@ $('.searchbox input').on('blur', function(){
 	$('.close-icon').hide();
 	$('.blur-trigger, .blur-trigger-mobile').hide();
 });
-/*
-$('.searchbox input').on('blur', function(){
-	$('.searchbox').addClass('closed').removeClass('open');
-});
-*/
+
 // END - SEARCHBOX
 
 // ____________________________________
@@ -103,18 +129,18 @@ $(".slideout ul li a, .body-overlay").click(function(){
 
 // LIKE - DISLIKE
 
-$(function(){
-	$('.controllers .icons .like').on('click', function(){
-		$('.dislike').removeClass('checked');
-		$('.like').addClass('checked');
-	});
+$('.controllers .icons .like').on('click', function(){
+	$('.dislike').removeClass('checked');
+	$('.like').addClass('checked');
 });
 
-$(function(){
-	$('.controllers .icons .dislike').on('click', function(){
-		$('.like').removeClass('checked');
-		$('.dislike').addClass('checked');
-	});
+$('.controllers .icons .dislike').on('click', function(){
+	$('.like').removeClass('checked');
+	$('.dislike').addClass('checked');
+});
+
+$('.controllers .icons .favorite').on('click', function(){
+	$('.favorite').toggleClass('checked');
 });
 
 // END LIKE - DISLIKE
@@ -149,12 +175,16 @@ function urlTitle() {
 				ttl.textContent = getUrl().replace('-', ' ');
 				document.title = pageBaseTitle + " - " + getUrl().ucFirst();
 				break;
+			case page19:
+				ttl.textContent = 'Home';
+				document.title = pageBaseTitle + " - " + 'Home';
+				break;
 			case page2:
-				ttl.textContent = 'your lectures'
+				ttl.textContent = 'your lectures';
 				document.title = pageBaseTitle + " - " + 'Your lectures';
 				break;
 			case page3:
-				ttl.textContent = 'home'
+				ttl.textContent = 'home';
 				document.title = pageBaseTitle + " - " + 'Home';
 				break;
 			case page4:
@@ -162,19 +192,29 @@ function urlTitle() {
 				document.title = pageBaseTitle + " - " + getUrl().ucFirst();
 				break;
 			case page5:
-				ttl.textContent = 'home'
+				ttl.textContent = 'home';
 				document.title = pageBaseTitle + " - " + 'Home';
 				break;
 			case page6:
-				ttl.textContent = 'home'
+				ttl.textContent = 'home';
 				document.title = pageBaseTitle + " - " + 'Home';
 				break;
 			case page9:
-				ttl.textContent = 'your lectures'
+				ttl.textContent = 'your lectures';
 				document.title = pageBaseTitle + " - " + 'Your lectures';
 				break;
-			default:
-
+			case page8:
+				ttl.textContent = 'profile';
+				document.title = pageBaseTitle + " - " + 'profile';
+				break;
+			case page10:
+				ttl.textContent = 'profile';
+				document.title = pageBaseTitle + " - " + 'profile';
+				break;
+			case page11:
+				ttl.textContent = 'profile';
+				document.title = pageBaseTitle + " - " + 'profile';
+				break;
 		}
 	} else {
 		ttl.textContent = ''
@@ -197,7 +237,7 @@ window.addEventListener("hashchange", function(){
 
 function setActiveMenuItem(){
 	switch (url = window.location.href.split(pageDivider)[1]) {
-		case page1:
+		case page19:
 			removeActiveClass();
 			//document.getElementById('page-one-mobile').setAttribute('class', 'nav-list-mobile__item nav-list-mobile__item--active');
 			$('.nav-desktop-indicator .page-1-link').addClass('active');

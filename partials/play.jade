@@ -50,6 +50,11 @@
                   include ../includes/svg-icons/like-icon.jade
                .dislike   
                   include ../includes/svg-icons/dislike-icon.jade
+               .favorite
+                  include ../includes/svg-icons/favorite-icon.jade
+               .mail
+                  a(href="mailto:someone@example.com?Subject=Check%20this%20lecture%20out!" target="_top")
+                     include ../includes/svg-icons/mail-icon.jade
             
          .change-slides
             input#prev(type='button', name='prev', onclick='prev();')
@@ -122,7 +127,7 @@
                      h4 Lists are wierd..
                      p Great lecture! But i'm curious, how can i style a list to prevent it from having those bullet points? Those pesky lists also take up so much space, why is that?
                      p.secondary 20.05.16 - 
-                        strong Relpy
+                        strong Reply
                            include ../includes/svg-icons/reply-icon.jade
                      
                   .comment.two
@@ -135,7 +140,7 @@
                      h4 Great question!
                      p If you style the &LT;li&GT; element with 'list style type: none;', then the bullet points will dissapear. A list will often have some default margins/paddings, to reset these, style the &LT;ul&GT; element with 'margin: 0; padding 0;'.
                      p.secondary 20.05.16 - 
-                        strong Relpy
+                        strong Reply
                            include ../includes/svg-icons/reply-icon.jade
                      
                   .comment.one
@@ -148,7 +153,7 @@
                      h4 Missing lectures slides
                      p It seems like the last few slides from the lecture is missing. Can you please add them?
                      p.secondary 19.05.16 - 
-                        strong Relpy
+                        strong Reply
                            include ../includes/svg-icons/reply-icon.jade
                      
                   .comment.two
@@ -161,7 +166,7 @@
                      h4 Oops!
                      p I will get to it!
                      p.secondary 20.05.16 - 
-                        strong Relpy
+                        strong Reply
                            include ../includes/svg-icons/reply-icon.jade
                   
                   a.hyperlink view more comments..
