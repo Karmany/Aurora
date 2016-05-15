@@ -273,7 +273,7 @@
          margin: 7px 0
       &:hover
          background-color: $green2
-   
+
 
 
    .teacher-edit
@@ -300,8 +300,61 @@
          margin: 7px 0
       &:hover
          background-color: $green2
+   .admin-add-subject
+      display: none
 
-   @media (max-width: 1000px)
+   .add-icon
+      margin: 0
+      padding: 0
+      position: relative
+      top: 4px
+      right: 5px
+   .add-subject
+      input
+         background-color: $primaryColorLight
+         outline: none
+         border: none
+         border-radius: 2px
+         width: 100%
+         cursor: pointer
+         border: 2px solid $green1
+      textarea
+         width: 100%
+         background-color: $primaryColorLight
+         outline: none
+         border: none
+         border-radius: 2px
+         resize: none
+         height: 200px
+         font-size: 1.2rem
+         cursor: pointer
+         border: 2px solid $green1
+
+   // content + Profile CSS
+   display: flex
+   justify-content: space-between
+   width: 100%
+
+   .notprofile-content
+      width: calc(100% - 200px)
+      height: auto
+      padding-right: 20px
+
+   .profile-content
+      width: 200px
+      height: auto
+
+   @media (max-width: 800px)
+      .notprofile-content
+         width: 100vw !important
+      .profile-content
+         display: none
+   //Content + profile End
+
+
+
+@media (max-width: 1000px)
+   #subjectWrapper
       .subBtn, .subPressed
          width: 38%
       .comment-wrap
@@ -309,7 +362,8 @@
       .latest-lecture, .header-all
          width: 250px
 
-   @media (max-width: 700px)
+@media (max-width: 700px)
+   #subjectWrapper
       .displayNoneTablet
          display: none
       .subBtn, .subPressed
@@ -322,11 +376,20 @@
          margin-top: 0
       .latest-lecture, .header-all
          width: 200px
-   @media (max-width: 480px)
+@media (max-width: 480px)
+   #subjectWrapper
       button.accordion
-         font-size: 1.8rem
+         font-size: 1.3rem
+
       .subBtn, .subPressed
          width: 65%
+      .teacher-edit
+         margin-left: 0
+         width: 141px
+      .admin-edit
+         width: 141px
+      .admin-delete
+         margin-right: 20px
 
       hr
          width: 20%
@@ -334,3 +397,10 @@
          margin-top: 10px
       .all-lectures
          margin-top: 15px
+@media (max-width: 380px)
+   #subjectWrapper
+      .teacher-edit
+         margin-left: 0
+         width: 141px
+      .admin-edit
+         width: 141px

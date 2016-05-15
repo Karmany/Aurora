@@ -1,21 +1,22 @@
 .content.profile-student
    .row
       
-      .col.col--4-of-8.col--push-1-of-8
+      .col.col--5-of-8
          .row
             img.avatar(src='img/profile_images/main-student.jpg')   
          .row      
-            .p-col1.col.col--2-of-4
+            .p-col1.col.col--2-of-4.col--m-1-of-2.col--s-1-of-2
                p Name:
                p Student number:
                p Email:
                p Phone number:
-            .p-col2.col.col--2-of-4
+            .p-col2.col.col--2-of-4.col--m-1-of-2.col--s-1-of-2
                p Kim Pedersen
                p 592734
-               p kim.pedersen@aurora.no
+               p 
+                  span kim.pedersen@aurora.no
                p#phoneNumber 95827363   
-      .col.col--2-of-8
+      .col.col--3-of-8
          .profile-edit-wrap
             img(src="../img/iconography/ic_edit_white_24px.svg")
             h2 Edit profile 
@@ -97,6 +98,6 @@
             $('#phoneNumber').replaceWith(a)
          });   
       });
-      //Change Phonenumber Script
+
       
       

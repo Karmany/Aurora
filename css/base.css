@@ -2128,7 +2128,13 @@ a.hyperlink:active {
 
 @media (max-width: 480px) {
   .lectures-student .author p span {
-    font-size: 1.1rem;
+    font-size: 1rem;
+  }
+  .lectures-student .author p {
+    font-size: 1.4rem;
+  }
+  .lectures-student .author {
+    width: 180px;
   }
 }
 
@@ -2544,6 +2550,12 @@ textarea {
   #main-teacher .author p span {
     font-size: 1.1rem !important;
   }
+}
+
+#main-admin {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 #main-admin .monitor {
@@ -3097,6 +3109,26 @@ textarea {
   transform: scale(1.2);
 }
 
+#main-admin .notprofile-content {
+  width: calc(100% - 200px);
+  height: auto;
+  padding-right: 20px;
+}
+
+#main-admin .profile-content {
+  width: 200px;
+  height: 500px;
+}
+
+@media (max-width: 1000px) {
+  #main-admin .notprofile-content {
+    width: 100vw !important;
+  }
+  #main-admin .profile-content {
+    display: none;
+  }
+}
+
 @media (max-width: 1050px) {
   #main-admin #teachersModal .modal-content {
     max-width: 50%;
@@ -3141,6 +3173,12 @@ textarea {
   #main-admin #teachersModal .modal-content h2 {
     font-size: 2rem;
   }
+}
+
+#subjectWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 #subjectWrapper button.accordion {
@@ -3494,6 +3532,61 @@ textarea {
   background-color: #98ff9b;
 }
 
+#subjectWrapper .admin-add-subject {
+  display: none;
+}
+
+#subjectWrapper .add-icon {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 4px;
+  right: 5px;
+}
+
+#subjectWrapper .add-subject input {
+  background-color: #6d828c;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  width: 100%;
+  cursor: pointer;
+  border: 2px solid #79d894;
+}
+
+#subjectWrapper .add-subject textarea {
+  width: 100%;
+  background-color: #6d828c;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  resize: none;
+  height: 200px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: 2px solid #79d894;
+}
+
+#subjectWrapper .notprofile-content {
+  width: calc(100% - 200px);
+  height: auto;
+  padding-right: 20px;
+}
+
+#subjectWrapper .profile-content {
+  width: 200px;
+  height: auto;
+}
+
+@media (max-width: 800px) {
+  #subjectWrapper .notprofile-content {
+    width: 100vw !important;
+  }
+  #subjectWrapper .profile-content {
+    display: none;
+  }
+}
+
 @media (max-width: 1000px) {
   #subjectWrapper .subBtn, #subjectWrapper .subPressed {
     width: 38%;
@@ -3529,10 +3622,20 @@ textarea {
 
 @media (max-width: 480px) {
   #subjectWrapper button.accordion {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
   #subjectWrapper .subBtn, #subjectWrapper .subPressed {
     width: 65%;
+  }
+  #subjectWrapper .teacher-edit {
+    margin-left: 0;
+    width: 141px;
+  }
+  #subjectWrapper .admin-edit {
+    width: 141px;
+  }
+  #subjectWrapper .admin-delete {
+    margin-right: 20px;
   }
   #subjectWrapper hr {
     width: 20%;
@@ -3545,14 +3648,24 @@ textarea {
   }
 }
 
+@media (max-width: 380px) {
+  #subjectWrapper .teacher-edit {
+    margin-left: 0;
+    width: 141px;
+  }
+  #subjectWrapper .admin-edit {
+    width: 141px;
+  }
+}
+
 .profile .profile-wrapper {
   background-color: #455A64;
   padding-bottom: 20px;
   border-radius: 2px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
-  position: relative;
   margin-top: 7px;
   min-width: 200px;
+  height: auto;
 }
 
 .profile .profile-list {
@@ -3686,6 +3799,7 @@ textarea {
   padding: 20px;
   border-radius: 2px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  min-width: 210px;
 }
 
 .profile-student .profile-edit-wrap img {
@@ -3763,6 +3877,7 @@ textarea {
   border: 0;
   border-radius: 2px;
   padding: 5px;
+  border: 2px solid #79d894;
 }
 
 .profile-student .change input:focus {
@@ -3800,11 +3915,15 @@ textarea {
   width: 100%;
   text-align: center;
   display: block;
-  background-color: #314650;
-  color: #79d894;
+  background-color: #79d894;
+  color: #455A64;
   border-radius: 2px;
   padding: 5px;
   cursor: pointer;
+}
+
+.profile-student #changePic label:hover {
+  background-color: #98ff9b;
 }
 
 .profile-student .p-col1 p {
@@ -3822,6 +3941,78 @@ textarea {
 .profile-student .p-col2 p a {
   text-decoration: none;
   color: #79d894;
+}
+
+.profile-student .deactivate-btn {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  width: 70%;
+  position: relative;
+  left: 15%;
+  background-color: #E57373;
+  border-radius: 2px;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  display: none;
+}
+
+.profile-student .deactivate-btn:hover {
+  background-color: #ff9b9b;
+}
+
+.profile-student .deactivate-btn p {
+  margin: 5px 0 5px -35px;
+}
+
+.profile-student .deactivate-btn .deactivate-icon {
+  fill: white;
+  width: 20px;
+  margin: 5px 0 5px -10px;
+}
+
+@media (max-width: 1000px) {
+  .profile-student .p-col1 p {
+    font-size: 1.4rem;
+  }
+  .profile-student .p-col2 p {
+    font-size: 1.4rem;
+  }
+  .profile-student .p-col2 span {
+    font-size: 1.2rem;
+  }
+  .profile-student .p-col2 a {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .profile-student .deactivate-btn {
+    width: 40%;
+    position: relative;
+    left: 30%;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-student .p-col1 p {
+    font-size: 1.2rem;
+  }
+  .profile-student .p-col2 p {
+    font-size: 1.2rem;
+  }
+  .profile-student .p-col2 span {
+    font-size: 1rem;
+  }
+  .profile-student .p-col2 a {
+    font-size: 1rem;
+  }
+  .profile-student .deactivate-btn {
+    width: 80%;
+    left: 10%;
+  }
 }
 
 #playVideo {
@@ -4275,7 +4466,7 @@ button.comment:active {
 }
 
 #uploadWrapper #uploadForm {
-  background: #314650;
+  background: #455A64;
   border-radius: 4px;
   padding: 40px;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
@@ -4294,14 +4485,14 @@ button.comment:active {
   color: #79d894;
 }
 
-#uploadBreakpoints {
-  background: #314650;
+#uploadWrapper #uploadBreakpoints {
+  background: #455A64;
   border-radius: 4px;
   padding: 40px;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
 }
 
-.theBreakpoints, .theKeywords {
+#uploadWrapper .theBreakpoints, #uploadWrapper .theKeywords {
   font-size: 22px;
   display: block;
   width: 100%;
@@ -4317,20 +4508,20 @@ button.comment:active {
   -webkit-appearance: none;
 }
 
-.theBreakpoints:focus, .theKeywords:focus {
+#uploadWrapper .theBreakpoints:focus, #uploadWrapper .theKeywords:focus {
   outline: #98ff9b;
 }
 
-.theBreakpoints {
+#uploadWrapper .theBreakpoints {
   border-bottom: none;
 }
 
-.theKeywords {
-  margin-bottom: 30px;
+#uploadWrapper .theKeywords {
+  margin-bottom: 20px;
   border-top: none;
 }
 
-#addButton, #finalUpload {
+#uploadWrapper #addButton, #uploadWrapper #finalUpload {
   border: 0;
   outline: none;
   border-radius: 0;
@@ -4348,12 +4539,110 @@ button.comment:active {
   -webkit-appearance: none;
 }
 
-#addButton:hover, #addButton:focus, #finalUpload:hover, #finalUpload:focus {
+#uploadWrapper #addButton:hover, #uploadWrapper #addButton:focus {
   background: #98ff9b;
 }
 
-#finalUpload {
+#uploadWrapper #finalUpload {
   margin-top: 100px;
+}
+
+#uploadWrapper select {
+  color: #455A64;
+  background-color: #79d894;
+  margin-top: 0px !important;
+}
+
+#uploadWrapper .btn {
+  padding: 10px 0;
+  background-color: #79d894;
+  color: #455A64;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#uploadWrapper .change {
+  display: none;
+  padding: 5px;
+  background-color: #455A64;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 20px;
+}
+
+#uploadWrapper .change input {
+  width: 100%;
+  background-color: #455A64;
+  border: 0;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+#uploadWrapper .change input:focus {
+  outline-width: 0;
+}
+
+#uploadWrapper .change ::-webkit-input-placeholder {
+  color: #79d894;
+}
+
+#uploadWrapper .change p {
+  width: 48%;
+  margin: 0;
+  padding: 0;
+  padding: 5px 10px 0 10px;
+  background-color: #455A64;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+#uploadWrapper #changeVid input, #uploadWrapper #changeTra input, #uploadWrapper #changeSli input {
+  display: none;
+}
+
+#uploadWrapper #changeVid label, #uploadWrapper #changeTra label, #uploadWrapper #changeSli label {
+  width: 100%;
+  text-align: center;
+  display: block;
+  background-color: #455A64;
+  color: #79d894;
+  border-radius: 2px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#uploadWrapper select {
+  text-align: center;
+  text-align-last: center;
+}
+
+#uploadWrapper #key5time, #uploadWrapper #key5title {
+  display: none;
+}
+
+#uploadWrapper #myProgress {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: #455A64;
+  visibility: hidden;
+}
+
+#uploadWrapper #myBar {
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  background-color: #79d894;
+}
+
+#uploadWrapper #label {
+  text-align: center;
+  line-height: 30px;
+  color: #455A64;
 }
 
 /* BEGIN Thin */

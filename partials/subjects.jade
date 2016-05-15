@@ -1,418 +1,432 @@
-#subjectWrapper.content
-   .row
-      .col.col--4-of-5.col--m-4-of-4
+.content
+   #subjectWrapper
+      .notprofile-content
          .row
-            #results.col.col--5-of-5
-               #accordion
-                  //SUBJECT 1 WEB CODING
-                  button.accordion.expand IMT1292: Web Coding
-                     include ../includes/svg-icons/expand.jade
-                  .panel
-                     .row
-                        .col.col--1-of-4.col--m-2-of-4.marginTop.teacherCol
-                           img.panelImage(src='../img/profile_images/teacher2.jpg')
-                           
-                           p 
-                              strong Henriette Jacobsen
-                           p.p-space-fix Subject Lecturer
-                        .col.col--3-of-4.col--m-2-of-4.marginTop
-                           .row   
-                              p.col.col--2-of-2.col--s-2-of-2.p-space-fix After completing the course, students will have a basic understanding of and skills in visual design of web pages. They should be able to plan and carry out the development of Web pages and sites based on the most important client based web tecnologies as well as a basic understanding for the server based content management systems.  
-                              p.col.col--2-of-2.col--s-2-of-2.p-space-fix The students will also be able to independently assess and describe the most important aspects of a site's usability, effectiveness, and information architecture, and further to decide what any changes needed to improve the quality of the site / page.
-                              a(href='').admin-delete.delete-space-fix
-                                 include ../includes/svg-icons/delete-forever-icon.jade
-                                 p Delete Subject
-                              a(href='').admin-edit 
-                                 include ../includes/svg-icons/edit-icon.jade
-                                 p Edit Subject
-                     .row
-                        .col.col--2-of-2.sub-wrap
-                           hr
-                           a.subBtn.codingOff
-                              include ../includes/svg-icons/unchecked.jade
-                              p Subscribe
-                           a.subPressed.codingOn
-                              include ../includes/svg-icons/checked.jade
-                              p Subscribe
-                           hr
-                     .row
-                        h2.col.col--4-of-4.latest-lecture.codingHeaderLatest Latest Lecture 
-                        h2.col.col--4-of-4.header-all.codingHeaderAll All Lectures 
-                     //WEBCODING LECTURE 1   
-                     .row   
-                        .col.col--1-of-4.displayNoneTablet
-                           img.lecture-img(src='img/slides/Lecture3-1.010.jpeg')
-                           .comment-wrap
-                              img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
-                              .comment-txt
-                                 a(href='') Comments (4)
-                        .col.col--3-of-4
-                           a.lec-link.codingLink(href='#play')   
-                              h3.lecture-head IMT1292 Web Coding:  -  3rd Introductury Lecture to HTML
-                              p In this lecture we go though alot of diffrent topics it is important to be aware of when designing for mobile. There is alot of diffrent topics, but it is important, so I would recommend taking notes.
-                              p.secondary 17.05.2016
-                              a(href='').admin-delete 
-                                 include ../includes/svg-icons/delete-forever-icon.jade
-                                 p Delete Lecture
-                              a(href='').teacher-edit 
-                                 include ../includes/svg-icons/edit-icon.jade
-                                 p Edit Lecture
+            .col.col--4-of-4.col--m-4-of-4
+               .row
+                  #results.col.col--5-of-5
+                     #accordion
+                        //SUBJECT 1 WEB CODING
+                        button.accordion.expand IMT1292: Web Coding
+                           include ../includes/svg-icons/expand.jade
+                        .panel
+                           .row
+                              .col.col--1-of-4.col--m-2-of-4.marginTop.teacherCol
+                                 img.panelImage(src='../img/profile_images/teacher2.jpg')
                                  
-                     
-                     a.all-lectures.codingAll(href='') View all lectures          
-                     .hiddenLec.codingHiddenLec
-                        //WEBCODING LECTURE 2   
-                        .row   
-                           .col.col--1-of-4.displayNoneTablet
-                              img.lecture-img(src='img/lecture_images/webcoding_lecture2.png')
-                              .comment-wrap
-                                 img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
-                                 .comment-txt
-                                    a(href='') Comments (6)
-                           .col.col--3-of-4
-                              a.lec-link.codingLink(href='#play')   
-                                 h3.lecture-head IMT1292 Web Coding: 1st Introductory Lecture to CSS
-                                 p In this lecture we go through the first basics of CSS and how it connects to the HTML we've already learned. If you havent seen the previous HTML lectures, or know about HTML from before, I would recommend going back and watching from the start of this subject.
-                                 p.secondary 12.05.2016
-                                 a(href='').admin-delete 
-                                    include ../includes/svg-icons/delete-forever-icon.jade
-                                    p Delete Lecture
-                                 a(href='').teacher-edit 
-                                    include ../includes/svg-icons/edit-icon.jade
-                                    p Edit Lecture
-                        //WEBCODING LECTURE 3   
-                        .row   
-                           .col.col--1-of-4.displayNoneTablet
-                              img.lecture-img(src='img/lecture_images/webcoding_lecture3.png')
-                              .comment-wrap
-                                 img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
-                                 .comment-txt
-                                    a(href='') Comments (5)
-                           .col.col--3-of-4
-                              a.lec-link.codingLink(href='#play')   
-                                 h3.lecture-head IMT1292 Web Coding: 2nd Introductury Lecture to HTML
-                                 p In this lecture we continue on the intro to HTML. If you are new to HTML and havent watched the last lecture, I would recommend watching the first lecture in this subject first.
-                                 p.secondary 05.05.2016
-                                 a(href='').admin-delete 
-                                    include ../includes/svg-icons/delete-forever-icon.jade
-                                    p Delete Lecture
-                                 a(href='').teacher-edit 
-                                    include ../includes/svg-icons/edit-icon.jade
-                                    p Edit Lecture
-                        //WEBCODING LECTURE 4
-                        .row   
-                           .col.col--1-of-4.displayNoneTablet
-                              img.lecture-img(src='img/lecture_images/webcoding_lecture4.png')
-                              .comment-wrap
-                                 img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
-                                 .comment-txt
-                                    a(href='') Comments (4)
-                           .col.col--3-of-4
-                              a.lec-link.codingLink(href='#play')   
-                                 h3.lecture-head IMT1292 Web Coding: 1st Introductury Lecture to HTML
-                                 p In this lecture we go through the first basics of HTML. This will be completely from scratch so if you are new to HTML and don't know anything, this is the lecture for you.
-                                 p.secondary 28.04.2016
-                                 a(href='').admin-delete 
-                                    include ../includes/svg-icons/delete-forever-icon.jade
-                                    p Delete Lecture
-                                 a(href='').teacher-edit 
-                                    include ../includes/svg-icons/edit-icon.jade
-                                    p Edit Lecture
+                                 p 
+                                    strong Henriette Jacobsen
+                                 p.p-space-fix Subject Lecturer
+                              .col.col--3-of-4.col--m-2-of-4.marginTop
+                                 .row   
+                                    p.col.col--2-of-2.col--s-2-of-2.p-space-fix After completing the course, students will have a basic understanding of and skills in visual design of web pages. They should be able to plan and carry out the development of Web pages and sites based on the most important client based web tecnologies as well as a basic understanding for the server based content management systems.  
+                                    p.col.col--2-of-2.col--s-2-of-2.p-space-fix The students will also be able to independently assess and describe the most important aspects of a site's usability, effectiveness, and information architecture, and further to decide what any changes needed to improve the quality of the site / page.
+                                    a(href='').admin-delete.delete-space-fix
+                                       include ../includes/svg-icons/delete-forever-icon.jade
+                                       p Delete Subject
+                                    a(href='').admin-edit 
+                                       include ../includes/svg-icons/edit-icon.jade
+                                       p Edit Subject
+                           .row
+                              .col.col--2-of-2.sub-wrap
+                                 hr
+                                 a.subBtn.codingOff
+                                    include ../includes/svg-icons/unchecked.jade
+                                    p Subscribe
+                                 a.subPressed.codingOn
+                                    include ../includes/svg-icons/checked.jade
+                                    p Subscribe
+                                 hr
+                           .row
+                              h2.col.col--4-of-4.latest-lecture.codingHeaderLatest Latest Lecture 
+                              h2.col.col--4-of-4.header-all.codingHeaderAll All Lectures 
+                           //WEBCODING LECTURE 1   
+                           .row   
+                              .col.col--1-of-4.displayNoneTablet
+                                 img.lecture-img(src='img/slides/Lecture3-1.010.jpeg')
+                                 .comment-wrap
+                                    img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                    .comment-txt
+                                       a(href='') Comments (4)
+                              .col.col--3-of-4
+                                 a.lec-link.codingLink(href='#play')   
+                                    h3.lecture-head IMT1292 Web Coding:  -  3rd Introductury Lecture to HTML
+                                    p In this lecture we go though alot of diffrent topics it is important to be aware of when designing for mobile. There is alot of diffrent topics, but it is important, so I would recommend taking notes.
+                                    p.secondary 17.05.2016
+                                    a(href='').admin-delete 
+                                       include ../includes/svg-icons/delete-forever-icon.jade
+                                       p Delete Lecture
+                                    a(href='').teacher-edit 
+                                       include ../includes/svg-icons/edit-icon.jade
+                                       p Edit Lecture
+                                       
+                           
+                           a.all-lectures.codingAll(href='') View all lectures          
+                           .hiddenLec.codingHiddenLec
+                              //WEBCODING LECTURE 2   
+                              .row   
+                                 .col.col--1-of-4.displayNoneTablet
+                                    img.lecture-img(src='img/lecture_images/webcoding_lecture2.png')
+                                    .comment-wrap
+                                       img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                       .comment-txt
+                                          a(href='') Comments (6)
+                                 .col.col--3-of-4
+                                    a.lec-link.codingLink(href='#play')   
+                                       h3.lecture-head IMT1292 Web Coding: 1st Introductory Lecture to CSS
+                                       p In this lecture we go through the first basics of CSS and how it connects to the HTML we've already learned. If you havent seen the previous HTML lectures, or know about HTML from before, I would recommend going back and watching from the start of this subject.
+                                       p.secondary 12.05.2016
+                                       a(href='').admin-delete 
+                                          include ../includes/svg-icons/delete-forever-icon.jade
+                                          p Delete Lecture
+                                       a(href='').teacher-edit 
+                                          include ../includes/svg-icons/edit-icon.jade
+                                          p Edit Lecture
+                              //WEBCODING LECTURE 3   
+                              .row   
+                                 .col.col--1-of-4.displayNoneTablet
+                                    img.lecture-img(src='img/lecture_images/webcoding_lecture3.png')
+                                    .comment-wrap
+                                       img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                       .comment-txt
+                                          a(href='') Comments (5)
+                                 .col.col--3-of-4
+                                    a.lec-link.codingLink(href='#play')   
+                                       h3.lecture-head IMT1292 Web Coding: 2nd Introductury Lecture to HTML
+                                       p In this lecture we continue on the intro to HTML. If you are new to HTML and havent watched the last lecture, I would recommend watching the first lecture in this subject first.
+                                       p.secondary 05.05.2016
+                                       a(href='').admin-delete 
+                                          include ../includes/svg-icons/delete-forever-icon.jade
+                                          p Delete Lecture
+                                       a(href='').teacher-edit 
+                                          include ../includes/svg-icons/edit-icon.jade
+                                          p Edit Lecture
+                              //WEBCODING LECTURE 4
+                              .row   
+                                 .col.col--1-of-4.displayNoneTablet
+                                    img.lecture-img(src='img/lecture_images/webcoding_lecture4.png')
+                                    .comment-wrap
+                                       img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                       .comment-txt
+                                          a(href='') Comments (4)
+                                 .col.col--3-of-4
+                                    a.lec-link.codingLink(href='#play')   
+                                       h3.lecture-head IMT1292 Web Coding: 1st Introductury Lecture to HTML
+                                       p In this lecture we go through the first basics of HTML. This will be completely from scratch so if you are new to HTML and don't know anything, this is the lecture for you.
+                                       p.secondary 28.04.2016
+                                       a(href='').admin-delete 
+                                          include ../includes/svg-icons/delete-forever-icon.jade
+                                          p Delete Lecture
+                                       a(href='').teacher-edit 
+                                          include ../includes/svg-icons/edit-icon.jade
+                                          p Edit Lecture
+                              
+                              a.all-lectures.codingNone(href='') Close Lectures 
+                                       
+                        // SUBJECT 2 - MOBILE MEDIA DESIGN
+                        button.accordion.expand IMT2661: Mobile Media Design
+                           include ../includes/svg-icons/expand.jade
+                        .panel
+                           .row
+                              .col.col--1-of-4.col--m-2-of-4.marginTop.teacherCol
+                                 img.panelImage(src='../img/profile_images/clooney.jpg')
+                                 
+                                 p 
+                                    strong Torgeir Hansen
+                                 p.p-space-fix Subject Lecturer
+                              .col.col--3-of-4.col--m-2-of-4.marginTop
+                                 .row   
+                                    p.col.col--2-of-2.col--s-2-of-2.p-space-fix After successfully completing this course, the students will know the characteristics, including the limitations and possibilities of modern smartphone devices. They will also have knowledge about how the open web standards and technologies is adapted to - and can be used to present information on modern smartphone and tablet devices.  interfaces for these kinds of devices.
+                                    p.col.col--2-of-2.col--s-2-of-2.p-space-fix The students will also know more about the key accessibility challenges that users of small-screen devices face, and how to design web-based user
+                                    a(href='').admin-delete.delete-space-fix
+                                       include ../includes/svg-icons/delete-forever-icon.jade
+                                       p Delete Subject
+                                    a(href='').admin-edit 
+                                       include ../includes/svg-icons/edit-icon.jade
+                                       p Edit Subject
+                           .row
+                              .col.col--2-of-2.sub-wrap
+                                 hr
+                                 a.subBtn.mobileOff
+                                    include ../includes/svg-icons/unchecked.jade
+                                    p Subscribe
+                                 a.subPressed.mobileOn
+                                    include ../includes/svg-icons/checked.jade
+                                    p Subscribe
+                                 hr
+                           .row
+                              h2.col.col--4-of-4.latest-lecture.mobileHeaderLatest Latest Lecture 
+                              h2.col.col--4-of-4.header-all.mobileHeaderAll All Lectures 
+                           //MOBILE LECTURE 1   
+                           .row   
+                              .col.col--1-of-4.displayNoneTablet
+                                 img.lecture-img(src='img/lecture_images/mobile_lecture1.png')
+                                 .comment-wrap
+                                    img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                    .comment-txt
+                                       a(href='') Comments (3)
+                              .col.col--3-of-4
+                                 a.lec-link.mobileLink(href='#play')   
+                                    h3.lecture-head IMT2661 Mobile Media Design: Mobile Design
+                                    p In this lecture we go though alot of diffrent topics it is important to be aware of when designing for mobile. There is alot of diffrent topics, but it is important, so I would recommend taking notes.
+                                    p.secondary 17.05.2016
+                                    a(href='').admin-delete 
+                                       include ../includes/svg-icons/delete-forever-icon.jade
+                                       p Delete Lecture
+                                    a(href='').teacher-edit 
+                                       include ../includes/svg-icons/edit-icon.jade
+                                       p Edit Lecture
+                           a.all-lectures.mobileAll(href='') View all lectures          
+                           .hiddenLec.mobileHiddenLec
+                              //MOBILE LECTURE 2   
+                              .row   
+                                 .col.col--1-of-4.displayNoneTablet
+                                    img.lecture-img(src='img/lecture_images/mobile_lecture2.png')
+                                    .comment-wrap
+                                       img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                       .comment-txt
+                                          a(href='') Comments (5)
+                                 .col.col--3-of-4
+                                    a.lec-link.mobileLink(href='#play')   
+                                       h3.lecture-head IMT2661 Mobile Media Design: Mobile and Games
+                                       p In this lecture we go through some basics of what play and gaming is. Afterwards we talk about the mobile gaming industry and the future of mobile gaming.
+                                       p.secondary 10.05.2016
+                                       a(href='').admin-delete 
+                                          include ../includes/svg-icons/delete-forever-icon.jade
+                                          p Delete Lecture
+                                       a(href='').teacher-edit 
+                                          include ../includes/svg-icons/edit-icon.jade
+                                          p Edit Lecture
+                              //MOBILE LECTURE 3   
+                              .row   
+                                 .col.col--1-of-4.displayNoneTablet
+                                    img.lecture-img(src='img/lecture_images/mobile_lecture3.png')
+                                    .comment-wrap
+                                       img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                       .comment-txt
+                                          a(href='') Comments (4)
+                                 .col.col--3-of-4
+                                    a.lec-link.mobileLink(href='#play')   
+                                       h3.lecture-head IMT2661 Mobile Media Design: Mobile Communication Technology
+                                       p In this lecture we continue on the intro to HTML. If you are new to HTML and havent watched the last lecture, I would recommend watching the first lecture in this subject first.
+                                       p.secondary 03.05.2016   
+                                       a(href='').admin-delete 
+                                          include ../includes/svg-icons/delete-forever-icon.jade
+                                          p Delete Lecture
+                                       a(href='').teacher-edit 
+                                          include ../includes/svg-icons/edit-icon.jade
+                                          p Edit Lecture
+                              a.all-lectures.mobileNone(href='') Close Lectures 
+      
+      
+                        //SUBJECT 3 WEB PROJECT
+                        button.accordion.expand IMT1471: Web Project
+                           include ../includes/svg-icons/expand.jade
+                        .panel
+                           .row
+                              .col.col--1-of-4.col--m-2-of-4.marginTop.teacherCol
+                                 img.panelImage(src='../img/profile_images/female_teacher.jpg')
+                                 
+                                 p 
+                                    strong Frida Nygaard
+                                 p.p-space-fix Subject Lecturer
+                              .col.col--3-of-4.col--m-2-of-4.marginTop
+                                 .row   
+                                    p.col.col--2-of-2.col--s-2-of-2.p-space-fix Webproject is a practical development project that supplement or continue the topics from Web Coding and other web development subjects. 
+                                    p.col.col--2-of-2.col--s-2-of-2.p-space-fix The aim is for the students to be better web developers with practical experience in the industry, as well as typical approaches to new, and anticipated future methods for development of active web solutions
+                                    a(href='').admin-delete.delete-space-fix
+                                       include ../includes/svg-icons/delete-forever-icon.jade
+                                       p Delete Subject
+                                    a(href='').admin-edit 
+                                       include ../includes/svg-icons/edit-icon.jade
+                                       p Edit Subject
+                           .row
+                              .col.col--2-of-2.sub-wrap
+                                 hr
+                                 a.subBtn.projectOff
+                                    include ../includes/svg-icons/unchecked.jade
+                                    p Subscribe
+                                 a.subPressed.projectOn
+                                    include ../includes/svg-icons/checked.jade
+                                    p Subscribe
+                                 hr
+                           .row
+                              h2.col.col--4-of-4.latest-lecture.projectHeaderLatest Latest Lecture 
+                              h2.col.col--4-of-4.header-all.projectHeaderAll All Lectures 
+                           //WEB PROJECT LECTURE 1   
+                           .row   
+                              .col.col--1-of-4.displayNoneTablet
+                                 img.lecture-img(src='img/lecture_images/webproject_lecture1.png')
+                                 .comment-wrap
+                                    img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                    .comment-txt
+                                       a(href='') Comments (4)
+                              .col.col--3-of-4
+                                 a.lec-link.projectLink(href='#play')   
+                                    h3.lecture-head IMT1471 Web Project: Technical Design Specification Document
+                                    p In this lecture we go through the Technical Design Specification Document. I will give guidance to how you should write it, and which parts are most relevant for us as web developers.
+                                    p.secondary 16.05.2016
+                                    a(href='').admin-delete 
+                                       include ../includes/svg-icons/delete-forever-icon.jade
+                                       p Delete Lecture
+                                    a(href='').teacher-edit 
+                                       include ../includes/svg-icons/edit-icon.jade
+                                       p Edit Lecture
+                           a.all-lectures.projectAll(href='') View all lectures          
+                           .hiddenLec.projectHiddenLec
+                              //WEB PROJECT LECTURE 2   
+                              .row   
+                                 .col.col--1-of-4.displayNoneTablet
+                                    img.lecture-img(src='img/lecture_images/webproject_lecture3.png')
+                                    .comment-wrap
+                                       img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                       .comment-txt
+                                          a(href='') Comments (6)
+                                 .col.col--3-of-4
+                                    a.lec-link.projectLink(href='#play')   
+                                       h3.lecture-head IMT1471 Web Project: Website Requirements Specification Document.
+                                       p In this lecture we go through the Website requirements specification document. i will give duidance to how you should write it, and which parts are most relevant for us as web developers.
+                                       p.secondary 09.05.2016
+                                       a(href='').admin-delete 
+                                          include ../includes/svg-icons/delete-forever-icon.jade
+                                          p Delete Lecture
+                                       a(href='').teacher-edit 
+                                          include ../includes/svg-icons/edit-icon.jade
+                                          p Edit Lecture
+                              //WEB PROJECT LECTURE 3   
+                              .row   
+                                 .col.col--1-of-4.displayNoneTablet
+                                    img.lecture-img(src='img/lecture_images/webproject_lecture2.png')
+                                    .comment-wrap
+                                       img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                       .comment-txt
+                                          a(href='') Comments (4)
+                                 .col.col--3-of-4
+                                    a.lec-link.projectLink(href='#play')   
+                                       h3.lecture-head IMT1471 Web Project: Project Management and Planning
+                                       p In this lecture we go through some topics relevant to planning and managing a project. We talk about managing risks and people aswell as going through some methods you can use to manage and plan your project.
+                                       p.secondary 02.05.2016  
+                                       a(href='').admin-delete 
+                                          include ../includes/svg-icons/delete-forever-icon.jade
+                                          p Delete Lecture
+                                       a(href='').teacher-edit 
+                                          include ../includes/svg-icons/edit-icon.jade
+                                          p Edit Lecture
+                              a.all-lectures.projectNone(href='') Close Lectures 
+      
+      
+                        // SUBJECT 4 COLOR MANAGEMENT
+                        button.accordion.expand IMT2002: Color Management
+                           include ../includes/svg-icons/expand.jade
+                        .panel
+                           .row
+                              .col.col--1-of-4.col--m-2-of-4.marginTop.teacherCol
+                                 img.panelImage(src='../img/profile_images/teacher1.jpg')
+                                 
+                                 p 
+                                    strong Gunnar Olsen
+                                 p.p-space-fix Subject Lecturer
+                              .col.col--3-of-4.col--m-2-of-4.marginTop
+                                 .row   
+                                    p.col.col--2-of-2.col--s-2-of-2.p-space-fix After completing the course, students will have a basic understanding of and skills in visual design of web pages. They should be able to plan and carry out the development of Web pages and sites based on the most important client based web tecnologies as well as a basic understanding for the server based content management systems.  
+                                    p.col.col--2-of-2.col--s-2-of-2 The students will also be able to independently assess and describe the most important aspects of a site's usability, effectiveness, and information architecture, and further to decide what any changes needed to improve the quality of the site / page.
+                                    a(href='').admin-delete.delete-space-fix
+                                       include ../includes/svg-icons/delete-forever-icon.jade
+                                       p Delete Subject
+                                    a(href='').admin-edit 
+                                       include ../includes/svg-icons/edit-icon.jade
+                                       p Edit Subject
+                           .row
+                              .col.col--2-of-2.sub-wrap
+                                 hr
+                                 a.subBtn.colorOff
+                                    include ../includes/svg-icons/unchecked.jade
+                                    p Subscribe
+                                 a.subPressed.colorOn
+                                    include ../includes/svg-icons/checked.jade
+                                    p Subscribe
+                                 hr
+                           .row
+                              h2.col.col--4-of-4.latest-lecture.colorHeaderLatest Latest Lecture 
+                              h2.col.col--4-of-4.header-all.colorHeaderAll All Lectures 
+                           //COLOR MANAGEMENT LECTURE 1   
+                           .row   
+                              .col.col--1-of-4.displayNoneTablet
+                                 img.lecture-img(src='img/lecture_images/color_lecture3.png')
+                                 .comment-wrap
+                                    img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                    .comment-txt
+                                       a(href='') Comments (3)
+                              .col.col--3-of-4
+                                 a.lec-link.colorLink(href='#play')   
+                                    h3.lecture-head IMT2002 Color Management: Colorimetry
+                                    p In this lecture we go through diffrent topics regarding colorimetry. These include, what is colorimetry?, describing colour, additive - subtractive colour mixing, what is «colour»?  - the triplet!, light sources and properties (colour temperature), object properties, standard observer, CIE colour systems, colour differences. 
+                                    p.secondary 14.05.2016
+                                    a(href='').admin-delete 
+                                       include ../includes/svg-icons/delete-forever-icon.jade
+                                       p Delete Lecture
+                                    a(href='').teacher-edit 
+                                       include ../includes/svg-icons/edit-icon.jade
+                                       p Edit Lecture
+                           a.all-lectures.colorAll(href='') View all lectures          
+                           .hiddenLec.colorHiddenLec
+                              //COLOR MANAGEMENT LECTURE 2   
+                              .row   
+                                 .col.col--1-of-4.displayNoneTablet
+                                    img.lecture-img(src='img/lecture_images/color_lecture2.png')
+                                    .comment-wrap
+                                       img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                       .comment-txt
+                                          a(href='') Comments (2)
+                                 .col.col--3-of-4
+                                    a.lec-link.colorLink(href='#play')   
+                                       h3.lecture-head IMT2002 Color Management: Introduction to Colour Management 2
+                                       p In this lecture we will continue covering diffrent topics regaring color management. These incude, standard colour spaces for electronic publishing, principles and components in professional colour management, input profiles and output profiles, ICC colour workflow, colour gamut - gamut mapping, colour Rendering Intents, assign profile - convert to profile.
+                                       p.secondary 07.05.2016
+                                       a(href='').admin-delete 
+                                          include ../includes/svg-icons/delete-forever-icon.jade
+                                          p Delete Lecture
+                                       a(href='').teacher-edit 
+                                          include ../includes/svg-icons/edit-icon.jade
+                                          p Edit Lecture
+                              //COLOR MANAGEMENT LECTURE 3   
+                              .row   
+                                 .col.col--1-of-4.displayNoneTablet
+                                    img.lecture-img(src='img/lecture_images/color_lecture1.png')
+                                    .comment-wrap
+                                       img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
+                                       .comment-txt
+                                          a(href='') Comments (5)
+                                 .col.col--3-of-4
+                                    a.lec-link.colorLink(href='#play')   
+                                       h3.lecture-head IMT2002 Color Management: Introduction to Colour Management
+                                       p In this lecture we go through some introductory topics regarding ICC color management. These include, factors affecting the appearance of colour, why do we need colour management?, device-dependent colour models, device-independent colour models, colour management architecture, basic professional colour management workflow, principles of device profiling
+                                       p.secondary 30.04.2016   
+                                       a(href='').admin-delete 
+                                          include ../includes/svg-icons/delete-forever-icon.jade
+                                          p Delete Lecture
+                                       a(href='').teacher-edit 
+                                          include ../includes/svg-icons/edit-icon.jade
+                                          p Edit Lecture
+                              a.all-lectures.colorNone(href='') Close Lectures 
                         
-                        a.all-lectures.codingNone(href='') Close Lectures 
-                                 
-                  // SUBJECT 2 - MOBILE MEDIA DESIGN
-                  button.accordion.expand IMT2661: Mobile Media Design
-                     include ../includes/svg-icons/expand.jade
-                  .panel
-                     .row
-                        .col.col--1-of-4.col--m-2-of-4.marginTop.teacherCol
-                           img.panelImage(src='../img/profile_images/clooney.jpg')
+                        button.accordion.expand.admin-add-subject
+                           include ../includes/svg-icons/add-icon.jade
+                           | Add new subject
+                           include ../includes/svg-icons/expand.jade
+                        .panel.add-subject
+                           h3 Subject name
+                           input
+                           h3 Subject teacher
+                           input
+                           h3 Subject description
+                           textarea.hue
                            
-                           p 
-                              strong Torgeir Hansen
-                           p.p-space-fix Subject Lecturer
-                        .col.col--3-of-4.col--m-2-of-4.marginTop
-                           .row   
-                              p.col.col--2-of-2.col--s-2-of-2.p-space-fix After successfully completing this course, the students will know the characteristics, including the limitations and possibilities of modern smartphone devices. They will also have knowledge about how the open web standards and technologies is adapted to - and can be used to present information on modern smartphone and tablet devices.  interfaces for these kinds of devices.
-                              p.col.col--2-of-2.col--s-2-of-2.p-space-fix The students will also know more about the key accessibility challenges that users of small-screen devices face, and how to design web-based user
-                              a(href='').admin-delete.delete-space-fix
-                                 include ../includes/svg-icons/delete-forever-icon.jade
-                                 p Delete Subject
-                              a(href='').admin-edit 
-                                 include ../includes/svg-icons/edit-icon.jade
-                                 p Edit Subject
-                     .row
-                        .col.col--2-of-2.sub-wrap
-                           hr
-                           a.subBtn.mobileOff
-                              include ../includes/svg-icons/unchecked.jade
-                              p Subscribe
-                           a.subPressed.mobileOn
-                              include ../includes/svg-icons/checked.jade
-                              p Subscribe
-                           hr
-                     .row
-                        h2.col.col--4-of-4.latest-lecture.mobileHeaderLatest Latest Lecture 
-                        h2.col.col--4-of-4.header-all.mobileHeaderAll All Lectures 
-                     //MOBILE LECTURE 1   
-                     .row   
-                        .col.col--1-of-4.displayNoneTablet
-                           img.lecture-img(src='img/lecture_images/mobile_lecture1.png')
-                           .comment-wrap
-                              img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
-                              .comment-txt
-                                 a(href='') Comments (3)
-                        .col.col--3-of-4
-                           a.lec-link.mobileLink(href='#play')   
-                              h3.lecture-head IMT2661 Mobile Media Design: Mobile Design
-                              p In this lecture we go though alot of diffrent topics it is important to be aware of when designing for mobile. There is alot of diffrent topics, but it is important, so I would recommend taking notes.
-                              p.secondary 17.05.2016
-                              a(href='').admin-delete 
-                                 include ../includes/svg-icons/delete-forever-icon.jade
-                                 p Delete Lecture
-                              a(href='').teacher-edit 
-                                 include ../includes/svg-icons/edit-icon.jade
-                                 p Edit Lecture
-                     a.all-lectures.mobileAll(href='') View all lectures          
-                     .hiddenLec.mobileHiddenLec
-                        //MOBILE LECTURE 2   
-                        .row   
-                           .col.col--1-of-4.displayNoneTablet
-                              img.lecture-img(src='img/lecture_images/mobile_lecture2.png')
-                              .comment-wrap
-                                 img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
-                                 .comment-txt
-                                    a(href='') Comments (5)
-                           .col.col--3-of-4
-                              a.lec-link.mobileLink(href='#play')   
-                                 h3.lecture-head IMT2661 Mobile Media Design: Mobile and Games
-                                 p In this lecture we go through some basics of what play and gaming is. Afterwards we talk about the mobile gaming industry and the future of mobile gaming.
-                                 p.secondary 10.05.2016
-                                 a(href='').admin-delete 
-                                    include ../includes/svg-icons/delete-forever-icon.jade
-                                    p Delete Lecture
-                                 a(href='').teacher-edit 
-                                    include ../includes/svg-icons/edit-icon.jade
-                                    p Edit Lecture
-                        //MOBILE LECTURE 3   
-                        .row   
-                           .col.col--1-of-4.displayNoneTablet
-                              img.lecture-img(src='img/lecture_images/mobile_lecture3.png')
-                              .comment-wrap
-                                 img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
-                                 .comment-txt
-                                    a(href='') Comments (4)
-                           .col.col--3-of-4
-                              a.lec-link.mobileLink(href='#play')   
-                                 h3.lecture-head IMT2661 Mobile Media Design: Mobile Communication Technology
-                                 p In this lecture we continue on the intro to HTML. If you are new to HTML and havent watched the last lecture, I would recommend watching the first lecture in this subject first.
-                                 p.secondary 03.05.2016   
-                                 a(href='').admin-delete 
-                                    include ../includes/svg-icons/delete-forever-icon.jade
-                                    p Delete Lecture
-                                 a(href='').teacher-edit 
-                                    include ../includes/svg-icons/edit-icon.jade
-                                    p Edit Lecture
-                        a.all-lectures.mobileNone(href='') Close Lectures 
 
-
-                  //SUBJECT 3 WEB PROJECT
-                  button.accordion.expand IMT1471: Web Project
-                     include ../includes/svg-icons/expand.jade
-                  .panel
-                     .row
-                        .col.col--1-of-4.col--m-2-of-4.marginTop.teacherCol
-                           img.panelImage(src='../img/profile_images/female_teacher.jpg')
-                           
-                           p 
-                              strong Frida Nygaard
-                           p.p-space-fix Subject Lecturer
-                        .col.col--3-of-4.col--m-2-of-4.marginTop
-                           .row   
-                              p.col.col--2-of-2.col--s-2-of-2.p-space-fix Webproject is a practical development project that supplement or continue the topics from Web Coding and other web development subjects. 
-                              p.col.col--2-of-2.col--s-2-of-2.p-space-fix The aim is for the students to be better web developers with practical experience in the industry, as well as typical approaches to new, and anticipated future methods for development of active web solutions
-                              a(href='').admin-delete.delete-space-fix
-                                 include ../includes/svg-icons/delete-forever-icon.jade
-                                 p Delete Subject
-                              a(href='').admin-edit 
-                                 include ../includes/svg-icons/edit-icon.jade
-                                 p Edit Subject
-                     .row
-                        .col.col--2-of-2.sub-wrap
-                           hr
-                           a.subBtn.projectOff
-                              include ../includes/svg-icons/unchecked.jade
-                              p Subscribe
-                           a.subPressed.projectOn
-                              include ../includes/svg-icons/checked.jade
-                              p Subscribe
-                           hr
-                     .row
-                        h2.col.col--4-of-4.latest-lecture.projectHeaderLatest Latest Lecture 
-                        h2.col.col--4-of-4.header-all.projectHeaderAll All Lectures 
-                     //WEB PROJECT LECTURE 1   
-                     .row   
-                        .col.col--1-of-4.displayNoneTablet
-                           img.lecture-img(src='img/lecture_images/webproject_lecture1.png')
-                           .comment-wrap
-                              img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
-                              .comment-txt
-                                 a(href='') Comments (4)
-                        .col.col--3-of-4
-                           a.lec-link.projectLink(href='#play')   
-                              h3.lecture-head IMT1471 Web Project: Technical Design Specification Document
-                              p In this lecture we go through the Technical Design Specification Document. I will give guidance to how you should write it, and which parts are most relevant for us as web developers.
-                              p.secondary 16.05.2016
-                              a(href='').admin-delete 
-                                 include ../includes/svg-icons/delete-forever-icon.jade
-                                 p Delete Lecture
-                              a(href='').teacher-edit 
-                                 include ../includes/svg-icons/edit-icon.jade
-                                 p Edit Lecture
-                     a.all-lectures.projectAll(href='') View all lectures          
-                     .hiddenLec.projectHiddenLec
-                        //WEB PROJECT LECTURE 2   
-                        .row   
-                           .col.col--1-of-4.displayNoneTablet
-                              img.lecture-img(src='img/lecture_images/webproject_lecture3.png')
-                              .comment-wrap
-                                 img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
-                                 .comment-txt
-                                    a(href='') Comments (6)
-                           .col.col--3-of-4
-                              a.lec-link.projectLink(href='#play')   
-                                 h3.lecture-head IMT1471 Web Project: Website Requirements Specification Document.
-                                 p In this lecture we go through the Website requirements specification document. i will give duidance to how you should write it, and which parts are most relevant for us as web developers.
-                                 p.secondary 09.05.2016
-                                 a(href='').admin-delete 
-                                    include ../includes/svg-icons/delete-forever-icon.jade
-                                    p Delete Lecture
-                                 a(href='').teacher-edit 
-                                    include ../includes/svg-icons/edit-icon.jade
-                                    p Edit Lecture
-                        //WEB PROJECT LECTURE 3   
-                        .row   
-                           .col.col--1-of-4.displayNoneTablet
-                              img.lecture-img(src='img/lecture_images/webproject_lecture2.png')
-                              .comment-wrap
-                                 img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
-                                 .comment-txt
-                                    a(href='') Comments (4)
-                           .col.col--3-of-4
-                              a.lec-link.projectLink(href='#play')   
-                                 h3.lecture-head IMT1471 Web Project: Project Management and Planning
-                                 p In this lecture we go through some topics relevant to planning and managing a project. We talk about managing risks and people aswell as going through some methods you can use to manage and plan your project.
-                                 p.secondary 02.05.2016  
-                                 a(href='').admin-delete 
-                                    include ../includes/svg-icons/delete-forever-icon.jade
-                                    p Delete Lecture
-                                 a(href='').teacher-edit 
-                                    include ../includes/svg-icons/edit-icon.jade
-                                    p Edit Lecture
-                        a.all-lectures.projectNone(href='') Close Lectures 
-
-
-                  // SUBJECT 4 COLOR MANAGEMENT
-                  button.accordion.expand IMT2002: Color Management
-                     include ../includes/svg-icons/expand.jade
-                  .panel
-                     .row
-                        .col.col--1-of-4.col--m-2-of-4.marginTop.teacherCol
-                           img.panelImage(src='../img/profile_images/teacher1.jpg')
-                           
-                           p 
-                              strong Gunnar Olsen
-                           p.p-space-fix Subject Lecturer
-                        .col.col--3-of-4.col--m-2-of-4.marginTop
-                           .row   
-                              p.col.col--2-of-2.col--s-2-of-2.p-space-fix After completing the course, students will have a basic understanding of and skills in visual design of web pages. They should be able to plan and carry out the development of Web pages and sites based on the most important client based web tecnologies as well as a basic understanding for the server based content management systems.  
-                              p.col.col--2-of-2.col--s-2-of-2 The students will also be able to independently assess and describe the most important aspects of a site's usability, effectiveness, and information architecture, and further to decide what any changes needed to improve the quality of the site / page.
-                              a(href='').admin-delete.delete-space-fix
-                                 include ../includes/svg-icons/delete-forever-icon.jade
-                                 p Delete Subject
-                              a(href='').admin-edit 
-                                 include ../includes/svg-icons/edit-icon.jade
-                                 p Edit Subject
-                     .row
-                        .col.col--2-of-2.sub-wrap
-                           hr
-                           a.subBtn.colorOff
-                              include ../includes/svg-icons/unchecked.jade
-                              p Subscribe
-                           a.subPressed.colorOn
-                              include ../includes/svg-icons/checked.jade
-                              p Subscribe
-                           hr
-                     .row
-                        h2.col.col--4-of-4.latest-lecture.colorHeaderLatest Latest Lecture 
-                        h2.col.col--4-of-4.header-all.colorHeaderAll All Lectures 
-                     //COLOR MANAGEMENT LECTURE 1   
-                     .row   
-                        .col.col--1-of-4.displayNoneTablet
-                           img.lecture-img(src='img/lecture_images/color_lecture3.png')
-                           .comment-wrap
-                              img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
-                              .comment-txt
-                                 a(href='') Comments (3)
-                        .col.col--3-of-4
-                           a.lec-link.colorLink(href='#play')   
-                              h3.lecture-head IMT2002 Color Management: Colorimetry
-                              p In this lecture we go through diffrent topics regarding colorimetry. These include, what is colorimetry?, describing colour, additive - subtractive colour mixing, what is «colour»?  - the triplet!, light sources and properties (colour temperature), object properties, standard observer, CIE colour systems, colour differences. 
-                              p.secondary 14.05.2016
-                              a(href='').admin-delete 
-                                 include ../includes/svg-icons/delete-forever-icon.jade
-                                 p Delete Lecture
-                              a(href='').teacher-edit 
-                                 include ../includes/svg-icons/edit-icon.jade
-                                 p Edit Lecture
-                     a.all-lectures.colorAll(href='') View all lectures          
-                     .hiddenLec.colorHiddenLec
-                        //COLOR MANAGEMENT LECTURE 2   
-                        .row   
-                           .col.col--1-of-4.displayNoneTablet
-                              img.lecture-img(src='img/lecture_images/color_lecture2.png')
-                              .comment-wrap
-                                 img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
-                                 .comment-txt
-                                    a(href='') Comments (2)
-                           .col.col--3-of-4
-                              a.lec-link.colorLink(href='#play')   
-                                 h3.lecture-head IMT2002 Color Management: Introduction to Colour Management 2
-                                 p In this lecture we will continue covering diffrent topics regaring color management. These incude, standard colour spaces for electronic publishing, principles and components in professional colour management, input profiles and output profiles, ICC colour workflow, colour gamut - gamut mapping, colour Rendering Intents, assign profile - convert to profile.
-                                 p.secondary 07.05.2016
-                                 a(href='').admin-delete 
-                                    include ../includes/svg-icons/delete-forever-icon.jade
-                                    p Delete Lecture
-                                 a(href='').teacher-edit 
-                                    include ../includes/svg-icons/edit-icon.jade
-                                    p Edit Lecture
-                        //COLOR MANAGEMENT LECTURE 3   
-                        .row   
-                           .col.col--1-of-4.displayNoneTablet
-                              img.lecture-img(src='img/lecture_images/color_lecture1.png')
-                              .comment-wrap
-                                 img.comment-icon(src="../img/iconography/ic_comment_green_24px.svg")
-                                 .comment-txt
-                                    a(href='') Comments (5)
-                           .col.col--3-of-4
-                              a.lec-link.colorLink(href='#play')   
-                                 h3.lecture-head IMT2002 Color Management: Introduction to Colour Management
-                                 p In this lecture we go through some introductory topics regarding ICC color management. These include, factors affecting the appearance of colour, why do we need colour management?, device-dependent colour models, device-independent colour models, colour management architecture, basic professional colour management workflow, principles of device profiling
-                                 p.secondary 30.04.2016   
-                                 a(href='').admin-delete 
-                                    include ../includes/svg-icons/delete-forever-icon.jade
-                                    p Delete Lecture
-                                 a(href='').teacher-edit 
-                                    include ../includes/svg-icons/edit-icon.jade
-                                    p Edit Lecture
-                        a.all-lectures.colorNone(href='') Close Lectures 
-
-      .col.col--1-of-5
+      .profile-content
          include ../includes/profile.jade
          include ../includes/profile-sidebar-admin.jade
          include ../includes/profile-sidebar-teacher.jade
-include ../includes/partialscript.jade
 
 
 // Usikker på om disse kan slettes
@@ -484,6 +498,7 @@ script.
          $('.admin-delete').css('display', 'inline-block')
          $('.admin-edit').show()
          $('.admin-edit').css('display', 'inline-block')
+         $('.admin-add-subject').show()
       }
       
    // Scripts for sub button og lecture link
@@ -638,6 +653,4 @@ script.
          $('.colorHeaderLatest').toggle()
       });   
    });
-
-   
    

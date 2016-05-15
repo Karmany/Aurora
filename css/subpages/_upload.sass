@@ -1,6 +1,6 @@
 #uploadWrapper
    #uploadForm
-      background: $primaryColorDark
+      background: $primaryColor
       border-radius: 4px
       padding: 40px
       box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3)
@@ -15,55 +15,142 @@
    .upLabel
       color: $green1
 
-#uploadBreakpoints
-   background: $primaryColorDark
-   border-radius: 4px
-   padding: 40px
-   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3)
+   #uploadBreakpoints
+      background: $primaryColor
+      border-radius: 4px
+      padding: 40px
+      box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3)
 
-.theBreakpoints, .theKeywords
-   font-size: 22px
-   display: block
-   width: 100%
-   height: 100%
-   padding: 5px 10px
-   background: none
-   background-image: none
-   border: 2px solid $primaryColorLight
-   color: #ffffff
-   border-radius: 2px
-   -webkit-transition: border-color .25s ease, box-shadow .25s ease
-   transition: border-color .25s ease, box-shadow .25s ease
-   -webkit-appearance: none
-   &:focus
-      outline: $green2
+   .theBreakpoints, .theKeywords
+      font-size: 22px
+      display: block
+      width: 100%
+      height: 100%
+      padding: 5px 10px
+      background: none
+      background-image: none
+      border: 2px solid $primaryColorLight
+      color: #ffffff
+      border-radius: 2px
+      -webkit-transition: border-color .25s ease, box-shadow .25s ease
+      transition: border-color .25s ease, box-shadow .25s ease
+      -webkit-appearance: none
+      &:focus
+         outline: $green2
 
-.theBreakpoints
-   //margin-bottom: 5px
-   border-bottom: none
+   .theBreakpoints
+      //margin-bottom: 5px
+      border-bottom: none
 
-.theKeywords
-   margin-bottom: 30px
-   border-top: none
+   .theKeywords
+      margin-bottom: 20px
+      border-top: none
 
-#addButton, #finalUpload
-   border: 0
-   outline: none
-   border-radius: 0
-   padding: 15px 0
-   font-size: 2rem
-   font-weight: 600
-   text-transform: uppercase
-   letter-spacing: .1em
-   display: block
-   width: 100%
-   background: $green1
-   color: $primaryColor
-   -webkit-transition: all 0.5s ease
-   transition: all 0.5s ease
-   -webkit-appearance: none
-   &:hover, &:focus
-      background: $green2
+   #addButton, #finalUpload
+      border: 0
+      outline: none
+      border-radius: 0
+      padding: 15px 0
+      font-size: 2rem
+      font-weight: 600
+      text-transform: uppercase
+      letter-spacing: .1em
+      display: block
+      width: 100%
+      background: $green1
+      color: $primaryColor
+      -webkit-transition: all 0.5s ease
+      transition: all 0.5s ease
+      -webkit-appearance: none
+   #addButton
+      &:hover, &:focus
+         background: $green2
 
-#finalUpload
-   margin-top: 100px
+   #finalUpload
+      margin-top: 100px
+
+   select
+      color: $primaryColor
+      background-color: $green1
+      margin-top: 0px !important
+
+   .btn
+      padding: 10px 0
+      background-color: $green1
+      color: $primaryColor
+      width: 100%
+      text-align: center
+      margin-top: 20px
+      border-radius: 2px
+      cursor: pointer
+      text-decoration: none
+
+   .change
+      display: none
+      padding: 5px
+      background-color: $primaryColor
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25)
+      margin-top: 20px
+
+      input
+         width: 100%
+         background-color: $primaryColor
+         //color: $green1
+         border: 0
+         border-radius: 2px
+         padding: 5px
+
+      input:focus
+         outline-width: 0
+
+      ::-webkit-input-placeholder
+         color: $green1
+
+      p
+         width: 48%
+         margin: 0
+         padding: 0
+         padding: 5px 10px 0 10px
+         background-color: $primaryColor
+         cursor: pointer
+         display: inline-block
+         text-align: center
+
+   #changeVid, #changeTra, #changeSli
+      input
+         display: none
+      label
+         width: 100%
+         text-align: center
+         display: block
+         background-color: $primaryColor
+         color: $green1
+         border-radius: 2px
+         padding: 5px
+         cursor: pointer
+
+   select
+      text-align: center
+      text-align-last: center
+
+   #key5time, #key5title
+      display: none
+
+   #myProgress
+      position: relative
+      width: 100%
+      height: 30px
+      background-color: $primaryColor
+      visibility: hidden
+
+   #myBar
+      position: absolute
+      width: 10%
+      height: 100%
+      background-color: $green1
+
+
+   #label
+      text-align: center
+      line-height: 30px
+      color: $primaryColor
