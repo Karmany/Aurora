@@ -498,6 +498,8 @@ script.
          $('.projectOn').toggle()
          $('.projectOff').toggle()
          $('.sidebar-student').show()
+         $('.sidebar-teacher').hide()
+         $('.sidebar-admin').hide()
       }
       if(sessionStorage.role == 'teacher'){
          $('.sub-wrap').hide();
@@ -506,6 +508,8 @@ script.
          projectNotSub = false;
          colorNotSub = false;
          $('.sidebar-teacher').show()
+         $('.sidebar-student').hide()
+         $('.sidebar-admin').hide()
          $('.admin-delete').show()
          $('.admin-delete').css('display', 'inline-block')
          $('.teacher-edit').show()
@@ -518,6 +522,8 @@ script.
          projectNotSub = false;
          colorNotSub = false;
          $('.sidebar-admin').show()
+         $('.sidebar-teacher').hide()
+         $('.sidebar-student').hide()
          $('.admin-delete').show()
          $('.admin-delete').css('display', 'inline-block')
          $('.admin-edit').show()
