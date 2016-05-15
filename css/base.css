@@ -2334,7 +2334,7 @@ a.hyperlink:active {
   margin: 0;
   padding: 0;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 #loginWrapper {
