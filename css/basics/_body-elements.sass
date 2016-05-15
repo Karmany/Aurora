@@ -2,6 +2,7 @@
 
 *
    box-sizing: border-box
+   //transition: all 0.3s ease
 
 html, body
    height: 100%
@@ -50,7 +51,6 @@ header
       ul
          list-style-type: none
          display: flex
-         justify-content: space-between
          align-items: center
          width: calc(100% - 100px)
          max-width: 1060px
@@ -85,6 +85,12 @@ header
             top: 0
             right: 4px
 
+            .search-icon, .close-icon
+               svg
+                  fill: $primaryColor
+                  margin-top: 5px
+                  margin-left: 3px
+
             .search-press
                width: 100%
                height: 100%
@@ -99,14 +105,19 @@ header
                z-index: 99
 
             &.activeColor
-               background-color: $green2
+               background-color: $green1
+               transform: scale(0.4)
                top: 65px
+               right: 40px
+               .search-icon, .close-icon
+                  svg
+                     opacity: 0
 
-            .search-icon, .close-icon
-               svg
-                  fill: $primaryColor
-                  margin-top: 5px
-                  margin-left: 3px
+.flex-around
+   justify-content: space-around
+
+.flex-between
+   justify-content: space-between
 
 .searchbox
    max-width: 960px
@@ -173,7 +184,6 @@ header
    ul
       list-style-type: none
       display: flex
-      justify-content: space-between
       align-items: center
       align-self: flex-end
       width: calc(100% - 100px)
@@ -236,6 +246,7 @@ nav.mobile
 
       &.search-active
          margin-top: 10px
+         transition: all 0.3s
 
          .flex-item
             display: block
@@ -517,3 +528,9 @@ footer
    100%
       transform: translateY(0px)
       opacity: 1
+
+// ETC
+
+.round-center
+   border-radius: 50%
+   margin: 0 auto

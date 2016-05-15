@@ -22,7 +22,7 @@ html(lang="en", ng-app="myApp")
             .flex2
             
             nav.desktop
-               ul
+               ul.flex-between
                   li.page-1-link
                      .desktop-nav-icon 
                         include ./includes/svg-icons/home-icon.jade
@@ -60,13 +60,13 @@ html(lang="en", ng-app="myApp")
                         .desktop-nav-icon.search-icon
                            include ./includes/svg-icons/search-icon.jade
                         .desktop-nav-icon.close-icon(style='display: none')
-                           include ./includes/svg-icons/close-icon.jade
+                           include ./includes/svg-icons/search-icon.jade
                      .blur-trigger
                         
          include ./includes/nav-indicator.jade
          .searchbox
             input(placeholder='Search for e.g. a partical subject')
-            
+         
          .container(ng-view)
          
       footer#footer
