@@ -31,7 +31,7 @@
 	.students, .teachers
 		margin-top: 10px
 
-	// ----------- MODAL STYLES ----------
+	// ----------- GENERAL MODAL STYLES ----------
 	.modal
 		display: none
 		position: fixed
@@ -61,6 +61,7 @@
 		cursor: pointer
 		transform: scale(1.3)
 
+	// ---------------- SUBJECTS MODAL STYLES ---------------- //
 	#subjectsModal
 		.modal-content
 			max-width: 80%
@@ -68,11 +69,42 @@
 
 			h2
 				margin-left: 45px
-				margin-bottom: 10px
+				margin-bottom: 25px
 				margin-top: 15px
 				padding-bottom: 2px
 				border-bottom: 2px solid $green2
 				max-width: 210px
+
+			.help-button
+				float: left
+				margin-left: 10px
+				margin-top: -55px
+
+				&:hover
+					transform: scale(1.2)
+
+			.info-text-alignment
+				display: none
+				margin-top: -15px
+
+				.info-text
+					margin-left: 45px
+					margin-bottom: 35px
+					max-width: 80%
+
+					.secondary
+						color: white
+
+					p, img
+						display: inline
+
+					img
+						height: 14px
+						width: 14px
+
+				.second-info-text
+					margin-top: -35px
+					margin-bottom: 10px
 
 			.icon-alignment
 				float: left
@@ -89,7 +121,7 @@
 					transform: scale(1.3)
 
 				.delete-forever-icon
-					margin-left: 3px
+					margin-left: 0
 
 					&:hover
 						fill: $alert
@@ -175,6 +207,7 @@
 				margin-bottom: -10px
 				margin-top: -15px
 
+	// ------------------ STUDENTS MODAL STYLES ------------ //
 	#studentsModal
 		.modal-content
 			max-width: 100%
@@ -185,10 +218,31 @@
 				margin-right: 30px
 				max-width: 220px
 
-			.info-text
-				margin-left: 30px
-				margin-bottom: 35px
-				max-width: 80%
+			.help-button
+				float: left
+				margin-left: 0
+				margin-top: -52px
+
+				&:hover
+					transform: scale(1.2)
+
+			.info-text-alignment
+				display: none
+				margin-top: -15px
+
+				.info-text
+					margin-left: 30px
+					margin-bottom: 25px
+
+					.secondary
+						color: white
+
+					p, img
+						display: inline
+
+					img
+						height: 14px
+						width: 14px
 
 				.secondary
 					color: white
@@ -238,6 +292,8 @@
 								&:hover
 									color: $green2
 
+
+	// ------------------- TEACHERS MODAL STYLES ------------------ //
 	#teachersModal
 		.modal-content
 			max-width: 35%
@@ -252,10 +308,32 @@
 				border-bottom: 2px solid $green2
 				max-width: 210px
 
-			.info-text
-				margin-left: 30px
-				margin-bottom: 30px
-				max-width: 80%
+			.help-button
+				float: left
+				margin-left: 2px
+				margin-top: -52px
+
+				&:hover
+					transform: scale(1.2)
+
+			.info-text-alignment
+				display: none
+				margin-top: -10px
+				margin-bottom: 25px
+
+				.info-text
+					margin-left: 30px
+					max-width: 80%
+
+					.secondary
+						color: white
+
+					p, img
+						display: inline
+
+					img
+						height: 14px
+						width: 14px
 
 				.secondary
 					color: white

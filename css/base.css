@@ -2526,11 +2526,50 @@ textarea {
 
 #main-admin #subjectsModal .modal-content h2 {
   margin-left: 45px;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   margin-top: 15px;
   padding-bottom: 2px;
   border-bottom: 2px solid #98ff9b;
   max-width: 210px;
+}
+
+#main-admin #subjectsModal .modal-content .help-button {
+  float: left;
+  margin-left: 10px;
+  margin-top: -55px;
+}
+
+#main-admin #subjectsModal .modal-content .help-button:hover {
+  transform: scale(1.2);
+}
+
+#main-admin #subjectsModal .modal-content .info-text-alignment {
+  display: none;
+  margin-top: -15px;
+}
+
+#main-admin #subjectsModal .modal-content .info-text-alignment .info-text {
+  margin-left: 45px;
+  margin-bottom: 35px;
+  max-width: 80%;
+}
+
+#main-admin #subjectsModal .modal-content .info-text-alignment .info-text .secondary {
+  color: white;
+}
+
+#main-admin #subjectsModal .modal-content .info-text-alignment .info-text p, #main-admin #subjectsModal .modal-content .info-text-alignment .info-text img {
+  display: inline;
+}
+
+#main-admin #subjectsModal .modal-content .info-text-alignment .info-text img {
+  height: 14px;
+  width: 14px;
+}
+
+#main-admin #subjectsModal .modal-content .info-text-alignment .second-info-text {
+  margin-top: -35px;
+  margin-bottom: 10px;
 }
 
 #main-admin #subjectsModal .modal-content .icon-alignment {
@@ -2551,7 +2590,7 @@ textarea {
 }
 
 #main-admin #subjectsModal .modal-content .icon-alignment .delete-forever-icon {
-  margin-left: 3px;
+  margin-left: 0;
 }
 
 #main-admin #subjectsModal .modal-content .icon-alignment .delete-forever-icon:hover {
@@ -2666,21 +2705,48 @@ textarea {
   max-width: 220px;
 }
 
-#main-admin #studentsModal .modal-content .info-text {
-  margin-left: 30px;
-  margin-bottom: 35px;
-  max-width: 80%;
+#main-admin #studentsModal .modal-content .help-button {
+  float: left;
+  margin-left: 0;
+  margin-top: -52px;
 }
 
-#main-admin #studentsModal .modal-content .info-text .secondary {
+#main-admin #studentsModal .modal-content .help-button:hover {
+  transform: scale(1.2);
+}
+
+#main-admin #studentsModal .modal-content .info-text-alignment {
+  display: none;
+  margin-top: -15px;
+}
+
+#main-admin #studentsModal .modal-content .info-text-alignment .info-text {
+  margin-left: 30px;
+  margin-bottom: 25px;
+}
+
+#main-admin #studentsModal .modal-content .info-text-alignment .info-text .secondary {
   color: white;
 }
 
-#main-admin #studentsModal .modal-content .info-text p, #main-admin #studentsModal .modal-content .info-text img {
+#main-admin #studentsModal .modal-content .info-text-alignment .info-text p, #main-admin #studentsModal .modal-content .info-text-alignment .info-text img {
   display: inline;
 }
 
-#main-admin #studentsModal .modal-content .info-text img {
+#main-admin #studentsModal .modal-content .info-text-alignment .info-text img {
+  height: 14px;
+  width: 14px;
+}
+
+#main-admin #studentsModal .modal-content .info-text-alignment .secondary {
+  color: white;
+}
+
+#main-admin #studentsModal .modal-content .info-text-alignment p, #main-admin #studentsModal .modal-content .info-text-alignment img {
+  display: inline;
+}
+
+#main-admin #studentsModal .modal-content .info-text-alignment img {
   height: 14px;
   width: 14px;
 }
@@ -2746,21 +2812,49 @@ textarea {
   max-width: 210px;
 }
 
-#main-admin #teachersModal .modal-content .info-text {
+#main-admin #teachersModal .modal-content .help-button {
+  float: left;
+  margin-left: 2px;
+  margin-top: -52px;
+}
+
+#main-admin #teachersModal .modal-content .help-button:hover {
+  transform: scale(1.2);
+}
+
+#main-admin #teachersModal .modal-content .info-text-alignment {
+  display: none;
+  margin-top: -10px;
+  margin-bottom: 25px;
+}
+
+#main-admin #teachersModal .modal-content .info-text-alignment .info-text {
   margin-left: 30px;
-  margin-bottom: 30px;
   max-width: 80%;
 }
 
-#main-admin #teachersModal .modal-content .info-text .secondary {
+#main-admin #teachersModal .modal-content .info-text-alignment .info-text .secondary {
   color: white;
 }
 
-#main-admin #teachersModal .modal-content .info-text p, #main-admin #teachersModal .modal-content .info-text img {
+#main-admin #teachersModal .modal-content .info-text-alignment .info-text p, #main-admin #teachersModal .modal-content .info-text-alignment .info-text img {
   display: inline;
 }
 
-#main-admin #teachersModal .modal-content .info-text img {
+#main-admin #teachersModal .modal-content .info-text-alignment .info-text img {
+  height: 14px;
+  width: 14px;
+}
+
+#main-admin #teachersModal .modal-content .info-text-alignment .secondary {
+  color: white;
+}
+
+#main-admin #teachersModal .modal-content .info-text-alignment p, #main-admin #teachersModal .modal-content .info-text-alignment img {
+  display: inline;
+}
+
+#main-admin #teachersModal .modal-content .info-text-alignment img {
   height: 14px;
   width: 14px;
 }
