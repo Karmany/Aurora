@@ -9,6 +9,9 @@
 // 	// z-index: 3
 
 #main-admin
+
+
+
 	// ------------- MANAGEMENT STYLES -----------------
 	.monitor
 		padding: 0
@@ -488,27 +491,27 @@
 				&:hover
 					transform: scale(1.2)
 
+	// content + Profile CSS
+	display: flex
+	justify-content: space-between
+	width: 100%
 
-   // content + Profile CSS
-   display: flex
-   justify-content: space-between
-   width: 100%
+	.notprofile-content
+		width: calc(100% - 200px)
+		height: auto
+		padding-right: 20px
 
-   .notprofile-content
-      width: calc(100% - 200px)
-      height: auto
-      padding-right: 20px
+	.profile-content
+		width: 200px
+		height: 500px
 
-   .profile-content
-      width: 200px
-      height: 500px
+@media (max-width: 1000px)
+	#main-admin
+		.notprofile-content
+			width: 100vw !important
+		.profile-content
+			display: none
 
-   @media (max-width: 900px)
-      .notprofile-content
-         width: 100vw !important
-      .profile-content
-         display: none
-   //Content + profile End
 
 
 
