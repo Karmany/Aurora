@@ -2740,6 +2740,12 @@ textarea {
   }
 }
 
+#main-admin {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 #main-admin .monitor {
   padding: 0;
   margin: 0;
@@ -2776,7 +2782,6 @@ textarea {
   position: relative;
   background-color: #1d323c;
   padding: 5px;
-  box-shadow: 0px 0px 0px;
   border-radius: 2px;
 }
 
@@ -2818,9 +2823,14 @@ textarea {
 }
 
 #main-admin #subjectsModal .modal-content .help-button:hover {
+<<<<<<< HEAD
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
+=======
+  transform: scale(1.2);
+  cursor: pointer;
+>>>>>>> origin/master
 }
 
 #main-admin #subjectsModal .modal-content .info-text-alignment {
@@ -3285,6 +3295,7 @@ textarea {
 
 #main-admin .approve-teachers form {
   margin-top: 25px;
+<<<<<<< HEAD
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -3292,6 +3303,8 @@ textarea {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+=======
+>>>>>>> origin/master
 }
 
 #main-admin .approve-teachers form ul {
@@ -3338,22 +3351,22 @@ textarea {
           transform: scale(1.2);
 }
 
-#main-admin .approve-teachers form .notprofile-content {
+#main-admin .notprofile-content {
   width: calc(100% - 200px);
   height: auto;
   padding-right: 20px;
 }
 
-#main-admin .approve-teachers form .profile-content {
+#main-admin .profile-content {
   width: 200px;
   height: 500px;
 }
 
-@media (max-width: 900px) {
-  #main-admin .approve-teachers form .notprofile-content {
+@media (max-width: 1000px) {
+  #main-admin .notprofile-content {
     width: 100vw !important;
   }
-  #main-admin .approve-teachers form .profile-content {
+  #main-admin .profile-content {
     display: none;
   }
 }
@@ -3406,6 +3419,35 @@ textarea {
   #main-admin #teachersModal .modal-content h2 {
     font-size: 2rem;
   }
+}
+
+.error-wrap {
+  position: fixed !important;
+  top: 300px;
+  background-color: #E57373;
+  margin: 0 auto;
+  z-index: 10;
+  width: 60%;
+  left: 20%;
+  padding-left: 0 10px;
+  display: none;
+  text-align: center;
+  border-radius: 2px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
+}
+
+.error-wrap p {
+  color: white;
+  display: inline-block;
+  width: 85%;
+}
+
+.error-wrap .close-icon {
+  display: inline-block;
+  width: 10%;
+  position: relative;
+  top: 7px;
+  cursor: pointer;
 }
 
 #subjectWrapper {
@@ -3815,14 +3857,14 @@ textarea {
 }
 
 #subjectWrapper .notprofile-content {
-  width: calc(100% - 200px);
+  width: calc(100% - 220px);
   height: auto;
-  padding-right: 20px;
 }
 
 #subjectWrapper .profile-content {
-  width: 200px;
-  height: 500px;
+  width: 220px;
+  height: auto;
+  padding-left: 20px;
 }
 
 @media (max-width: 800px) {
@@ -3834,19 +3876,36 @@ textarea {
   }
 }
 
+@media (max-width: 1050px) {
+  #subjectWrapper .comment-wrap {
+    display: none;
+  }
+}
+
 @media (max-width: 1000px) {
   #subjectWrapper .subBtn, #subjectWrapper .subPressed {
     width: 38%;
-  }
-  #subjectWrapper .comment-wrap {
-    display: none;
   }
   #subjectWrapper .latest-lecture, #subjectWrapper .header-all {
     width: 250px;
   }
 }
 
+@media (max-width: 850px) {
+  .error-wrap .mobile-fix {
+    font-size: 1.2rem;
+  }
+  .error-wrap p span {
+    font-size: 1.5rem;
+  }
+}
+
 @media (max-width: 700px) {
+  .error-wrap {
+    width: 80%;
+    left: 10%;
+    top: 200px;
+  }
   #subjectWrapper .displayNoneTablet {
     display: none;
   }
@@ -3867,19 +3926,42 @@ textarea {
   }
 }
 
+@media (max-width: 550px) {
+  .error-wrap .mobile-fix {
+    font-size: 1.1rem;
+  }
+  .error-wrap p span {
+    font-size: 1.3rem;
+  }
+}
+
 @media (max-width: 480px) {
+  .error-wrap {
+    width: 90%;
+    left: 5%;
+    top: 100px;
+  }
+  .error-wrap .mobile-fix {
+    font-size: 1rem;
+  }
+  .error-wrap p span {
+    font-size: 1.2rem;
+  }
   #subjectWrapper button.accordion {
     font-size: 1.3rem;
   }
   #subjectWrapper .subBtn, #subjectWrapper .subPressed {
     width: 65%;
   }
-  #subjectWrapper .admin-edit {
-    width: 141px;
-  }
   #subjectWrapper .teacher-edit {
     margin-left: 0;
     width: 141px;
+  }
+  #subjectWrapper .admin-edit {
+    width: 141px;
+  }
+  #subjectWrapper .admin-delete {
+    margin-right: 20px;
   }
   #subjectWrapper hr {
     width: 20%;
@@ -3889,6 +3971,16 @@ textarea {
   }
   #subjectWrapper .all-lectures {
     margin-top: 15px;
+  }
+}
+
+@media (max-width: 380px) {
+  #subjectWrapper .teacher-edit {
+    margin-left: 0;
+    width: 141px;
+  }
+  #subjectWrapper .admin-edit {
+    width: 141px;
   }
 }
 

@@ -1,0 +1,331 @@
+.content
+	#main-admin
+		.notprofile-content
+			#subjectsModal.modal 
+				.modal-content 
+					img.close(src="../img/iconography/x.svg")
+					h2 Manage Subjects
+					img.help-button(src="../img/iconography/ic_help_black_24px.svg")
+					
+					.info-text-alignment
+						.info-text
+							p.secondary Click the 
+							img(src="../img/iconography/ic_edit_white_24px.svg")
+							p.secondary icon to edit a subject category
+						.info-text.second-info-text
+							p.secondary Click the 
+							img(src="../img/iconography/ic_delete_forever_black_18px.svg")
+							p.secondary icon to delete a subject category
+						
+						
+					.subject#webProject
+						.icon-alignment 
+							include ../includes/svg-icons/edit-icon.jade
+							include ../includes/svg-icons/delete-forever-icon.jade
+							
+						h3 IMT1471: Web Project 1
+						.lecture-list
+							.lecture.first
+								include ../includes/svg-icons/delete-forever-icon.jade
+								a(href="#play") Project Management and Planning
+								
+							.lecture
+								include ../includes/svg-icons/delete-forever-icon.jade
+								a(href="#play") Website Requirements Specification Document
+								
+							.lecture
+								include ../includes/svg-icons/delete-forever-icon.jade
+								a(href="#play") Technical Design Specification Document
+								
+					.subject#webCoding
+						.icon-alignment 
+							include ../includes/svg-icons/edit-icon.jade
+							include ../includes/svg-icons/delete-forever-icon.jade
+							
+						h3 IMT1292: Web Coding
+						.lecture-list 
+							.lecture.first
+								include ../includes/svg-icons/delete-forever-icon.jade
+								a(href="#play") 1st Introductury Lecture to HTML
+								
+							.lecture
+								include ../includes/svg-icons/delete-forever-icon.jade
+								a(href="#play") 2nd Introductury Lecture to HTML
+								
+							.lecture
+								include ../includes/svg-icons/delete-forever-icon.jade
+								a(href="#play") 1st Introductory Lecture to CSS
+								
+							.lecture
+								include ../includes/svg-icons/delete-forever-icon.jade
+								a(href="#play") 3rd Introductury Lecture to HTML
+								
+					.subject#mobileMedia
+						.icon-alignment 
+							include ../includes/svg-icons/edit-icon.jade
+							include ../includes/svg-icons/delete-forever-icon.jade
+							
+						h3 IMT1292: Mobile Media Design 
+						.lecture-list 
+							.lecture.first
+								include ../includes/svg-icons/delete-forever-icon.jade
+								a(href="#play") Mobile Communication Technology
+								
+							.lecture
+								include ../includes/svg-icons/delete-forever-icon.jade
+								a(href="#play") Mobile and Games
+								
+							.lecture
+								include ../includes/svg-icons/delete-forever-icon.jade
+								a(href="#play") Mobile Design
+					
+					.subject#colourManagement
+						.icon-alignment 
+							include ../includes/svg-icons/edit-icon.jade
+							include ../includes/svg-icons/delete-forever-icon.jade
+							
+						h3 IMT2002: Digital Image Reproduction and Colour Management 
+						.lecture-list 
+							.lecture.first
+								include ../includes/svg-icons/delete-forever-icon.jade
+								a(href="#play") Introduction to Color Management 
+								
+							.lecture
+								include ../includes/svg-icons/delete-forever-icon.jade
+								a(href="#play") Introduction to Color Management 2
+								
+							.lecture
+								include ../includes/svg-icons/delete-forever-icon.jade
+								a(href="#play") Colorimetry
+								
+					.add-lecture
+						include ../includes/svg-icons/add-icon.jade
+						h3 Add a new subject category
+								
+			// Teachers modal 
+			#teachersModal.modal 
+				.modal-content 
+					img.close(src="../img/iconography/x.svg")
+					h2 Manage teachers
+					img.help-button(src="../img/iconography/ic_help_black_24px.svg")
+					.info-text-alignment
+						.info-text
+							p.secondary Click the 
+							img(src="../img/iconography/ic_deactivate_24px.svg")
+							p.secondary icon to de-activate a teacher account
+		
+					.alignment-grid
+						ul
+							li 
+								span
+								include ../includes/svg-icons/deactivate-icon.jade
+								a(href="#notmy-profile-teacher") Frida Nygaard
+							li
+								include ../includes/svg-icons/deactivate-icon.jade
+								a(href="#notmy-profile-teacher") Gunnar Olsen
+							li
+								include ../includes/svg-icons/deactivate-icon.jade
+								a(href="#notmy-profile-teacher") Henriette Jacobsen
+							li
+								include ../includes/svg-icons/deactivate-icon.jade
+								a(href="#notmy-profile-teacher") Jonas Meek
+							li
+								include ../includes/svg-icons/deactivate-icon.jade
+								a(href="#notmy-profile-teacher") Lillian Johansen
+							li
+								include ../includes/svg-icons/deactivate-icon.jade
+								a(href="#notmy-profile-teacher") Tobias Moe
+							li
+								include ../includes/svg-icons/deactivate-icon.jade
+								a(href="#notmy-profile-teacher") Torgeir Hansen
+							li
+								include ../includes/svg-icons/deactivate-icon.jade
+								a(href="#notmy-profile-teacher") Ove Nakken
+							li
+								include ../includes/svg-icons/deactivate-icon.jade
+								a(href="#notmy-profile-teacher") Vegard Lillebakk
+			
+			// Students modal 
+			#studentsModal.modal 
+				.modal-content 
+					img.close(src="../img/iconography/x.svg")
+					h2 Manage Students
+					img.help-button(src="../img/iconography/ic_help_black_24px.svg")
+					.info-text-alignment
+						.info-text
+							p.secondary Click the 
+							img(src="../img/iconography/ic_deactivate_24px.svg")
+							p.secondary icon to de-activate a student account
+					
+					.alignment-grid 
+						.year-enrolled
+							h3 2013
+							ul
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Alisha Houston
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Amir Jonestown
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Birger Flemming
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Christine Fjellheim
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Ottar Aspen
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Trude Bergseth
+							
+						.year-enrolled
+							h3 2014 
+							ul
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Gertrud Knutsen
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Marit Laksevåg
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Merete Hamre
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Rune Bratland
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Shawn Smalls 
+								li
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Silje Nordfjord
+							
+						.year-enrolled
+							h3 2015 
+							ul
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Amelie Skramstad
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Frank Kornelius
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Julie Otervik
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Karl Nergaard
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Lars Jevne			
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Petter Lilleøen
+							
+						.year-enrolled
+							h3 2016 
+							ul
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Camilla Svensen
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Karl Svenning 
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Kristine Nilsen
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Ola Kristiansen
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Rajesh Singh
+								li 
+									include ../includes/svg-icons/deactivate-icon.jade
+									a(href="#notmy-profile-student") Kjetil Guttorm
+			//  END OF MODALS 
+			
+			.row 
+				// ------------ START OF CONTENT ----------------------
+				.col.col--4-of-4
+					
+					// ------------------- MANAGEMENT CONTENT -----------------------------
+					.monitor.col.col--1-of-6
+					
+						.subjects
+							// When clicked, lectures modal triggers 
+							button#btnSubjects Subjects  
+						.teachers
+							// When clicked, teachers modal triggers 
+							button#btnTeachers Teachers
+						.students
+							// When clicked, students modal triggers 
+							button#btnStudents Students 
+		
+					// -------------------- NOTIFICATIONS CONTENT --------------------------
+					.notification-content.col.col--3-of-6
+					
+						h3 Reported comments 
+						
+						.notification.first.col.col--2-of-2
+							h4 IMT1292: Web Coding 
+							p Fuck off dude. You don't know anything about this.
+							p.date.secondary 14.05.2016 
+							p.reported-student Written by: <a href="#notmy-profile-student">Gustav Trulsen</a>
+							.button-alignment   
+								button.removeComment Remove comment
+								button.allowComment Allow comment
+							
+						.notification.col.col--2-of-2
+							h4 IMT2661: Mobile Media Design 
+							p GTFO man, this is none of your business. 
+							p.date.secondary 07.05.2016 
+							p.reported-student Written by: <a href="#notmy-profile-student">Erik Haug</a>
+							.button-alignment
+								button.removeComment Remove comment
+								button.allowComment Allow comment
+						
+						.notification.col.col--2-of-2
+							h4 IMT2661: Mobile Media Design 
+							p Calm your tits woman!
+							p.date.secondary 04.05.2016 
+							p.reported-student Written by: <a href="#notmy-profile-student">Kristine Nilsen</a>
+							.button-alignment
+								button.removeComment Remove comment
+								button.allowComment Allow comment
+					
+					// ----------------- APPROVE TEACHERS ---------------------- 
+					.approve-teachers.col.col--2-of-6
+					
+						h3 Pending requests
+						// What action to use? 
+						form#approveTeachersForm(name='approveTeachersForm', action='#', method='get')
+							ul 
+								li
+									input(type="checkbox")
+									a(href="#notmy-profile-teacher") Ali Sharif
+								li
+									input(type="checkbox")
+									a(href="#notmy-profile-teacher") Randi Rikberg
+								li
+									input(type="checkbox")
+									a(href="#notmy-profile-teacher") Tina Tvist 
+								li
+									input(type="checkbox")
+									a(href="#notmy-profile-teacher") Ole Olsen		
+								li
+									input(type="checkbox")
+									a(href="#notmy-profile-teacher") Nina Nilsen
+									
+							input(type="submit", value="Approve teacher(s)")
+								
+					
+				
+		.profile-content
+			include ../includes/profile-sidebar-admin.jade
+include ../includes/partialscript.jade
+
+
+	script(src='js/main-admin.js')
