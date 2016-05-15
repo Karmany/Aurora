@@ -2494,8 +2494,12 @@ textarea {
 }
 
 #main-student {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
 }
 
@@ -2609,8 +2613,12 @@ textarea {
 }
 
 #main-teacher {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
 }
 
@@ -2804,7 +2812,9 @@ textarea {
 }
 
 #main-admin #subjectsModal .modal-content .help-button:hover {
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 #main-admin #subjectsModal .modal-content .info-text-alignment {
@@ -2978,7 +2988,9 @@ textarea {
 }
 
 #main-admin #studentsModal .modal-content .help-button:hover {
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
   cursor: pointer;
 }
 
@@ -3096,7 +3108,9 @@ textarea {
 }
 
 #main-admin #teachersModal .modal-content .help-button:hover {
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
   cursor: pointer;
 }
 
@@ -3846,9 +3860,15 @@ textarea {
   background-color: #79d894;
   border-radius: 2px;
   padding: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .profile .upload-btn:hover {
