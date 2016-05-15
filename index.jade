@@ -2,6 +2,17 @@ doctype html
 
 html(lang="en", ng-app="myApp")
    head
+      script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+      script.
+         // Prevent access without assigned sessionStorage.role 
+         (function () {
+         	if(sessionStorage.role == undefined){
+         		sessionStorage.role = 'unregistered';
+         		window.location.href = 'login.html';
+         	}
+         })();
+         // Fade on load
+         $(document).ready(function () { $('body').hide().fadeIn(1500).delay(6000)});
       include ./includes/favicons.jade
       meta(charset="utf-8")
       meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")

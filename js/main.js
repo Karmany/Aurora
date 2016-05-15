@@ -1,10 +1,5 @@
 // !SESSIONSTORAGE for storing session roles!
 
-if(sessionStorage.role == undefined){
-	sessionStorage.role = 'unregistered';
-	window.location.href = 'login.html';
-}
-
 $('.logout').on('click', function() {
 	sessionStorage.removeItem('role');
 });

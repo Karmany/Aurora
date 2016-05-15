@@ -2,7 +2,7 @@
 
 *
    box-sizing: border-box
-   //transition: all 0.3s ease
+   transition: background-color 0.3s ease, transform 0.3s ease
 
 html, body
    height: 100%
@@ -13,6 +13,7 @@ html
 body
    background-color: $primaryColorDark
    color: white
+   display: none
 
 #role
    position: absolute
@@ -408,6 +409,9 @@ footer
    p.secondary
       a
          text-decoration: none
+      img
+         height: 1rem
+         margin-right: 1rem
 
    .container
       padding-top: 20px
