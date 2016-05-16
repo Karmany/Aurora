@@ -4,6 +4,7 @@ html#loginhtml(lang="en", ng-app="myApp")
       meta(charset="utf-8")
       meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
       title Login
+      include ./includes/favicons.jade
       link(rel="stylesheet", href="css/base.css")
    body#loginBody(style='display: block;')
       #loginWrapper
@@ -12,6 +13,7 @@ html#loginhtml(lang="en", ng-app="myApp")
             source(src='img/aurora.webm', type='video/webm')
          #login
             h1#loginheader Welcome Back
+            // Form method attribute should obviously be post when handling passwords, but for a proof of concept page this has no consequences. (Codekit localhost feature can't handle post  method)
             form#logmein(name='loginForm', action='index.html', method='get', onsubmit='return validateLogin(this);')
                #loginState
                   #loginField1.field-wrap

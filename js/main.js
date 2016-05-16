@@ -1,3 +1,14 @@
+// Logo animate
+
+$(function() {
+	$('#logo .a2').attr('class', 'a2 animate');
+	$('#logo .r2').attr('class', 'r2 animate');
+	$('#logo .o').attr('class', 'o animate');
+	$('#logo .r').attr('class', 'r animate');
+	$('#logo .u').attr('class', 'u animate');
+	$('#logo .a').attr('class', 'a animate-a');
+});
+
 // !SESSIONSTORAGE for storing session roles!
 
 $('.logout').on('click', function() {
@@ -61,13 +72,11 @@ $(function(){
 				}).length <= 4
 
 			){
-				console.log('yay');
 				$('nav.desktop ul').removeClass('flex-between');
 				$('nav.desktop ul').addClass('flex-around');
 				$('.nav-desktop-indicator ul').removeClass('flex-between');
 				$('.nav-desktop-indicator ul').addClass('flex-around');
 			}else{
-				console.log('y u do dis');
 			};
 		}, 600);
    });
@@ -163,7 +172,10 @@ function urlTitle() {
 		getUrl() == page4 ||
 		getUrl() == page5 ||
 		getUrl() == page6 ||
-		getUrl() == page9
+		getUrl() == page9 ||
+		getUrl() == page8 ||
+		getUrl() == page10 ||
+		getUrl() == page11
 	){
 		switch (url = window.location.href.split(pageDivider)[1]) {
 			case page1:
@@ -288,10 +300,6 @@ function removeActiveClass(){
 // START | PLAY VIDEO - ETC
 
 $(function(){
-
-	if(url = window.location.href.split(pageDivider)[1] == page7){
-		console.log('plaeh!!')
-	};
 
 	$('.tabs').click(function(e){
 

@@ -15,7 +15,6 @@ var timeStamp = 0;
 vid.ontimeupdate = function() {
    "use strict";
    changeImg();
-   console.log("Time is updated!");
 };
 
 // This function change the slide based on how far the video have played
@@ -23,31 +22,22 @@ function changeImg() {
    "use strict";
    if (vid.currentTime > 0  && vid.currentTime < 32 && document.getElementById('slides').src !== slides[0]) {
       document.getElementById('slides').src = slides[0];
-      console.log("Slide 1 loaded on page");
    } else if (vid.currentTime > 32 && vid.currentTime < 52 && document.getElementById('slides').src !== slides[1]) {
       document.getElementById('slides').src = slides[1];
-      console.log("Slide 2 loaded on page");
    } else if (vid.currentTime > 52 && vid.currentTime < 80 && document.getElementById('slides').src !== slides[2]) {
       document.getElementById('slides').src = slides[2];
-      console.log("Slide 3 loaded on page");
    } else if (vid.currentTime > 80 && vid.currentTime < 428 && document.getElementById('slides').src !== slides[3]) {
       document.getElementById('slides').src = slides[3];
-      console.log("Slide 4 loaded on page");
    } else if (vid.currentTime > 428 && vid.currentTime < 446 && document.getElementById('slides').src !== slides[4]) {
       document.getElementById('slides').src = slides[4];
-      console.log("Slide 5 loaded on page");
    } else if (vid.currentTime > 446 && vid.currentTime < 483 && document.getElementById('slides').src !== slides[5]) {
       document.getElementById('slides').src = slides[5];
-      console.log("Slide 6 loaded on page");
    } else if (vid.currentTime > 483 && vid.currentTime < 502 && document.getElementById('slides').src !== slides[6]) {
       document.getElementById('slides').src = slides[6];
-      console.log("Slide 7 loaded on page");
    } else if (vid.currentTime > 502 && vid.currentTime < 521 && document.getElementById('slides').src !== slides[7]) {
       document.getElementById('slides').src = slides[7];
-      console.log("Slide 8 loaded on page");
    } else if (vid.currentTime > 521 && vid.currentTime < 555 && document.getElementById('slides').src !== slides[8]) {
       document.getElementById('slides').src = slides[8];
-      console.log("Slide 9 loaded on page");
    }
 }
 
@@ -141,7 +131,6 @@ function switchImage()
       imageNum=imageNum+1;
       if(imageNum<slides.length)
       document.getElementById('slides').src=slides[imageNum];
-      console.log("switchImage");
 	}
 }
 function next_event()
@@ -151,7 +140,6 @@ function next_event()
       count+=1;
       var video = document.getElementById("lectureVideo");
       video.currentTime = breakpoints[count];
-      console.log("next_event");
 	}
 }
 
@@ -167,7 +155,6 @@ function prevImage()
       imageNum=imageNum-1;
       if(imageNum>=0)
       document.getElementById('slides').src=slides[imageNum];
-      console.log("prevImage");
 	}
 }
 function prev_event()
@@ -177,7 +164,6 @@ function prev_event()
       count-=1;
       var video = document.getElementById("lectureVideo");
       video.currentTime = breakpoints[count];
-      console.log("prev_event");
 	}
 }
 
