@@ -10,8 +10,8 @@
             
             #playVideo
                video#lectureVideo(controls, preload)
-                  source(src='../img/lecture.mp4', type='video/mp4', id='lectureVideo')
-                  track(src='../img/transcript.vtt', kind='subtitles', srclang='en', label='English')
+                  source(src='img/lecture.mp4', type='video/mp4', id='lectureVideo')
+                  track(src='img/transcript.vtt', kind='subtitles', srclang='en', label='English')
                
             .change-slides.mobile
                input#prev(type='button', name='prev', onclick='prev();')
@@ -31,7 +31,7 @@
                      include ../includes/svg-icons/info-icon.jade
                      | wiki
                #slide-wrap   
-                  img#slides(src="../img/slides/Lecture3-1.001.jpeg", alt="Slides")
+                  img#slides(src="img/slides/Lecture3-1.001.jpeg", alt="Slides")
                #wiki.closed
                   h2 HTML entities
                   p Some characters are reserved in HTML. If you use the less than (<) or greater than (>) signs in your text, the browser might mix them with tags. Character entities are used to display reserved characters in HTML. A character entity looks like this: &amp; (&amp;amp;).
@@ -108,7 +108,7 @@
                   p.secondary Published: 19.05.2016
                   
                   .lecture-poster   
-                     img.profile-img(src="../img/profile_images/teacher2.jpg")
+                     img.profile-img(src="img/profile_images/teacher2.jpg")
                      a.author(href='#notmy-profile-teacher')
                         p
                            | Henriette Jacobsen
@@ -118,7 +118,7 @@
                   h2 Comments
                   
                   .comment.one
-                     img.profile-img(src="../img/profile_images/female_student1.jpg")
+                     img.profile-img(src="img/profile_images/female_student1.jpg")
                      a.author(href='#notmy-profile-student')
                         p
                            | Camilla Svensen - 
@@ -131,7 +131,7 @@
                            include ../includes/svg-icons/reply-icon.jade
                      
                   .comment.two
-                     img.profile-img(src="../img/profile_images/teacher2.jpg")
+                     img.profile-img(src="img/profile_images/teacher2.jpg")
                      a.author(href='#notmy-profile-teacher')
                         p
                            | Henriette Jacobsen - 
@@ -144,7 +144,7 @@
                            include ../includes/svg-icons/reply-icon.jade
                      
                   .comment.one
-                     img.profile-img(src="../img/profile_images/male_student1.png")
+                     img.profile-img(src="img/profile_images/male_student1.png")
                      a.author(href='#notmy-profile-student')
                         p
                            | Rajesh Singh - 
@@ -157,7 +157,7 @@
                            include ../includes/svg-icons/reply-icon.jade
                      
                   .comment.two
-                     img.profile-img(src="../img/profile_images/teacher2.jpg")
+                     img.profile-img(src="img/profile_images/teacher2.jpg")
                      a.author(href='#notmy-profile-teacher')
                         p
                            | Camilla Svensen - 
